@@ -403,7 +403,13 @@ Error: No pnpm version is specified. Please specify it by one of the following w
 在 package.json添加
 
 ```
-"packageManager": "pnpm@8.6.0"
+"packageManager": "pnpm@10.11.1"
+
+或者在 .github/workflows/docs.yml 文档中添加
+      - name: 设置 pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: '8.x'
 ```
 
 ## 报错
@@ -413,3 +419,20 @@ Dependencies lock file is not found in /home/runner/work/vuepress-v2.xgss.net/vu
 ```
 
 ![image-20250605171442396](H:\typora_images\image-20250605171442396.png)
+
+## 解决
+
+安装pnpm
+
+```
+$ npm install -g pnpm
+added 1 package in 3s
+
+
+$ pnpm -v
+10.11.1
+
+
+pnpm install
+```
+
