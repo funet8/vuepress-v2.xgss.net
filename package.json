@@ -8,8 +8,8 @@
   "devDependencies": {
     "@vuepress/bundler-vite": "^2.0.0-rc.23",
     "@vuepress/plugin-search": "^2.0.0-rc.108",
-    "@vuepress/theme-default": "^2.0.0-rc.106",
-    "sass-embedded": "^1.89.0",
+    "@vuepress/theme-default": "^2.0.0-rc.108",
+    "sass-embedded": "^1.89.1",
     "vuepress": "^2.0.0-rc.23",
     "vuepress-plugin-fulltext-search": "^2.2.1",
     "vuepress-theme-mix": "^2.0.0-alpha.6"
@@ -17,6 +17,5 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
-  },
-  "packageManager": "pnpm@10.11.1"
+  }
 }

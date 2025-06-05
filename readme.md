@@ -1,4 +1,6 @@
-# vuepress
+# 使用VuePress2.X构建个人知识博客
+
+
 
 ## 官网
 
@@ -124,6 +126,8 @@ yarn list vuepress
 
 # vuepress主题（报错）
 
+更换主题，一直报错就不换了！
+
 官网： https://marketplace.vuejs.press/zh/themes/
 
 ## VuePress Theme Mix
@@ -159,50 +163,6 @@ export default defineUserConfig({
 
 
 # vuepress配置搜索
-
-vuepress@2.0.0 配置搜索
-
-```
-yarn add -D vuepress-plugin-fulltext-search
-修改配置 vi docs/.vuepress/config.js
-  module.exports = {
-  // ...
-  plugins: ['fulltext-search'],
-  }
-
-
-```
-
-
-
-实际操作：
-
-```
-$ yarn add -D vuepress-plugin-fulltext-search
-yarn add v1.22.22
-[1/4] Resolving packages...
-[2/4] Fetching packages...
-[3/4] Linking dependencies...
-warning " > vuepress@2.0.0-rc.23" has unmet peer dependency "vue@^3.5.13".
-warning " > vuepress-plugin-fulltext-search@2.2.1" has incorrect peer dependency "vuepress@^1.4.0".
-[4/4] Building fresh packages...
-
-success Saved lockfile.
-success Saved 8 new dependencies.
-info Direct dependencies
-└─ vuepress-plugin-fulltext-search@2.2.1
-info All dependencies
-├─ deepmerge@4.3.1
-├─ flexsearch@0.6.32
-├─ he@1.2.0
-├─ html-to-text@7.1.3
-├─ htmlparser2@6.1.0
-├─ lodash@4.17.21
-├─ minimist@1.2.8
-└─ vuepress-plugin-fulltext-search@2.2.1
-Done in 4.37s.
-
-```
 
 安装插件
 
@@ -432,7 +392,8 @@ added 1 package in 3s
 $ pnpm -v
 10.11.1
 
+$rm -rf node_modules/
 
-pnpm install
+$ pnpm install
 ```
 
