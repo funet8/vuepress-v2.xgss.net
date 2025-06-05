@@ -398,3 +398,18 @@ Error: No pnpm version is specified. Please specify it by one of the following w
 
 ![image-20250605165722852](https://imgoss.xgss.net/picgo2025/image-20250605165722852.png?aliyun)
 
+## 解决
+
+在 package.json添加
+
+```
+"packageManager": "pnpm@8.6.0"
+```
+
+## 报错
+
+```
+Dependencies lock file is not found in /home/runner/work/vuepress-v2.xgss.net/vuepress-v2.xgss.net. Supported file patterns: pnpm-lock.yaml
+```
+
+![image-20250605171442396](H:\typora_images\image-20250605171442396.png)
