@@ -397,3 +397,15 @@ $rm -rf node_modules/
 $ pnpm install
 ```
 
+## 工作流权限
+
+在仓库的 Settings > Actions > General，确保 GITHUB_TOKEN 的权限被设置为 write 权限（即推送权限）。
+
+![image-20250605183211238](https://imgoss.xgss.net/picgo2025/image-20250605183211238.png?aliyun)
+
+如图，勾选：Read and write permissions
+
+保存。
+
+
+
