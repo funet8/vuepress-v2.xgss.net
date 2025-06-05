@@ -1,0 +1,325 @@
+# vuepress
+
+## 官网
+
+https://vuepress.vuejs.org/zh/
+
+# 安装vuepress
+
+```
+你可以通过 create-vuepress 直接创建项目模板。
+yarn create vuepress vuepress-starter
+
+创建并进入一个新目录
+mkdir vuepress-starter
+cd vuepress-starter
+
+初始化项目
+git init
+yarn init
+
+# 安装 vuepress
+yarn add -D vuepress@next
+# 安装打包工具和主题
+yarn add -D @vuepress/bundler-vite@next @vuepress/theme-default@next
+
+```
+
+## 创建 VuePress 配置文件
+
+docs/.vuepress/config.js
+
+```
+mkdir -p docs/.vuepress/
+vi docs/.vuepress/config.js
+填入一下配置：
+import { viteBundler } from '@vuepress/bundler-vite'
+import { defaultTheme } from '@vuepress/theme-default'
+import { defineUserConfig } from 'vuepress'
+
+export default defineUserConfig({
+  bundler: viteBundler(),
+  theme: defaultTheme(),
+})
+```
+
+创建你的第一篇文档
+
+```
+echo '# Hello VuePress' > docs/README.md
+```
+
+
+
+## 启动开发服务器
+
+你可以在 package.json 中添加一些 scripts ：
+
+```
+{
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}
+```
+
+![image-20250605102058056](https://imgoss.xgss.net/picgo2025/image-20250605102058056.png?aliyun)
+
+运行 docs:dev 脚本可以启动开发服务器:
+
+```
+yarn docs:dev
+```
+
+VuePress 会在 http://localhost:8080 启动一个热重载的开发服务器。当你修改你的 Markdown 文件时，浏览器中的内容也会自动更新。
+
+报错：
+
+![image-20250605102257832](https://imgoss.xgss.net/picgo2025/image-20250605102257832.png?aliyun)
+
+```
+yarn add -D sass-embedded
+```
+
+## 再启动开发服务器
+
+```
+$ yarn docs:dev
+yarn run v1.22.22
+$ vuepress dev docs
+√ Initializing and preparing data - done in 58ms
+10:22:16 [vite] (client) Re-optimizing dependencies because lockfile has changed
+
+  vite v6.3.5 dev server running at:
+
+  ➜  Local:   http://localhost:8080/
+  ➜  Network: http://192.168.1.251:8080/
+  ➜  Network: http://192.168.52.1:8080/
+  ➜  Network: http://192.168.152.1:8080/
+
+```
+
+使用浏览器访问http://localhost:8080/
+
+![image-20250605102401921](https://imgoss.xgss.net/picgo2025/image-20250605102401921.png?aliyun)
+
+
+
+## 构建你的网站
+
+运行 docs:build 脚本可以构建你的网站：
+
+```
+yarn docs:build
+```
+
+## 查看vuepress版本
+
+```
+yarn list vuepress
+```
+
+
+
+# vuepress主题（报错）
+
+官网： https://marketplace.vuejs.press/zh/themes/
+
+## VuePress Theme Mix
+
+https://vuepress-theme-mix.netlify.app/zh/guide/getting-started.html
+
+### 安装VuePress Theme Mix
+
+```
+yarn add -D vuepress-theme-mix@next
+
+```
+
+### 使用与配置
+
+```
+import { defineUserConfig } from 'vuepress'
+import mixTheme from 'vuepress-theme-mix'
+
+export default defineUserConfig({
+  // ...
+
+  theme: mixTheme({
+    // 在这里配置主题
+  }),
+
+  // ...
+})
+```
+
+
+
+
+
+# vuepress配置搜索
+
+vuepress@2.0.0 配置搜索
+
+```
+yarn add -D vuepress-plugin-fulltext-search
+修改配置 vi docs/.vuepress/config.js
+  module.exports = {
+  // ...
+  plugins: ['fulltext-search'],
+  }
+
+
+```
+
+
+
+实际操作：
+
+```
+$ yarn add -D vuepress-plugin-fulltext-search
+yarn add v1.22.22
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+warning " > vuepress@2.0.0-rc.23" has unmet peer dependency "vue@^3.5.13".
+warning " > vuepress-plugin-fulltext-search@2.2.1" has incorrect peer dependency "vuepress@^1.4.0".
+[4/4] Building fresh packages...
+
+success Saved lockfile.
+success Saved 8 new dependencies.
+info Direct dependencies
+└─ vuepress-plugin-fulltext-search@2.2.1
+info All dependencies
+├─ deepmerge@4.3.1
+├─ flexsearch@0.6.32
+├─ he@1.2.0
+├─ html-to-text@7.1.3
+├─ htmlparser2@6.1.0
+├─ lodash@4.17.21
+├─ minimist@1.2.8
+└─ vuepress-plugin-fulltext-search@2.2.1
+Done in 4.37s.
+
+```
+
+安装插件
+
+```
+首先，在你的 VuePress 项目中安装该插件：
+pnpm add -D @vuepress/plugin-search@next
+# 或者
+yarn add -D @vuepress/plugin-search@next
+# 或者
+npm i -D @vuepress/plugin-search@next
+
+
+```
+
+配置
+
+```
+.vuepress/config.js 示例:
+import { searchPlugin } from '@vuepress/plugin-search'
+
+module.exports = {
+  plugins: [
+    searchPlugin({
+      // 插件选项
+      // 可以配置的选项包括：
+      // maxSuggestions: 5, // 最多显示多少条搜索结果
+      // isSearchable: (page) => page.path !== '/', // 排除特定页面
+      // hotKeys: ['s', '/'], // 激活搜索框的快捷键
+      // locales: { // 多语言支持
+      //   '/': {
+      //     placeholder: '搜索',
+      //   },
+      //   '/en/': {
+      //     placeholder: 'Search',
+      //   },
+      // },
+      // get.Display.Text: (page) => { /* 自定义搜索结果显示文本 */ },
+      // search: (query, pages) => { /* 自定义搜索逻辑 */ },
+    }),
+  ],
+}
+
+
+```
+
+
+
+## 报错1
+
+使用
+
+```
+yarn docs:build
+```
+
+
+
+报错，由于图片没有上传到oss中导致报错。
+
+```
+error [vite:asset] Could not load G:/STAR学习/vuepress-starter/docs/./chatgpt/H:/typora_images/image-20240415180831846.png (imported by docs/.vuepress/.temp/pages/chatgpt/15.免费使用GPT-4的3种方法，白嫖大模型.html.vue): ENOENT: no such file or directory, open 'G:\STAR学习\vuepress
+-starter\docs\chatgpt\H:\typora_images\image-20240415180831846.png'
+
+```
+
+
+
+解决：
+
+```
+grep -R 'typora_images' ./*| grep -v '.vuepress/'
+
+grep -R 'images/image' ./*| grep -v '.vuepress/'
+
+
+```
+
+
+
+# 配置到GitHub Pages
+
+## 1.github新建仓库
+
+```
+新建git 仓库
+vuepress-v2.xgss.net
+
+克隆到本地
+git clone git@github.com:funet8/vuepress-v2.xgss.net.git
+把docs的文档拷贝进去
+```
+
+## 2.执行
+
+```
+#提交到github仓库-vuepress-v2分支
+#git init
+git add -A
+git commit -m 'deploy.sh-vuepressV2脚本自动提交'
+git push -f git@github.com:funet8/vuepress-v2.xgss.net.git main
+
+
+# 生成静态文件
+yarn docs:build
+
+# 进入生成的文件夹
+cd docs/.vuepress/dist
+echo 'vuepress-v2.xgss.net' >  CNAME
+git init
+git remote add origin git@github.com:funet8/vuepress-v2.xgss.net.git
+git add .
+git commit -m "deploy.sh-脚本自动提交"
+git push --force --quiet "git@github.com:funet8/vuepress-v2.xgss.net.git" master:gh-pages
+cd -
+```
+
+
+
+
+
