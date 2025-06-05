@@ -384,7 +384,17 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
+提交代码，触发Actions
+
+![image-20250605165314078](https://imgoss.xgss.net/picgo2025/image-20250605165314078.png?aliyun)
+
+## 报错
+
+```
+Error: No pnpm version is specified. Please specify it by one of the following ways: - in the GitHub Action config with the key "version" - in the package.json with the key "packageManager"
+```
 
 
 
+![image-20250605165722852](https://imgoss.xgss.net/picgo2025/image-20250605165722852.png?aliyun)
 
