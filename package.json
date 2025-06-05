@@ -17,6 +17,5 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
-  },
-  "packageManager": "pnpm@8.6.0"
+  }
 }
