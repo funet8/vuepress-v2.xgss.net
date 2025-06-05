@@ -268,16 +268,12 @@ error [vite:asset] Could not load G:/STAR学习/vuepress-starter/docs/./chatgpt/
 
 ```
 
-
-
 解决：
 
 ```
 grep -R 'typora_images' ./*| grep -v '.vuepress/'
-
+把所有的图片上传到oss中，再生成
 grep -R 'images/image' ./*| grep -v '.vuepress/'
-
-
 ```
 
 
@@ -303,20 +299,89 @@ git clone git@github.com:funet8/vuepress-v2.xgss.net.git
 git add -A
 git commit -m 'deploy.sh-vuepressV2脚本自动提交'
 git push -f git@github.com:funet8/vuepress-v2.xgss.net.git main
+```
 
+有两个分支
 
-# 生成静态文件
-yarn docs:build
+![image-20250605161934191](https://imgoss.xgss.net/picgo2025/image-20250605161934191.png?aliyun)
 
-# 进入生成的文件夹
-cd docs/.vuepress/dist
-echo 'vuepress-v2.xgss.net' >  CNAME
-git init
-git remote add origin git@github.com:funet8/vuepress-v2.xgss.net.git
-git add .
-git commit -m "deploy.sh-脚本自动提交"
-git push --force --quiet "git@github.com:funet8/vuepress-v2.xgss.net.git" master:gh-pages
-cd -
+## 3.设置域名访问
+
+自有域名 vuepress-v2.xgss.net 解析到github中
+
+Settings --> Pages 
+
+![image-20250605162124719](https://imgoss.xgss.net/picgo2025/image-20250605162124719.png?aliyun)
+
+```
+把 vuepress-v2.xgss.net CNAME解析到 funet8.github.io
+把 你的域名  解析到 <你的github账号名>.github.io
+```
+
+![image-20250605162742075](https://imgoss.xgss.net/picgo2025/image-20250605162742075.png?aliyun)
+
+等待解析生效，github会提示DNS check successful
+
+勾选 Enforce HTTPS，强制
+
+直接根据官方文档先初始化项目就行了，注意文档的版本，v1和v2还是有很多地方不同的。
+
+## 4.用 GitHub Actions 部署到 GitHub Pages
+
+参考：https://vuepress.vuejs.org/zh/guide/deployment.html#github-pages
+
+创建 .github/workflows/docs.yml 文件来配置工作流。
+
+```
+name: docs
+
+on:
+  # 每当 push 到 main 分支时触发部署
+  push:
+    branches: [main]
+  # 手动触发部署
+  workflow_dispatch:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
+          fetch-depth: 0
+
+      - name: 设置 pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          # 选择要使用的 node 版本
+          node-version: 22
+          # 缓存 pnpm 依赖
+          cache: pnpm
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      # 运行构建脚本
+      - name: 构建 VuePress 站点
+        run: pnpm docs:build
+
+      # 查看 workflow 的文档来获取更多信息
+      # @see https://github.com/crazy-max/ghaction-github-pages
+      - name: 部署到 GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          # 部署到 gh-pages 分支
+          target_branch: gh-pages
+          # 部署目录为 VuePress 的默认输出目录
+          build_dir: docs/.vuepress/dist
+        env:
+          # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 
