@@ -1,6 +1,5 @@
 ##忽略文件
 /node_modules
-yarn.lock
 docs/.vuepress/dist
 docs/.vuepress/.cache
 docs/.vuepress/.temp
