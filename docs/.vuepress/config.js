@@ -104,7 +104,7 @@ export default defineUserConfig({
 	host: 'localhost', // 只能使用http://localhost:8099 , 可以指定ip
 	port: '8099', //端口号
 	serviceWorker: true, // 是否开启 PWA
-	base: '/', // 部署到github相关的配置
+	base: '/vuepress-v2.xgss.net/', // 部署到github相关的配置
 	markdown: {
 		lineNumbers: true // 代码块是否显示行号
 	},
