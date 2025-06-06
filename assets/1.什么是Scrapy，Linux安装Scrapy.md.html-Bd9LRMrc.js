@@ -1,0 +1,52 @@
+import{_ as n,c as a,b as e,o as i}from"./app-BEL8OELx.js";const l={};function p(r,s){return i(),a("div",null,s[0]||(s[0]=[e(`<h1 id="什么是scrapy-linux如何安装scrapy" tabindex="-1"><a class="header-anchor" href="#什么是scrapy-linux如何安装scrapy"><span>什么是Scrapy，Linux如何安装Scrapy</span></a></h1><p>最近有个项目需要用到爬虫。</p><p><img src="https://imgoss.xgss.net/picgo/image-20230526144310383.png?aliyun" alt="image-20230526144310383"></p><h1 id="scrapy-是什么" tabindex="-1"><a class="header-anchor" href="#scrapy-是什么"><span>Scrapy 是什么</span></a></h1><p>Scrapy是一个基于Python的开源网络爬虫框架，用于抓取和提取结构化数据。它提供了一组强大的工具和机制，使得开发者能够快速、高效地构建和管理各种类型的爬虫程序。</p><p>以下是Scrapy的一些主要特点和功能：</p><p>高性能：Scrapy使用异步网络库（Twisted）和多线程技术，能够高效地处理大规模的爬取任务。</p><p>灵活的数据提取：Scrapy提供了基于XPath和CSS选择器的强大的数据提取功能，使得开发者可以方便地从网页中提取所需的数据。</p><p>中间件支持：Scrapy通过中间件机制，允许开发者对请求和响应进行全局处理，例如设置代理、添加请求头等。</p><p>分布式爬取：Scrapy-Redis扩展可以实现分布式爬取任务，使用Redis作为分布式队列和去重的存储。</p><p>自动限速和重试：Scrapy自带的调度器可以自动进行请求的限速和重试，以避免对目标网站造成过大的负载和处理网络异常。</p><p>数据存储和导出：Scrapy支持将爬取的数据存储到各种数据库（如MySQL、MongoDB）或者导出为多种格式（如JSON、CSV）。</p><p>自定义扩展：Scrapy提供了丰富的扩展点和API，开发者可以根据需要编写自定义的扩展组件，以增强框架的功能和适应特定的业务需求。</p><p>总之，Scrapy是一个功能强大、灵活且高度可定制的爬虫框架，非常适合用于抓取大量结构化数据的场景，如搜索引擎、数据挖掘、数据分析等。</p><h1 id="centos7安装-scrapy" tabindex="-1"><a class="header-anchor" href="#centos7安装-scrapy"><span>Centos7安装 Scrapy</span></a></h1><h2 id="_1-更新yum" tabindex="-1"><a class="header-anchor" href="#_1-更新yum"><span>1.更新yum</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line"># yum -y update</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><h2 id="_2-安装gcc及扩展包" tabindex="-1"><a class="header-anchor" href="#_2-安装gcc及扩展包"><span>2.安装gcc及扩展包</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line"># yum install gcc libffi-devel python-devel openssl-devel  -y</span>
+<span class="line"> 安装开发工具包:</span>
+<span class="line"># yum groupinstall -y development</span>
+<span class="line"></span>
+<span class="line">安装libxslt-devel支持xml：</span>
+<span class="line"># yum install libxslt-devel epel-release -y </span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="安装pip" tabindex="-1"><a class="header-anchor" href="#安装pip"><span>安装pip</span></a></h2><p>pip是一个Python包管理工具，主要是用于安装PyPI上的软件包，可以替代easy-install工具</p><p>再执行</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">yum -y install python-pip</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><h2 id="安装python3" tabindex="-1"><a class="header-anchor" href="#安装python3"><span>安装Python3</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tar.xz</span>
+<span class="line">tar -xvJf  Python-3.7.0.tar.xz</span>
+<span class="line">mkdir /usr/local/python3 #创建编译安装目录</span>
+<span class="line">cd Python-3.7.0</span>
+<span class="line">./configure --prefix=/usr/local/python3</span>
+<span class="line">make &amp;&amp; make install</span>
+<span class="line"></span>
+<span class="line">ln -s /usr/local/python3/bin/python3 /usr/local/bin/python3</span>
+<span class="line">ln -s /usr/local/python3/bin/pip3 /usr/local/bin/pip3</span>
+<span class="line"></span>
+<span class="line">python3 -V</span>
+<span class="line">pip3 -V</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="安装scrapy" tabindex="-1"><a class="header-anchor" href="#安装scrapy"><span>安装Scrapy</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line"># yum clean all</span>
+<span class="line"># pip install scrapy</span>
+<span class="line">报错：</span>
+<span class="line">Command &quot;python setup.py egg_info&quot; failed with error code 1 in /tmp/pip-build-QXTLrO/packaging/</span>
+<span class="line">You are using pip version 8.1.2, however version 23.1.2 is available.</span>
+<span class="line">You should consider upgrading via the &#39;pip install --upgrade pip&#39; command.</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="检查scrapy安装结果" tabindex="-1"><a class="header-anchor" href="#检查scrapy安装结果"><span>检查Scrapy安装结果</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line"># scrapy</span>
+<span class="line">Scrapy 1.5.0 - no active project</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><p>则表示安装scrapy 成功。</p><h1 id="windows安装scrapy" tabindex="-1"><a class="header-anchor" href="#windows安装scrapy"><span>windows安装scrapy</span></a></h1><p>首先安装Python，本机安装的3.10.2</p><p>前往Python官方网站（https://www.python.org/downloads/windows/）下载最新的Python安装程序。</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">$ python -V</span>
+<span class="line">Python 3.10.2</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">$ python -m pip install scrapy</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><p>验证</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">$ scrapy</span>
+<span class="line">Scrapy 2.9.0 - no active project</span>
+<span class="line"></span>
+<span class="line">Usage:</span>
+<span class="line">  scrapy &lt;command&gt; [options] [args]</span>
+<span class="line"></span>
+<span class="line">Available commands:</span>
+<span class="line">  bench         Run quick benchmark test</span>
+<span class="line">  fetch         Fetch a URL using the Scrapy downloader</span>
+<span class="line">  genspider     Generate new spider using pre-defined templates</span>
+<span class="line">  runspider     Run a self-contained spider (without creating a project)</span>
+<span class="line">  settings      Get settings values</span>
+<span class="line">  shell         Interactive scraping console</span>
+<span class="line">  startproject  Create new project</span>
+<span class="line">  version       Print Scrapy version</span>
+<span class="line">  view          Open URL in browser, as seen by Scrapy</span>
+<span class="line"></span>
+<span class="line">  [ more ]      More commands available when run from project directory</span>
+<span class="line"></span>
+<span class="line">Use &quot;scrapy &lt;command&gt; -h&quot; to see more info about a command</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>说明window下已经安装完成 Scrapy 2.9.0。</p>`,38)]))}const d=n(l,[["render",p]]),t=JSON.parse('{"path":"/Scrapy/1.%E4%BB%80%E4%B9%88%E6%98%AFScrapy%EF%BC%8CLinux%E5%AE%89%E8%A3%85Scrapy.md.html","title":"什么是Scrapy，Linux如何安装Scrapy","lang":"en-US","frontmatter":{},"git":{"updatedTime":1749111496000,"contributors":[{"name":"star","username":"star","email":"star@xgss.net","commits":1,"url":"https://github.com/star"}],"changelog":[{"hash":"f42710dc7c9262f92ca07eb1bfb1c7d35be48fda","time":1749111496000,"email":"star@xgss.net","author":"star","message":"deploy.sh-vuepressV2脚本自动提交"}]},"filePathRelative":"Scrapy/1.什么是Scrapy，Linux安装Scrapy.md.md"}');export{d as comp,t as data};

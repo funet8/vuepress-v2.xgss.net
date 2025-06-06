@@ -1,0 +1,26 @@
+import{_ as n,c as s,b as a,o as i}from"./app-BEL8OELx.js";const l={};function t(r,e){return i(),s("div",null,e[0]||(e[0]=[a(`<h1 id="在释放一个数亿记录的表时报该错" tabindex="-1"><a class="header-anchor" href="#在释放一个数亿记录的表时报该错"><span>在释放一个数亿记录的表时报该错</span></a></h1><h2 id="阿里云rds删除数据库过期报错" tabindex="-1"><a class="header-anchor" href="#阿里云rds删除数据库过期报错"><span>阿里云RDS删除数据库过期报错：</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">...</span>
+<span class="line">error	Creating index &#39;PRIMARY&#39; required more than &#39;innodb_online_alter_log_max_size&#39; bytes of modification log. Please try again.</span>
+<span class="line">optimize	status	Operation failed</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>网上搜索问题</p><p>https://blog.csdn.net/hyzx_9987/article/details/112010324 在释放一个数亿记录的表时报该错 Creating index &#39;PRIMARY&#39; required more than &#39;innodb_online_alter_log_max_size&#39; bytes of modification</p><p>最大的在线创建索引修改日志文件大小</p><p>大致意思就是，当online_alter的时候，会将insert,update,delete的数据存在log中，log有个上限就是这个参数；如果alter花费了1小时，而在这1小时内的数据变更超过500M，那么就会失败；</p><h2 id="解决方案" tabindex="-1"><a class="header-anchor" href="#解决方案"><span>解决方案</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">set global innodb_online_alter_log_max_size = 10737418240，调大该值；</span>
+<span class="line"></span>
+<span class="line">mysql&gt; show variables like &#39;%innodb_online_alter_log_max_size%&#39;;</span>
+<span class="line">+----------------------------------+-----------+</span>
+<span class="line">| Variable_name                    | Value     |</span>
+<span class="line">+----------------------------------+-----------+</span>
+<span class="line">| innodb_online_alter_log_max_size | 134217728 |</span>
+<span class="line">+----------------------------------+-----------+</span>
+<span class="line">1 row in set</span>
+<span class="line">默认大小为128M</span>
+<span class="line"></span>
+<span class="line">set global innodb_online_alter_log_max_size=1073741824;</span>
+<span class="line">设置为1024G</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="在阿里云rds中用命令行修改" tabindex="-1"><a class="header-anchor" href="#在阿里云rds中用命令行修改"><span>在阿里云RDS中用命令行修改</span></a></h2><p>无权限</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">mysql&gt; set global innodb_online_alter_log_max_size=1073741824;</span>
+<span class="line">1227 - Access denied; you need (at least one of) the SUPER privilege(s) for this operation</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><p>阿里云后台的&#39;参数设置&#39;修改提交，之后即可生效（非重启数据库）。</p><p><img src="https://imgoss.xgss.net/picgo/image-20220510154650487.png?aliyun" alt="image-20220510154650487"></p><p>修成功</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">mysql&gt; show variables like &#39;%innodb_online_alter_log_max_size%&#39;;</span>
+<span class="line">+----------------------------------+------------+</span>
+<span class="line">| Variable_name                    | Value      |</span>
+<span class="line">+----------------------------------+------------+</span>
+<span class="line">| innodb_online_alter_log_max_size | 1073741824 |</span>
+<span class="line">+----------------------------------+------------+</span>
+<span class="line">1 row in set</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,16)]))}const c=n(l,[["render",t]]),p=JSON.parse('{"path":"/debug/innodb_online_alter_log_max_size.html","title":"在释放一个数亿记录的表时报该错","lang":"en-US","frontmatter":{},"git":{"updatedTime":1749111496000,"contributors":[{"name":"star","username":"star","email":"star@xgss.net","commits":1,"url":"https://github.com/star"}],"changelog":[{"hash":"f42710dc7c9262f92ca07eb1bfb1c7d35be48fda","time":1749111496000,"email":"star@xgss.net","author":"star","message":"deploy.sh-vuepressV2脚本自动提交"}]},"filePathRelative":"debug/innodb_online_alter_log_max_size.md"}');export{c as comp,p as data};

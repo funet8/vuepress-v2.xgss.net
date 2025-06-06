@@ -1,0 +1,32 @@
+import{_ as n,c as e,b as a,o as i}from"./app-BEL8OELx.js";const l={};function t(c,s){return i(),e("div",null,s[0]||(s[0]=[a(`<h1 id="配置docker配置镜像加速器" tabindex="-1"><a class="header-anchor" href="#配置docker配置镜像加速器"><span>配置Docker配置镜像加速器</span></a></h1><h2 id="配置docker配置镜像加速器-1" tabindex="-1"><a class="header-anchor" href="#配置docker配置镜像加速器-1"><span>配置Docker配置镜像加速器</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">vi /etc/docker/daemon.json</span>
+<span class="line"></span>
+<span class="line">{</span>
+<span class="line">&quot;registry-mirrors&quot;: [</span>
+<span class="line">	&quot;https://docker.m.daocloud.io&quot;, </span>
+<span class="line">    &quot;https://noohub.ru&quot;, </span>
+<span class="line">    &quot;https://huecker.io&quot;,</span>
+<span class="line">    &quot;https://dockerhub.timeweb.cloud&quot;,</span>
+<span class="line">	&quot;https://f3e2e938202649e9b525ffb7272d7486.mirror.swr.myhuaweicloud.com&quot;,  </span>
+<span class="line">    &quot;https://otow63ff.mirror.aliyuncs.com&quot;,</span>
+<span class="line">    &quot;https://docker.1panel.live&quot;,</span>
+<span class="line">    &quot;http://mirrors.ustc.edu.cn/&quot;,</span>
+<span class="line">    &quot;http://mirror.azure.cn/&quot;,</span>
+<span class="line">    &quot;https://hub.rat.dev/&quot;,</span>
+<span class="line">    &quot;https://docker.ckyl.me/&quot;,</span>
+<span class="line">    &quot;https://docker.chenby.cn&quot;,</span>
+<span class="line">    &quot;https://docker.hpcloud.cloud&quot;,</span>
+<span class="line">    &quot;https://docker.m.daocloud.io&quot;,</span>
+<span class="line">    &quot;https://d-hub.xgss.net&quot;  </span>
+<span class="line">	],</span>
+<span class="line">  &quot;data-root&quot;: &quot;/data/docker-lib&quot;</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line">systemctl daemon-reload</span>
+<span class="line">systemctl restart docker</span>
+<span class="line">docker info</span>
+<span class="line"></span>
+<span class="line">registry-mirrors： 配置镜像加速器。</span>
+<span class="line">data-root： 指定 Docker 数据存储的根目录。</span>
+<span class="line"></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,3)]))}const d=n(l,[["render",t]]),o=JSON.parse('{"path":"/docker/%E9%85%8D%E7%BD%AEDocker%E9%85%8D%E7%BD%AE%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F%E5%99%A8.html","title":"配置Docker配置镜像加速器","lang":"en-US","frontmatter":{},"git":{"updatedTime":1749111496000,"contributors":[{"name":"star","username":"star","email":"star@xgss.net","commits":1,"url":"https://github.com/star"}],"changelog":[{"hash":"f42710dc7c9262f92ca07eb1bfb1c7d35be48fda","time":1749111496000,"email":"star@xgss.net","author":"star","message":"deploy.sh-vuepressV2脚本自动提交"}]},"filePathRelative":"docker/配置Docker配置镜像加速器.md"}');export{d as comp,o as data};

@@ -1,0 +1,95 @@
+import{_ as e,c as n,b as a,o as i}from"./app-BEL8OELx.js";const l={};function r(t,s){return i(),n("div",null,s[0]||(s[0]=[a(`<h1 id="【开源安全保护】如何安装jumpserver堡垒机" tabindex="-1"><a class="header-anchor" href="#【开源安全保护】如何安装jumpserver堡垒机"><span>【开源安全保护】如何安装JumpServer堡垒机</span></a></h1><h1 id="什么是堡垒机" tabindex="-1"><a class="header-anchor" href="#什么是堡垒机"><span>什么是堡垒机</span></a></h1><p>大家好，我是星哥，今天我以前来认识堡垒机</p><p>堡垒机（Bastion Host），也称为跳板机（Jump Server），是指在计算机网络中，作为一个中介的安全服务器，它位于内外网之间，主要用于集中管理和审计远程访问企业内部重要系统的操作。堡垒机通过严格的访问控制、日志审计和身份认证等手段，确保只有授权用户可以通过它访问企业内部的敏感服务器，并对访问过程进行全面监控。</p><p>堡垒机可以有效地降低内部系统暴露在公网中的风险，成为防止外部攻击和内部滥用的重要安全防线。</p><h2 id="未添加堡垒机-如下图" tabindex="-1"><a class="header-anchor" href="#未添加堡垒机-如下图"><span>未添加堡垒机，如下图</span></a></h2><p><img src="https://imgoss.xgss.net/picgo/image-20241203162947055.png?aliyun" alt="image-20241203162947055"></p><h2 id="使用堡垒机-如下图" tabindex="-1"><a class="header-anchor" href="#使用堡垒机-如下图"><span>使用堡垒机，如下图</span></a></h2><p><img src="https://imgoss.xgss.net/picgo/image-20241203163107285.png?aliyun" alt="image-20241203163107285"></p><h2 id="堡垒机的优点" tabindex="-1"><a class="header-anchor" href="#堡垒机的优点"><span><strong>堡垒机的优点</strong></span></a></h2><p><strong>增强安全性</strong>：堡垒机可以作为一道额外的防线，保护服务器免受直接连接的风险。只有堡垒机可以直接与服务器通信，从而减少了服务器直接暴露在公共网络中的风险。</p><p><strong>严格的权限控制</strong>：堡垒机可以充当访问控制的关口，只有经过授权的用户才能连接到目标服务器。管理员可以在堡垒机上配置严格的访问规则，确保只有合适的人员可以访问目标服务器。</p><p><strong>跟踪访问日志</strong>：堡垒机通常会记录连接和操作日志，这使得可以跟踪谁连接了服务器以及他们执行了哪些操作。这对于审计和安全审查非常重要。</p><p><strong>集中管理</strong>：堡垒机提供了一个集中的访问点，管理员可以在这里管理所有对服务器的访问。这使得在一个地方控制访问权限和监控访问活动变得更加方便。</p><h1 id="什么是jumpserver" tabindex="-1"><a class="header-anchor" href="#什么是jumpserver"><span>什么是JumpServer</span></a></h1><p>JumpServer 是广受欢迎的开源堡垒机，是符合 4A 规范的专业运维安全审计系统。JumpServer 帮助企业以更安全的方式管控和登录所有类型的资产，实现事前授权、事中监察、事后审计，满足等保合规要求。</p><p>官方文档： https://docs.jumpserver.org/</p><p>开源地址：https://github.com/jumpserver/jumpserver</p><h1 id="安装jumpserver" tabindex="-1"><a class="header-anchor" href="#安装jumpserver"><span>安装JumpServer</span></a></h1><h2 id="实验环境" tabindex="-1"><a class="header-anchor" href="#实验环境"><span>实验环境</span></a></h2><p>本文完整的方案会用到服务器(或者虚拟机)</p><ul><li>服务器一台（必须，安装 Centos7.2 以上版本系统，<strong>如果没有备案域名请购买香港或海外区域</strong>，http://y.xgss.net/aliyun）</li><li>域名或IP一个，下文以 域名 jms.xgss.net 代替（非必须，本文用用内网ip 192.168.1.121代替）</li><li>SSL 证书一个（非必须，可以免费证书）</li></ul><h2 id="环境要求" tabindex="-1"><a class="header-anchor" href="#环境要求"><span>环境要求</span></a></h2><ul><li>支持主流 Linux 发行版本（基于 Debian / RedHat，包括国产操作系统）</li><li>Gentoo / Arch Linux 请通过源码安装</li></ul><table><thead><tr><th>操作系统</th><th>架构</th><th>Linux 内核</th><th>软件要求</th><th>最小化硬件配置</th></tr></thead><tbody><tr><td>linux/amd64</td><td>x86_64</td><td>&gt;= 4.0</td><td>wget curl tar gettext iptables python</td><td>2Core/8GB RAM/60G HDD</td></tr><tr><td>linux/arm64</td><td>aarch64</td><td>&gt;= 4.0</td><td>wget curl tar gettext iptables python</td><td>2Core/8GB RAM/60G HDD</td></tr></tbody></table><h2 id="ubuntu" tabindex="-1"><a class="header-anchor" href="#ubuntu"><span>Ubuntu</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">apt-get update</span>
+<span class="line">apt-get install -y wget curl tar gettext iptables</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="centos" tabindex="-1"><a class="header-anchor" href="#centos"><span>CentOS</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">yum update</span>
+<span class="line">yum install -y wget curl tar gettext iptables</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><h1 id="离线安装" tabindex="-1"><a class="header-anchor" href="#离线安装"><span>离线安装</span></a></h1><p>为什么选择离线安装，因为在线安装jumpserver很考验服务器的网络，有时候会因为网络的问题导致安装失败。</p><p>还有一种方法是docker all in one。</p><p>从飞致云社区 下载最新的 linux/amd64 [地址： community.fit2cloud.com/#/products/jumpserver/downloads ]离线包, 并上传到部署服务器的 /opt 目录。</p><p>关注公众号&#39;星哥玩云&#39;，回复&#39;jumpserver&#39;，获得jumpserver的下载地址。</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">cd /opt</span>
+<span class="line">tar -xf jumpserver-ce-v4.4.1-x86_64.tar.gz</span>
+<span class="line">cd jumpserver-ce-v4.4.1-x86_64</span>
+<span class="line"></span>
+<span class="line"># 安装</span>
+<span class="line">./jmsctl.sh install</span>
+<span class="line"></span>
+<span class="line"># 启动</span>
+<span class="line">./jmsctl.sh start</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="安装成功" tabindex="-1"><a class="header-anchor" href="#安装成功"><span>安装成功</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">&gt;&gt;&gt; The Installation is Complete</span>
+<span class="line">1. You can use the following command to start, and then visit</span>
+<span class="line">cd /opt/jumpserver-ce-v4.4.1-x86_64</span>
+<span class="line">/opt/jumpserver-ce-v4.4.1-x86_64/jmsctl.sh start</span>
+<span class="line"></span>
+<span class="line">2. Other management commands</span>
+<span class="line">/opt/jumpserver-ce-v4.4.1-x86_64/jmsctl.sh stop</span>
+<span class="line">/opt/jumpserver-ce-v4.4.1-x86_64/jmsctl.sh restart</span>
+<span class="line">/opt/jumpserver-ce-v4.4.1-x86_64/jmsctl.sh backup</span>
+<span class="line">/opt/jumpserver-ce-v4.4.1-x86_64/jmsctl.sh upgrade</span>
+<span class="line">For more commands, you can enter ./jmsctl.sh --help to understand</span>
+<span class="line"></span>
+<span class="line">3. Web access</span>
+<span class="line">http://192.168.1.121:80</span>
+<span class="line">Default username: admin  Default password: ChangeMe</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="docker-ps" tabindex="-1"><a class="header-anchor" href="#docker-ps"><span>docker ps</span></a></h2><p>查看正在运行的容器</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">[root@node121 ~]# docker ps</span>
+<span class="line">CONTAINER ID   IMAGE                       COMMAND                  CREATED       STATUS                 PORTS                                       NAMES</span>
+<span class="line">27241322b803   jumpserver/koko:v4.4.1-ce   &quot;./entrypoint.sh ./k…&quot;   5 hours ago   Up 5 hours (healthy)   0.0.0.0:2222-&gt;2222/tcp, :::2222-&gt;2222/tcp   jms_koko</span>
+<span class="line">76dda2c4c06c   jumpserver/core:v4.4.1-ce   &quot;./entrypoint.sh sta…&quot;   5 hours ago   Up 5 hours (healthy)   8080/tcp                                    jms_core</span>
+<span class="line">df05a6e1df0e   jumpserver/chen:v4.4.1-ce   &quot;./entrypoint.sh wisp&quot;   5 hours ago   Up 5 hours (healthy)   8082/tcp                                    jms_chen</span>
+<span class="line">099a575dc8a9   redis:7.0-bullseye          &quot;docker-entrypoint.s…&quot;   5 hours ago   Up 5 hours (healthy)   6379/tcp                                    jms_redis</span>
+<span class="line">716f50d4f2f0   jumpserver/web:v4.4.1-ce    &quot;/docker-entrypoint.…&quot;   5 hours ago   Up 5 hours (healthy)   0.0.0.0:80-&gt;80/tcp, :::80-&gt;80/tcp           jms_web</span>
+<span class="line">5afd8a649cc4   jumpserver/lion:v4.4.1-ce   &quot;./entrypoint.sh sup…&quot;   5 hours ago   Up 5 hours (healthy)   4822/tcp, 8081/tcp                          jms_lion</span>
+<span class="line">421b962cb795   postgres:16.3-bullseye      &quot;docker-entrypoint.s…&quot;   5 hours ago   Up 5 hours (healthy)   5432/tcp                                    jms_postgresql</span>
+<span class="line">72521dbb2adc   jumpserver/core:v4.4.1-ce   &quot;./entrypoint.sh sta…&quot;   5 hours ago   Up 5 hours (healthy)   8080/tcp                                    jms_celery</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="浏览器访问" tabindex="-1"><a class="header-anchor" href="#浏览器访问"><span>浏览器访问</span></a></h2><p>http://192.168.1.121:80 访问 jumpserver</p><p>输入用户和默认的密码，username: admin Default password: ChangeMe，提示修改初始密码。</p><p><img src="https://imgoss.xgss.net/picgo/image-20241203164439583.png?aliyun" alt="image-20241203164439583"></p><p>至此离线安装jumpserver安装成功。</p><h1 id="jumpserver-all-in-one安装方法" tabindex="-1"><a class="header-anchor" href="#jumpserver-all-in-one安装方法"><span>JumpServer all-in-one安装方法</span></a></h1><p>这里用容器all-in-one有个好处就是方便，不会破坏宿主机原来的服务（如果是全新机就可以考虑这个问题），但是安装之后有两个BUG。</p><p>一个是nginx的一个报错，“nginx: [emerg] host not found in upstream &quot;facelive&quot; in /etc/nginx/includes/facelive.conf:2”</p><p>一个是需要配置配置文件，“配置文件有问题，无法登录，请联系管理员或查看最新文档，如果你是管理员，可以更新配置文件解决，设置配置项”</p><p>所以不建议没有Docker操作的小白用这个方法。</p><p>至少官方没有修复之前不建议用。</p><h2 id="安装docker" tabindex="-1"><a class="header-anchor" href="#安装docker"><span>安装docker</span></a></h2><p>省略</p><h2 id="quick-start" tabindex="-1"><a class="header-anchor" href="#quick-start"><span>Quick start</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">docker volume create jsdata</span>
+<span class="line">docker volume create pgdata</span>
+<span class="line">docker volume ls</span>
+<span class="line"></span>
+<span class="line">docker run --name jms_all \\</span>
+<span class="line">-e SECRET_KEY=PleaseChangeMe \\</span>
+<span class="line">-e BOOTSTRAP_TOKEN=PleaseChangeMe \\</span>
+<span class="line">-v jsdata:/opt/data \\</span>
+<span class="line">-v pgdata:/var/lib/postgresql \\</span>
+<span class="line">-p 2222:2222 \\</span>
+<span class="line">-p 82:80 jumpserver/jms_all</span>
+<span class="line"></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="报错" tabindex="-1"><a class="header-anchor" href="#报错"><span>报错</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">mv: inter-device move failed: &#39;/opt/jumpserver/data/logs&#39; to &#39;/opt/data/jumpserver/logs&#39;; unable to remove target: Directory not empty</span>
+<span class="line">rm: cannot remove &#39;/var/log/nginx&#39;: Device or resource busy</span>
+<span class="line">&gt;&gt; Init database</span>
+<span class="line">&gt;&gt; Start database postgre</span>
+<span class="line">Removed stale pid file.</span>
+<span class="line"></span>
+<span class="line">/opt/web/entrypoint.sh: Configuration complete; ready for start up</span>
+<span class="line">nginx: [emerg] host not found in upstream &quot;facelive&quot; in /etc/nginx/includes/facelive.conf:2</span>
+<span class="line">2024-12-03 16:55:49,570 INFO exited: web (exit status 1; not expected)</span>
+<span class="line">2024-12-03 16:55:50,571 INFO gave up: web entered FATAL state, too many start retries too quickly</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="https://imgoss.xgss.net/picgo/image-20241203170109111.png?aliyun" alt="image-20241203170109111"></p><h2 id="修复nginx配置bug" tabindex="-1"><a class="header-anchor" href="#修复nginx配置bug"><span>修复nginx配置bug</span></a></h2><p>进入docker</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line"></span>
+<span class="line"># docker exec -it jms_all /bin/bash</span>
+<span class="line"></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>编辑</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">vim /etc/nginx/includes/facelive.conf</span>
+<span class="line">把</span>
+<span class="line">proxy_pass http://facelive:9999;</span>
+<span class="line">改成：</span>
+<span class="line">proxy_pass http://127.0.0.1:9999;</span>
+<span class="line">保存退出，再重启容器</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>重启docker容器</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line">root@415e8fb4b1cd:/opt# exit</span>
+<span class="line">exit</span>
+<span class="line">[root@node121 ~]# docker restart jms_all</span>
+<span class="line"></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="浏览器访问-1" tabindex="-1"><a class="header-anchor" href="#浏览器访问-1"><span>浏览器访问</span></a></h2><p>输入用户和默认的密码，username: admin Default password: ChangeMe</p><p>依然报错：</p><p>配置文件有问题，无法登录，请联系管理员或查看最新文档 如果你是管理员，可以更新配置文件解决，设置配置项 DOMAINS=192.168.1.121:82</p><p><img src="https://imgoss.xgss.net/picgo/image-20241203171218906.png?aliyun" alt="image-20241203171218906"></p><h2 id="修复bug" tabindex="-1"><a class="header-anchor" href="#修复bug"><span>修复bug</span></a></h2><p>修复： 配置文件有问题，无法登录，请联系管理员或查看最新文档，如果你是管理员，可以更新配置文件解决，设置配置项</p><p>在网上找到的解决办法，这个方法不管用。</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line"># docker exec -it jms_all /bin/bash</span>
+<span class="line"></span>
+<span class="line">1.服务器上找到  </span>
+<span class="line">mkdir /opt/jumpserver/config/</span>
+<span class="line">vim /opt/jumpserver/config/config.txt</span>
+<span class="line"></span>
+<span class="line">2.vi进去，找到这里，如何找。可以进入冒号模式：/DOMAINS,来进行查找。</span>
+<span class="line"></span>
+<span class="line">DOMAINS=&quot;192.168.1.121:82&quot;</span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这个方法可以修复</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code class="language-text"><span class="line"># docker exec -it jms_all /bin/bash</span>
+<span class="line"></span>
+<span class="line">vim /opt/jumpserver/apps/jumpserver/conf.py</span>
+<span class="line">找到 &#39;DOMAINS&#39;: &#39;&#39;, 这一行。</span>
+<span class="line">把改为：</span>
+<span class="line">&#39;DOMAINS&#39;: &#39;192.168.1.121:82&#39;, # 这里换成你的地址。</span>
+<span class="line">保存退出</span>
+<span class="line">再重启容器</span>
+<span class="line">exit</span>
+<span class="line">docker restart jms_all</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>至此all-in-one安装方法可以成功登录jumpserver。</p><p>系统内存占用到2G。</p><p>参考： https://github.com/jumpserver/Dockerfile/tree/master/allinone</p><h1 id="结尾" tabindex="-1"><a class="header-anchor" href="#结尾"><span>结尾</span></a></h1><p>JumpServer 的安装（离线安装）和配置并不复杂，但却能显著提升企业的运维安全性和操作规范化程度。通过合理的权限划分和全面的审计功能，</p><p>下一篇文章星哥会讲如何使用JumpServer堡垒机，保护你的服务器的安全。</p>`,82)]))}const d=e(l,[["render",r]]),c=JSON.parse('{"path":"/safe/jumpserver01.html","title":"【开源安全保护】如何安装JumpServer堡垒机","lang":"en-US","frontmatter":{},"git":{"updatedTime":1749111496000,"contributors":[{"name":"star","username":"star","email":"star@xgss.net","commits":1,"url":"https://github.com/star"}],"changelog":[{"hash":"f42710dc7c9262f92ca07eb1bfb1c7d35be48fda","time":1749111496000,"email":"star@xgss.net","author":"star","message":"deploy.sh-vuepressV2脚本自动提交"}]},"filePathRelative":"safe/jumpserver01.md"}');export{d as comp,c as data};
