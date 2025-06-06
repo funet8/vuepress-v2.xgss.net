@@ -421,3 +421,13 @@ https://funet8.github.io/vuepress-v2.xgss.net/
 
 ![image-20250606094350107](https://imgoss.xgss.net/picgo2025/image-20250606094350107.png?aliyun)
 
+再次修改
+
+```
+docs\.vuepress\config.js
+里面的配置
+base: '/vuepress-v2.xgss.net/', // 部署到github相关的配置
+```
+
+
+
