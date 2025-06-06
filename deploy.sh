@@ -30,8 +30,15 @@ git push -f git@github.com:funet8/vuepress-v2.xgss.net.git main
 # git push origin vuepress
 ## 切换分支
 # git checkout master
+
+
 ## VuePress基本命令
 # yarn init 或者 npm init
 # yarn add -D vuepress 或者 npm install -D vuepress
 # yarn docs:dev 或者 npm run docs:dev
 
+#启动开发服务器
+#pnpm docs:dev
+
+#构建网站：
+#pnpm docs:build

@@ -109,23 +109,23 @@ export default defineUserConfig({
 		lineNumbers: true // 代码块是否显示行号
 	},
 	plugins: [
-    searchPlugin({
-      // 插件选项
-      // 可以配置的选项包括：
-      maxSuggestions: 30, // 最多显示多少条搜索结果
-      // isSearchable: (page) => page.path !== '/', // 排除特定页面
-      hotKeys: ['s', '/'], // 激活搜索框的快捷键
-      // locales: { // 多语言支持
-      //   '/': {
-      //     placeholder: '搜索',
-      //   },
-      //   '/en/': {
-      //     placeholder: 'Search',
-      //   },
-      // },
-      // get.Display.Text: (page) => { /* 自定义搜索结果显示文本 */ },
-      // search: (query, pages) => { /* 自定义搜索逻辑 */ },
-    }),
+		searchPlugin({
+		  // 插件选项
+		  // 可以配置的选项包括：
+		  maxSuggestions: 30, // 最多显示多少条搜索结果
+		  // isSearchable: (page) => page.path !== '/', // 排除特定页面
+		  hotKeys: ['s', '/'], // 激活搜索框的快捷键
+		  // locales: { // 多语言支持
+		  //   '/': {
+		  //     placeholder: '搜索',
+		  //   },
+		  //   '/en/': {
+		  //     placeholder: 'Search',
+		  //   },
+		  // },
+		  // get.Display.Text: (page) => { /* 自定义搜索结果显示文本 */ },
+		  // search: (query, pages) => { /* 自定义搜索逻辑 */ },
+		}),
   ],
 	
 })

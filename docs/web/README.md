@@ -28,6 +28,8 @@
 
 ## [重装系统之后VuePress出现问题.md](Vuepress-重装系统之后VuePress出现问题.md)
 
+## [使用VuePress2.X构建个人知识博客-并且用个人域名部署到GitHub-Pages中](使用VuePress2.X构建个人知识博客-并且用个人域名部署到GitHub-Pages中.md)
+
 
 
 # 企业邮箱
