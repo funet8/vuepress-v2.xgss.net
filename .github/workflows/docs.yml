@@ -34,6 +34,10 @@ jobs:
       # 运行构建脚本
       - name: 构建 VuePress 站点
         run: pnpm docs:build
+        
+      - name: Add CNAME file # 步骤5: 添加 CNAME 文件
+        run: echo 'vuepress-v2.xgss.net' > docs/.vuepress/dist/CNAME
+
 
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
