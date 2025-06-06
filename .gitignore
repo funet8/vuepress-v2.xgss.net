@@ -11,4 +11,3 @@ docs/.vuepress/.temp
 *.log
 .env
 .DS_Store
-

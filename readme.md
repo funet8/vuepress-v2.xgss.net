@@ -407,5 +407,17 @@ $ pnpm install
 
 保存。
 
+## 提交成功
 
+![image-20250606094256875](https://imgoss.xgss.net/picgo2025/image-20250606094256875.png?aliyun)
+
+但是当我访问页面的时候
+
+```
+https://funet8.github.io/vuepress-v2.xgss.net/
+```
+
+无尽的404让人头疼
+
+![image-20250606094350107](https://imgoss.xgss.net/picgo2025/image-20250606094350107.png?aliyun)
 
