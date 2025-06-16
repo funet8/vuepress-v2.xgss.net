@@ -69,3 +69,10 @@ https://cloud.tencent.com/developer/article/2516978
 
 
 ## [中国人自己的Cursor？腾讯CodeBuddy让人人都能成为程序员](8.中国人自己的Cursor？腾讯CodeBuddy让人人都能成为程序员.md)
+
+
+
+
+
+## 试用腾讯云新产品-轻量对象存储(])
+

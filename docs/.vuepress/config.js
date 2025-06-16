@@ -33,32 +33,38 @@ export default defineUserConfig({
 	  { text: '服务器安全', link: '/safe/' },
 	  { text: '常用软件', link: '/software/' },
 	  { text: '互联网福利', link: '/internet/' },
-	  { text: '调试Debug', link: '/debug/' }
+	  { text: '调试Debug', link: '/debug/' },
+	  // 替换为你的 GitHub 仓库地址
+	  { text: 'GitHub', link: 'https://github.com/funet8/vuepress-v2.xgss.net.git'},
     ],
 	// 侧边栏
 	sidebar: [
 		{ text: '首页',link: '/README.md', },
 		{ text: 'ChatGPT',
 			collapsible: true,
-			link: '/chatgpt/',
 				children: [
 					{ text: 'ChatGPT', link: '/chatgpt/',},
 					{ text: 'ChatGPT2025',link: '/chatgpt2025/',},
 				],
 		},
+		{ text: '开源',
+			collapsible: true,
+				children: [
+					{ text: '开源软件', link: '/kaiyuan/Open-Source-Software/',},
+					{ text: '开源2025',link: '/kaiyuan2025/',},
+				],
+		},
 		{ text: '基础知识',link: '/linux-basis/', },
-		{ text: 'Git服务',link: '/git/', },
-		{ text: '网络安全',link: '/safe/', },
-		{ text: '开源软件',link: '/kaiyuan/Open-Source-Software/', },
-		{ text: '开源2025',link: '/kaiyuan2025/', },
 		{ text: '互联网2025', link: '/internet2025/' },
+		{ text: 'NAS',link: '/NAS/', },
+		{ text: 'Rocky-Linux',link: '/Rocky-Linux/', },
+		{ text: '网络安全',link: '/safe/', },
 		{ text: 'MySQL',link: '/mysql/', },
 		{ text: 'Nginx',link: '/nginx/', },
 		{ text: 'Shell',link: '/shell/', },
 		{ text: 'Ubuntu',link: '/Ubuntu/', },
 		{ text: '硬件',link: '/hardware/', },
-		{ text: 'NAS',link: '/NAS/', },
-		
+		{ text: 'Git',link: '/git/', },
 		//隐藏左侧导航
 		/**
 		{ text: '基础知识',

@@ -1,4 +1,4 @@
-# 使用VuePress2.X构建个人知识博客，并且用个人域名部署到GitHub Pages中。
+# 使用VuePress2.X构建个人知识博客，并且用个人域名部署到GitHub Pages中
 
 ## 什么是VuePress
 
@@ -20,7 +20,7 @@ https://vuepress.vuejs.org/zh/
 
 环境： window10
 
-最好有自己的域名，星哥这里使用的事vuepress-v2.xgss.net
+最好有自己的域名，星哥这里使用的是vuepress-v2.xgss.net
 
 软件安装：nodejs和git
 
