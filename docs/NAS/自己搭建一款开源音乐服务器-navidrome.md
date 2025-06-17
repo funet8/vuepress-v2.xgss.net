@@ -1,3 +1,8 @@
+---
+title: 自己搭建一款开源音乐服务器-navidrome
+createTime: 2025/05/27 17:51:17
+permalink: /article/arotx54k/
+---
 # 自建一款开源音乐服务-Navidrome
 
 

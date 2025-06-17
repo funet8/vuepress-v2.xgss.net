@@ -1,3 +1,8 @@
+---
+title: 群晖NAS基础设置
+createTime: 2025/05/27 17:51:17
+permalink: /article/h32607h8/
+---
 # 群晖NAS基础设置
 
 最近一直在玩群晖NAS系统，有一些基础的配置跟大家分享一下

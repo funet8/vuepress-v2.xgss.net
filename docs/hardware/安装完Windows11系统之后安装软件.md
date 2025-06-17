@@ -1,3 +1,8 @@
+---
+title: 安装完Windows11系统之后安装软件
+createTime: 2025/05/27 17:51:17
+permalink: /article/uryepgb0/
+---
 # 我安装完Windows11系统之后的操作
 
 

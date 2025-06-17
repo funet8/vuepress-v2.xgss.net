@@ -1,3 +1,8 @@
+---
+title: 使用iptables来实现SNAT转发，可以让无公网IP的服务器与公网通信
+createTime: 2025/05/27 17:51:17
+permalink: /article/twlgwye5/
+---
 # linux服务器局域网通过一台iptables计算机桥接上网
 
 

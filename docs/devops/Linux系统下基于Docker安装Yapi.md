@@ -1,3 +1,8 @@
+---
+title: Linux系统下基于Docker安装Yapi
+createTime: 2025/05/27 17:51:17
+permalink: /article/1cra0s24/
+---
 # 两种方法教你如何在Linux系统中安装Yapi
 
 

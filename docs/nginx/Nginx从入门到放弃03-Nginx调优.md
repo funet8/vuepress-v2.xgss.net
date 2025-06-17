@@ -1,3 +1,8 @@
+---
+title: Nginx从入门到放弃03-Nginx调优
+createTime: 2025/05/27 17:51:17
+permalink: /article/j413zzfc/
+---
 # Nginx从入门到放弃03-Nginx调优
 
 ## 一、调优的必要性

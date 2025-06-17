@@ -1,3 +1,8 @@
+---
+title: gitbook中使用百度统计查看页面访问情况
+createTime: 2025/05/27 17:51:18
+permalink: /article/mvzqe8ut/
+---
 # gitbook中使用百度统计查看页面访问情况
 
 

@@ -1,3 +1,8 @@
+---
+title: Ubuntu安装CasaOS系统
+createTime: 2025/05/27 17:51:17
+permalink: /article/ui70zwge/
+---
 # Ubuntu安装CasaOS系统
 
 

@@ -1,3 +1,8 @@
+---
+title: 基于Linux安装私有化部署SVN代码仓库
+createTime: 2025/05/27 17:51:17
+permalink: /article/4y2srik7/
+---
 # 基于Linux安装私有化部署SVN代码仓库
 
 

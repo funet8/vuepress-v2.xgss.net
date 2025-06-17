@@ -1,3 +1,8 @@
+---
+title: Mini小主机All-in-one搭建教程3-安装群晖NAS系统
+createTime: 2025/05/27 17:51:17
+permalink: /article/avj3tktv/
+---
 # Mini小主机All-in-one搭建教程3-安装群晖NAS系统
 
 

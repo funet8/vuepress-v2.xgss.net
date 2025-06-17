@@ -1,3 +1,8 @@
+---
+title: Linux-paicha
+createTime: 2025/05/27 17:51:17
+permalink: /article/16kqhbmj/
+---
 # Linux服务器故障排查基本方案
 
 # 服务器架构

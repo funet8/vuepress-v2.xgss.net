@@ -1,3 +1,8 @@
+---
+title: Nginx从入门到放弃06-Nginx的N种特别实用示例
+createTime: 2025/05/27 17:51:17
+permalink: /article/1xkithk0/
+---
 # Nginx从入门到放弃06-Nginx的N种特别实用示例
 
 从前面的几篇教程里面我们知道了nginx的安装和调优、负载均衡、反向代理等，这篇文档我们来介绍Nginx的N种特别实用示例

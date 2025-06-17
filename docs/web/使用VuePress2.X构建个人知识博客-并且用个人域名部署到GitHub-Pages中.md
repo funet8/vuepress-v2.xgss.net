@@ -1,12 +1,17 @@
+---
+title: 使用VuePress2.X构建个人知识博客-并且用个人域名部署到GitHub-Pages中
+createTime: 2025/06/05 09:22:17
+permalink: /article/xr9wpdm4/
+---
 # 使用VuePress2.X构建个人知识博客，并且用个人域名部署到GitHub Pages中
 
 ## 什么是VuePress
 
-VuePress 是一个以 Markdown 为中心的静态网站生成器。你可以使用 Markdown 来书写内容（如文档、博客等），然后 VuePress 会帮助你生成一个静态网站来展示它们。VuePress 诞生的初衷是为了支持 Vue.js 及其子项目的文档需求，但是现在它已经在帮助大量用户构建他们的文档、博客和其他静态网站。官网：
+VuePress 是一个以 Markdown 为中心的静态网站生成器。你可以使用 Markdown 来书写内容（如文档、博客等），然后 VuePress 会帮助你生成一个静态网站来展示它们。VuePress 诞生的初衷是为了支持 Vue.js 及其子项目的文档需求，但是现在它已经在帮助大量用户构建他们的文档、博客和其他静态网站。官网：[https://vuepress.vuejs.org/zh/](https://vuepress.vuejs.org/zh/)
 
-```
-https://vuepress.vuejs.org/zh/
-```
+
+
+
 
 ## VuePress1.X和VuePress2.X区别
 
@@ -182,8 +187,6 @@ yarn docs:build
 yarn list vuepress
 ```
 
-
-
 # vuepress主题（报错）
 
 更换主题，一直报错就决定不换主题了，使用默认主题了！
@@ -216,6 +219,70 @@ export default defineUserConfig({
   // ...
 })
 ```
+
+# 2025-06-17更新
+
+## VuePress2.X 如何更换主题
+
+### 1.安装新主题
+
+```
+pnpm add -D vuepress-theme-hope
+```
+
+![img](https://imgoss.xgss.net/picgo-tx2025/QQ_1750126197415.png?tx)
+
+### 2.更改配置
+
+修改配置文件
+
+```
+修改配置文件 .vuepress/config.ts
+更换 theme 配置，并使用对应主题的配置方法：
+
+把 import { defaultTheme } from '@vuepress/theme-default' 这个注释掉
+添加： 
+import { hopeTheme } from "vuepress-theme-hope"
+
+export default {
+  title: "我的文档",
+  description: "这是我的 VuePress2.X 站点",
+  theme: hopeTheme({   
+    logo: "/logo.png",
+    navbar: [/* 导航栏配置 */],
+    sidebar: [/* 侧边栏配置 */],
+    // 主题特有配置
+  }),
+}
+
+
+```
+
+报错：
+
+```
+error ReferenceError: defaultTheme is not defined
+    at file:///G:/STAR%E5%AD%A6%E4%B9%A0/vuepress-v2.xgss.net/docs/.vuepress/con
+fig.js.342ad1b4.mjs:8:10
+ ELIFECYCLE  Command failed with exit code 1.
+
+```
+
+更改：
+
+```
+把旧的配置： theme: defaultTheme({ 
+
+改成： theme: hopeTheme({    
+```
+
+成功：
+
+查看主题
+
+![img](https://imgoss.xgss.net/picgo-tx2025/QQ_1750127287427.png?tx)
+
+
 
 # VuePress配置搜索
 

@@ -1,3 +1,8 @@
+---
+title: IP、子网掩码、DNS、服务器、端口是什么
+createTime: 2025/05/27 17:51:17
+permalink: /article/en057x1r/
+---
 # IP、子网掩码、DNS、服务器、端口是什么
 
 

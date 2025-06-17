@@ -1,12 +1,19 @@
 import { viteBundler } from '@vuepress/bundler-vite'
-import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
-import { searchPlugin } from '@vuepress/plugin-search'
+
+//默认主题
+//import { defaultTheme } from '@vuepress/theme-default'
+
+//theme-hope主题
+import { hopeTheme } from 'vuepress-theme-hope'
+
+//默认主题的搜索插件
+//import { searchPlugin } from '@vuepress/plugin-search'
 
 
 export default defineUserConfig({
   bundler: viteBundler(),
-    theme: defaultTheme({
+    theme: hopeTheme({
     // 导航栏，注意， NavbarGroup嵌套最多两层
     navbar: [
       { text: '首页', link: '/' },
@@ -107,31 +114,12 @@ export default defineUserConfig({
     ['meta', { 'http-quiv': 'pragma', cotent: 'no-cache,must-revalidate'}],
     ['meta', { 'http-quiv': 'expires', cotent: '0'}]
   ],
-	host: 'localhost', // 只能使用http://localhost:8099 , 可以指定ip
+	host: 'localhost', // 只能使用 http://localhost:8099 , 可以指定ip
 	port: '8099', //端口号
 	serviceWorker: true, // 是否开启 PWA
 	//base: '/vuepress-v2.xgss.net/', // 部署到github相关的配置
 	markdown: {
 		lineNumbers: true // 代码块是否显示行号
 	},
-	plugins: [
-		searchPlugin({
-		  // 插件选项
-		  // 可以配置的选项包括：
-		  maxSuggestions: 30, // 最多显示多少条搜索结果
-		  // isSearchable: (page) => page.path !== '/', // 排除特定页面
-		  hotKeys: ['s', '/'], // 激活搜索框的快捷键
-		  // locales: { // 多语言支持
-		  //   '/': {
-		  //     placeholder: '搜索',
-		  //   },
-		  //   '/en/': {
-		  //     placeholder: 'Search',
-		  //   },
-		  // },
-		  // get.Display.Text: (page) => { /* 自定义搜索结果显示文本 */ },
-		  // search: (query, pages) => { /* 自定义搜索逻辑 */ },
-		}),
-  ],
 	
 })

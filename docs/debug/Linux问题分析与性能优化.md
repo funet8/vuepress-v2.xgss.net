@@ -1,3 +1,8 @@
+---
+title: Linux问题分析与性能优化
+createTime: 2025/05/27 17:51:17
+permalink: /article/savv3jy1/
+---
 # Linux问题分析与性能优化
 
 # 排查顺序

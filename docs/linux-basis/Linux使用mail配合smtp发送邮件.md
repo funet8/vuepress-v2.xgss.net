@@ -1,3 +1,8 @@
+---
+title: Linux使用mail配合smtp发送邮件
+createTime: 2025/05/27 17:51:17
+permalink: /article/zdawdrcz/
+---
 # Linux使用mail配合smtp发送邮件
 
 由于工作需要结合shell脚本需要发送邮件通知，linux自带的mail可以实现外部smtp发邮件。不需要本地配置postfix，sendmail邮件服务器。

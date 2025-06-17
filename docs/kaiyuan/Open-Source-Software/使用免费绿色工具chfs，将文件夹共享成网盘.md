@@ -1,3 +1,8 @@
+---
+title: 使用免费绿色工具chfs，将文件夹共享成网盘
+createTime: 2025/05/27 17:51:17
+permalink: /article/8g8z6pl0/
+---
 # 使用免费绿色工具chfs，将文件夹共享成网盘
 
 需求：

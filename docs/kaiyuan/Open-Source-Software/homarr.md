@@ -1,3 +1,8 @@
+---
+title: homarr
+createTime: 2025/05/27 17:51:17
+permalink: /article/rzq5m47t/
+---
 # 超简单的个人精美导航网站搭建-Homarr
 
 

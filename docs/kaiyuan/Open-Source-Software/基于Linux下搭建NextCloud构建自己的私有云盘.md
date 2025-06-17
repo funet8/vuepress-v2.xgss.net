@@ -1,3 +1,8 @@
+---
+title: 基于Linux下搭建NextCloud构建自己的私有云盘
+createTime: 2025/05/27 17:51:17
+permalink: /article/fkaq42ee/
+---
 # 基于Linux下搭建NextCloud构建自己的私有网盘
 
 ## NextCloud是什么

@@ -1,3 +1,8 @@
+---
+title: CentOS-7-Install
+createTime: 2025/05/27 17:51:17
+permalink: /article/magocaef/
+---
 # VMware Workstation 中安装 CentOS7 详细版
 
 ## 概括

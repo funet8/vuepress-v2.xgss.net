@@ -1,3 +1,8 @@
+---
+title: Github-Page-my-domain
+createTime: 2025/05/27 17:51:18
+permalink: /article/oroap40n/
+---
 # Github Page怎么绑定自己的域名
 
 ## 前提

@@ -1,3 +1,8 @@
+---
+title: Docker系列教程5-使用dockerfile基本语法
+createTime: 2025/05/27 17:51:17
+permalink: /article/p123jmer/
+---
 # 使用dockerfile创建镜像
 
 文本格式的配置文件，用户可以使用它快速创建自定义的镜像。

@@ -1,3 +1,8 @@
+---
+title: 一文学会curl
+createTime: 2025/05/27 17:51:17
+permalink: /article/djl90e0e/
+---
 # 一文学会curl和curl详解
 
 # 什么是curl

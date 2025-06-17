@@ -1,3 +1,8 @@
+---
+title: Linux基于Docker部署开源OnlyOffice
+createTime: 2025/05/27 17:51:17
+permalink: /article/ugp6tfza/
+---
 # Linux基于Docker部署开源OnlyOffice
 
 ## 什么是OnlyOffice

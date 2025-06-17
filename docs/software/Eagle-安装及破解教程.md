@@ -1,3 +1,8 @@
+---
+title: Eagle-安装及破解教程
+createTime: 2025/05/27 17:51:17
+permalink: /article/xo0hs2t9/
+---
 # Eagle-安装及破解教程
 
 https://www.downkuai.com/soft/120638.html

@@ -1,3 +1,8 @@
+---
+title: 基于Linux安装私有化部署GitLab
+createTime: 2025/05/27 17:51:17
+permalink: /article/ry011po3/
+---
 # 再见Github和码云！基于Linux安装私有化部署GitLab代码仓库
 
 

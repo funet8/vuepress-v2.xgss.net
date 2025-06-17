@@ -1,3 +1,8 @@
+---
+title: cdn
+createTime: 2025/05/27 17:51:17
+permalink: /article/coy8gwiu/
+---
 # 一文读懂CDN和CDN实现的原理
 
 # 什么是CDN

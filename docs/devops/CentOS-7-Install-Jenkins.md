@@ -1,3 +1,8 @@
+---
+title: CentOS-7-Install-Jenkins
+createTime: 2025/05/27 17:51:17
+permalink: /article/hyj625gx/
+---
 # 2.安卓项目APK自动打包流程-安装jenkins
 
 ## Jenkins 简介

@@ -1,3 +1,8 @@
+---
+title: Nginx从入门到放弃02-Nginx基本命令和操作
+createTime: 2025/05/27 17:51:17
+permalink: /article/831dxp2a/
+---
 # Nginx从入门到放弃02-Nginx基本命令和新建WEB站点
 
 通过上一篇文章我们知道了的一些基础知识还有在centos7上安装nginx，yum源或者通过编译，但是通过两种方式安装后的nginx的目录结构略有不同，默认提供的资源与配置略有不同，我们暂且先以编译安装的方式进行介绍。

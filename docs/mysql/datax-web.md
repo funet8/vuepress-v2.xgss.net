@@ -1,3 +1,8 @@
+---
+title: datax-web
+createTime: 2025/05/27 17:51:17
+permalink: /article/j98cmeh9/
+---
 # 开源DataX集成可视化项目Datax-Web的安装
 
 # 关于datax-web项目

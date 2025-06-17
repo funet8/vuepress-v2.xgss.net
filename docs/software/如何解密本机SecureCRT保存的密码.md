@@ -1,3 +1,8 @@
+---
+title: 如何解密本机SecureCRT保存的密码
+createTime: 2025/05/27 17:51:17
+permalink: /article/881x9qgj/
+---
 # 如何解密本机SecureCRT保存的密码
 
 今天查看一台服务器的，发现登陆不了，可能是防火墙误操作了，需要去机房操作。

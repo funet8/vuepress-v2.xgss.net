@@ -1,3 +1,8 @@
+---
+title: Linux常用命令及其使用详解
+createTime: 2025/05/27 17:51:17
+permalink: /article/f804jz2d/
+---
 # Linux系统常用命令及其使用详解大全
 
  

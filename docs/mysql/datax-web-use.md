@@ -1,3 +1,8 @@
+---
+title: datax-web-use
+createTime: 2025/05/27 17:51:17
+permalink: /article/rdjktarf/
+---
 # 开源DataX集成可视化项目Datax-Web的使用
 
 上一篇文章我们已经搭建好了 Datax-Web 后台，这篇文章我们具体讲一下如何通过Datax-Web来配置，同步MySQL数据库。

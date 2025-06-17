@@ -1,3 +1,8 @@
+---
+title: 高颜值多平台的第三方网易云音乐播放器-YesPlayMusic
+createTime: 2025/05/27 17:51:17
+permalink: /article/vqozamom/
+---
 #  【免费开源软件】高颜值多平台的第三方网易云音乐播放器-YesPlayMusic
 
 

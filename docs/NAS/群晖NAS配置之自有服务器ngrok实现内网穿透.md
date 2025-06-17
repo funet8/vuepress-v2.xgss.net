@@ -1,3 +1,8 @@
+---
+title: 群晖NAS配置之自有服务器ngrok实现内网穿透
+createTime: 2025/05/27 17:51:17
+permalink: /article/a6gg40u0/
+---
 # 群晖NAS配置之自有服务器ngrok实现内网穿透
 
 # 前言-内网穿透

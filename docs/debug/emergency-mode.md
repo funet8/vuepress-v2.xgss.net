@@ -1,3 +1,8 @@
+---
+title: emergency-mode
+createTime: 2025/05/27 17:51:17
+permalink: /article/s8qo6syc/
+---
 # Linux开机出现welcome to emergency mode! 解决方法after logging in ，type “journalctl -xb” to view system logs
 
 

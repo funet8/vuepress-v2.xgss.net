@@ -1,3 +1,8 @@
+---
+title: Nginx从入门到放弃05-访问日志与日志切割
+createTime: 2025/05/27 17:51:17
+permalink: /article/ianxlt5y/
+---
 # Nginx从入门到放弃05-访问日志与日志切割
 
 

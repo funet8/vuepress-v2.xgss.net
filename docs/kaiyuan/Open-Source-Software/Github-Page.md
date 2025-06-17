@@ -1,3 +1,8 @@
+---
+title: Github-Page
+createTime: 2025/05/27 17:51:17
+permalink: /article/farlszs3/
+---
 # 免费开源Github Page实现短链接方案
 
 以前公司有一个需求，将推广用的长链接转化为短链接，再通过营销短信发送给客户。虽然有很多的第三方短链的生成工具，但为了安全还是自建一个。以前用过开源的YOURLS，是基于PHP的开源方案。 https://github.com/YOURLS/YOURLS 。

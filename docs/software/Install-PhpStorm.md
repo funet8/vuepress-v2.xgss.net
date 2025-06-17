@@ -1,3 +1,8 @@
+---
+title: Install-PhpStorm
+createTime: 2025/05/27 17:51:17
+permalink: /article/bawb2ghv/
+---
 # 一、安装PhpStorm
 官网下载并且安装： https://www.jetbrains.com/zh-cn/phpstorm/
 

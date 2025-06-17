@@ -1,3 +1,8 @@
+---
+title: Windows下VSCode及中文配置
+createTime: 2025/05/27 17:51:17
+permalink: /article/bqnl0563/
+---
 # Windows下VSCode及中文配置
 
 ## 一.什么是vscode

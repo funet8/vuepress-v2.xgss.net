@@ -1,3 +1,8 @@
+---
+title: Web-safe
+createTime: 2025/05/27 17:51:17
+permalink: /article/1eg8wrhb/
+---
 # WEB服务器攻击类型和应对方案
 
 ![web-safe-yingdui](http://imgoss.xgss.net/picgo/web-safe-yingdui.jpg?aliyunoss)

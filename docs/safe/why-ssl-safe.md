@@ -1,3 +1,8 @@
+---
+title: why-ssl-safe
+createTime: 2025/05/27 17:51:17
+permalink: /article/r3069a8t/
+---
 # 为什么说HTTPS是安全的
 
 ## 1. HTTP 协议

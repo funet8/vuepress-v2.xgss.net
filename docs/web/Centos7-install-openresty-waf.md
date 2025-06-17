@@ -1,3 +1,8 @@
+---
+title: Centos7-install-openresty-waf
+createTime: 2025/05/27 17:51:18
+permalink: /article/x1xyuy8s/
+---
 # Centos7安装openresty实现WAF防火墙功能
 
 # OpenResty是什么

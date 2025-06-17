@@ -1,3 +1,8 @@
+---
+title: qinglong_jingdongdou
+createTime: 2025/05/27 17:51:17
+permalink: /article/dsaqbzss/
+---
 # Docker安装青龙面板每天自动获取某东豆
 
 首先说一下获取jing东豆（以下简称豆子）的几种方式，也是基本打卡等软件的方式

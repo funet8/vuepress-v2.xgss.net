@@ -1,3 +1,8 @@
+---
+title: Linux
+createTime: 2025/05/27 17:51:17
+permalink: /article/rpgqa8av/
+---
 # Linux 介绍
 
 

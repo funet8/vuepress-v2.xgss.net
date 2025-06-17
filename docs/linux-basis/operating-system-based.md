@@ -1,3 +1,8 @@
+---
+title: operating-system-based
+createTime: 2025/05/27 17:51:17
+permalink: /article/8fvbfby6/
+---
 # 资深运维工程师必须了解的操作系统基础
 
 ![资深运维工程师必须了解的操作系统基础](http://imgoss.xgss.net/picgo/d13583e9888240d5930bcaae98c1b47d?aliyunoss)

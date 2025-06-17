@@ -1,3 +1,8 @@
+---
+title: 阿里云CDN提高配额和批量预热和批量刷新的方法
+createTime: 2025/05/27 17:51:17
+permalink: /article/tiilysvl/
+---
 # 阿里云CDN提高配额和批量预热和批量刷新的方法
 
 

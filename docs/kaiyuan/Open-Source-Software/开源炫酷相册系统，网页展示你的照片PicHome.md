@@ -1,3 +1,8 @@
+---
+title: 开源炫酷相册系统，网页展示你的照片PicHome
+createTime: 2025/05/27 17:51:17
+permalink: /article/udmixl7r/
+---
 # 开源炫酷相册系统，网页展示你的照片PicHome
 
 ## 欧奥PicHome介绍

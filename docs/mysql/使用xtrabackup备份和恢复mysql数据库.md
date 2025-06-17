@@ -1,3 +1,8 @@
+---
+title: 使用xtrabackup备份和恢复mysql数据库
+createTime: 2025/05/27 17:51:17
+permalink: /article/3fgt2ok7/
+---
 # 使用xtrabackup备份和恢复mysql数据库
 
 ## mysqldump

@@ -1,3 +1,8 @@
+---
+title: Mini小主机All-in-one搭建教程8-安装爱快软路由系统
+createTime: 2025/05/27 17:51:17
+permalink: /article/v0zylc7r/
+---
 # Mini小主机All-in-one搭建教程8-安装爱快软路由系统
 
 

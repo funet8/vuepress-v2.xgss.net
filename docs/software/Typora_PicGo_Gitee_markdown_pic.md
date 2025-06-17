@@ -1,3 +1,8 @@
+---
+title: Typora_PicGo_Gitee_markdown_pic
+createTime: 2025/05/27 17:51:17
+permalink: /article/de5188k6/
+---
 # Typora+PicGo+Gitee或github实现markdown自带图床效果
 
 这里可以选择gitee或者码云，gitee由于众所周知的原因有时候会很慢，无奈选择gitee

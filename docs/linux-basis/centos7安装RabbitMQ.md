@@ -1,3 +1,8 @@
+---
+title: centos7安装RabbitMQ
+createTime: 2025/05/27 17:51:17
+permalink: /article/70gwv38b/
+---
 # Centos7安装RabbitMQ
 
 

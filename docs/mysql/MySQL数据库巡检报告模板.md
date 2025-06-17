@@ -1,3 +1,8 @@
+---
+title: MySQL数据库巡检报告模板
+createTime: 2025/05/27 17:51:17
+permalink: /article/pbns4t40/
+---
 # 如何做一个MySQL的自动巡检脚本
 
 

@@ -1,3 +1,8 @@
+---
+title: Linux安装rsync和inotify实现文件夹实时同步
+createTime: 2025/05/27 17:51:17
+permalink: /article/ht0jpafl/
+---
 # Linux安装rsync和inotify实现文件夹实时同步
 
 

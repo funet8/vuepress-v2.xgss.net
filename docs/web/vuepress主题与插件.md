@@ -1,3 +1,8 @@
+---
+title: vuepress主题与插件
+createTime: 2025/05/27 17:51:18
+permalink: /article/jrs9p24h/
+---
 # vuepress主题与插件
 
 

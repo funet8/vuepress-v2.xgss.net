@@ -1,3 +1,8 @@
+---
+title: Docker部署搭建一个开源强大的图书管理系统
+createTime: 2025/05/27 17:51:17
+permalink: /article/5nx6o2hs/
+---
 # Docker部署搭建一个开源强大的图书管理系统
 
 

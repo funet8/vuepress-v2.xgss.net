@@ -1,3 +1,8 @@
+---
+title: 开源的redis可视化WEB工具phpRedisAdmin
+createTime: 2025/05/27 17:51:17
+permalink: /article/i5bxa99y/
+---
 # 开源的redis可视化WEB工具phpRedisAdmin
 
 

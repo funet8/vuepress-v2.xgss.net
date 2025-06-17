@@ -1,3 +1,8 @@
+---
+title: datax-tongbu-mysql
+createTime: 2025/05/27 17:51:17
+permalink: /article/yr8tzmtf/
+---
 # 阿里巴巴开源DataX全量同步多个MySQL数据库
 
 # 前言

@@ -1,3 +1,8 @@
+---
+title: 把浏览器中写代码，春节也要假期coding
+createTime: 2025/05/27 17:51:17
+permalink: /article/bapzsy5s/
+---
 # 把浏览器中写代码，春节假期也要'愉快'的coding
 
 

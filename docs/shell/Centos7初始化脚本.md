@@ -1,3 +1,8 @@
+---
+title: Centos7初始化脚本
+createTime: 2025/05/27 17:51:17
+permalink: /article/dsycujpa/
+---
 # Centos7初始化脚本
 
 

@@ -1,3 +1,8 @@
+---
+title: CentOS6-and-CentOS7
+createTime: 2025/05/27 17:51:17
+permalink: /article/fctm2i8e/
+---
 # CentOS 6 和 CentOS 7 介绍
 
 ## 总体差异

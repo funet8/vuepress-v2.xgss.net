@@ -1,3 +1,8 @@
+---
+title: Docker系列教程6-使用dockerfile创建镜像
+createTime: 2025/05/27 17:51:17
+permalink: /article/t6xf1tqc/
+---
 # 使用dockerfile创建镜像
 
 ## 1.克隆 dockerfile

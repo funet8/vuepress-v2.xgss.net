@@ -1,3 +1,8 @@
+---
+title: Linux中使用rsync数据备份工具和实例
+createTime: 2025/05/27 17:51:17
+permalink: /article/bxq96uhz/
+---
 # Linux中使用rsync数据备份工具和实例
 
 对于运维不得不得做的就是备份，增量备份与全量备份，通过rsync工具可以快速做到远程备份。

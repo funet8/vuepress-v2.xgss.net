@@ -1,3 +1,8 @@
+---
+title: programmer_position_skills
+createTime: 2025/05/27 17:51:17
+permalink: /article/viy5x4zo/
+---
 # 互联网程序员各个职位技能图
 
 

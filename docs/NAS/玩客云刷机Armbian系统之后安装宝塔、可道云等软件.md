@@ -1,3 +1,8 @@
+---
+title: 玩客云刷机Armbian系统之后安装宝塔、可道云等软件
+createTime: 2025/05/27 17:51:17
+permalink: /article/xgcfcw1u/
+---
 # 玩客云刷机Armbian系统之后安装宝塔、可道云等软件
 
 

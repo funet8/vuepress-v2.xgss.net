@@ -1,3 +1,8 @@
+---
+title: Ubuntu系统使用指南
+createTime: 2025/05/27 17:51:17
+permalink: /article/q8t57ufh/
+---
 # Ubuntu系统使用指南
 
 > **记录 Ubuntu21.04 升级到 Ubuntu22.04 的过程以及相关设置纪要**

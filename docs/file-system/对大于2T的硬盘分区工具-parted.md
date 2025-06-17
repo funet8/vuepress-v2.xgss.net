@@ -1,3 +1,8 @@
+---
+title: 对大于2T的硬盘分区工具-parted
+createTime: 2025/05/27 17:51:17
+permalink: /article/5gvrs2ut/
+---
 # Linux对大于2T的硬盘分区工具-parted
 
 

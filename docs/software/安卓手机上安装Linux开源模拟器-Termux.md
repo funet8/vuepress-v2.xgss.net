@@ -1,3 +1,8 @@
+---
+title: 安卓手机上安装Linux开源模拟器-Termux
+createTime: 2025/05/27 17:51:17
+permalink: /article/y2vt75s9/
+---
 # 安卓手机上安装Linux开源模拟器-Termux
 
 ## 什么是Termux

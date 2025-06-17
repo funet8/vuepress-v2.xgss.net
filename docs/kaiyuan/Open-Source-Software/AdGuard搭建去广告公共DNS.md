@@ -1,3 +1,8 @@
+---
+title: AdGuard搭建去广告公共DNS
+createTime: 2025/05/27 17:51:17
+permalink: /article/835kyvrg/
+---
 # AdGuard搭建去广告公共DNS
 
 

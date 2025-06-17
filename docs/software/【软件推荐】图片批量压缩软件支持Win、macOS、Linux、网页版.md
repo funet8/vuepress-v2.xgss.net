@@ -1,3 +1,8 @@
+---
+title: 【软件推荐】图片批量压缩软件支持Win、macOS、Linux、网页版
+createTime: 2025/05/27 17:51:17
+permalink: /article/brbpdplm/
+---
 # 【软件推荐】图片免费批量压缩软件支持Win、macOS、Linux、网页版
 
 

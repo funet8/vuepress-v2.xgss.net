@@ -1,3 +1,8 @@
+---
+title: 通过acme.sh开源工具申请泛解析SSL证书
+createTime: 2025/05/27 17:51:17
+permalink: /article/eojqq2qk/
+---
 # 通过acme.sh开源工具申请泛解析SSL证书
 
 # 前期准备

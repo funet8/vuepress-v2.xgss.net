@@ -1,3 +1,8 @@
+---
+title: 负载均衡和CDN技术
+createTime: 2025/05/27 17:51:17
+permalink: /article/7hstc3ot/
+---
 #  负载均衡和CDN技术
 
 曾经见到知乎上有人问“为什么像facebook这类的网站需要上千个工程师维护？”

@@ -1,3 +1,8 @@
+---
+title: vi和vim基本教程
+createTime: 2025/05/27 17:51:17
+permalink: /article/mvwlmgxc/
+---
 # 学好vim一篇就够了-vi和vim的使用教程
 
 

@@ -1,3 +1,8 @@
+---
+title: 永久免费的节点！免费解锁Netflix、ChatGPT！通过Cloudflare Worker、Pages部署免费的VLESS节点！
+createTime: 2025/05/27 17:51:18
+permalink: /article/r106fj9l/
+---
 # 【转载】永久免费的节点！免费解锁Netflix、ChatGPT！通过Cloudflare Worker、Pages部署免费的VLESS节点！
 
 永久免费的节点！通过Cloudflare Worker、Pages部署免费的VLESS！

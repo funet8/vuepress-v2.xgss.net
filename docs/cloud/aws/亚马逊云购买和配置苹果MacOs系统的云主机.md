@@ -1,3 +1,8 @@
+---
+title: 亚马逊云购买和配置苹果MacOs系统的云主机
+createTime: 2025/05/27 17:51:17
+permalink: /article/7dg12sgl/
+---
 # 亚马逊云购买和配置苹果MacOs系统的云主机
 
 

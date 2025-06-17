@@ -1,3 +1,8 @@
+---
+title: 开源免费软件一键瘦身你的Windows系统-Win11Debloat
+createTime: 2025/05/27 17:51:17
+permalink: /article/e6eu63ba/
+---
 # 开源免费软件一键瘦身你的Windows系统-Win11Debloat
 
 

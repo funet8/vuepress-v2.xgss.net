@@ -1,3 +1,8 @@
+---
+title: Docker部署开源私有云相册photoprism
+createTime: 2025/05/27 17:51:17
+permalink: /article/e14a0wtq/
+---
 # Docker部署开源私有云相册，给你的照片一个家
 
 

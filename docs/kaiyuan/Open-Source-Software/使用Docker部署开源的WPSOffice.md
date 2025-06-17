@@ -1,3 +1,8 @@
+---
+title: 使用Docker部署开源的WPSOffice
+createTime: 2025/05/27 17:51:17
+permalink: /article/3lm836as/
+---
 # 使用Docker部署开源的WPS-Office
 
 

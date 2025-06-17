@@ -1,3 +1,8 @@
+---
+title: vuepress-theme-vdoing
+createTime: 2025/05/27 17:51:18
+permalink: /article/z4xrrrl6/
+---
 # 使用 vuepress-theme-vdoing 搭建知识管理博客主题
 
 

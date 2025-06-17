@@ -1,3 +1,8 @@
+---
+title: 使用Docker搭建自己的DNS服务器
+createTime: 2025/05/27 17:51:17
+permalink: /article/dyw34ryk/
+---
 # 使用Docker搭建自己的DNS服务器
 
 

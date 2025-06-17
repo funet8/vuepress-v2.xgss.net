@@ -1,3 +1,8 @@
+---
+title: Centos7搭建开源高颜值的IT资产管理平台chemex
+createTime: 2025/05/27 17:51:17
+permalink: /article/jipxbgzz/
+---
 # Centos7搭建开源高颜值的IT资产管理平台chemex
 
 

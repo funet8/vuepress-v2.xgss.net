@@ -1,3 +1,8 @@
+---
+title: OwnCloud
+createTime: 2025/05/27 17:51:17
+permalink: /article/0q9gfw32/
+---
 # OwnCloud搭建自己的私有云盘
 
 # OwnCloud 是什么

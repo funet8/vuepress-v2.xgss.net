@@ -1,3 +1,8 @@
+---
+title: Mini小主机All-in-one搭建教程1-安装Esxi7.0虚拟机系统
+createTime: 2025/05/27 17:51:17
+permalink: /article/mrw6l4ct/
+---
 # Mini小主机All-in-one搭建教程1-安装Esxi7.0虚拟机系统
 
 

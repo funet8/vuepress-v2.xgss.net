@@ -1,3 +1,8 @@
+---
+title: Linux为什么值得学习
+createTime: 2025/05/27 17:51:17
+permalink: /article/y8bvc6zo/
+---
 # Linux为什么值得学习
 
 您可能会考虑是否值得学习 Linux，因为它在桌面上远没有 macOS 或 Windows 那么受欢迎。有很多值得学习 Linux 的原因，下面是其中的一些。

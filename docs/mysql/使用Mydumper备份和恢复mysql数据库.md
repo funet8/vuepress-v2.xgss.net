@@ -1,3 +1,8 @@
+---
+title: 使用Mydumper备份和恢复mysql数据库
+createTime: 2025/05/27 17:51:17
+permalink: /article/b8nhzzpv/
+---
 # 使用Mydumper备份和恢复mysql数据库
 
 

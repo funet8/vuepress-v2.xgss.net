@@ -1,3 +1,8 @@
+---
+title: Linux搭建开源企业邮箱系统EwoMail
+createTime: 2025/05/27 17:51:17
+permalink: /article/skon65nw/
+---
 # Linux搭建开源企业邮箱系统EwoMail
 
 

@@ -1,3 +1,8 @@
+---
+title: httpd无法启动报错No-space-left-on-device
+createTime: 2025/05/27 17:51:17
+permalink: /article/ttrfhxwa/
+---
 # httpd无法启动，报错No space left on device
 
 今天有一个项目nginx报504，查到有一台云服务器重启报错，怎么也提不起来。

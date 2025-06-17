@@ -1,3 +1,8 @@
+---
+title: Mini小主机All-in-one搭建教程2-安装Openwrt软路由系统
+createTime: 2025/05/27 17:51:17
+permalink: /article/ggc3j9bn/
+---
 # Mini小主机All-in-one搭建教程2-安装Openwrt软路由系统
 
 

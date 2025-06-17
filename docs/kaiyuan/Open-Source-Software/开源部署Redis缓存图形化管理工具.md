@@ -1,3 +1,8 @@
+---
+title: 开源部署Redis缓存图形化管理工具
+createTime: 2025/05/27 17:51:17
+permalink: /article/zq36h2qn/
+---
 # 开源部署Redis缓存图形化管理工具
 
 

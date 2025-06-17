@@ -1,3 +1,8 @@
+---
+title: 一分钟了解HTTP和HTTPS
+createTime: 2025/05/27 17:51:17
+permalink: /article/e5sasswt/
+---
 # 一分钟了解HTTP和HTTPS协议
 
 很多人存在这样的疑惑就是**http与https的区别**，这篇文章就跟大家介绍一下。一句话总结**HTTPS是身披SSL外壳的HTTP**，HTTPS更安全，实际使用中绝大多数的网站现在都采用的是HTTPS协议，这也是未来互联网发展的趋势。

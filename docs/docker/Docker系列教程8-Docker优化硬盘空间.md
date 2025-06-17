@@ -1,3 +1,8 @@
+---
+title: Docker系列教程8-Docker优化硬盘空间
+createTime: 2025/05/27 17:51:17
+permalink: /article/qz6u65ed/
+---
 # docker优化硬盘空间
 
 

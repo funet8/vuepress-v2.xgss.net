@@ -1,3 +1,8 @@
+---
+title: 云服务器部署开源短链生成-YOURLS
+createTime: 2025/05/27 17:51:17
+permalink: /article/iw1gts1c/
+---
 # 简单部署开源短链工具-YOURLS
 
 YOURLS是一款使用PHP+Mysql开发的短链接程序，相比公共短网址好处是数据掌握在自己手中，可控性更高。开源地址：https://github.com/YOURLS/YOURLS

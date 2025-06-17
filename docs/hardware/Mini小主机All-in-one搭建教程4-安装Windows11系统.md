@@ -1,3 +1,8 @@
+---
+title: Mini小主机All-in-one搭建教程4-安装Windows11系统
+createTime: 2025/05/27 17:51:17
+permalink: /article/t93h2yuc/
+---
 # Mini小主机All-in-one搭建教程4-安装Windows11系统
 
 

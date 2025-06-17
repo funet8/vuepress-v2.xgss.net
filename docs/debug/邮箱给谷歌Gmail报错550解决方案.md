@@ -1,3 +1,8 @@
+---
+title: 邮箱给谷歌Gmail报错550解决方案
+createTime: 2025/05/27 17:51:17
+permalink: /article/kmbl7yb1/
+---
 # 企业邮箱给谷歌Gmail报错550-5.7.25解决方案
 
 

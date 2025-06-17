@@ -1,3 +1,8 @@
+---
+title: 腾讯云双十一福利重磅产品介绍-下一代CDN-EdgeOne
+createTime: 2025/05/27 17:51:17
+permalink: /article/2csh5579/
+---
 # 腾讯云双十一福利重磅产品介绍-下一代CDN-EdgeOne
 
 # 前言

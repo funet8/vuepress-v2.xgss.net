@@ -1,3 +1,8 @@
+---
+title: 通过Cloudflare Worker、Pages部署免费的VLESS节点
+createTime: 2025/05/27 17:51:18
+permalink: /article/9n9lckra/
+---
 # 通过Cloudflare Worker、Pages部署免费的VLESS节点
 
 # 注册Cloudflare

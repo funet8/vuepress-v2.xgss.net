@@ -1,3 +1,8 @@
+---
+title: jumpserver01
+createTime: 2025/05/27 17:51:17
+permalink: /article/mb1b891h/
+---
 # 【开源安全保护】如何安装JumpServer堡垒机
 
 

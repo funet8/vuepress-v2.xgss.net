@@ -1,3 +1,8 @@
+---
+title: Gitbook
+createTime: 2025/05/27 17:51:18
+permalink: /article/hkgug6nj/
+---
 # 使用Gitbook制作发布个人的电子书籍
 
 ![gitbooklogo](http://imgoss.xgss.net/picgo/gitbooklogo.jpg?aliyunoss)

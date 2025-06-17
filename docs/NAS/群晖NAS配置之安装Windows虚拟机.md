@@ -1,3 +1,8 @@
+---
+title: 群晖NAS配置之安装Windows虚拟机
+createTime: 2025/05/27 17:51:17
+permalink: /article/mklc5c4m/
+---
 # 群晖NAS系统下安装Windows、Linux等虚拟机
 
 # 需求

@@ -1,3 +1,8 @@
+---
+title: 个人设备如何CPU挖矿？小白挖矿指南
+createTime: 2025/05/27 17:51:17
+permalink: /article/02ihwu57/
+---
 # 个人设备如何CPU挖矿？小白挖矿指南 
 
 # 前言

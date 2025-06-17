@@ -1,3 +1,8 @@
+---
+title: 搭建开源美观的数据库监控系统-Lepus
+createTime: 2025/05/27 17:51:17
+permalink: /article/qg11ydtk/
+---
 # 搭建开源美观的数据库监控系统-Lepus
 
 

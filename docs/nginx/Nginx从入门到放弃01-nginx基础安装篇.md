@@ -1,3 +1,8 @@
+---
+title: Nginx从入门到放弃01-nginx基础安装篇
+createTime: 2025/05/27 17:51:17
+permalink: /article/vb9i0v6j/
+---
 # Nginx从入门到放弃01-nginx基础安装篇
 
 ## 什么是Nginx

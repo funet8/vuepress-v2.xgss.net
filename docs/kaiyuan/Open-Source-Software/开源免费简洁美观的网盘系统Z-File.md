@@ -1,3 +1,8 @@
+---
+title: 开源免费简洁美观的网盘系统Z-File
+createTime: 2025/05/27 17:51:17
+permalink: /article/tez36g36/
+---
 # 开源免费简洁美观的网盘系统Z-File
 
 ## 什么是zfile

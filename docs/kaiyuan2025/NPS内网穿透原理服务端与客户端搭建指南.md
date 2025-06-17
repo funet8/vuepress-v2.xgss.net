@@ -1,3 +1,8 @@
+---
+title: NPS内网穿透原理服务端与客户端搭建指南
+createTime: 2025/05/27 17:51:17
+permalink: /article/oaohmwnv/
+---
 # NPS 内网穿透：原理、服务端与客户端搭建指南
 
 

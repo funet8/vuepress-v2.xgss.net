@@ -1,3 +1,8 @@
+---
+title: Cloud-Server-What-todo
+createTime: 2025/05/27 17:51:17
+permalink: /article/lngef7wo/
+---
 # 买了一台云服务器能干嘛
 
 ## 一、搭建博客

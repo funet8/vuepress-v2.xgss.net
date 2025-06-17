@@ -1,3 +1,8 @@
+---
+title: 让你的Linux客户端secureCRT充满颜色
+createTime: 2025/05/27 17:51:17
+permalink: /article/lfamuq4s/
+---
 # 让你的Linux客户端secureCRT充满颜色
 
 一般secureCRT是黑白色的背景和字体。这样不是彩色的，看起来非常不清楚。需要设置成彩色。方法步骤如下：

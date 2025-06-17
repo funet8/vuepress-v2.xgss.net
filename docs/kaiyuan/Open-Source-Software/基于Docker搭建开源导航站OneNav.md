@@ -1,3 +1,8 @@
+---
+title: 基于Docker搭建开源导航站OneNav
+createTime: 2025/05/27 17:51:17
+permalink: /article/ami58pob/
+---
 # 基于Docker搭建开源导航站OneNav
 
 

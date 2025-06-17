@@ -1,3 +1,8 @@
+---
+title: 通过Heimdall开源免费，搭建自己的网络书签
+createTime: 2025/05/27 17:51:17
+permalink: /article/8kuthudg/
+---
 # 通过Docker安装Heimdall开源免费，搭建自己的网络书签
 
 Heimdall 是一款网络书签仪表盘，它内置了超过 300 款网络服务图标，以及接通了部分服务的 API，可以实现一个非常漂亮的网络书签、内网门户页面。

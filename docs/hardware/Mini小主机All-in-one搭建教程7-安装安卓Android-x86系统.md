@@ -1,3 +1,8 @@
+---
+title: Mini小主机All-in-one搭建教程7-安装安卓Android-x86系统
+createTime: 2025/05/27 17:51:17
+permalink: /article/nf4cjso9/
+---
 # Mini小主机All-in-one搭建教程7-安装安卓Android-x86系统
 
 

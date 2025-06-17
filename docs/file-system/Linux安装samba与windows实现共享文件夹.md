@@ -1,3 +1,8 @@
+---
+title: Linux安装samba与windows实现共享文件夹
+createTime: 2025/05/27 17:51:17
+permalink: /article/fc75rwde/
+---
 # Linux安装samba与windows实现共享文件夹
 
 Linux与Linux间通过什么共享文件呢——NFS，Windows与Windows之间呢——共享文件功能，那Windows与Linux之间通过samba。

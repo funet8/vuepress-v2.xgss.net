@@ -1,4 +1,13 @@
+# 系统优化
+
+## [安装完Windows11系统之后安装软件](安装完Windows11系统之后安装软件.md)
+
+## [开源免费软件一键瘦身你的Windows系统-Win11Debloat](开源免费软件一键瘦身你的Windows系统-Win11Debloat.md)
+
+## [Windows系统设置 num 键开启](Windows系统设置num键开启.md)
+
 # 图床
+
 ## [Typora+PicGo+Gitee或github实现markdown自带图床效果](Typora_PicGo_Gitee_markdown_pic.md)
 
 ## [程序员必备-Typora+PicGo+阿里云oss实现图床](Typora_PicGo_aliyun_oss.md)
@@ -38,10 +47,6 @@
 ## [语雀导出所有文档方案](语雀导出所有文档方案.md)
 
 
-
-# 系统优化
-
-## [开源免费软件一键瘦身你的Windows系统-Win11Debloat](开源免费软件一键瘦身你的Windows系统-Win11Debloat.md)
 
 # 视频下载
 

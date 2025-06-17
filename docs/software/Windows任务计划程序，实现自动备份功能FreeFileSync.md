@@ -1,3 +1,8 @@
+---
+title: Windows任务计划程序，实现自动备份功能FreeFileSync
+createTime: 2025/05/27 17:51:17
+permalink: /article/xr7bjsvg/
+---
 
 
 # Windows任务计划程序，实现自动备份功能FreeFileSync

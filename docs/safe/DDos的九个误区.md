@@ -1,3 +1,8 @@
+---
+title: DDos的九个误区
+createTime: 2025/05/27 17:51:17
+permalink: /article/pj3usg6b/
+---
 # DDoS的九个误区
 
 DDoS是一种破坏性很强的攻击，且危害性极大，真正了解DDoS的几个误区

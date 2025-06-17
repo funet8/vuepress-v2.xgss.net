@@ -1,3 +1,8 @@
+---
+title: Typora_PicGo_aliyun_oss
+createTime: 2025/05/27 17:51:17
+permalink: /article/jidsjch4/
+---
 # 程序员必备-Typora+PicGo+阿里云oss实现图床
 
 按照上篇文章《程序员必备-Typora+PicGo+码云或github实现免费markdown自带图床》部署了，之后有时候会担心gitee或者github不提供服务，

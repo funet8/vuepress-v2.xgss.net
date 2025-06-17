@@ -1,3 +1,8 @@
+---
+title: 2_Archery_config
+createTime: 2025/05/27 17:51:17
+permalink: /article/czuf39cw/
+---
 # SQL审核查询平台Archery-后台配置基本操作
 
 ## 一.系统配置

@@ -1,3 +1,8 @@
+---
+title: centos7作为客户端连接Socks5上网
+createTime: 2025/05/27 17:51:17
+permalink: /article/60p5s2fx/
+---
 # centos7作为客户端连接Socks5上网
 
 

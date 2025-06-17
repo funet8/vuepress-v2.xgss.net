@@ -1,3 +1,8 @@
+---
+title: jumpserver02
+createTime: 2025/05/27 17:51:17
+permalink: /article/chb3v18c/
+---
 # 开源堡垒机JumpServer配置教程：使用步骤与配置
 
 上一篇文章星哥讲了如何安装JumpServer堡垒机，本篇文章来讲如何配置和使用JumpServer。

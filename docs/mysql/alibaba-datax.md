@@ -1,3 +1,8 @@
+---
+title: alibaba-datax
+createTime: 2025/05/27 17:51:17
+permalink: /article/07mqsh9x/
+---
 # 阿里巴巴高效的离线数据同步工具DataX
 
 

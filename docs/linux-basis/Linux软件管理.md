@@ -1,3 +1,8 @@
+---
+title: Linux软件管理
+createTime: 2025/05/27 17:51:17
+permalink: /article/4sjq4668/
+---
 # Linux软件包管理
 
 Linux系统如果需要安装软件怎么办？如何安装，大概有以下几种方式

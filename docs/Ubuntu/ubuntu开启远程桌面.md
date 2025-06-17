@@ -1,3 +1,8 @@
+---
+title: ubuntu开启远程桌面
+createTime: 2025/05/27 17:51:17
+permalink: /article/hbmzepaa/
+---
 # ubuntu开启远程桌面VNC
 
 

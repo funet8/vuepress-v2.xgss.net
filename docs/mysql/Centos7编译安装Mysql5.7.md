@@ -1,3 +1,8 @@
+---
+title: Centos7编译安装Mysql5.7
+createTime: 2025/05/27 17:51:17
+permalink: /article/jfp7me1t/
+---
 
 
 # Centos7编译安装Mysql5.7

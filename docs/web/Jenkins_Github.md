@@ -1,3 +1,8 @@
+---
+title: Jenkins_Github
+createTime: 2025/05/27 17:51:18
+permalink: /article/e1aaz5it/
+---
 # Gitbook+Jenkins+Github实现文档持续集成
 
 ## 需求说明

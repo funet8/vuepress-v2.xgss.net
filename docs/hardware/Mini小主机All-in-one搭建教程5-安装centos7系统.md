@@ -1,3 +1,8 @@
+---
+title: Mini小主机All-in-one搭建教程5-安装centos7系统
+createTime: 2025/05/27 17:51:17
+permalink: /article/mey1umru/
+---
 # Mini小主机All-in-one搭建教程5-安装centos7系统
 
 # 下载centos7

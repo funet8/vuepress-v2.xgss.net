@@ -1,3 +1,8 @@
+---
+title: Ubuntu修改IP地址
+createTime: 2025/05/27 17:51:17
+permalink: /article/5y1399t4/
+---
 # Ubuntu修改IP地址
 
 

@@ -1,3 +1,8 @@
+---
+title: Linux基于Docker安装开源项目管理禅道系统
+createTime: 2025/05/27 17:51:17
+permalink: /article/pz7akrwp/
+---
 # Linux基于Docker安装开源项目管理禅道
 
 ## 什么是禅道

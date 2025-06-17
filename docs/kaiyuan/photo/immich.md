@@ -1,3 +1,8 @@
+---
+title: immich
+createTime: 2025/05/27 17:51:17
+permalink: /article/6uxxg105/
+---
 # 自建私有云相册：Docker一键部署Immich，照片视频备份利器
 
 # 前言

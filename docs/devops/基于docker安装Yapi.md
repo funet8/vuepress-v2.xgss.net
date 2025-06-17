@@ -1,3 +1,8 @@
+---
+title: 基于docker安装Yapi
+createTime: 2025/05/27 17:51:17
+permalink: /article/jq24ckqc/
+---
 # Linux系统下基于Docker安装Yapi，并且迁移Yapi数据
 
 本文主要讲四个部分：

@@ -1,3 +1,8 @@
+---
+title: vuepress的安装和使用
+createTime: 2025/05/27 17:51:18
+permalink: /article/d1j5gkgk/
+---
 # 什么是VuePress
 
 官网： https://vuepress.vuejs.org/zh/

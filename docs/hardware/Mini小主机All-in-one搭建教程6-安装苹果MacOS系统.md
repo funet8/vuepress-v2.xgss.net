@@ -1,3 +1,8 @@
+---
+title: Mini小主机All-in-one搭建教程6-安装苹果MacOS系统
+createTime: 2025/05/27 17:51:17
+permalink: /article/vv2fuap2/
+---
 # Mini小主机All-in-one搭建教程6-安装苹果MacOS系统
 
 

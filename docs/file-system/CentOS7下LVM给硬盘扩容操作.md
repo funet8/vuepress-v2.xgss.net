@@ -1,3 +1,8 @@
+---
+title: CentOS7下LVM给硬盘扩容操作
+createTime: 2025/05/27 17:51:17
+permalink: /article/7r7j8v2b/
+---
 
 
 # CentOS7下LVM给硬盘扩容操作

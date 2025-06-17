@@ -1,3 +1,8 @@
+---
+title: 开源免费WEB防火墙，不让黑客不敢越雷池一步！ 2
+createTime: 2025/05/27 17:51:17
+permalink: /article/xntuqgtx/
+---
 # 使用开源免费雷池WAF防火墙，接入保护你的网站
 
 大家好，我是星哥，昨天介绍了《[开源免费WEB防火墙，不让黑客越雷池一步！](https://mp.weixin.qq.com/s/9TOXth3128N6PtXhaWI5aw)》链接：https://mp.weixin.qq.com/s/9TOXth3128N6PtXhaWI5aw

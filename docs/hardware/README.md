@@ -1,7 +1,3 @@
-# 系统
-
-## [安装完Windows11系统之后安装软件.md](安装完Windows11系统之后安装软件.md)
-
 # ESXI虚拟机
 
 ## [Mini小主机All-in-one搭建教程1-安装Esxi7.0虚拟机系统](Mini小主机All-in-one搭建教程1-安装Esxi7.0虚拟机系统.md)
