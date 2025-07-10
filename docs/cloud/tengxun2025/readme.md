@@ -72,7 +72,15 @@ https://cloud.tencent.com/developer/article/2516978
 
 
 
+## 试用腾讯云新产品-轻量对象存储(9.试用腾讯云新产品-轻量对象存储.md)
+
+# 活动：AI 代码远征季 | 带上「CloudBase AI ToolKit」征服后端宇宙
+
+https://cloud.tencent.com/developer/article/2528801
+
+文章：
+
+## [不会代码？没关系，用CloudBase AI ToolKit 三分钟创造一个个人导航网站](10.三分钟创造一个个人导航网站.md)
 
 
-## 试用腾讯云新产品-轻量对象存储(])
 

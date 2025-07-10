@@ -5,6 +5,7 @@ import { defineUserConfig } from 'vuepress'
 //import { defaultTheme } from '@vuepress/theme-default'
 
 //theme-hope主题
+//官网：https://theme-hope.vuejs.press/zh/
 import { hopeTheme } from 'vuepress-theme-hope'
 
 //默认主题的搜索插件
@@ -121,5 +122,26 @@ export default defineUserConfig({
 	markdown: {
 		lineNumbers: true // 代码块是否显示行号
 	},
+	//插件-开始
+	plugins: [
+		//searchPlugin({
+		  // 插件选项
+		  // 可以配置的选项包括：
+		  //maxSuggestions: 10, // 最多显示多少条搜索结果
+		  // isSearchable: (page) => page.path !== '/', // 排除特定页面
+		  //hotKeys: ['s', '/'], // 激活搜索框的快捷键
+		  // locales: { // 多语言支持
+		  //   '/': {
+		  //     placeholder: '搜索',
+		  //   },
+		  //   '/en/': {
+		  //     placeholder: 'Search',
+		  //   },
+		  // },
+		  // get.Display.Text: (page) => { /* 自定义搜索结果显示文本 */ },
+		  // search: (query, pages) => { /* 自定义搜索逻辑 */ },
+		//}),
+	],
+	//插件-结束
 	
 })
