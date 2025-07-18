@@ -8,15 +8,15 @@
 
 ## [Rocky-Linux-9挂载硬盘的方法](4.Rocky-Linux-9挂载硬盘的方法.md)
 
-## [Rocky-Linux-9-安装Nginx.md](5.Rocky-Linux-9-安装Nginx.md)
+## [Rocky-Linux-9-安装Nginx](5.Rocky-Linux-9-安装Nginx.md)
 
 ## [Rocky-Linux-9-源码包安装Mysql5.7](6.Rocky-Linux-9-源码包安装Mysql5.7.md)
 
 ## [Rocky-Linux-9-源码包安装Mysql8](7.Rocky-Linux-9-源码包安装Mysql8.md)
 
+## [Rocky-Linux-9-源码包安装php8](8.Rocky-Linux-9-源码包安装php8.md)
 
-
-
+## [Rocky-Linux-9-源码包安装php7](9.Rocky-Linux-9-源码包安装php7.md)
 
 # 【软件安装】
 

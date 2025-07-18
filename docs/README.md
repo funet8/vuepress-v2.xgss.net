@@ -126,8 +126,6 @@ cd docs/.vuepress/dist
 
 ### 前端
 
-[jsliang 的文档库](https://github.com/LiangJunrong/document-library)
-
 [腾讯alloyteam](http://www.alloyteam.com/)
 
 [移动端滑块-Swiper](https://github.com/nolimits4web/swiper)
