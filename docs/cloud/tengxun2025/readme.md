@@ -82,5 +82,8 @@ https://cloud.tencent.com/developer/article/2528801
 
 ## [不会代码？没关系，用CloudBase AI ToolKit 三分钟创造一个个人导航网站](10.三分钟创造一个个人导航网站.md)
 
+![img](https://imgoss.xgss.net/picgo-tx2025/QQ_1753146452507.png?tx)
 
+![img](https://imgoss.xgss.net/picgo-tx2025/QQ_1753146504429.png?tx)
 
+![img](https://imgoss.xgss.net/picgo-tx2025/QQ_1753146545705.png?tx)

@@ -2,9 +2,7 @@
 
 https://vuepress-v2.xgss.net
 
-
-
-<img src="https://socialify.git.ci/funet8/vuepress-v2.xgss.net/image?font=Bitter&language=1&name=1&owner=1&stargazers=1&theme=Auto" alt="vuepress-v2.xgss.net" width="640" height="320" />
+<img src="https://socialify.git.ci/funet8/vuepress-v2.xgss.net/image?font=Bitter&language=1&name=1&owner=1&stargazers=1&theme=Auto" alt="vuepress-v2.xgss.net" width="1024" height="768" />
 
 https://socialify.git.ci/
 

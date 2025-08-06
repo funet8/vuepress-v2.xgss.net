@@ -1,3 +1,11 @@
+
+
+# 【软件安装】
+
+## [Rocky-Linux-9软件安装流程](0.Rocky-Linux-9软件安装流程.md)
+
+
+
 # 【目录】
 
 ## [Rocky Linux 9 系统安装配置图解教程并做简单配置](1.Rocky-Linux-9-系统安装配置图解教程并做简单配置.md)
@@ -18,13 +26,11 @@
 
 ## [Rocky-Linux-9-源码包安装php7](9.Rocky-Linux-9-源码包安装php7.md)
 
-# 【软件安装】
+## [Rocky-Linux-9-安装VSFTP](10.Rocky-Linux-9-安装FTP.md)
 
-## [Rocky-Linux-9软件安装流程](0.Rocky-Linux-9软件安装流程.md)
+## [Rocky-Linux-9-安装Redis](11.Rocky-Linux-9-安装Redis.md)
 
-
-
-
+## [Rocky-Linux-9-安装Nodejs](12.Rocky-Linux-9-安装Nodejs.md)
 
 # rockylinux.cn社区
 
