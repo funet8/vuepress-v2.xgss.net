@@ -1,13 +1,8 @@
----
-title: 使用Mydumper备份和恢复mysql数据库
-createTime: 2025/05/27 17:51:17
-permalink: /article/b8nhzzpv/
----
 # 使用Mydumper备份和恢复mysql数据库
 
 
 
-Mydumper 是一个高性能 MySQL 数据库备份工具，设计用于解决 mysqldump 在备份大型数据库时遇到的性能瓶颈问题。与 mysqldump 相比，
+Mydumper 是一个高性能 MySQL 数据库备份工具，设计用于解决 mysqldump 在备份大型数据库时遇到的性能瓶颈问题。与 mysqldump 相比的优势
 
 ## 优势
 
@@ -35,8 +30,6 @@ Mydumper 允许用户灵活选择备份哪些数据库或表，支持各种过�
 
 相比 mysqldump，Mydumper 提供了更多易于使用的选项和更好的性能，使其成为大型数据库环境下的备选备份工具。
 
-
-
 Mydumper 如此强大，使其在需要快速、高效备份 MySQL 数据库的场景中，成为了首选工具。尤其适合于大规模数据库的备份和恢复工作。
 
 ## Mydumper主要特性
@@ -56,14 +49,12 @@ Mydumper 如此强大，使其在需要快速、高效备份 MySQL 数据库的�
 
 系统： centos7
 
-
-
 ```
 # yum -y  install glib2-devel mysql-devel zlib-devel pcre-devel zlib gcc-c++ gcc cmake
 
-
 # cd /data/software/
 # wget https://launchpad.net/mydumper/0.9/0.9.1/+download/mydumper-0.9.1.tar.gz
+备份下载：http://js.funet8.com/centos_software/mydumper-0.9.1.tar.gz
 # tar zxf mydumper-0.9.1.tar.gz
 # cd mydumper-0.9.1/
 # cmake .
@@ -146,9 +137,7 @@ myloader --help
 
 ```
 # mkdir -p /data/backup/mysql/
-
 # mydumper -u root -h 192.168.1.12 -p 123456  -P 61920 -B DBName  -o /data/backup/mysql/
-
 ```
 
 
@@ -177,6 +166,35 @@ root@localhost [(none)]>drop database DBName;
 # 验证
 root@localhost [(none)]>show databases;
 ```
+
+## 恢复数据库报错
+
+从mysql8恢复到MariaDB10.2.9的报错
+
+原因： 10.2.9-MariaDB 这个版本的 字符集排序规则列表里并没有 MySQL 8.0 才引入的utf8mb4_0900_ai_ci（以及其他 utf8mb4_0900_* 系列）。
+
+```
+myloader -u root -p 123456 -h 192.168.1.12 -P 61925 -B btwaf -d /data/backup/mysql/ 
+** (myloader:13121): CRITICAL **: 11:15:02.105: Error restoring btwaf.area_intercept from file btwaf.area_intercept-schema.sql: Unknown collation: 'utf8mb4_0900_ai_ci'
+```
+
+解决方法：
+
+批量替换 /data/backup/mysql/ 目录里所有 SQL 文件里的 utf8mb4_0900_ai_ci → utf8mb4_general_ci，这样 MariaDB 10.2.9 就能导入了
+
+```
+grep -rl 'utf8mb4_0900_ai_ci' /data/backup/mysql/ | xargs sed -i 's/utf8mb4_0900_ai_ci/utf8mb4_general_ci/g'
+```
+
+再次导入成功：
+
+```
+myloader -u root -p 123456 -h 192.168.1.12 -P 61925 -B btwaf -d /data/backup/mysql/ 
+```
+
+![image-20250815112746008](https://imgoss.xgss.net/picgo-tx2025/image-20250815112746008.png?tx)
+
+
 
 
 

@@ -87,3 +87,38 @@ https://cloud.tencent.com/developer/article/2528801
 ![img](https://imgoss.xgss.net/picgo-tx2025/QQ_1753146504429.png?tx)
 
 ![img](https://imgoss.xgss.net/picgo-tx2025/QQ_1753146545705.png?tx)
+
+
+
+# 腾讯 iOA 场景体验官大赛 | 探索免费功能，赢取苹果手表
+
+https://cloud.tencent.com/developer/article/2541769
+
+# 技术创作特训营 “超级码力”技术闯关大挑战
+
+https://cloud.tencent.com/developer/article/2535345
+
+![image-20250813090926249](https://imgoss.xgss.net/picgo-tx2025/image-20250813090926249.png?tx)
+
+## 获奖
+
+最强王者奖池、创作达人奖池、遥遥领先奖池、踊跃争先奖池
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
