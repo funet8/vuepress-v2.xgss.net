@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en-US" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.23" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.92" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <link rel="icon" href="/images/logo.png"><link rel="manifest" href="/images/logo.png"><link rel="apple-touch-icon" href="/images/logo.png"><meta http-quiv="pragma" cotent="no-cache"><meta http-quiv="pragma" cotent="no-cache,must-revalidate"><meta http-quiv="expires" cotent="0"><title>3.Rocky-Linux-9系统初始化与安全加固脚本 | 星哥的私有笔记</title><meta name="description" content="星哥说事vuepress描述，包含前端、后端、运维、等技术的介绍">
+    <link rel="preload" href="/assets/style-Bxags5vD.css" as="style"><link rel="stylesheet" href="/assets/style-Bxags5vD.css">
+    <link rel="modulepreload" href="/assets/app-w0bMFjFL.js"><link rel="modulepreload" href="/assets/index.html-BsQ920XH.js"><link rel="modulepreload" href="/assets/plugin-vue_export-helper-DlAUqK2U.js">
+    <link rel="prefetch" href="/assets/index.html-DEVYO_g1.js" as="script"><link rel="prefetch" href="/assets/index.html-DO06jdrQ.js" as="script"><link rel="prefetch" href="/assets/index.html-Blg2pPqV.js" as="script"><link rel="prefetch" href="/assets/index.html-Do6AeUWD.js" as="script"><link rel="prefetch" href="/assets/index.html-BTnhkkGY.js" as="script"><link rel="prefetch" href="/assets/index.html-DQWIcWUy.js" as="script"><link rel="prefetch" href="/assets/index.html-BM4v4g4Y.js" as="script"><link rel="prefetch" href="/assets/index.html-BMTvSfdx.js" as="script"><link rel="prefetch" href="/assets/index.html-CDq8k9P4.js" as="script"><link rel="prefetch" href="/assets/index.html-_zoy0tNS.js" as="script"><link rel="prefetch" href="/assets/index.html-ALlVv6WV.js" as="script"><link rel="prefetch" href="/assets/index.html-CAkrw4p_.js" as="script"><link rel="prefetch" href="/assets/index.html-D-nbx7Tw.js" as="script"><link rel="prefetch" href="/assets/index.html-CHMVaOyj.js" as="script"><link rel="prefetch" href="/assets/index.html-Cx49VJ2d.js" as="script"><link rel="prefetch" href="/assets/index.html-BL62CPLa.js" as="script"><link rel="prefetch" href="/assets/0.Rocky-Linux-9软件安装流程.html-D-EP-ljg.js" as="script"><link rel="prefetch" href="/assets/index.html-BNnWfse8.js" as="script"><link rel="prefetch" href="/assets/10.Rocky-Linux-9-安装FTP.html-Cp7dFfm4.js" as="script"><link rel="prefetch" href="/assets/11.Rocky-Linux-9-安装Redis.html-C3x9wSTo.js" as="script"><link rel="prefetch" href="/assets/12.Rocky-Linux-9-安装Nodejs.html-DneLrcTc.js" as="script"><link rel="prefetch" href="/assets/index.html-r2gC25o0.js" as="script"><link rel="prefetch" href="/assets/4.Rocky-Linux-9挂载硬盘的方法.html-DCQD82m3.js" as="script"><link rel="prefetch" href="/assets/5.Rocky-Linux-9-安装Nginx.html-CfCVHJrz.js" as="script"><link rel="prefetch" href="/assets/6.Rocky-Linux-9-源码包安装Mysql5.7.html-C7lD1cWC.js" as="script"><link rel="prefetch" href="/assets/7.Rocky-Linux-9-源码包安装Mysql8.html-BtXDshw4.js" as="script"><link rel="prefetch" href="/assets/8.Rocky-Linux-9-源码包安装php8.html-D_fPyzT4.js" as="script"><link rel="prefetch" href="/assets/9.Rocky-Linux-9-源码包安装php7.html-B9bXZUBs.js" as="script"><link rel="prefetch" href="/assets/index.html-D0_9CJlq.js" as="script"><link rel="prefetch" href="/assets/index.html-GR5KBEXs.js" as="script"><link rel="prefetch" href="/assets/index.html-DjTFtBnP.js" as="script"><link rel="prefetch" href="/assets/index.html-CaqaJKCU.js" as="script"><link rel="prefetch" href="/assets/index.html-DOu5Lz9T.js" as="script"><link rel="prefetch" href="/assets/index.html-BjxaDkRn.js" as="script"><link rel="prefetch" href="/assets/index.html-DHqbA-H6.js" as="script"><link rel="prefetch" href="/assets/index.html-BP2PcPSx.js" as="script"><link rel="prefetch" href="/assets/index.html-BiOOZzyN.js" as="script"><link rel="prefetch" href="/assets/index.html-Btc7ys-e.js" as="script"><link rel="prefetch" href="/assets/index.html-XK7c8vXP.js" as="script"><link rel="prefetch" href="/assets/index.html-CSkPaPnG.js" as="script"><link rel="prefetch" href="/assets/index.html-D6gigZ6H.js" as="script"><link rel="prefetch" href="/assets/index.html-BqoTov6J.js" as="script"><link rel="prefetch" href="/assets/index.html-DUbk5aMV.js" as="script"><link rel="prefetch" href="/assets/index.html-C3N9Igz2.js" as="script"><link rel="prefetch" href="/assets/index.html-ClTEePPV.js" as="script"><link rel="prefetch" href="/assets/index.html-BDfrkIKD.js" as="script"><link rel="prefetch" href="/assets/index.html-CVlPjYRT.js" as="script"><link rel="prefetch" href="/assets/index.html-CkFS0SyO.js" as="script"><link rel="prefetch" href="/assets/index.html-BohRvZKZ.js" as="script"><link rel="prefetch" href="/assets/index.html-BUQe7RrI.js" as="script"><link rel="prefetch" href="/assets/index.html-CHfQ452i.js" as="script"><link rel="prefetch" href="/assets/index.html-CZZaKHFA.js" as="script"><link rel="prefetch" href="/assets/index.html-DWeQ1EgI.js" as="script"><link rel="prefetch" href="/assets/index.html-CzZPy28Q.js" as="script"><link rel="prefetch" href="/assets/index.html-Bx1NcthE.js" as="script"><link rel="prefetch" href="/assets/index.html-C1MxtJs_.js" as="script"><link rel="prefetch" href="/assets/index.html-DjWvCbd2.js" as="script"><link rel="prefetch" href="/assets/index.html-lnZjFqLA.js" as="script"><link rel="prefetch" href="/assets/index.html-CPNpGVzj.js" as="script"><link rel="prefetch" href="/assets/index.html-D5aXnZ1d.js" as="script"><link rel="prefetch" href="/assets/index.html-BmkEe17V.js" as="script"><link rel="prefetch" href="/assets/index.html-B_EcOvRe.js" as="script"><link rel="prefetch" href="/assets/index.html-DhJr8MWb.js" as="script"><link rel="prefetch" href="/assets/index.html-Bz1NetUQ.js" as="script"><link rel="prefetch" href="/assets/index.html-CdUfqtXf.js" as="script"><link rel="prefetch" href="/assets/index.html-DQ6H2fOd.js" as="script"><link rel="prefetch" href="/assets/index.html-4dNZWLR1.js" as="script"><link rel="prefetch" href="/assets/index.html-DoyPKm0F.js" as="script"><link rel="prefetch" href="/assets/index.html-D_uMuPBm.js" as="script"><link rel="prefetch" href="/assets/index.html-DsV5288p.js" as="script"><link rel="prefetch" href="/assets/index.html-B2TKhO-w.js" as="script"><link rel="prefetch" href="/assets/index.html-qzMxxEGW.js" as="script"><link rel="prefetch" href="/assets/index.html-D6xCQH_V.js" as="script"><link rel="prefetch" href="/assets/index.html-YcP7Fh-K.js" as="script"><link rel="prefetch" href="/assets/index.html-B49WuPiq.js" as="script"><link rel="prefetch" href="/assets/index.html-DNJ5JVER.js" as="script"><link rel="prefetch" href="/assets/index.html-D21T0Dqz.js" as="script"><link rel="prefetch" href="/assets/index.html-DhtJb_9Y.js" as="script"><link rel="prefetch" href="/assets/index.html-BT95LAik.js" as="script"><link rel="prefetch" href="/assets/index.html-9QD-5a5K.js" as="script"><link rel="prefetch" href="/assets/index.html-C2UZZWQ6.js" as="script"><link rel="prefetch" href="/assets/index.html-DB0xTl-G.js" as="script"><link rel="prefetch" href="/assets/index.html-CoCC0Skx.js" as="script"><link rel="prefetch" href="/assets/index.html-Cnsm85qN.js" as="script"><link rel="prefetch" href="/assets/index.html-__8sm0Ph.js" as="script"><link rel="prefetch" href="/assets/16.人工智能通信协议三种协议.html-M7r2bxlU.js" as="script"><link rel="prefetch" href="/assets/17.Wan2GP-AI视频生成神器安装教程.html-CCVHHRPX.js" as="script"><link rel="prefetch" href="/assets/18.ChatGPT5.html-BXPVtm6o.js" as="script"><link rel="prefetch" href="/assets/index.html-BlcstLZu.js" as="script"><link rel="prefetch" href="/assets/index.html-D8gZTG1G.js" as="script"><link rel="prefetch" href="/assets/index.html-CUTHe9WA.js" as="script"><link rel="prefetch" href="/assets/index.html-D7dgCY04.js" as="script"><link rel="prefetch" href="/assets/index.html-CJ-pILmC.js" as="script"><link rel="prefetch" href="/assets/index.html-CKqs5fSh.js" as="script"><link rel="prefetch" href="/assets/index.html-BZWkKGqG.js" as="script"><link rel="prefetch" href="/assets/index.html-C5bpZzQf.js" as="script"><link rel="prefetch" href="/assets/index.html-BioyFATv.js" as="script"><link rel="prefetch" href="/assets/index.html-D94LD1uC.js" as="script"><link rel="prefetch" href="/assets/index.html-x4eD9w6L.js" as="script"><link rel="prefetch" href="/assets/index.html-jScYj9a7.js" as="script"><link rel="prefetch" href="/assets/index.html-CpTg6glm.js" as="script"><link rel="prefetch" href="/assets/index.html-b3n4GoJn.js" as="script"><link rel="prefetch" href="/assets/index.html-CBku2MHI.js" as="script"><link rel="prefetch" href="/assets/index.html-B2nvMsv6.js" as="script"><link rel="prefetch" href="/assets/index.html-B28CCFQ-.js" as="script"><link rel="prefetch" href="/assets/index.html-B_RSSiau.js" as="script"><link rel="prefetch" href="/assets/index.html-DNmIxSY2.js" as="script"><link rel="prefetch" href="/assets/index.html-CJ4YRXLU.js" as="script"><link rel="prefetch" href="/assets/index.html-CGRG3PWD.js" as="script"><link rel="prefetch" href="/assets/index.html-Ds1HPeFf.js" as="script"><link rel="prefetch" href="/assets/index.html-TZVW5Did.js" as="script"><link rel="prefetch" href="/assets/index.html-q0YsJi_V.js" as="script"><link rel="prefetch" href="/assets/index.html-BFipYvBe.js" as="script"><link rel="prefetch" href="/assets/index.html-BKsO7tWc.js" as="script"><link rel="prefetch" href="/assets/index.html-QMK-lhMJ.js" as="script"><link rel="prefetch" href="/assets/index.html-DTNmJNkR.js" as="script"><link rel="prefetch" href="/assets/index.html-CoDxHnSZ.js" as="script"><link rel="prefetch" href="/assets/index.html-Cl7kqHSW.js" as="script"><link rel="prefetch" href="/assets/index.html-B_B013F2.js" as="script"><link rel="prefetch" href="/assets/index.html-BFmb6Ty4.js" as="script"><link rel="prefetch" href="/assets/index.html-y2_62vSW.js" as="script"><link rel="prefetch" href="/assets/index.html-DDMkzC1-.js" as="script"><link rel="prefetch" href="/assets/index.html-CU7QD5AF.js" as="script"><link rel="prefetch" href="/assets/index.html-Cbb51USb.js" as="script"><link rel="prefetch" href="/assets/index.html-CP1Pb_Dd.js" as="script"><link rel="prefetch" href="/assets/index.html-BmoLIJkm.js" as="script"><link rel="prefetch" href="/assets/index.html-Biep3xqI.js" as="script"><link rel="prefetch" href="/assets/index.html-DUkzA6hL.js" as="script"><link rel="prefetch" href="/assets/index.html-BlAjTPl4.js" as="script"><link rel="prefetch" href="/assets/index.html-DnEDObi_.js" as="script"><link rel="prefetch" href="/assets/index.html-BW7Ke9o2.js" as="script"><link rel="prefetch" href="/assets/index.html-CbFAQ7Hc.js" as="script"><link rel="prefetch" href="/assets/index.html-DrN_N45Z.js" as="script"><link rel="prefetch" href="/assets/index.html-Bq2-Iaul.js" as="script"><link rel="prefetch" href="/assets/index.html-ByWIGyiT.js" as="script"><link rel="prefetch" href="/assets/index.html-Rhrlgeho.js" as="script"><link rel="prefetch" href="/assets/index.html-7Wa-jZac.js" as="script"><link rel="prefetch" href="/assets/index.html-B7cofP4G.js" as="script"><link rel="prefetch" href="/assets/index.html-CVX2v0mF.js" as="script"><link rel="prefetch" href="/assets/index.html-BeQdApmQ.js" as="script"><link rel="prefetch" href="/assets/index.html-XPGmkKxf.js" as="script"><link rel="prefetch" href="/assets/index.html-CuDcv8Id.js" as="script"><link rel="prefetch" href="/assets/index.html-Bt2D2L5F.js" as="script"><link rel="prefetch" href="/assets/index.html-CF5iHfE2.js" as="script"><link rel="prefetch" href="/assets/index.html-MtLOhQRT.js" as="script"><link rel="prefetch" href="/assets/index.html-J6PsiCqj.js" as="script"><link rel="prefetch" href="/assets/index.html-BMkj0h1q.js" as="script"><link rel="prefetch" href="/assets/index.html-Dgoysqc6.js" as="script"><link rel="prefetch" href="/assets/index.html-HfLgXE0o.js" as="script"><link rel="prefetch" href="/assets/index.html-B2RI4hXF.js" as="script"><link rel="prefetch" href="/assets/index.html-DT5Codvr.js" as="script"><link rel="prefetch" href="/assets/index.html-BFxfkytH.js" as="script"><link rel="prefetch" href="/assets/index.html-BdxKeKIj.js" as="script"><link rel="prefetch" href="/assets/index.html-DxS4SSU2.js" as="script"><link rel="prefetch" href="/assets/index.html-BQjiwe7L.js" as="script"><link rel="prefetch" href="/assets/index.html-DxW_N_JS.js" as="script"><link rel="prefetch" href="/assets/index.html-D099YXZl.js" as="script"><link rel="prefetch" href="/assets/index.html-D7HE0yDA.js" as="script"><link rel="prefetch" href="/assets/index.html-EwhS9Hrc.js" as="script"><link rel="prefetch" href="/assets/index.html-Bo157zsA.js" as="script"><link rel="prefetch" href="/assets/index.html-BVMKX2HB.js" as="script"><link rel="prefetch" href="/assets/index.html-BctgI_vz.js" as="script"><link rel="prefetch" href="/assets/index.html-CqhjTrgQ.js" as="script"><link rel="prefetch" href="/assets/index.html-UOO49j3A.js" as="script"><link rel="prefetch" href="/assets/index.html-DskduBAn.js" as="script"><link rel="prefetch" href="/assets/index.html-DblvYD3v.js" as="script"><link rel="prefetch" href="/assets/index.html-ZJAq72_f.js" as="script"><link rel="prefetch" href="/assets/Automa.html-Btvd41Cv.js" as="script"><link rel="prefetch" href="/assets/Awesome-Cloudflare.html-k5-d9x3r.js" as="script"><link rel="prefetch" href="/assets/index.html-BbD1I_Po.js" as="script"><link rel="prefetch" href="/assets/Docker部署闲鱼自动赚钱机器-闲鱼自动回复系统 .html-DAt4UKYz.js" as="script"><link rel="prefetch" href="/assets/EasySpider开源可视化爬虫工具体验.html-BnDL4V-G.js" as="script"><link rel="prefetch" href="/assets/index.html-Dk8soRuy.js" as="script"><link rel="prefetch" href="/assets/Syncthing.html-BOHqe44m.js" as="script"><link rel="prefetch" href="/assets/Teable.html-BKbmNwj2.js" as="script"><link rel="prefetch" href="/assets/doocs-md.html-CRUAclzL.js" as="script"><link rel="prefetch" href="/assets/index.html-T0fKO8Ot.js" as="script"><link rel="prefetch" href="/assets/index.html-Dr-btgeY.js" as="script"><link rel="prefetch" href="/assets/index.html-DZCdcbmQ.js" as="script"><link rel="prefetch" href="/assets/堡塔云WAF免费WEB防火墙-实用的功能.html-GUI5He4y.js" as="script"><link rel="prefetch" href="/assets/index.html-BMA6z2vo.js" as="script"><link rel="prefetch" href="/assets/如何将堡塔云WAF迁移到新的服务器.html-DS2viadc.js" as="script"><link rel="prefetch" href="/assets/index.html-PcCc_4kJ.js" as="script"><link rel="prefetch" href="/assets/index.html-CSTjawM3.js" as="script"><link rel="prefetch" href="/assets/index.html-CJPExvkv.js" as="script"><link rel="prefetch" href="/assets/index.html-KBX0KERM.js" as="script"><link rel="prefetch" href="/assets/开源综合性网络安全检测和运维工具-TscanClient.html-B9LmYL_U.js" as="script"><link rel="prefetch" href="/assets/index.html-CnZw25p3.js" as="script"><link rel="prefetch" href="/assets/index.html-DdHwe_5d.js" as="script"><link rel="prefetch" href="/assets/index.html-E6y8zQtB.js" as="script"><link rel="prefetch" href="/assets/index.html-YsGON23E.js" as="script"><link rel="prefetch" href="/assets/index.html-DPZD73pi.js" as="script"><link rel="prefetch" href="/assets/index.html-D7c4Wz_R.js" as="script"><link rel="prefetch" href="/assets/index.html-n1tk41CO.js" as="script"><link rel="prefetch" href="/assets/index.html-97e9vs4W.js" as="script"><link rel="prefetch" href="/assets/index.html-DUrone-w.js" as="script"><link rel="prefetch" href="/assets/index.html-x7lfR5iX.js" as="script"><link rel="prefetch" href="/assets/index.html-B8-FC-9n.js" as="script"><link rel="prefetch" href="/assets/index.html-BsYr_lyD.js" as="script"><link rel="prefetch" href="/assets/index.html-CMCf4Sy2.js" as="script"><link rel="prefetch" href="/assets/index.html-nVrP2RXM.js" as="script"><link rel="prefetch" href="/assets/index.html-UKjlj0UA.js" as="script"><link rel="prefetch" href="/assets/index.html-3rQoXBZ2.js" as="script"><link rel="prefetch" href="/assets/index.html-CkVfGq0B.js" as="script"><link rel="prefetch" href="/assets/index.html-C2LFLH0K.js" as="script"><link rel="prefetch" href="/assets/index.html-BGehEoHH.js" as="script"><link rel="prefetch" href="/assets/index.html-DEGSR0dH.js" as="script"><link rel="prefetch" href="/assets/index.html-DAA2bhuW.js" as="script"><link rel="prefetch" href="/assets/index.html-BAr4-NB8.js" as="script"><link rel="prefetch" href="/assets/index.html-CdlvELu2.js" as="script"><link rel="prefetch" href="/assets/index.html-BJZuyC2D.js" as="script"><link rel="prefetch" href="/assets/index.html-hdbxDy6d.js" as="script"><link rel="prefetch" href="/assets/index.html-yZGj_8Ra.js" as="script"><link rel="prefetch" href="/assets/index.html-B2qLvY4T.js" as="script"><link rel="prefetch" href="/assets/index.html-BDcJimZf.js" as="script"><link rel="prefetch" href="/assets/index.html-BAMs4dM2.js" as="script"><link rel="prefetch" href="/assets/index.html-COTItuXO.js" as="script"><link rel="prefetch" href="/assets/index.html-DIa1LIog.js" as="script"><link rel="prefetch" href="/assets/index.html-BBNYcOKO.js" as="script"><link rel="prefetch" href="/assets/index.html-BMZ_PYTm.js" as="script"><link rel="prefetch" href="/assets/index.html-BtneoWS5.js" as="script"><link rel="prefetch" href="/assets/index.html-CAEnWaAo.js" as="script"><link rel="prefetch" href="/assets/index.html-F-RPY-RM.js" as="script"><link rel="prefetch" href="/assets/index.html-CkjILIi5.js" as="script"><link rel="prefetch" href="/assets/index.html-BRgYsIUE.js" as="script"><link rel="prefetch" href="/assets/index.html-DP51oftW.js" as="script"><link rel="prefetch" href="/assets/index.html-CRAo21ae.js" as="script"><link rel="prefetch" href="/assets/2.http-status.html-D94CVDne.js" as="script"><link rel="prefetch" href="/assets/3.Linux-Cockpit.html-ChVqSgtp.js" as="script"><link rel="prefetch" href="/assets/index.html-cxOcft87.js" as="script"><link rel="prefetch" href="/assets/index.html-DybnJlwf.js" as="script"><link rel="prefetch" href="/assets/index.html-BNocfOo2.js" as="script"><link rel="prefetch" href="/assets/index.html-fKk_idgA.js" as="script"><link rel="prefetch" href="/assets/index.html-DZuj9kJG.js" as="script"><link rel="prefetch" href="/assets/index.html-B22Joa9Y.js" as="script"><link rel="prefetch" href="/assets/index.html-CC7V7Y_h.js" as="script"><link rel="prefetch" href="/assets/index.html-TcCoBcz2.js" as="script"><link rel="prefetch" href="/assets/index.html-C0O-WBUg.js" as="script"><link rel="prefetch" href="/assets/index.html-C-X3YBzQ.js" as="script"><link rel="prefetch" href="/assets/index.html-Dri1yPro.js" as="script"><link rel="prefetch" href="/assets/index.html-CmpAJtFa.js" as="script"><link rel="prefetch" href="/assets/index.html-O3CmyVBP.js" as="script"><link rel="prefetch" href="/assets/使用Mydumper备份和恢复mysql数据库.html-BNIP-d-6.js" as="script"><link rel="prefetch" href="/assets/index.html-CrzY-z8c.js" as="script"><link rel="prefetch" href="/assets/index.html-vF1lYTUI.js" as="script"><link rel="prefetch" href="/assets/index.html-WTdvEgcf.js" as="script"><link rel="prefetch" href="/assets/index.html-CxKpET2Q.js" as="script"><link rel="prefetch" href="/assets/index.html-BRxNNAtG.js" as="script"><link rel="prefetch" href="/assets/index.html-CgKKQCE-.js" as="script"><link rel="prefetch" href="/assets/index.html-DXG9wlqb.js" as="script"><link rel="prefetch" href="/assets/index.html-SCJ3SYKK.js" as="script"><link rel="prefetch" href="/assets/index.html-wosO1BF1.js" as="script"><link rel="prefetch" href="/assets/index.html-B7eApgB_.js" as="script"><link rel="prefetch" href="/assets/解决Nginx的HTTPS跨域内容显示问题.html-DHxoZttT.js" as="script"><link rel="prefetch" href="/assets/Python自学05-分支结构.html-COD1ghHr.js" as="script"><link rel="prefetch" href="/assets/Python自学06-循环结构.html-C3S6lT_P.js" as="script"><link rel="prefetch" href="/assets/Python自学07-分支和循环结构实战代码.html-ChOGqtWu.js" as="script"><link rel="prefetch" href="/assets/Python自学08-常用数据结构之列表.html-BzHiBn_7.js" as="script"><link rel="prefetch" href="/assets/Python自学09-常用数据结构之元组.html-Bid9PY6g.js" as="script"><link rel="prefetch" href="/assets/Python自学10-常用数据结构之字符串.html-DqDLdrGH.js" as="script"><link rel="prefetch" href="/assets/index.html-DB5nXOUO.js" as="script"><link rel="prefetch" href="/assets/index.html-DNt7Bl7i.js" as="script"><link rel="prefetch" href="/assets/index.html-CPICLeWs.js" as="script"><link rel="prefetch" href="/assets/index.html-ydqD991b.js" as="script"><link rel="prefetch" href="/assets/index.html-DX2rfIz0.js" as="script"><link rel="prefetch" href="/assets/index.html-CzjkfT1h.js" as="script"><link rel="prefetch" href="/assets/index.html-BqNlbVOV.js" as="script"><link rel="prefetch" href="/assets/index.html-pW2YUMme.js" as="script"><link rel="prefetch" href="/assets/index.html-Bjqjqfah.js" as="script"><link rel="prefetch" href="/assets/记一次网站防护功能.html-Ckvn6x1V.js" as="script"><link rel="prefetch" href="/assets/index.html-DJSRWMpk.js" as="script"><link rel="prefetch" href="/assets/index.html-C3OIVs7B.js" as="script"><link rel="prefetch" href="/assets/index.html-Cxo4HFRW.js" as="script"><link rel="prefetch" href="/assets/index.html-B01jtVdI.js" as="script"><link rel="prefetch" href="/assets/BookmarkHub-各大浏览器书签同步工具.html-BzZZ0jIs.js" as="script"><link rel="prefetch" href="/assets/index.html-Bp5kBB7D.js" as="script"><link rel="prefetch" href="/assets/index.html-BHYEmMOr.js" as="script"><link rel="prefetch" href="/assets/index.html-nfc6TvRd.js" as="script"><link rel="prefetch" href="/assets/index.html-wvx0Ddrw.js" as="script"><link rel="prefetch" href="/assets/index.html-D9I6MvDo.js" as="script"><link rel="prefetch" href="/assets/index.html-Z30Nr3Bd.js" as="script"><link rel="prefetch" href="/assets/index.html-DCakM2FI.js" as="script"><link rel="prefetch" href="/assets/index.html-J7xZdE2Z.js" as="script"><link rel="prefetch" href="/assets/index.html-CqSww_Wk.js" as="script"><link rel="prefetch" href="/assets/index.html-EF63GD77.js" as="script"><link rel="prefetch" href="/assets/index.html-EBxs_Msk.js" as="script"><link rel="prefetch" href="/assets/index.html-CBarHMWl.js" as="script"><link rel="prefetch" href="/assets/index.html-CayHR27e.js" as="script"><link rel="prefetch" href="/assets/index.html-CLUQJSaf.js" as="script"><link rel="prefetch" href="/assets/index.html-BiW8dVaO.js" as="script"><link rel="prefetch" href="/assets/index.html-BjW35PXg.js" as="script"><link rel="prefetch" href="/assets/index.html-DrB1GjB4.js" as="script"><link rel="prefetch" href="/assets/index.html-ClchQKrY.js" as="script"><link rel="prefetch" href="/assets/index.html-DA0kp3eE.js" as="script"><link rel="prefetch" href="/assets/火狐浏览器中国特供版关闭.html-Bx7Xjlkm.js" as="script"><link rel="prefetch" href="/assets/index.html-rF_5I9xC.js" as="script"><link rel="prefetch" href="/assets/index.html-CY1ImFkE.js" as="script"><link rel="prefetch" href="/assets/index.html-BXxOG2gF.js" as="script"><link rel="prefetch" href="/assets/index.html-D922um7J.js" as="script"><link rel="prefetch" href="/assets/index.html-BIM7obMa.js" as="script"><link rel="prefetch" href="/assets/index.html-ByxvRwI6.js" as="script"><link rel="prefetch" href="/assets/index.html-CAjv_MAP.js" as="script"><link rel="prefetch" href="/assets/index.html-Bvcz8afd.js" as="script"><link rel="prefetch" href="/assets/index.html-D5u1EdY8.js" as="script"><link rel="prefetch" href="/assets/index.html-DGK8lPq9.js" as="script"><link rel="prefetch" href="/assets/index.html-CrcNcR1V.js" as="script"><link rel="prefetch" href="/assets/index.html-Dwynfcwy.js" as="script"><link rel="prefetch" href="/assets/index.html-D9VK9VBz.js" as="script"><link rel="prefetch" href="/assets/index.html-DJYwkpui.js" as="script"><link rel="prefetch" href="/assets/index.html-BslcN1Kg.js" as="script"><link rel="prefetch" href="/assets/index.html-BZXHkwdO.js" as="script"><link rel="prefetch" href="/assets/index.html-CKfxtyKp.js" as="script"><link rel="prefetch" href="/assets/index.html-zpQ7r3mC.js" as="script"><link rel="prefetch" href="/assets/index.html-Dp3hVopw.js" as="script"><link rel="prefetch" href="/assets/index.html-DA_vz6dT.js" as="script"><link rel="prefetch" href="/assets/index.html-CWGh2x6S.js" as="script"><link rel="prefetch" href="/assets/index.html-nebX_m1x.js" as="script"><link rel="prefetch" href="/assets/index.html-Cgb2VfOU.js" as="script"><link rel="prefetch" href="/assets/index.html-DQH8qg3V.js" as="script"><link rel="prefetch" href="/assets/index.html-gup40Usd.js" as="script"><link rel="prefetch" href="/assets/index.html-DO2fdS3U.js" as="script"><link rel="prefetch" href="/assets/index.html-VpY7E0EY.js" as="script"><link rel="prefetch" href="/assets/index.html-FyH8PXxE.js" as="script"><link rel="prefetch" href="/assets/index.html-CEK4GJKa.js" as="script"><link rel="prefetch" href="/assets/10.三分钟创造一个个人导航网站.html-DtiZ6YcL.js" as="script"><link rel="prefetch" href="/assets/11.动物连连看.html-BcMI6CjQ.js" as="script"><link rel="prefetch" href="/assets/12.试用codebuddy-IDE.html-VdAADte0.js" as="script"><link rel="prefetch" href="/assets/13.腾讯云iOA-csdn.html-KhFrrXKG.js" as="script"><link rel="prefetch" href="/assets/13.腾讯云iOA.html-BJj7SC_o.js" as="script"><link rel="prefetch" href="/assets/index.html-CXLYmZLy.js" as="script"><link rel="prefetch" href="/assets/index.html-cPnzWzwg.js" as="script"><link rel="prefetch" href="/assets/index.html-BReflBkN.js" as="script"><link rel="prefetch" href="/assets/index.html-BpqZKHlk.js" as="script"><link rel="prefetch" href="/assets/index.html-CdgGwA8U.js" as="script"><link rel="prefetch" href="/assets/index.html-Bl7HsoxY.js" as="script"><link rel="prefetch" href="/assets/index.html-CCed40D1.js" as="script"><link rel="prefetch" href="/assets/index.html-_qvmpnmI.js" as="script"><link rel="prefetch" href="/assets/index.html-B-ThWEXD.js" as="script"><link rel="prefetch" href="/assets/index.html-BDt-PJpk.js" as="script"><link rel="prefetch" href="/assets/index.html-CQxbmNng.js" as="script"><link rel="prefetch" href="/assets/index.html-eqRiOB3b.js" as="script"><link rel="prefetch" href="/assets/index.html-Bmxu_SpS.js" as="script"><link rel="prefetch" href="/assets/index.html-BVETDfEo.js" as="script"><link rel="prefetch" href="/assets/index.html-C0Ir53ga.js" as="script"><link rel="prefetch" href="/assets/index.html-iwmE4qpv.js" as="script"><link rel="prefetch" href="/assets/index.html-GNub-eHK.js" as="script"><link rel="prefetch" href="/assets/index.html-Naiq1264.js" as="script"><link rel="prefetch" href="/assets/index.html-BOqrw2lT.js" as="script"><link rel="prefetch" href="/assets/index.html-B_Z-9MnJ.js" as="script"><link rel="prefetch" href="/assets/index.html-Ck14WkEo.js" as="script"><link rel="prefetch" href="/assets/index.html-RFsDiWwl.js" as="script"><link rel="prefetch" href="/assets/index.html-w-4y4YHv.js" as="script"><link rel="prefetch" href="/assets/index.html-CXI3cwz-.js" as="script"><link rel="prefetch" href="/assets/index.html-DqUfj9NQ.js" as="script"><link rel="prefetch" href="/assets/index.html-C4maRgsG.js" as="script"><link rel="prefetch" href="/assets/index.html-CaV4ul3v.js" as="script"><link rel="prefetch" href="/assets/index.html-B7ynGW7z.js" as="script"><link rel="prefetch" href="/assets/index.html-CKIbnZ3O.js" as="script"><link rel="prefetch" href="/assets/index.html-DXm9wXXr.js" as="script"><link rel="prefetch" href="/assets/index.html-ZenVLeMz.js" as="script"><link rel="prefetch" href="/assets/index.html-DQZPr4IA.js" as="script"><link rel="prefetch" href="/assets/index.html-BojMkSN4.js" as="script"><link rel="prefetch" href="/assets/index.html-cFONI8_d.js" as="script"><link rel="prefetch" href="/assets/index.html-DN2ZwEeG.js" as="script"><link rel="prefetch" href="/assets/index.html-DcMXg9p6.js" as="script"><link rel="prefetch" href="/assets/index.html-BA5WrJHX.js" as="script"><link rel="prefetch" href="/assets/index.html-DMkH7PVh.js" as="script"><link rel="prefetch" href="/assets/index.html-yiw2ARkW.js" as="script"><link rel="prefetch" href="/assets/index.html-DmSuhgbH.js" as="script"><link rel="prefetch" href="/assets/index.html-CSpsDn5u.js" as="script"><link rel="prefetch" href="/assets/index.html-DFkR53ng.js" as="script"><link rel="prefetch" href="/assets/index.html-BOtvdci8.js" as="script"><link rel="prefetch" href="/assets/index.html-CSx5rnna.js" as="script"><link rel="prefetch" href="/assets/index.html-Dkm0tgJz.js" as="script"><link rel="prefetch" href="/assets/index.html-D5vfX_rE.js" as="script"><link rel="prefetch" href="/assets/index.html-B_UacTWE.js" as="script"><link rel="prefetch" href="/assets/index.html-Bg9xajjM.js" as="script"><link rel="prefetch" href="/assets/index.html-x9KQNDCm.js" as="script"><link rel="prefetch" href="/assets/index.html-Db2yLvw3.js" as="script"><link rel="prefetch" href="/assets/index.html-DJySy9GI.js" as="script"><link rel="prefetch" href="/assets/index.html-BXB_FFx5.js" as="script"><link rel="prefetch" href="/assets/index.html-_duq53pk.js" as="script"><link rel="prefetch" href="/assets/index.html-D0TAmTqE.js" as="script"><link rel="prefetch" href="/assets/index.html-DwC2ae3U.js" as="script"><link rel="prefetch" href="/assets/index.html-D8qBnQv7.js" as="script"><link rel="prefetch" href="/assets/index.html-CPp8_ruc.js" as="script"><link rel="prefetch" href="/assets/index.html-WISAkmNF.js" as="script"><link rel="prefetch" href="/assets/index.html-zkYL6QOc.js" as="script"><link rel="prefetch" href="/assets/index.html-B4qkx8GK.js" as="script"><link rel="prefetch" href="/assets/index.html-CRX9d5kp.js" as="script"><link rel="prefetch" href="/assets/index.html-BtNYpE2K.js" as="script"><link rel="prefetch" href="/assets/index.html-CrBz5RVj.js" as="script"><link rel="prefetch" href="/assets/index.html-C90Njvu4.js" as="script"><link rel="prefetch" href="/assets/index.html-CAAKUb0f.js" as="script"><link rel="prefetch" href="/assets/index.html-DTs4Khry.js" as="script"><link rel="prefetch" href="/assets/index.html-CvCtcCxD.js" as="script"><link rel="prefetch" href="/assets/index.html-CKpjj6nq.js" as="script"><link rel="prefetch" href="/assets/index.html-DsL01sdP.js" as="script"><link rel="prefetch" href="/assets/index.html-Cp6QlzXs.js" as="script"><link rel="prefetch" href="/assets/index.html-BZ9O6qG1.js" as="script"><link rel="prefetch" href="/assets/index.html-Dm7AbQoX.js" as="script"><link rel="prefetch" href="/assets/index.html-CL0lZvWG.js" as="script"><link rel="prefetch" href="/assets/index.html-Bvat5C49.js" as="script"><link rel="prefetch" href="/assets/index.html-Dfo5t9CI.js" as="script"><link rel="prefetch" href="/assets/index.html-IFTIHGsG.js" as="script"><link rel="prefetch" href="/assets/index.html-B2Ru6x_m.js" as="script"><link rel="prefetch" href="/assets/index.html-BfatSN9G.js" as="script"><link rel="prefetch" href="/assets/index.html-32qyiVGa.js" as="script"><link rel="prefetch" href="/assets/index.html-C1ohwh8g.js" as="script"><link rel="prefetch" href="/assets/404.html-D809hJxO.js" as="script"><link rel="prefetch" href="/assets/index.html-IeSaoVEN.js" as="script"><link rel="prefetch" href="/assets/index.html-qtZ7RNm1.js" as="script"><link rel="prefetch" href="/assets/index.html-Cblv_WL8.js" as="script"><link rel="prefetch" href="/assets/index.html-DZcEa7CW.js" as="script"><link rel="prefetch" href="/assets/photoswipe.esm-D2Nf-uDI.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><!--[--><!--[--><span tabindex="-1"></span><a href="#main-content" class="vp-skip-link sr-only">Skip to main content</a><!--]--><!--[--><div class="theme-container external-link-icon has-toc" vp-container><!--[--><header id="navbar" class="vp-navbar" vp-navbar><div class="vp-navbar-start"><button type="button" class="vp-toggle-sidebar-button" title="Toggle Sidebar"><span class="icon"></span></button><!--[--><a class="route-link vp-brand" href="/" aria-label="Take me home"><!----><!----><span class="vp-site-name">星哥的私有笔记</span></a><!--]--></div><div class="vp-navbar-center"><!--[--><nav class="vp-nav-links"><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/" aria-label="首页"><!---->首页<!----></a></div><div class="vp-nav-item hide-in-mobile"><div class="vp-dropdown-wrapper"><button type="button" class="vp-dropdown-title" aria-label="Linux基础教程"><!--[--><!---->Linux基础教程<!--]--><span class="arrow"></span><ul class="vp-dropdown"><li class="vp-dropdown-item"><a class="route-link auto-link" href="/linux-basis/" aria-label="基础知识"><!---->基础知识<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/devops/" aria-label="DevOps"><!---->DevOps<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/web/" aria-label="WEB服务"><!---->WEB服务<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/file-system/" aria-label="文件系统"><!---->文件系统<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/nginx/" aria-label="Nginx"><!---->Nginx<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/docker/" aria-label="Docker"><!---->Docker<!----></a></li></ul></button></div></div><div class="vp-nav-item hide-in-mobile"><div class="vp-dropdown-wrapper"><button type="button" class="vp-dropdown-title" aria-label="开源软件"><!--[--><!---->开源软件<!--]--><span class="arrow"></span><ul class="vp-dropdown"><li class="vp-dropdown-item"><a class="route-link auto-link" href="/kaiyuan/Open-Source-Software/" aria-label="开源软件"><!---->开源软件<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/kaiyuan/Open-databases/" aria-label="数据库"><!---->数据库<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/kaiyuan/android/" aria-label="安卓相关"><!---->安卓相关<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/kaiyuan/jumpserver/" aria-label="JumpServer"><!---->JumpServer<!----></a></li></ul></button></div></div><div class="vp-nav-item hide-in-mobile"><div class="vp-dropdown-wrapper"><button type="button" class="vp-dropdown-title" aria-label="云服务"><!--[--><!---->云服务<!--]--><span class="arrow"></span><ul class="vp-dropdown"><li class="vp-dropdown-item"><a class="route-link auto-link" href="/cloud/aliyun/" aria-label="阿里云"><!---->阿里云<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/cloud/tengxunyun/" aria-label="腾讯云"><!---->腾讯云<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/cloud/tengxunyun2025/" aria-label="腾讯云"><!---->腾讯云<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/cloud/aws/" aria-label="亚马逊云"><!---->亚马逊云<!----></a></li><li class="vp-dropdown-item"><a class="route-link auto-link" href="/cloud/other/" aria-label="其他"><!---->其他<!----></a></li></ul></button></div></div><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/safe/" aria-label="服务器安全"><!---->服务器安全<!----></a></div><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/software/" aria-label="常用软件"><!---->常用软件<!----></a></div><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/internet/" aria-label="互联网福利"><!---->互联网福利<!----></a></div><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/debug/" aria-label="调试Debug"><!---->调试Debug<!----></a></div><div class="vp-nav-item hide-in-mobile"><a class="auto-link external-link" href="https://github.com/funet8/vuepress-v2.xgss.net.git" aria-label="GitHub" rel="noopener noreferrer" target="_blank"><!---->GitHub<!----></a></div></nav><!--]--></div><div class="vp-navbar-end"><!--[--><!----><!----><div class="vp-nav-item hide-in-mobile"><button type="button" class="vp-color-mode-switch" id="color-mode-switch"><svg xmlns="http://www.w3.org/2000/svg" class="icon auto-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="auto icon" name="auto" style="display:block;"><path d="M512 992C246.92 992 32 777.08 32 512S246.92 32 512 32s480 214.92 480 480-214.92 480-480 480zm0-840c-198.78 0-360 161.22-360 360 0 198.84 161.22 360 360 360s360-161.16 360-360c0-198.78-161.22-360-360-360zm0 660V212c165.72 0 300 134.34 300 300 0 165.72-134.28 300-300 300z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon dark-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="dark icon" name="dark" style="display:none;"><path d="M524.8 938.667h-4.267a439.893 439.893 0 0 1-313.173-134.4 446.293 446.293 0 0 1-11.093-597.334A432.213 432.213 0 0 1 366.933 90.027a42.667 42.667 0 0 1 45.227 9.386 42.667 42.667 0 0 1 10.24 42.667 358.4 358.4 0 0 0 82.773 375.893 361.387 361.387 0 0 0 376.747 82.774 42.667 42.667 0 0 1 54.187 55.04 433.493 433.493 0 0 1-99.84 154.88 438.613 438.613 0 0 1-311.467 128z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon light-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="light icon" name="light" style="display:none;"><path d="M952 552h-80a40 40 0 0 1 0-80h80a40 40 0 0 1 0 80zM801.88 280.08a41 41 0 0 1-57.96-57.96l57.96-58a41.04 41.04 0 0 1 58 58l-58 57.96zM512 752a240 240 0 1 1 0-480 240 240 0 0 1 0 480zm0-560a40 40 0 0 1-40-40V72a40 40 0 0 1 80 0v80a40 40 0 0 1-40 40zm-289.88 88.08-58-57.96a41.04 41.04 0 0 1 58-58l57.96 58a41 41 0 0 1-57.96 57.96zM192 512a40 40 0 0 1-40 40H72a40 40 0 0 1 0-80h80a40 40 0 0 1 40 40zm30.12 231.92a41 41 0 0 1 57.96 57.96l-57.96 58a41.04 41.04 0 0 1-58-58l58-57.96zM512 832a40 40 0 0 1 40 40v80a40 40 0 0 1-80 0v-80a40 40 0 0 1 40-40zm289.88-88.08 58 57.96a41.04 41.04 0 0 1-58 58l-57.96-58a41 41 0 0 1 57.96-57.96z"></path></svg></button></div><!----><!--]--><button type="button" class="vp-toggle-navbar-button" aria-label="Toggle Navbar" aria-expanded="false" aria-controls="nav-screen"><span><span class="vp-top"></span><span class="vp-middle"></span><span class="vp-bottom"></span></span></button></div></header><!----><!--]--><!----><div class="toggle-sidebar-wrapper"><span class="arrow start"></span></div><aside id="sidebar" class="vp-sidebar" vp-sidebar><!----><ul class="vp-sidebar-links"><li><a class="route-link auto-link vp-sidebar-link" href="/" aria-label="首页"><!---->首页<!----></a></li><li><section class="vp-sidebar-group"><button class="vp-sidebar-header clickable" type="button"><!----><span class="vp-sidebar-title">ChatGPT</span><span class="vp-arrow end"></span></button><!----></section></li><li><section class="vp-sidebar-group"><button class="vp-sidebar-header clickable" type="button"><!----><span class="vp-sidebar-title">开源</span><span class="vp-arrow end"></span></button><!----></section></li><li><a class="route-link auto-link vp-sidebar-link" href="/linux-basis/" aria-label="基础知识"><!---->基础知识<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/internet2025/" aria-label="互联网2025"><!---->互联网2025<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/NAS/" aria-label="NAS"><!---->NAS<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Rocky-Linux/" aria-label="Rocky-Linux"><!---->Rocky-Linux<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/safe/" aria-label="网络安全"><!---->网络安全<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/mysql/" aria-label="MySQL"><!---->MySQL<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/nginx/" aria-label="Nginx"><!---->Nginx<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/shell/" aria-label="Shell"><!---->Shell<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Ubuntu/" aria-label="Ubuntu"><!---->Ubuntu<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/hardware/" aria-label="硬件"><!---->硬件<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/git/" aria-label="Git"><!---->Git<!----></a></li></ul><!----></aside><!--[--><main id="main-content" class="vp-page"><!--[--><!----><!----><nav class="vp-breadcrumb disable"></nav><div class="vp-page-title"><h1><!---->3.Rocky-Linux-9系统初始化与安全加固脚本</h1><div class="page-info"><!----><!----><span class="page-date-info" aria-label="Writing Date📅" data-balloon-pos="up"><svg xmlns="http://www.w3.org/2000/svg" class="icon calendar-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="calendar icon" name="calendar"><path d="M716.4 110.137c0-18.753-14.72-33.473-33.472-33.473-18.753 0-33.473 14.72-33.473 33.473v33.473h66.993v-33.473zm-334.87 0c0-18.753-14.72-33.473-33.473-33.473s-33.52 14.72-33.52 33.473v33.473h66.993v-33.473zm468.81 33.52H716.4v100.465c0 18.753-14.72 33.473-33.472 33.473a33.145 33.145 0 01-33.473-33.473V143.657H381.53v100.465c0 18.753-14.72 33.473-33.473 33.473a33.145 33.145 0 01-33.473-33.473V143.657H180.6A134.314 134.314 0 0046.66 277.595v535.756A134.314 134.314 0 00180.6 947.289h669.74a134.36 134.36 0 00133.94-133.938V277.595a134.314 134.314 0 00-133.94-133.938zm33.473 267.877H147.126a33.145 33.145 0 01-33.473-33.473c0-18.752 14.72-33.473 33.473-33.473h736.687c18.752 0 33.472 14.72 33.472 33.473a33.145 33.145 0 01-33.472 33.473z"></path></svg><span data-allow-mismatch="text">6/17/25</span><meta property="datePublished" content="2025-06-17T03:04:05.000Z"></span><!----><span class="page-reading-time-info" aria-label="Reading Time⌛" data-balloon-pos="up"><svg xmlns="http://www.w3.org/2000/svg" class="icon timer-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="timer icon" name="timer"><path d="M799.387 122.15c4.402-2.978 7.38-7.897 7.38-13.463v-1.165c0-8.933-7.38-16.312-16.312-16.312H256.33c-8.933 0-16.311 7.38-16.311 16.312v1.165c0 5.825 2.977 10.874 7.637 13.592 4.143 194.44 97.22 354.963 220.201 392.763-122.204 37.542-214.893 196.511-220.2 389.397-4.661 5.049-7.638 11.651-7.638 19.03v5.825h566.49v-5.825c0-7.379-2.849-13.981-7.509-18.9-5.049-193.016-97.867-351.985-220.2-389.527 123.24-37.67 216.446-198.453 220.588-392.892zM531.16 450.445v352.632c117.674 1.553 211.787 40.778 211.787 88.676H304.097c0-48.286 95.149-87.382 213.728-88.676V450.445c-93.077-3.107-167.901-81.297-167.901-177.093 0-8.803 6.99-15.793 15.793-15.793 8.803 0 15.794 6.99 15.794 15.793 0 80.261 63.69 145.635 142.01 145.635s142.011-65.374 142.011-145.635c0-8.803 6.99-15.793 15.794-15.793s15.793 6.99 15.793 15.793c0 95.019-73.789 172.82-165.96 177.093z"></path></svg><span>About 11 min</span><meta property="timeRequired" content="PT11M"></span><!----><!----></div><hr></div><!----><div class="" vp-content><!----><div id="markdown-content"><h1 id="rocky-linux-9-系统初始化与安全加固脚本" tabindex="-1"><a class="header-anchor" href="#rocky-linux-9-系统初始化与安全加固脚本"><span>Rocky Linux 9 系统初始化与安全加固脚本</span></a></h1><p>在服务器运维与系统管理的实际场景中，一个安全、稳定、标准化的系统环境至关重要。Rocky Linux 作为一款企业级稳定发行版，越来越多地被用于生产环境部署。为节省重复配置的时间、降低人为操作失误率，同时提升系统的安全性，编写一套系统初始化与安全加固脚本显得尤为必要。</p><p>本文将基于 Rocky Linux 9，介绍如何通过 Shell 脚本实现系统初始化配置（如时间同步、YUM 源更换、基础软件安装）、安全加固（如 SSH 配置、密码策略、防火墙规则等）的一体化自动部署，帮助用户快速构建一套符合安全基线的操作系统环境。</p><p><img src="https://imgoss.xgss.net/picgo-tx2025/QQ_1750138991746.png?tx" alt="img"></p><h1 id="使用" tabindex="-1"><a class="header-anchor" href="#使用"><span>使用</span></a></h1><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span># wget https://gitee.com/funet8/Rocky-Linux-Shell/raw/main/shell/Rocky_Linux_9_system_init_shell_mini.sh</span></span>
+<span class="line"><span># sh Rocky_Linux_9_system_init_shell_mini.sh</span></span>
+<span class="line"><span>或者</span></span>
+<span class="line"><span>wget -qO- https://gitee.com/funet8/Rocky-Linux-Shell/raw/main/shell/Rocky_Linux_9_system_init_shell_mini.sh | sh</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h1 id="主要功能" tabindex="-1"><a class="header-anchor" href="#主要功能"><span>主要功能</span></a></h1><h2 id="_1-修改主机名-set-hostname" tabindex="-1"><a class="header-anchor" href="#_1-修改主机名-set-hostname"><span>1.修改主机名 ： set_hostname</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>HOSTNAME=&quot;node2&quot;</span></span>
+<span class="line"><span>hostnamectl set-hostname ${HOSTNAME}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_2-安装基础软件包-install-base-software" tabindex="-1"><a class="header-anchor" href="#_2-安装基础软件包-install-base-software"><span>2.安装基础软件包 ： install_base_software</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>dnf install -y vim wget curl lrzsz net-tools lsof bash-completion yum-utils tar zip unzip sudo cronie chrony policycoreutils-python-utils</span></span>
+<span class="line"><span># 安装 EPEL 仓库</span></span>
+<span class="line"><span>dnf install -y epel-release</span></span>
+<span class="line"><span>dnf makecache</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># rc.local添加执行权限   </span></span>
+<span class="line"><span>chmod +x /etc/rc.d/rc.local</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_3-更新系统-update-system" tabindex="-1"><a class="header-anchor" href="#_3-更新系统-update-system"><span>3.更新系统 ： update_system</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>dnf clean all</span></span>
+<span class="line"><span>dnf -y update</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_4-修改ssh端口-config-ssh" tabindex="-1"><a class="header-anchor" href="#_4-修改ssh端口-config-ssh"><span>4.修改SSH端口 ： config_ssh</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>SSH_PROT=&quot;60920&quot;</span></span>
+<span class="line"><span>SSHD_CONFIG=&quot;/etc/ssh/sshd_config&quot;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	echo &quot;修改 sshd_config 文件...&quot;</span></span>
+<span class="line"><span>	if grep -q &quot;^#Port 22&quot; &quot;$SSHD_CONFIG&quot;; then</span></span>
+<span class="line"><span>		sed -i &quot;s/^#Port 22/Port ${SSH_PROT}/&quot; &quot;$SSHD_CONFIG&quot;</span></span>
+<span class="line"><span>	elif grep -q &quot;^Port &quot; &quot;$SSHD_CONFIG&quot;; then</span></span>
+<span class="line"><span>		sed -i &quot;s/^Port .*/Port ${SSH_PROT}/&quot; &quot;$SSHD_CONFIG&quot;</span></span>
+<span class="line"><span>	else</span></span>
+<span class="line"><span>		echo &quot;Port ${SSH_PROT}&quot; &gt;&gt; &quot;$SSHD_CONFIG&quot;</span></span>
+<span class="line"><span>	fi</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	echo &quot;添加防火墙端口规则...&quot;</span></span>
+<span class="line"><span>	firewall-cmd --permanent --add-port=${SSH_PROT}/tcp</span></span>
+<span class="line"><span>	firewall-cmd --reload</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	echo &quot;重启 sshd 服务...&quot;</span></span>
+<span class="line"><span>	systemctl restart sshd</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_5-配置防火墙-configure-firewall" tabindex="-1"><a class="header-anchor" href="#_5-配置防火墙-configure-firewall"><span>5.配置防火墙 ： configure_firewall</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span># 确保防火墙服务已启用</span></span>
+<span class="line"><span>    systemctl enable firewalld</span></span>
+<span class="line"><span>    systemctl start firewalld</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 开放必要端口</span></span>
+<span class="line"><span>    firewall-cmd --permanent --add-service=ssh</span></span>
+<span class="line"><span>    firewall-cmd --permanent --add-service=http</span></span>
+<span class="line"><span>    firewall-cmd --permanent --add-service=https</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 重新加载防火墙规则</span></span>
+<span class="line"><span>    firewall-cmd --reload</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_6-配置ssh安全-configure-ssh" tabindex="-1"><a class="header-anchor" href="#_6-配置ssh安全-configure-ssh"><span>6.配置SSH安全 ： configure_ssh</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span> 备份原始配置</span></span>
+<span class="line"><span>    cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak</span></span>
+<span class="line"><span>    log &quot;INFO&quot; &quot;已备份SSH配置文件: /etc/ssh/sshd_config.bak&quot;</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 配置SSH安全选项</span></span>
+<span class="line"><span>    sed -i &#39;s/#PermitRootLogin yes/PermitRootLogin no/g&#39; /etc/ssh/sshd_config</span></span>
+<span class="line"><span>    sed -i &#39;s/#PasswordAuthentication yes/PasswordAuthentication no/g&#39; /etc/ssh/sshd_config</span></span>
+<span class="line"><span>    sed -i &#39;s/#PermitEmptyPasswords no/PermitEmptyPasswords no/g&#39; /etc/ssh/sshd_config</span></span>
+<span class="line"><span>    sed -i &#39;s/#UseDNS yes/UseDNS no/g&#39; /etc/ssh/sshd_config</span></span>
+<span class="line"><span>    sed -i &#39;s/#AllowTcpForwarding yes/AllowTcpForwarding no/g&#39; /etc/ssh/sshd_config</span></span>
+<span class="line"><span>    sed -i &#39;s/#X11Forwarding yes/X11Forwarding no/g&#39; /etc/ssh/sshd_config</span></span>
+<span class="line"><span>    sed -i &#39;s/#MaxAuthTries 6/MaxAuthTries 3/g&#39; /etc/ssh/sshd_config</span></span>
+<span class="line"><span>    sed -i &#39;s/#LoginGraceTime 2m/LoginGraceTime 60/g&#39; /etc/ssh/sshd_config</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>	mkdir -p /root/.ssh</span></span>
+<span class="line"><span>    # 将公钥写入 authorized_keys 文件</span></span>
+<span class="line"><span>    echo &quot;$PUB_KEY&quot; &gt;&gt; /root/.ssh/authorized_keys</span></span>
+<span class="line"><span>	</span></span>
+<span class="line"><span>    chmod 600 /root/.ssh/authorized_keys</span></span>
+<span class="line"><span>    chmod 700 /root/.ssh</span></span>
+<span class="line"><span>	</span></span>
+<span class="line"><span>    # 重启 SSH 服务以应用更改</span></span>
+<span class="line"><span>    systemctl restart sshd</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_7-配置selinux-configure-selinux" tabindex="-1"><a class="header-anchor" href="#_7-配置selinux-configure-selinux"><span>7.配置SELinux ： configure_selinux</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>cp /etc/selinux/config /etc/selinux/config.bak</span></span>
+<span class="line"><span>    log &quot;INFO&quot; &quot;已备份SELinux配置文件: /etc/selinux/config.bak&quot;</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 设置SELinux为强制模式</span></span>
+<span class="line"><span>    sed -i &#39;s/SELINUX=permissive/SELINUX=enforcing/g&#39; /etc/selinux/config</span></span>
+<span class="line"><span>    sed -i &#39;s/SELINUX=disabled/SELINUX=enforcing/g&#39; /etc/selinux/config</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 检查当前SELinux状态</span></span>
+<span class="line"><span>    current_status=$(getenforce)</span></span>
+<span class="line"><span>    if [ &quot;$current_status&quot; != &quot;Enforcing&quot; ]; then</span></span>
+<span class="line"><span>        log &quot;WARNING&quot; &quot;SELinux当前状态为 $current_status，需要重启系统以应用更改&quot;</span></span>
+<span class="line"><span>        log &quot;WARNING&quot; &quot;当前配置已设置为强制模式，重启后生效&quot;</span></span>
+<span class="line"><span>    else</span></span>
+<span class="line"><span>        log &quot;INFO&quot; &quot;SELinux已处于强制模式&quot;</span></span>
+<span class="line"><span>    fi</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_8-配置系统日志-configure-logging" tabindex="-1"><a class="header-anchor" href="#_8-配置系统日志-configure-logging"><span>8.配置系统日志 ： configure_logging</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span># 确保rsyslog服务已启用</span></span>
+<span class="line"><span>    systemctl enable rsyslog</span></span>
+<span class="line"><span>    systemctl start rsyslog</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 配置日志轮转</span></span>
+<span class="line"><span>    cat &gt; /etc/logrotate.d/secure &lt;&lt; &quot;EOF&quot;</span></span>
+<span class="line"><span>/var/log/secure {</span></span>
+<span class="line"><span>    daily</span></span>
+<span class="line"><span>    missingok</span></span>
+<span class="line"><span>    rotate 7</span></span>
+<span class="line"><span>    compress</span></span>
+<span class="line"><span>    delaycompress</span></span>
+<span class="line"><span>    notifempty</span></span>
+<span class="line"><span>    create 600 root root</span></span>
+<span class="line"><span>    sharedscripts</span></span>
+<span class="line"><span>    postrotate</span></span>
+<span class="line"><span>        /usr/bin/systemctl restart rsyslog.service &gt; /dev/null 2&gt;&amp;1 || true</span></span>
+<span class="line"><span>    endscript</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>EOF</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    # 配置日志大小限制</span></span>
+<span class="line"><span>    cat &gt; /etc/systemd/journald.conf &lt;&lt; &quot;EOF&quot;</span></span>
+<span class="line"><span>[Journal]</span></span>
+<span class="line"><span>Storage=persistent</span></span>
+<span class="line"><span>Compress=yes</span></span>
+<span class="line"><span>SyncIntervalSec=5m</span></span>
+<span class="line"><span>RateLimitIntervalSec=30s</span></span>
+<span class="line"><span>RateLimitBurst=1000</span></span>
+<span class="line"><span>SystemMaxUse=100M</span></span>
+<span class="line"><span>SystemMaxFileSize=20M</span></span>
+<span class="line"><span>EOF</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    # 重启journald服务</span></span>
+<span class="line"><span>    systemctl restart systemd-journald</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_9-配置账户安全-configure-accounts" tabindex="-1"><a class="header-anchor" href="#_9-配置账户安全-configure-accounts"><span>9.配置账户安全 ： configure_accounts</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span># 设置密码复杂度策略</span></span>
+<span class="line"><span>    if [ ! -f &quot;/etc/pam.d/system-auth.bak&quot; ]; then</span></span>
+<span class="line"><span>        cp /etc/pam.d/system-auth /etc/pam.d/system-auth.bak</span></span>
+<span class="line"><span>        log &quot;INFO&quot; &quot;已备份系统认证配置: /etc/pam.d/system-auth.bak&quot;</span></span>
+<span class="line"><span>    fi</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 添加密码复杂度要求</span></span>
+<span class="line"><span>    sed -i &#39;s/password    requisite     pam_pwquality.so/password    requisite     pam_pwquality.so minlen=12 ucredit=-1 lcredit=-1 dcredit=-1 ocredit=-1/g&#39; /etc/pam.d/system-auth</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 设置密码过期策略</span></span>
+<span class="line"><span>    cat &gt; /etc/login.defs &lt;&lt; &quot;EOF&quot;</span></span>
+<span class="line"><span># 密码过期设置</span></span>
+<span class="line"><span>PASS_MAX_DAYS   90</span></span>
+<span class="line"><span>PASS_MIN_DAYS   7</span></span>
+<span class="line"><span>PASS_WARN_AGE   14</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 账户设置</span></span>
+<span class="line"><span>UID_MIN                  1000</span></span>
+<span class="line"><span>UID_MAX                 60000</span></span>
+<span class="line"><span>GID_MIN                  1000</span></span>
+<span class="line"><span>GID_MAX                 60000</span></span>
+<span class="line"><span>CREATE_HOME             yes</span></span>
+<span class="line"><span>UMASK                    077</span></span>
+<span class="line"><span>ENCRYPT_METHOD           SHA512</span></span>
+<span class="line"><span>EOF</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    # 锁定不必要的账户</span></span>
+<span class="line"><span>    for user in adm lp sync shutdown halt news uucp operator games gopher; do</span></span>
+<span class="line"><span>        if id &quot;$user&quot; &amp;&gt;/dev/null; then</span></span>
+<span class="line"><span>            usermod -L &quot;$user&quot;</span></span>
+<span class="line"><span>            log &quot;INFO&quot; &quot;已锁定账户: $user&quot;</span></span>
+<span class="line"><span>        fi</span></span>
+<span class="line"><span>    done</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    log &quot;INFO&quot; &quot;账户安全配置完成&quot;</span></span>
+<span class="line"><span>    log &quot;INFO&quot; &quot;已设置密码复杂度要求和过期策略&quot;</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    return 0</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 配置系统资源限制</span></span>
+<span class="line"><span>configure_resource_limits() {</span></span>
+<span class="line"><span>    log &quot;INFO&quot; &quot;配置系统资源限制...&quot;</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 设置用户资源限制</span></span>
+<span class="line"><span>    cat &gt; /etc/security/limits.conf &lt;&lt; &quot;EOF&quot;</span></span>
+<span class="line"><span># 资源限制配置</span></span>
+<span class="line"><span>*               hard    core            0</span></span>
+<span class="line"><span>*               hard    nproc           10000</span></span>
+<span class="line"><span>*               hard    nofile          65535</span></span>
+<span class="line"><span>root            hard    nproc           unlimited</span></span>
+<span class="line"><span>root            hard    nofile          65535</span></span>
+<span class="line"><span>EOF</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    # 配置PAM以应用资源限制</span></span>
+<span class="line"><span>    if ! grep -q &quot;pam_limits.so&quot; /etc/pam.d/common-session; then</span></span>
+<span class="line"><span>        echo &quot;session    required   pam_limits.so&quot; &gt;&gt; /etc/pam.d/common-session</span></span>
+<span class="line"><span>    fi</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    log &quot;INFO&quot; &quot;系统资源限制配置完成&quot;</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_10-配置系统资源限制-configure-resource-limits" tabindex="-1"><a class="header-anchor" href="#_10-配置系统资源限制-configure-resource-limits"><span>10.配置系统资源限制 ： configure_resource_limits</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span># 设置用户资源限制</span></span>
+<span class="line"><span>    cat &gt; /etc/security/limits.conf &lt;&lt; &quot;EOF&quot;</span></span>
+<span class="line"><span># 资源限制配置</span></span>
+<span class="line"><span>*               hard    core            0</span></span>
+<span class="line"><span>*               hard    nproc           10000</span></span>
+<span class="line"><span>*               hard    nofile          65535</span></span>
+<span class="line"><span>root            hard    nproc           unlimited</span></span>
+<span class="line"><span>root            hard    nofile          65535</span></span>
+<span class="line"><span>EOF</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    # 配置PAM以应用资源限制</span></span>
+<span class="line"><span>    if ! grep -q &quot;pam_limits.so&quot; /etc/pam.d/common-session; then</span></span>
+<span class="line"><span>        echo &quot;session    required   pam_limits.so&quot; &gt;&gt; /etc/pam.d/common-session</span></span>
+<span class="line"><span>    fi</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_11-配置网络安全-configure-network-security" tabindex="-1"><a class="header-anchor" href="#_11-配置网络安全-configure-network-security"><span>11.配置网络安全 ： configure_network_security</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>cp /etc/sysctl.conf /etc/sysctl.conf.bak</span></span>
+<span class="line"><span>    log &quot;INFO&quot; &quot;已备份系统参数配置: /etc/sysctl.conf.bak&quot;</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 配置系统网络参数</span></span>
+<span class="line"><span>    cat &gt; /etc/sysctl.d/99-security-hardening.conf &lt;&lt; &quot;EOF&quot;</span></span>
+<span class="line"><span># 防止IP欺骗</span></span>
+<span class="line"><span>net.ipv4.conf.all.rp_filter = 1</span></span>
+<span class="line"><span>net.ipv4.conf.default.rp_filter = 1</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 禁用IP源路由</span></span>
+<span class="line"><span>net.ipv4.conf.all.accept_source_route = 0</span></span>
+<span class="line"><span>net.ipv4.conf.default.accept_source_route = 0</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 禁用ICMP重定向</span></span>
+<span class="line"><span>net.ipv4.conf.all.accept_redirects = 0</span></span>
+<span class="line"><span>net.ipv4.conf.default.accept_redirects = 0</span></span>
+<span class="line"><span>net.ipv4.conf.all.secure_redirects = 0</span></span>
+<span class="line"><span>net.ipv4.conf.default.secure_redirects = 0</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 不发送ICMP重定向</span></span>
+<span class="line"><span>net.ipv4.conf.all.send_redirects = 0</span></span>
+<span class="line"><span>net.ipv4.conf.default.send_redirects = 0</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 启用SYN洪水保护</span></span>
+<span class="line"><span>net.ipv4.tcp_syncookies = 1</span></span>
+<span class="line"><span>net.ipv4.tcp_max_syn_backlog = 2048</span></span>
+<span class="line"><span>net.ipv4.tcp_synack_retries = 3</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 禁用IP转发</span></span>
+<span class="line"><span>net.ipv4.ip_forward = 0</span></span>
+<span class="line"><span># 启用IP转发，改为此配置，并且执行生效： sysctl -p</span></span>
+<span class="line"><span># net.ipv4.ip_forward = 1</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 禁用IPv6</span></span>
+<span class="line"><span>net.ipv6.conf.all.disable_ipv6 = 1</span></span>
+<span class="line"><span>net.ipv6.conf.default.disable_ipv6 = 1</span></span>
+<span class="line"><span>net.ipv6.conf.lo.disable_ipv6 = 1</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 启用内核保护</span></span>
+<span class="line"><span>kernel.exec-shield = 1</span></span>
+<span class="line"><span>kernel.randomize_va_space = 2</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 限制core文件大小</span></span>
+<span class="line"><span>fs.suid_dumpable = 0</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 提高网络性能</span></span>
+<span class="line"><span>net.core.rmem_max = 16777216</span></span>
+<span class="line"><span>net.core.wmem_max = 16777216</span></span>
+<span class="line"><span>net.core.netdev_max_backlog = 250000</span></span>
+<span class="line"><span>net.core.somaxconn = 4096</span></span>
+<span class="line"><span>net.ipv4.tcp_rmem = 4096 87380 16777216</span></span>
+<span class="line"><span>net.ipv4.tcp_wmem = 4096 65536 16777216</span></span>
+<span class="line"><span>net.ipv4.tcp_max_tw_buckets = 1440000</span></span>
+<span class="line"><span>net.ipv4.tcp_fin_timeout = 15</span></span>
+<span class="line"><span>net.ipv4.tcp_keepalive_time = 300</span></span>
+<span class="line"><span>net.ipv4.tcp_max_syn_backlog = 8192</span></span>
+<span class="line"><span>net.ipv4.tcp_timestamps = 0</span></span>
+<span class="line"><span>EOF</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    # 应用系统参数</span></span>
+<span class="line"><span>    sysctl --system</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_12-配置cron和at服务-configure-cron" tabindex="-1"><a class="header-anchor" href="#_12-配置cron和at服务-configure-cron"><span>12.配置Cron和at服务 ： configure_cron</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span># 确保Cron服务已启用</span></span>
+<span class="line"><span>    systemctl enable crond</span></span>
+<span class="line"><span>    systemctl start crond</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 确保atd服务已禁用</span></span>
+<span class="line"><span>    systemctl disable atd</span></span>
+<span class="line"><span>    systemctl stop atd</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 配置Cron安全</span></span>
+<span class="line"><span>    chmod 600 /etc/crontab</span></span>
+<span class="line"><span>    chmod 600 /etc/cron.hourly</span></span>
+<span class="line"><span>    chmod 600 /etc/cron.daily</span></span>
+<span class="line"><span>    chmod 600 /etc/cron.weekly</span></span>
+<span class="line"><span>    chmod 600 /etc/cron.monthly</span></span>
+<span class="line"><span>    chmod 600 /etc/cron.d</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 限制访问Cron</span></span>
+<span class="line"><span>    echo &quot;root&quot; &gt; /etc/cron.allow</span></span>
+<span class="line"><span>    rm -f /etc/cron.deny</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_13-自动配置-chronyd-同步时间-configure-time" tabindex="-1"><a class="header-anchor" href="#_13-自动配置-chronyd-同步时间-configure-time"><span>13.自动配置 chronyd 同步时间 ： configure_time</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>dnf install -y chrony</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	sed -i &#39;s/^server/#server/g&#39; /etc/chrony.conf</span></span>
+<span class="line"><span>	echo &quot;server ntp.aliyun.com iburst&quot; &gt;&gt; /etc/chrony.conf</span></span>
+<span class="line"><span>	echo &quot;server 0.centos.pool.ntp.org iburst&quot; &gt;&gt; /etc/chrony.conf</span></span>
+<span class="line"><span>	echo &quot;server 1.centos.pool.ntp.org iburst&quot; &gt;&gt; /etc/chrony.conf</span></span>
+<span class="line"><span>	echo &quot;server 2.centos.pool.ntp.org iburst&quot; &gt;&gt; /etc/chrony.conf</span></span>
+<span class="line"><span>	echo &quot;server 3.centos.pool.ntp.org iburst&quot; &gt;&gt; /etc/chrony.conf</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	systemctl restart chronyd</span></span>
+<span class="line"><span>	systemctl enable chronyd</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_14-配置系统审计-configure-audit" tabindex="-1"><a class="header-anchor" href="#_14-配置系统审计-configure-audit"><span>14.配置系统审计 ： configure_audit</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span># 安装auditd</span></span>
+<span class="line"><span>    dnf -y install audit audit-libs</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 备份原始配置</span></span>
+<span class="line"><span>    cp /etc/audit/auditd.conf /etc/audit/auditd.conf.bak</span></span>
+<span class="line"><span>    log &quot;INFO&quot; &quot;已备份审计配置: /etc/audit/auditd.conf.bak&quot;</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 配置auditd</span></span>
+<span class="line"><span>    sed -i &#39;s/max_log_file = 8/max_log_file = 100/g&#39; /etc/audit/auditd.conf</span></span>
+<span class="line"><span>    sed -i &#39;s/max_log_file_action = ROTATE/max_log_file_action = KEEP_LOGS/g&#39; /etc/audit/auditd.conf</span></span>
+<span class="line"><span>    sed -i &#39;s/num_logs = 5/num_logs = 50/g&#39; /etc/audit/auditd.conf</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 配置审计规则</span></span>
+<span class="line"><span>    cat &gt; /etc/audit/rules.d/audit.rules &lt;&lt; &quot;EOF&quot;</span></span>
+<span class="line"><span># 基本审计规则</span></span>
+<span class="line"><span>## 登录和认证</span></span>
+<span class="line"><span>-w /var/log/faillog -p wa -k logins</span></span>
+<span class="line"><span>-w /var/log/lastlog -p wa -k logins</span></span>
+<span class="line"><span>-w /var/log/tallylog -p wa -k logins</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## 账户和权限</span></span>
+<span class="line"><span>-w /etc/group -p wa -k identity</span></span>
+<span class="line"><span>-w /etc/passwd -p wa -k identity</span></span>
+<span class="line"><span>-w /etc/gshadow -p wa -k identity</span></span>
+<span class="line"><span>-w /etc/shadow -p wa -k identity</span></span>
+<span class="line"><span>-w /etc/security/opasswd -p wa -k identity</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## 关键文件和目录</span></span>
+<span class="line"><span>-w /etc/sudoers -p wa -k sudo</span></span>
+<span class="line"><span>-w /etc/ssh/sshd_config -p wa -k sshd</span></span>
+<span class="line"><span>-w /etc/selinux/ -p wa -k selinux</span></span>
+<span class="line"><span>-w /etc/grub2.cfg -p wa -k bootloader</span></span>
+<span class="line"><span>-w /etc/localtime -p wa -k time-change</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## 系统事件</span></span>
+<span class="line"><span>-w /var/log/audit/ -p wa -k auditd</span></span>
+<span class="line"><span>-w /etc/sysctl.conf -p wa -k sysctl</span></span>
+<span class="line"><span>-w /usr/bin/newgrp -p x -k privileged</span></span>
+<span class="line"><span>-w /usr/bin/sudo -p x -k privileged</span></span>
+<span class="line"><span>-w /usr/bin/su -p x -k privileged</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## 内核模块</span></span>
+<span class="line"><span>-w /sbin/insmod -p x -k modules</span></span>
+<span class="line"><span>-w /sbin/rmmod -p x -k modules</span></span>
+<span class="line"><span>-w /sbin/modprobe -p x -k modules</span></span>
+<span class="line"><span>-a always,exit -F arch=b64 -S init_module,finit_module -k modules</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## 关键系统调用</span></span>
+<span class="line"><span>-a always,exit -F arch=b64 -S adjtimex -S settimeofday -k time-change</span></span>
+<span class="line"><span>-a always,exit -F arch=b32 -S adjtimex -S settimeofday -k time-change</span></span>
+<span class="line"><span>-a always,exit -F arch=b64 -S clock_settime -k time-change</span></span>
+<span class="line"><span>-a always,exit -F arch=b32 -S clock_settime -k time-change</span></span>
+<span class="line"><span>-a always,exit -F arch=b64 -S clone -S fork -S vfork -k process</span></span>
+<span class="line"><span>-a always,exit -F arch=b32 -S clone -S fork -S vfork -k process</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## 网络活动</span></span>
+<span class="line"><span>-a always,exit -F arch=b64 -S socket -S bind -S connect -k network</span></span>
+<span class="line"><span>-a always,exit -F arch=b32 -S socket -S bind -S connect -k network</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## 特权命令</span></span>
+<span class="line"><span>-a always,exit -F path=/usr/bin/sudo -F perm=x -F auid&gt;=1000 -F auid!=unset -k privileged</span></span>
+<span class="line"><span>-a always,exit -F path=/usr/bin/newgrp -F perm=x -F auid&gt;=1000 -F auid!=unset -k privileged</span></span>
+<span class="line"><span>-a always,exit -F path=/usr/bin/passwd -F perm=x -F auid&gt;=1000 -F auid!=unset -k privileged</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## 敏感文件</span></span>
+<span class="line"><span>-a always,exit -F path=/etc/issue -F perm=wa -F auid&gt;=1000 -F auid!=unset -k etc-files</span></span>
+<span class="line"><span>-a always,exit -F path=/etc/issue.net -F perm=wa -F auid&gt;=1000 -F auid!=unset -k etc-files</span></span>
+<span class="line"><span>-a always,exit -F path=/etc/motd -F perm=wa -F auid&gt;=1000 -F auid!=unset -k etc-files</span></span>
+<span class="line"><span>-a always,exit -F path=/etc/group -F perm=wa -F auid&gt;=1000 -F auid!=unset -k etc-files</span></span>
+<span class="line"><span>-a always,exit -F path=/etc/passwd -F perm=wa -F auid&gt;=1000 -F auid!=unset -k etc-files</span></span>
+<span class="line"><span>-a always,exit -F path=/etc/shadow -F perm=wa -F auid&gt;=1000 -F auid!=unset -k etc-files</span></span>
+<span class="line"><span>-a always,exit -F path=/etc/gshadow -F perm=wa -F auid&gt;=1000 -F auid!=unset -k etc-files</span></span>
+<span class="line"><span>-a always,exit -F path=/etc/sudoers -F perm=r -F auid&gt;=1000 -F auid!=unset -k sudoers</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## 审计配置</span></span>
+<span class="line"><span>-w /etc/audit/ -p wa -k auditd</span></span>
+<span class="line"><span>-w /etc/libaudit.conf -p wa -k auditd</span></span>
+<span class="line"><span>-w /etc/audisp/ -p wa -k auditd</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 性能优化</span></span>
+<span class="line"><span>-f 2</span></span>
+<span class="line"><span>EOF</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    # 启用并启动auditd服务</span></span>
+<span class="line"><span>    systemctl enable auditd</span></span>
+<span class="line"><span>    systemctl restart auditd</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_15-安装安全工具-install-security-tools" tabindex="-1"><a class="header-anchor" href="#_15-安装安全工具-install-security-tools"><span>15.安装安全工具 ： install_security_tools</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span># 安装基础安全工具</span></span>
+<span class="line"><span>    # 如果报错：Error: Unable to find a match: lynis rkhunter fail2ban</span></span>
+<span class="line"><span>    # dnf install -y epel-release</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    dnf -y install aide lynis rkhunter fail2ban nmap sysstat lsof bind-utils</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    # 初始化AIDE</span></span>
+<span class="line"><span>    if [ -f &quot;/usr/sbin/aide&quot; ]; then</span></span>
+<span class="line"><span>        /usr/sbin/aide --init</span></span>
+<span class="line"><span>        if [ -f &quot;/var/lib/aide/aide.db.new.gz&quot; ]; then</span></span>
+<span class="line"><span>            mv /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz</span></span>
+<span class="line"><span>            log &quot;INFO&quot; &quot;AIDE数据库已初始化&quot;</span></span>
+<span class="line"><span>        fi</span></span>
+<span class="line"><span>    fi</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 配置fail2ban</span></span>
+<span class="line"><span>    if [ -f &quot;/etc/fail2ban/jail.conf&quot; ]; then</span></span>
+<span class="line"><span>        cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local</span></span>
+<span class="line"><span>        sed -i &#39;s/bantime  = 10m/bantime  = 1h/g&#39; /etc/fail2ban/jail.local</span></span>
+<span class="line"><span>        sed -i &#39;s/maxretry = 5/maxretry = 3/g&#39; /etc/fail2ban/jail.local</span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        # 确保fail2ban服务已启用</span></span>
+<span class="line"><span>        systemctl enable fail2ban</span></span>
+<span class="line"><span>        systemctl start fail2ban</span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        log &quot;INFO&quot; &quot;fail2ban已配置&quot;</span></span>
+<span class="line"><span>    fi</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    log &quot;INFO&quot; &quot;安全工具安装完成&quot;</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_16-配置定时任务-configure-scheduled-tasks-未开启" tabindex="-1"><a class="header-anchor" href="#_16-配置定时任务-configure-scheduled-tasks-未开启"><span>16.配置定时任务 ： configure_scheduled_tasks(未开启)</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span># 创建安全检查脚本</span></span>
+<span class="line"><span>    cat &gt; /usr/local/bin/security_check.sh &lt;&lt; &quot;EOF&quot;</span></span>
+<span class="line"><span>#!/bin/bash</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 安全检查脚本</span></span>
+<span class="line"><span>LOG_FILE=&quot;/var/log/security_check_$(date +%Y%m%d).log&quot;</span></span>
+<span class="line"><span>DATE=$(date &quot;+%Y-%m-%d %H:%M:%S&quot;)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo &quot;==========================================&quot; &gt; $LOG_FILE</span></span>
+<span class="line"><span>echo &quot;安全检查报告 - $DATE&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span>echo &quot;==========================================&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span>echo &quot;&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 检查系统更新</span></span>
+<span class="line"><span>echo &quot;系统更新状态:&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span>dnf check-update &gt;&gt; $LOG_FILE 2&gt;&amp;1</span></span>
+<span class="line"><span>echo &quot;&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 检查登录失败</span></span>
+<span class="line"><span>echo &quot;最近登录失败记录:&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span>lastb | head -n 10 &gt;&gt; $LOG_FILE 2&gt;&amp;1</span></span>
+<span class="line"><span>echo &quot;&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 检查root登录</span></span>
+<span class="line"><span>echo &quot;最近root登录记录:&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span>last root | head -n 10 &gt;&gt; $LOG_FILE 2&gt;&amp;1</span></span>
+<span class="line"><span>echo &quot;&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 检查系统日志</span></span>
+<span class="line"><span>echo &quot;系统安全日志:&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span>grep -i &quot;failed\|error\|denied\|refused\|invalid&quot; /var/log/secure | tail -n 20 &gt;&gt; $LOG_FILE 2&gt;&amp;1</span></span>
+<span class="line"><span>echo &quot;&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 检查监听端口</span></span>
+<span class="line"><span>echo &quot;当前监听端口:&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span>ss -tuln &gt;&gt; $LOG_FILE 2&gt;&amp;1</span></span>
+<span class="line"><span>echo &quot;&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 检查可疑进程</span></span>
+<span class="line"><span>echo &quot;可疑进程:&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span>ps aux | grep -v grep | egrep &quot;root|sudo|bash|sh|python|perl&quot; | awk &#39;$3 &gt; 10 || $4 &gt; 10&#39; &gt;&gt; $LOG_FILE 2&gt;&amp;1</span></span>
+<span class="line"><span>echo &quot;&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 检查开放文件</span></span>
+<span class="line"><span>echo &quot;打开的文件数量:&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span>lsof | wc -l &gt;&gt; $LOG_FILE 2&gt;&amp;1</span></span>
+<span class="line"><span>echo &quot;&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 检查SELinux状态</span></span>
+<span class="line"><span>echo &quot;SELinux状态:&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span>getenforce &gt;&gt; $LOG_FILE 2&gt;&amp;1</span></span>
+<span class="line"><span>echo &quot;&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 检查防火墙状态</span></span>
+<span class="line"><span>echo &quot;防火墙状态:&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span>firewall-cmd --list-all &gt;&gt; $LOG_FILE 2&gt;&amp;1</span></span>
+<span class="line"><span>echo &quot;&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 检查磁盘使用情况</span></span>
+<span class="line"><span>echo &quot;磁盘使用情况:&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span>df -h &gt;&gt; $LOG_FILE 2&gt;&amp;1</span></span>
+<span class="line"><span>echo &quot;&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 检查内存使用情况</span></span>
+<span class="line"><span>echo &quot;内存使用情况:&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span>free -m &gt;&gt; $LOG_FILE 2&gt;&amp;1</span></span>
+<span class="line"><span>echo &quot;&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 检查CPU使用情况</span></span>
+<span class="line"><span>echo &quot;CPU使用情况:&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span>top -bn1 | head -n 5 &gt;&gt; $LOG_FILE 2&gt;&amp;1</span></span>
+<span class="line"><span>echo &quot;&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 检查AIDE完整性</span></span>
+<span class="line"><span>echo &quot;文件完整性检查:&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span>if [ -f &quot;/usr/sbin/aide&quot; ]; then</span></span>
+<span class="line"><span>    /usr/sbin/aide --check &gt;&gt; $LOG_FILE 2&gt;&amp;1</span></span>
+<span class="line"><span>else</span></span>
+<span class="line"><span>    echo &quot;AIDE未安装&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span>echo &quot;&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 检查rkhunter</span></span>
+<span class="line"><span>echo &quot;Rootkit检查:&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span>if [ -f &quot;/usr/bin/rkhunter&quot; ]; then</span></span>
+<span class="line"><span>    /usr/bin/rkhunter --check --skip-keypress &gt;&gt; $LOG_FILE 2&gt;&amp;1</span></span>
+<span class="line"><span>else</span></span>
+<span class="line"><span>    echo &quot;rkhunter未安装&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span>echo &quot;&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 发送邮件通知（如果配置了邮件）</span></span>
+<span class="line"><span>if [ -x &quot;/usr/bin/mail&quot; ] &amp;&amp; [ -f &quot;/root/.forward&quot; ]; then</span></span>
+<span class="line"><span>    mail -s &quot;系统安全检查报告 - $DATE&quot; root &lt; $LOG_FILE</span></span>
+<span class="line"><span>fi</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>echo &quot;安全检查完成: $DATE&quot; &gt;&gt; $LOG_FILE</span></span>
+<span class="line"><span>EOF</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    # 设置脚本权限</span></span>
+<span class="line"><span>    chmod +x /usr/local/bin/security_check.sh</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 添加到crontab</span></span>
+<span class="line"><span>    if ! crontab -l | grep -q &quot;security_check.sh&quot;; then</span></span>
+<span class="line"><span>        (crontab -l 2&gt;/dev/null; echo &quot;0 3 * * * /usr/local/bin/security_check.sh&quot;) | crontab -</span></span>
+<span class="line"><span>        log &quot;INFO&quot; &quot;已添加每日安全检查任务&quot;</span></span>
+<span class="line"><span>    fi</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 添加每周系统更新任务</span></span>
+<span class="line"><span>    #if ! crontab -l | grep -q &quot;dnf update&quot;; then</span></span>
+<span class="line"><span>    #    (crontab -l 2&gt;/dev/null; echo &quot;0 2 * * 0 dnf -y update &amp;&amp; dnf -y autoremove&quot;) | crontab -</span></span>
+<span class="line"><span>    #    log &quot;INFO&quot; &quot;已添加每周系统更新任务&quot;</span></span>
+<span class="line"><span>    #fi</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    # 添加每周AIDE数据库更新任务</span></span>
+<span class="line"><span>    if [ -f &quot;/usr/sbin/aide&quot; ] &amp;&amp; ! crontab -l | grep -q &quot;aide --update&quot;; then</span></span>
+<span class="line"><span>        (crontab -l 2&gt;/dev/null; echo &quot;0 4 * * 0 /usr/sbin/aide --update &amp;&amp; mv /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz&quot;) | crontab -</span></span>
+<span class="line"><span>        log &quot;INFO&quot; &quot;已添加每周AIDE数据库更新任务&quot;</span></span>
+<span class="line"><span>    fi</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_17-显示完成信息-show-completion" tabindex="-1"><a class="header-anchor" href="#_17-显示完成信息-show-completion"><span>17.显示完成信息 ： show_completion</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>log &quot;INFO&quot; &quot;系统初始化与安全加固完成&quot;</span></span>
+<span class="line"><span>    log &quot;INFO&quot; &quot;日志文件: $LOG_FILE&quot;</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    echo &quot;&quot;</span></span>
+<span class="line"><span>    echo &quot;==============================================&quot;</span></span>
+<span class="line"><span>    echo &quot;系统初始化与安全加固已完成&quot;</span></span>
+<span class="line"><span>    echo &quot;==============================================&quot;</span></span>
+<span class="line"><span>    echo &quot;&quot;</span></span>
+<span class="line"><span>    echo &quot;重要注意事项:&quot;</span></span>
+<span class="line"><span>    echo &quot;1. 请检查日志文件: $LOG_FILE&quot;</span></span>
+<span class="line"><span>    echo &quot;2. 部分安全配置可能需要重启系统才能完全生效&quot;</span></span>
+<span class="line"><span>    echo &quot;3. 请确保SSH密钥已正确配置，否则可能无法登录系统&quot;</span></span>
+<span class="line"><span>    echo &quot;4. 建议在生产环境使用前进行全面测试&quot;</span></span>
+<span class="line"><span>    echo &quot;&quot;</span></span>
+<span class="line"><span>    echo &quot;推荐后续操作:&quot;</span></span>
+<span class="line"><span>    echo &quot;1. 配置邮件服务以接收安全警报&quot;</span></span>
+<span class="line"><span>    echo &quot;2. 设置定期备份重要数据&quot;</span></span>
+<span class="line"><span>    echo &quot;3. 考虑配置入侵检测系统(IDS)或入侵防御系统(IPS)&quot;</span></span>
+<span class="line"><span>    echo &quot;4. 定期审查系统日志和安全检查报告&quot;</span></span>
+<span class="line"><span>    echo &quot;&quot;</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    read -p &quot;是否需要重启系统? (y/n): &quot; choice</span></span>
+<span class="line"><span>    if [ &quot;$choice&quot; == &quot;y&quot; ] || [ &quot;$choice&quot; == &quot;Y&quot; ]; then</span></span>
+<span class="line"><span>        log &quot;INFO&quot; &quot;系统将在30秒后重启，请保存未完成的工作&quot;</span></span>
+<span class="line"><span>        sleep 30</span></span>
+<span class="line"><span>        reboot</span></span>
+<span class="line"><span>    fi</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h1 id="结尾" tabindex="-1"><a class="header-anchor" href="#结尾"><span>结尾</span></a></h1><p>通过本文的系统初始化与安全加固脚本，我们能够在部署 Rocky Linux 9 系统后，第一时间完成标准化配置与安全防护，大幅提升系统上线的效率与安全性。当然，实际环境中可能还需要根据业务需求进一步调整配置策略。</p><p>写文不易，如果你都看到了这里，请点个赞和在看，分享给更多的朋友；也别忘了关注星哥玩云！这里有满满的干货分享，还有轻松有趣的技术交流～点个赞、分享给身边的小伙伴，一起成长，一起玩转技术世界吧！ 😊</p></div><!----><!----><!----></div><footer class="vp-page-meta"><!----><div class="vp-meta-item git-info"><div class="update-time"><span class="vp-meta-label">Last Updated:</span><time class="vp-meta-info" datetime="2025-07-10T08:27:29.000Z" data-allow-mismatch>7/10/25, 8:27 AM</time></div><div class="contributors"><span class="vp-meta-label">Contributors: </span><!--[--><!--[--><span class="vp-meta-info" title="email: star@xgss.net">star</span><!--]--><!--]--></div></div></footer><!----><!----><!----><!--]--></main><!--]--><!----></div><!--]--><!--]--><!--[--><!----><!--[--><!--]--><!--]--><!--]--></div>
+    <script type="module" src="/assets/app-w0bMFjFL.js" defer></script>
+  </body>
+</html>
