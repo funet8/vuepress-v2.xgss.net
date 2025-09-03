@@ -1,8 +1,3 @@
----
-title: gitbook-chajian
-createTime: 2025/05/27 17:51:18
-permalink: /article/1kp3e0q4/
----
 # gitbook插件
 
 
