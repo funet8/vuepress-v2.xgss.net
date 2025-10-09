@@ -34,18 +34,39 @@ Mydumper 如此强大，使其在需要快速、高效备份 MySQL 数据库的�
 
 ## Mydumper主要特性
 
-1.轻量级C语言写的
-2.多线程备份，备份后会生成多个备份文件
-3.事务性和非事务性表一致的快照(适用于0.2.2以上版本)
-4.快速的文件压缩
-5.支持导出binlog
-6.多线程恢复(适用于0.2.1以上版本)
-7.以守护进程的工作方式，定时快照和连续二进制日志(适用于0.5.0以上版本)
-8.开源 (GNU GPLv3)
+1. 轻量级C语言写的
+2. 多线程备份，备份后会生成多个备份文件
+3. 事务性和非事务性表一致的快照(适用于0.2.2以上版本)
+4. 快速的文件压缩
+5. 支持导出binlog
+6. 多线程恢复(适用于0.2.1以上版本)
+7. 以守护进程的工作方式，定时快照和连续二进制日志(适用于0.5.0以上版本)
+8. 开源 (GNU GPLv3)
+
+
 
 开源地址： https://github.com/mydumper/mydumper
 
-## 安装Mydumper
+
+
+## RPM安装（推荐使用）
+
+```
+https://github.com/mydumper/mydumper/releases 下载对应的
+我这边下载 mydumper-0.19.4-17.el7.x86_64.rpm
+
+wget http://js.funet8.com/centos_software/mydumper-0.19.4-17.el7.x86_64.rpm
+yum install -y pcre2 pcre2-devel
+yum install -y zstd
+rpm -ivh mydumper-0.19.4-17.el7.x86_64.rpm
+安装成功
+mydumper --help
+myloader --help
+```
+
+
+
+## 源码包安装Mydumper
 
 系统： centos7
 
@@ -54,7 +75,7 @@ Mydumper 如此强大，使其在需要快速、高效备份 MySQL 数据库的�
 
 # cd /data/software/
 # wget https://launchpad.net/mydumper/0.9/0.9.1/+download/mydumper-0.9.1.tar.gz
-备份下载：http://js.funet8.com/centos_software/mydumper-0.9.1.tar.gz
+备份下载：wget http://js.funet8.com/centos_software/mydumper-0.9.1.tar.gz
 # tar zxf mydumper-0.9.1.tar.gz
 # cd mydumper-0.9.1/
 # cmake .
@@ -75,7 +96,43 @@ myloader --help
 
 
 
-### mydumper 参数解释
+报错：
+
+```
+解决报错：
+mydumper --help 
+mydumper: error while loading shared libraries: libmysqlclient.so.20: cannot open shared object file: No such file or directory 
+
+查找到：
+find /usr -name "libmysqlclient.so*"
+/usr/lib64/libmysqlclient.so.16
+/usr/lib64/libmysqlclient.so.18
+/usr/lib64/libmysqlclient.so.16.0.0
+/usr/lib64/libmysqlclient.so.18.0.0
+/usr/lib64/libmysqlclient.so.15
+/usr/lib64/libmysqlclient.so.15.0.0
+
+但是 mydumper-0.9.1 编译时依赖的是 libmysqlclient.so.20，所以报错。
+
+```
+
+重新编译
+
+```
+yum install -y gcc cmake make glib2-devel mysql-devel
+git clone https://github.com/mydumper/mydumper.git
+cd mydumper
+cmake .
+make
+make install
+这样编译出来的 mydumper 就会链接到你本机的 libmysqlclient.so.18，不会再找 .20。
+```
+
+
+
+
+
+## mydumper 参数解释
 
 ```
 -B, --database              要备份的数据库，不指定则备份所有库
@@ -112,7 +169,7 @@ myloader --help
 -v, --verbose               输出信息模式, 0 = silent, 1 = errors, 2 = warnings, 3 = info, 默认为 2
 ```
 
-### myloader 参数解释
+## myloader 参数解释
 
 ```
 -d, --directory                   备份文件的文件夹
@@ -156,6 +213,8 @@ database.table-schema.sql 表结构文件
 
 database.table.sql 表数据文件
 
+
+
 ## 恢复数据库
 
 ```
@@ -193,6 +252,28 @@ myloader -u root -p 123456 -h 192.168.1.12 -P 61925 -B btwaf -d /data/backup/mys
 ```
 
 ![image-20250815112746008](https://imgoss.xgss.net/picgo-tx2025/image-20250815112746008.png?tx)
+
+
+
+## 恢复时间验证
+
+服务器硬件配置
+
+```
+备份数据库 
+mydumper -u root -h 192.168.1.12 -p 123456  -P 61920 -B DBName  -o /data/backup/mysql/waf-7477
+
+
+恢复数据库：
+myloader -u root -p 123456 -h 192.168.1.8 -P 61920 -B DBName -d /data/backup/mysql/waf-7477
+
+mysqldump
+
+```
+
+
+
+## 
 
 
 

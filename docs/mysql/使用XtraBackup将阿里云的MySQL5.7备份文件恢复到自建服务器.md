@@ -264,7 +264,11 @@ mysqlbinlog  -d '指定数据库'  /data/tmp/binlog/mysql-bin1 | mysql -u root -
 
 # 参考文档
 
-官方帮助文档：[阿里云-RDS MySQL物理备份文件恢复到自建数据库](https://help.aliyun.com/knowledge_detail/41817.html) https://help.aliyun.com/knowledge_detail/41817.html
+官方帮助文档：
+
+[阿里云-RDS MySQL物理备份文件恢复到自建数据库](https://help.aliyun.com/knowledge_detail/41817.html) 
+
+https://help.aliyun.com/knowledge_detail/41817.html
 
 
 

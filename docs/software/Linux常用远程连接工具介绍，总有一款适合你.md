@@ -85,7 +85,7 @@ Putty主要是用来远程连接服务器，它支持SSH、Telnet、Serial等协
 
 
 
-# VNC Viewer
+## VNC Viewer
 
 VNC Viewer官方版是一款开源的远程控制软件，功能强大且高效实用，其性能不逊色同类软件，它的工作原理和WIN远程控制软件类似，但是更为重要的是，VNC-Viewer是一款完全免费开源的软件，更新速度也比较快。
 
