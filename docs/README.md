@@ -68,11 +68,27 @@ cd docs/.vuepress/dist
 
 
 
+# 文章链接（微信公众号）
+
+## 宝塔相关
+
+[宝塔面板从零搭建个人博客新手也能轻松上手](https://mp.weixin.qq.com/s/DIgPUt4lN-XAQPqa3WkYIQ)
+
+[宝塔免费WAF搭建WEB防火墙](https://mp.weixin.qq.com/s/k8ZW-Ii58Dh0tRrqEVAfSw)
 
 
 
+## 1Panel
+
+[云服务器部署服务器面板1Panel：小白轻松构建Web服务与面板加固指南](https://mp.weixin.qq.com/s/QYu3nISGOAr1wL1Mhl85Yw)
+
+[开源神器组合！1Panel面板+Halo助你轻松打造个人/企业内容中心](https://mp.weixin.qq.com/s/Ai61bwhE_bg-gL3KL7yZmw)
 
 
+
+## AI编程工具
+
+[腾讯云CodeBuddyCLI实战案例解析](https://mp.weixin.qq.com/s/gaUC_T-8bSNKu9neLsV0Bw)
 
 
 
