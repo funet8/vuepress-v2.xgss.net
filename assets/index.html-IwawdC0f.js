@@ -1,0 +1,30 @@
+import{_ as n}from"./plugin-vue_export-helper-DlAUqK2U.js";import{c as a,a as e,o as i}from"./app-BiQR_lPj.js";const l={};function p(t,s){return i(),a("div",null,s[0]||(s[0]=[e(`<h1 id="配置docker配置镜像加速器" tabindex="-1"><a class="header-anchor" href="#配置docker配置镜像加速器"><span>配置Docker配置镜像加速器</span></a></h1><h2 id="配置docker配置镜像加速器-1" tabindex="-1"><a class="header-anchor" href="#配置docker配置镜像加速器-1"><span>配置Docker配置镜像加速器</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>vi /etc/docker/daemon.json</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>&quot;registry-mirrors&quot;: [</span></span>
+<span class="line"><span>	&quot;https://docker.m.daocloud.io&quot;, </span></span>
+<span class="line"><span>    &quot;https://noohub.ru&quot;, </span></span>
+<span class="line"><span>    &quot;https://huecker.io&quot;,</span></span>
+<span class="line"><span>    &quot;https://dockerhub.timeweb.cloud&quot;,</span></span>
+<span class="line"><span>	&quot;https://f3e2e938202649e9b525ffb7272d7486.mirror.swr.myhuaweicloud.com&quot;,  </span></span>
+<span class="line"><span>    &quot;https://otow63ff.mirror.aliyuncs.com&quot;,</span></span>
+<span class="line"><span>    &quot;https://docker.1panel.live&quot;,</span></span>
+<span class="line"><span>    &quot;http://mirrors.ustc.edu.cn/&quot;,</span></span>
+<span class="line"><span>    &quot;http://mirror.azure.cn/&quot;,</span></span>
+<span class="line"><span>    &quot;https://hub.rat.dev/&quot;,</span></span>
+<span class="line"><span>    &quot;https://docker.ckyl.me/&quot;,</span></span>
+<span class="line"><span>    &quot;https://docker.chenby.cn&quot;,</span></span>
+<span class="line"><span>    &quot;https://docker.hpcloud.cloud&quot;,</span></span>
+<span class="line"><span>    &quot;https://docker.m.daocloud.io&quot;,</span></span>
+<span class="line"><span>    &quot;https://d-hub.xgss.net&quot;  </span></span>
+<span class="line"><span>	],</span></span>
+<span class="line"><span>  &quot;data-root&quot;: &quot;/data/docker-lib&quot;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>systemctl daemon-reload</span></span>
+<span class="line"><span>systemctl restart docker</span></span>
+<span class="line"><span>docker info</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>registry-mirrors： 配置镜像加速器。</span></span>
+<span class="line"><span>data-root： 指定 Docker 数据存储的根目录。</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,3)]))}const d=n(l,[["render",p]]),o=JSON.parse('{"path":"/article/uypkm0vf/","title":"配置Docker配置镜像加速器","lang":"en-US","frontmatter":{"title":"配置Docker配置镜像加速器","createTime":"2025/05/27 17:51:17","permalink":"/article/uypkm0vf/"},"git":{"createdTime":1749111496000,"updatedTime":1750129445000,"contributors":[{"name":"star","username":"star","email":"star@xgss.net","commits":2,"url":"https://github.com/star"}]},"readingTime":{"minutes":0.36,"words":107},"filePathRelative":"docker/配置Docker配置镜像加速器.md"}');export{d as comp,o as data};

@@ -1,0 +1,74 @@
+import{_ as n}from"./plugin-vue_export-helper-DlAUqK2U.js";import{c as a,a as e,o as i}from"./app-BiQR_lPj.js";const l={};function p(c,s){return i(),a("div",null,s[0]||(s[0]=[e(`<h1 id="centos7搭建开源高颜值的it资产管理平台chemex" tabindex="-1"><a class="header-anchor" href="#centos7搭建开源高颜值的it资产管理平台chemex"><span>Centos7搭建开源高颜值的IT资产管理平台chemex</span></a></h1><p>咖啡壶是开源、高颜值的IT资产管理平台。资产管理、归属、追溯、盘点以及轻量的服务器状态面板。支持导出导入、LDAP、自定义字段等。基于优雅的Laravel框架和DcatAdmin开发。</p><p>开源地址：https://gitee.com/celaraze/chemex</p><p><img src="https://imgoss.xgss.net/picgo/image-20220607180626167.png?aliyun" alt="image-20220607180626167"></p><h2 id="环境要求" tabindex="-1"><a class="header-anchor" href="#环境要求"><span>环境要求</span></a></h2><p>git，用于管理版本，部署和升级必要工具。</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>PHP 8+ ，仅支持 PHP8。</span></span>
+<span class="line"><span>MySQL 5.7+，数据库引擎，理论上 MariaDB 10.2 + 兼容支持。</span></span>
+<span class="line"><span>ext-zip 扩展。</span></span>
+<span class="line"><span>ext-json 扩展。</span></span>
+<span class="line"><span>ext-fileinfo 扩展。</span></span>
+<span class="line"><span>ext-ldap 扩展。</span></span>
+<span class="line"><span>ext-bcmath 扩展。</span></span>
+<span class="line"><span>ext-mysqli 扩展。</span></span>
+<span class="line"><span>ext-xml 扩展。</span></span>
+<span class="line"><span>ext-xmlrpc 扩展。</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>以上扩展安装过程注意版本必须与 PHP 版本一致。</p><h2 id="系统简介" tabindex="-1"><a class="header-anchor" href="#系统简介"><span>系统简介</span></a></h2><p>centos7</p><p>已安装PHP8和mysql数据库，nignx转发</p><p>域名：http://zc.nideyuming.com</p><h2 id="部署-经典-nginx-php-fpm" tabindex="-1"><a class="header-anchor" href="#部署-经典-nginx-php-fpm"><span>部署（经典 Nginx &amp; PHP-fpm）</span></a></h2><p>生产环境下为遵守安全策略，非常建议在服务器本地进行部署，暂时不提供相关线上初始化安装的功能。因此，虽然前期部署的步骤较多，但已经为大家自动化处理了很大部分的流程，只需要跟着下面的命令一步步执行，一般是不会有部署问题的。</p><p>1.为你的计算机安装 PHP8 环境，参考：PHP官方 （安装省略）。</p><p>2.为你的计算机安装 MySQL 或者 mariadb（安装省略）</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>http://zc.nideyuming.com</span></span>
+<span class="line"><span>数据库信息：</span></span>
+<span class="line"><span>数据库：zc_chuanqu_cn</span></span>
+<span class="line"><span>地址：172.16.32.11:3306</span></span>
+<span class="line"><span>用户：zc_chuanqu_cn</span></span>
+<span class="line"><span>密码：****</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>3：在你想要的目录中，执行 git clone https://gitee.com/celaraze/chemex.git 完成下载。</p><p>4：在项目根目录中，复制 .env.example 文件为一份新的，并重命名为 .env。</p><p>5：根据 .env 文件中注释的指引进行配置。</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span># cd /data/wwwroot/web/</span></span>
+<span class="line"><span># git clone https://gitee.com/celaraze/chemex.git </span></span>
+<span class="line"><span># mv chemex zc.nideyuming.com</span></span>
+<span class="line"><span># chown www.www -R zc.nideyuming.com/</span></span>
+<span class="line"><span># cd zc.nideyuming.com/</span></span>
+<span class="line"><span># mv .env.example .env</span></span>
+<span class="line"><span>修改 .env 配置文件</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="安装导入数据" tabindex="-1"><a class="header-anchor" href="#安装导入数据"><span>安装导入数据</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span># su -l www</span></span>
+<span class="line"><span>$ cd /data/wwwroot/web/zc.nideyuming.com/</span></span>
+<span class="line"><span>$ php artisan chemex:install</span></span>
+<span class="line"><span>正在优化配置！</span></span>
+<span class="line"><span>Compiled views cleared!</span></span>
+<span class="line"><span>Application cache cleared!</span></span>
+<span class="line"><span>Route cache cleared!</span></span>
+<span class="line"><span>Configuration cache cleared!</span></span>
+<span class="line"><span>Compiled services and packages files removed!</span></span>
+<span class="line"><span>Caches cleared successfully!</span></span>
+<span class="line"><span>正在设置存储系统！</span></span>
+<span class="line"><span>The [/home/data/wwwroot/web/zc.nideyuming.com/public/storage] link has been connected to [/home/data/wwwroot/web/zc.nideyuming.com/storage/app/public].</span></span>
+<span class="line"><span>The links have been created.</span></span>
+<span class="line"><span>正在配置APP密钥！</span></span>
+<span class="line"><span>Application key set successfully.</span></span>
+<span class="line"><span>正在配置JWT密钥！</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span> This will invalidate all existing tokens. Are you sure you want to override the secret key? (yes/no) [no]:</span></span>
+<span class="line"><span> &gt; yes</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>jwt-auth secret [opRJk8IlSJeJiOOVEKf5KEhk2Xz0rmYl8W4uZVVr06futCH77NlDPgCNt9ytymy2] set successfully.</span></span>
+<span class="line"><span>正在处理数据库迁移！</span></span>
+<span class="line"><span>Migration table created successfully.</span></span>
+<span class="line"><span>...</span></span>
+<span class="line"><span>Migrated:  2021_05_19_085513_version_3_0_10 (9.27ms)</span></span>
+<span class="line"><span>正在初始化基础数据！</span></span>
+<span class="line"><span>Database seeding completed successfully.</span></span>
+<span class="line"><span>Admin账户已成功重置为 admin/admin</span></span>
+<span class="line"><span>安装完成！</span></span>
+<span class="line"><span>用户名密码都为：admin</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>$ chmod 777 -R storage</span></span>
+<span class="line"><span>$ ll storage/</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="配置nginx" tabindex="-1"><a class="header-anchor" href="#配置nginx"><span>配置nginx</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>server {  </span></span>
+<span class="line"><span>        listen       80;</span></span>
+<span class="line"><span>        server_name  zc.nideyuming.com;</span></span>
+<span class="line"><span>        root /data/wwwroot/web/zc.nideyuming.com/public;</span></span>
+<span class="line"><span>        access_log /data/wwwroot/log/zc.nideyuming.com-access.log main_aliyun;</span></span>
+<span class="line"><span>        error_log off;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        location / {</span></span>
+<span class="line"><span>                index  index.php index.htm index.html;</span></span>
+<span class="line"><span>                try_files $uri $uri/ /index.php?$args;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        location ~ .*\\.(php|php5)?$     {</span></span>
+<span class="line"><span>                        fastcgi_pass http://127.0.0.1:8100;</span></span>
+<span class="line"><span>                        fastcgi_index index.php;</span></span>
+<span class="line"><span>                        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;</span></span>
+<span class="line"><span>                        include fastcgi_params;</span></span>
+<span class="line"><span>                }</span></span>
+<span class="line"><span>        location ~ .*\\.(htm|html|css|js|jpg|jpeg|gif|png|ico|bmp|gz|xml|zip|rar|swf|txt|xls|xlsx|flv|mid|doc|ppt|pdf|mp3|wma|exe)?$ {  </span></span>
+<span class="line"><span>                expires 30d;  </span></span>
+<span class="line"><span>                access_log /dev/null;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>此时可以通过访问 http://zc.nideyuming.com 来使用咖啡壶。管理员账号密码为：admin / admin。</p><p>访问</p><p><img src="https://imgoss.xgss.net/picgo/image-20210708154621618.png?aliyun" alt="image-20210708154621618"></p><h1 id="版本更新" tabindex="-1"><a class="header-anchor" href="#版本更新"><span>版本更新</span></a></h1><p>随时随地保持更新可以在项目根目录中执行以下命令，将会同步分支的最新修改内容。</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>sudo git fetch --all &amp;&amp; git reset --hard origin/main &amp;&amp; git pull</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><p>接着，执行以下来进行升级。</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>php artisan chemex:update</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><p>注意，如果提示 permission denied 错误，需要通过 sudo 身份执行。</p>`,34)]))}const t=n(l,[["render",p]]),m=JSON.parse('{"path":"/article/jipxbgzz/","title":"Centos7搭建开源高颜值的IT资产管理平台chemex","lang":"en-US","frontmatter":{"title":"Centos7搭建开源高颜值的IT资产管理平台chemex","createTime":"2025/05/27 17:51:17","permalink":"/article/jipxbgzz/"},"git":{"createdTime":1749111496000,"updatedTime":1750129445000,"contributors":[{"name":"star","username":"star","email":"star@xgss.net","commits":2,"url":"https://github.com/star"}]},"readingTime":{"minutes":2.81,"words":844},"filePathRelative":"kaiyuan/Open-Source-Software/Centos7搭建开源高颜值的IT资产管理平台chemex.md"}');export{t as comp,m as data};

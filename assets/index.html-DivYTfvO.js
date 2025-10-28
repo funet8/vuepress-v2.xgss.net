@@ -1,0 +1,93 @@
+import{_ as n}from"./plugin-vue_export-helper-DlAUqK2U.js";import{c as a,a as i,o as e}from"./app-BiQR_lPj.js";const p={};function l(d,s){return e(),a("div",null,s[0]||(s[0]=[i(`<h1 id="开源网盘空间本地挂载神器-挂载百度、阿里云盘、onedrive等云盘到本地工具-alist" tabindex="-1"><a class="header-anchor" href="#开源网盘空间本地挂载神器-挂载百度、阿里云盘、onedrive等云盘到本地工具-alist"><span>开源网盘空间本地挂载神器，挂载百度、阿里云盘、OneDrive等云盘到本地工具-AList</span></a></h1><h2 id="什么是alist" tabindex="-1"><a class="header-anchor" href="#什么是alist"><span>什么是Alist</span></a></h2><p>一个支持多种存储，支持网页浏览和 WebDAV 的文件列表程序，由 gin 和 Solidjs 驱动。</p><p>AList 是一款免费开源支持多存储的自建网盘程序 (文件列表程序)，可以轻松在 VPS 服务器、NAS、普通电脑 Win、Mac、Linux 上部署。它除了能作为一款自建网盘 (将文件保存在设备硬盘上) 外，最大的特色就是支持「挂载各大主流网盘」，免费将它们的空间“据为己用”！</p><p>alist 文档： https://alist.nn.ci/zh/</p><p>alist开源地址： https://github.com/alist-org/alist</p><p><img src="https://imgoss.xgss.net/picgo/alist-logo2.png?aliyun" alt="alist-logo2"></p><h2 id="支持的存储" tabindex="-1"><a class="header-anchor" href="#支持的存储"><span>支持的存储</span></a></h2><p><img src="https://imgoss.xgss.net/picgo/image-20230815160529357.png?aliyun" alt="image-20230815160529357"></p><h2 id="支持存储" tabindex="-1"><a class="header-anchor" href="#支持存储"><span>支持存储</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>本地存储</span></span>
+<span class="line"><span>Crypt</span></span>
+<span class="line"><span>阿里云盘Open</span></span>
+<span class="line"><span>阿里云盘</span></span>
+<span class="line"><span>OneDrive /APP/ SharePoint（国际版, 世纪互联,de,us）</span></span>
+<span class="line"><span>天翼云盘 (个人云, 家庭云)</span></span>
+<span class="line"><span>GoogleDrive</span></span>
+<span class="line"><span>123云盘/分享</span></span>
+<span class="line"><span> FTP / SFTP</span></span>
+<span class="line"><span>PikPak / 分享</span></span>
+<span class="line"><span>S3</span></span>
+<span class="line"><span>又拍云对象存储</span></span>
+<span class="line"><span> WebDAV(支持无API的OneDrive/SharePoint)</span></span>
+<span class="line"><span> Teambition（中国，国际）</span></span>
+<span class="line"><span>分秒帧</span></span>
+<span class="line"><span>中国移动云盘 (个人云, 家庭云)</span></span>
+<span class="line"><span>中国联通云盘</span></span>
+<span class="line"><span>四川电信魔盘</span></span>
+<span class="line"><span>Yandex.Disk</span></span>
+<span class="line"><span>百度网盘 / 分享</span></span>
+<span class="line"><span>夸克网盘</span></span>
+<span class="line"><span>迅雷网盘</span></span>
+<span class="line"><span>蓝奏云</span></span>
+<span class="line"><span>阿里云盘分享</span></span>
+<span class="line"><span>谷歌相册</span></span>
+<span class="line"><span>Mega.nz</span></span>
+<span class="line"><span>一刻相册</span></span>
+<span class="line"><span>TeraBox -海外百度</span></span>
+<span class="line"><span>AList v2/v3</span></span>
+<span class="line"><span> SMB</span></span>
+<span class="line"><span>别名</span></span>
+<span class="line"><span>115</span></span>
+<span class="line"><span>Seafile</span></span>
+<span class="line"><span> Cloudreve</span></span>
+<span class="line"><span>Trainbit</span></span>
+<span class="line"><span>UrlTree</span></span>
+<span class="line"><span> IPFS</span></span>
+<span class="line"><span>UC</span></span>
+<span class="line"><span>Dropbox</span></span>
+<span class="line"><span>腾讯微云</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="安装alist" tabindex="-1"><a class="header-anchor" href="#安装alist"><span>安装Alist</span></a></h2><h3 id="_1-window系统" tabindex="-1"><a class="header-anchor" href="#_1-window系统"><span>1.window系统</span></a></h3><p>通过 https://github.com/alist-org/alist/releases 下载对应的版本，笔者的系统是win11，就下载 alist-windows-amd64-upx.zip</p><p><img src="https://imgoss.xgss.net/picgo/image-20230815155753011.png?aliyun" alt="image-20230815155753011"></p><p>在命令行中</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>.\\alist.exe server</span></span>
+<span class="line"><span>第一次运行会出现一个随机密码</span></span>
+<span class="line"><span>用户名：admin</span></span>
+<span class="line"><span>密码：随机生成</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="https://imgoss.xgss.net/picgo/image-20230815155602391.png?aliyun" alt="image-20230815155602391"></p><p>Alist 服务成功启动之后，我们就能通过浏览器访问它了：</p><p>本机访问：http://127.0.0.1:5244</p><p>局域网访问：http://局域网IP:5244</p><p>公网访问：http://服务器公网IP:5244 (如部署在云服务器上可直接互联网访问)，如果是家庭宽带无公网 IP 的，那么需要额外配置「内网穿透」才可以实现。</p><p><img src="https://imgoss.xgss.net/picgo/image-20230815160207669.png?aliyun" alt="image-20230815160207669"></p><h3 id="_2-linux系统安装" tabindex="-1"><a class="header-anchor" href="#_2-linux系统安装"><span>2.linux系统安装</span></a></h3><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span># cd /data/app</span></span>
+<span class="line"><span>在github中下载 alist-linux-amd64.tar.gz</span></span>
+<span class="line"><span># wget http://js.funet8.com/centos_software/alist-linux-amd64.tar.gz</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 解压下载的文件，得到可执行文件：</span></span>
+<span class="line"><span>tar -zxvf alist-linux-amd64.tar.gz</span></span>
+<span class="line"><span># 授予程序执行权限：</span></span>
+<span class="line"><span>chmod +x alist</span></span>
+<span class="line"><span># 运行程序</span></span>
+<span class="line"><span>./alist server</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>./alist: /usr/lib64/libc.so.6: version \`GLIBC_2.28&#39; not found (required by ./alist)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 获得管理员信息 以下两个不同版本，新版本也有随机生成和手动设置</span></span>
+<span class="line"><span># 低于v3.25.0版本</span></span>
+<span class="line"><span>./alist admin</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 高于v3.25.0版本</span></span>
+<span class="line"><span># 随机生成一个密码</span></span>
+<span class="line"><span>./alist admin random</span></span>
+<span class="line"><span># 手动设置一个密码 \`NEW_PASSWORD\`是指你需要设置的密码</span></span>
+<span class="line"><span>./alist admin set NEW_PASSWORD</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_3-docker部署alist" tabindex="-1"><a class="header-anchor" href="#_3-docker部署alist"><span>3.Docker部署alist</span></a></h3><p>安装docker：略</p><p>系统：linux</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>docker 安装alist</span></span>
+<span class="line"><span># docker run -itd \\</span></span>
+<span class="line"><span>--name alist \\</span></span>
+<span class="line"><span>-p 5244:5244 \\</span></span>
+<span class="line"><span>--restart unless-stopped \\</span></span>
+<span class="line"><span>-v /data/docker/alist:/opt/alist/data \\</span></span>
+<span class="line"><span>xhofe/alist</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>查看密码： </span></span>
+<span class="line"><span># docker logs alist</span></span>
+<span class="line"><span>INFO[2024-04-26 03:26:18] reading config file: data/config.json        </span></span>
+<span class="line"><span>INFO[2024-04-26 03:26:18] config file not exists, creating default config file </span></span>
+<span class="line"><span>INFO[2024-04-26 03:26:18] load config from env with prefix:            </span></span>
+<span class="line"><span>INFO[2024-04-26 03:26:18] init logrus...                               </span></span>
+<span class="line"><span>INFO[2024-04-26 03:26:18] Successfully created the admin user and the initial password is: JF218P6X </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>查看到</span></span>
+<span class="line"><span>用户名： admin</span></span>
+<span class="line"><span>密码： JF218P6X</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>访问 IP+端口</p><h2 id="nginx反向代理" tabindex="-1"><a class="header-anchor" href="#nginx反向代理"><span>nginx反向代理</span></a></h2><p>宝塔中添加域名</p><p><img src="https://imgoss.xgss.net/picgo/image-20230815164150976.png?aliyun" alt="image-20230815164150976"></p><p><img src="https://imgoss.xgss.net/picgo/image-20230815164453628.png?aliyun" alt="image-20230815164453628"></p><h3 id="域名访问" tabindex="-1"><a class="header-anchor" href="#域名访问"><span>域名访问</span></a></h3><h1 id="添加阿里云盘" tabindex="-1"><a class="header-anchor" href="#添加阿里云盘"><span>添加阿里云盘</span></a></h1><p>1.后台 ---&gt; 存储 ---&gt;添加</p><p><img src="https://imgoss.xgss.net/picgo/image-20230815174426192.png?aliyun" alt="image-20230815174426192"></p><p>选择阿里云盘OPEN</p><p>获取刷新令牌： <a href="https://alist.nn.ci/tool/aliyundrive/request" target="_blank" rel="noopener noreferrer">https://alist.nn.ci/tool/aliyundrive/request</a></p><p>手机登录app，扫码，同意，点击I have scan，获取刷新令牌填写到后台。</p><p><img src="https://imgoss.xgss.net/picgo/image-20230815174942789.png?aliyun" alt="image-20230815174942789"></p><p><img src="https://imgoss.xgss.net/picgo/image-20230815174558522.png?aliyun" alt="image-20230815174558522"></p><h1 id="添加百度网盘" tabindex="-1"><a class="header-anchor" href="#添加百度网盘"><span>添加百度网盘</span></a></h1><h2 id="_1-添加驱动" tabindex="-1"><a class="header-anchor" href="#_1-添加驱动"><span>1.添加驱动</span></a></h2><p>alist后台---&gt;存储---&gt;添加</p><p><img src="https://imgoss.xgss.net/picgo/image-20230816103752775.png?aliyun" alt="image-20230816103752775"></p><h2 id="_2-选择百度网盘-填入信息" tabindex="-1"><a class="header-anchor" href="#_2-选择百度网盘-填入信息"><span>2.选择百度网盘，填入信息</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>挂载路径： /百度网盘 （可以随便写）</span></span>
+<span class="line"><span>刷新令牌，可以通过以下地址获取</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><p>获取刷新令牌： <a href="https://openapi.baidu.com/oauth/2.0/authorize?response_type=code&amp;client_id=iYCeC9g08h5vuP9UqvPHKKSVrKFXGa1v&amp;redirect_uri=https://alist.nn.ci/tool/baidu/callback&amp;scope=basic,netdisk&amp;qrcode=1" target="_blank" rel="noopener noreferrer">https://openapi.baidu.com/oauth/2.0/authorize?response_type=code&amp;client_id=iYCeC9g08h5vuP9UqvPHKKSVrKFXGa1v&amp;redirect_uri=https://alist.nn.ci/tool/baidu/callback&amp;scope=basic,netdisk&amp;qrcode=1</a></p><p><a href="https://openapi.baidu.com/oauth/2.0/authorize?response_type=code&amp;client_id=iYCeC9g08h5vuP9UqvPHKKSVrKFXGa1v&amp;redirect_uri=https://alist.nn.ci/tool/baidu/callback&amp;scope=basic,netdisk&amp;qrcode=1" target="_blank" rel="noopener noreferrer">点击这里</a></p><p><img src="https://imgoss.xgss.net/picgo/image-20230816104222804.png?aliyun" alt="image-20230816104222804"></p><p><img src="https://imgoss.xgss.net/picgo/image-20230816104628610.png?aliyun" alt="image-20230816104628610"></p><p>回到主页即看到</p><p><img src="https://imgoss.xgss.net/picgo/image-20230816104408644.png?aliyun" alt="image-20230816104408644"></p><h1 id="配置webdav" tabindex="-1"><a class="header-anchor" href="#配置webdav"><span>配置WebDAV</span></a></h1><p>首先下载 <a href="https://www.raidrive.com/" target="_blank" rel="noopener noreferrer">raidrive</a> 客户端配置。</p><h2 id="内网地址" tabindex="-1"><a class="header-anchor" href="#内网地址"><span>内网地址</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>地址： http：127.0.0.1:5244</span></span>
+<span class="line"><span>目录： /dav</span></span>
+<span class="line"><span>账号：admin</span></span>
+<span class="line"><span>密码： 随机生成的密码</span></span>
+<span class="line"><span>连接</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="https://imgoss.xgss.net/picgo/image-20230816103337897.png?aliyun" alt="image-20230816103337897"></p><h2 id="公网配置" tabindex="-1"><a class="header-anchor" href="#公网配置"><span>公网配置</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>地址： https：alist.xgss.net </span></span>
+<span class="line"><span>端口: 443</span></span>
+<span class="line"><span>目录： /dav</span></span>
+<span class="line"><span>账号：admin</span></span>
+<span class="line"><span>密码：随机生成的密码</span></span>
+<span class="line"><span>点击连接</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="https://imgoss.xgss.net/picgo/image-20230815174215857.png?aliyun" alt="image-20230815174215857"></p><p>最后可以当做电脑的一块硬盘使用</p><p><img src="https://imgoss.xgss.net/picgo/image-20230816150901848.png?aliyun" alt="image-20230816150901848"></p>`,65)]))}const t=n(p,[["render",l]]),v=JSON.parse('{"path":"/article/ndu1naw2/","title":"开源网盘空间本地挂载神器，挂载百度、阿里云盘、OneDrive等云盘到本地工具-AList","lang":"en-US","frontmatter":{"title":"开源网盘空间本地挂载神器，挂载百度、阿里云盘、OneDrive等云盘到本地工具-AList","createTime":"2025/05/27 17:51:17","permalink":"/article/ndu1naw2/"},"git":{"createdTime":1749111496000,"updatedTime":1750129445000,"contributors":[{"name":"star","username":"star","email":"star@xgss.net","commits":2,"url":"https://github.com/star"}]},"readingTime":{"minutes":3.91,"words":1172},"filePathRelative":"kaiyuan/Open-Source-Software/开源网盘空间本地挂载神器，挂载百度、阿里云盘、OneDrive等云盘到本地工具-AList.md"}');export{t as comp,v as data};
