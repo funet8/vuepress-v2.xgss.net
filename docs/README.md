@@ -66,6 +66,8 @@ cd docs/.vuepress/dist
 
 
 
+[WPS](https://jifendownload.yl234.com/jifen_2345/wpssetup_k309707872_196875.exe) | [万能压缩](https://jifendownload.yl234.com/jifen_2345/haocompress_k309707872.exe) |[驱动大师](https://jifendownload.yl234.com/jifen_2345/drivermaster_k309707872_129143.exe) |[爱奇艺](https://jifendownload.yl234.com/jifen_2345/iqiyi_k309707872_177864.exe)
+
 
 
 # 文章链接（微信公众号）
