@@ -344,8 +344,8 @@ yarn docs:build
 报错，由于图片没有上传到oss中导致报错。
 
 ```
-error [vite:asset] Could not load G:/STAR学习/vuepress-starter/docs/./chatgpt/H:/typora_images/image-20240415180831846.png (imported by docs/.vuepress/.temp/pages/chatgpt/15.免费使用GPT-4的3种方法，白嫖大模型.html.vue): ENOENT: no such file or directory, open 'G:\STAR学习\vuepress
--starter\docs\chatgpt\H:\typora_images\image-20240415180831846.png'
+error [vite:asset] Could not load G:/STAR学习/vuepress-starter/docs/./chatgpt/H:/0000/image-20240415180831846.png (imported by docs/.vuepress/.temp/pages/chatgpt/15.免费使用GPT-4的3种方法，白嫖大模型.html.vue): ENOENT: no such file or directory, open 'G:\STAR学习\vuepress
+-starter\docs\chatgpt\H:\0000\image-20240415180831846.png'
 ```
 
 解决：
