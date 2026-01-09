@@ -27,7 +27,7 @@ permalink: /article/9n9lckra/
 
 和刚才的方式一样，登录 CloudFlare ，来到 Workers 和 Pages ，和刚才不一样，我们需要点击 Pages ，点击 使用直接上传创建 – 上传资产。
 
-![永久免费的节点！免费解锁Netflix、ChatGPT！通过Cloudflare Worker、Pages部署免费的VLESS节点！](https://v2rayssr.com/wp-content/uploads/2024/05/worker%E5%88%9B%E5%BB%BA.png)
+![永久免费的节点！免费解锁Netflix、ChatGPT！通过Cloudflare Worker、Pages部署免费的VLESS节点！](https://imgoss.xgss.net/picgo-tx2026/worker%E5%88%9B%E5%BB%BA.png?tx)
 
 为我们的项目创建一个名字，点击创建项目。
 
@@ -89,12 +89,12 @@ vnp-v2raystar-cf.kaacd.com 域名CNAME解析到 v2raystar.pages.dev
 
 若你的域名不在 CF，或是有其他免费的域名，请会域名解析平台解析如上的 CNAME 记录，若是域名已经托管到了 CF，那么请直接点击 激活域！一般情况下，几十秒就激活完成了！（后续或是需要删掉该项目，请先删除这个 自定义域）
 
-![永久免费的节点！免费解锁Netflix、ChatGPT！通过Cloudflare Worker、Pages部署免费的VLESS节点！](https://v2rayssr.com/wp-content/uploads/2024/05/ok.png)
+![永久免费的节点！免费解锁Netflix、ChatGPT！通过Cloudflare Worker、Pages部署免费的VLESS节点！](https://imgoss.xgss.net/picgo-tx2026/ok.png?tx)
 
 尝试访问我们刚才设置的自定义域，也就是二级域名加上UUID，也就是 `https://vnp-v2raystar-cf.kaacd.com/0ee31707-2bcc-4d26-99a6-8bb18a8a361d`
 
 至此，节点部署完毕，我们导入上图中的 快速自适应订阅地址到相对于的 客户端软件，进行节点的订阅
 
-![永久免费的节点！免费解锁Netflix、ChatGPT！通过Cloudflare Worker、Pages部署免费的VLESS节点！](https://v2rayssr.com/wp-content/uploads/2024/05/%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%E9%83%A8%E7%BD%B2.png)
+![永久免费的节点！免费解锁Netflix、ChatGPT！通过Cloudflare Worker、Pages部署免费的VLESS节点！](https://imgoss.xgss.net/picgo-tx2026/%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%E9%83%A8%E7%BD%B2.png?tx)
 
 订阅完成，会多了很多节点，其实都是一个节点，只是用了不同的 IP。原理和刚才初级部署是一样的，只是自动进行了 IP 的优选！还是很方便的。

@@ -1,9 +1,3 @@
----
-title: CentOS7下LVM给腾讯云云硬盘扩容操作
-createTime: 2025/05/27 17:51:17
-permalink: /article/di7do5ml/
----
-
 
 # CentOS7下LVM给腾讯云云硬盘扩容操作
 

@@ -1,11 +1,4 @@
----
-title: 安装完Windows11系统之后安装软件
-createTime: 2025/05/27 17:51:17
-permalink: /article/uryepgb0/
----
 # 我安装完Windows11系统之后的操作
-
-
 
 # 前言
 
@@ -27,8 +20,6 @@ irm https://get.activated.win | iex
 按照屏幕上的说明轻松完成激活过程。
 
 ![image-20240706151840211](https://imgoss.xgss.net/picgo/image-20240706151840211.png?aliyun)
-
-
 
 # 启动administrator账号
 
@@ -55,8 +46,6 @@ DiskGenius 进行磁盘分区的操作。
 基础配置：
 
 1.把桌面、下载等常用文件夹移动到非C盘系统盘
-
-
 
 # 安装常用软件
 
@@ -126,8 +115,6 @@ DiskGenius 进行磁盘分区的操作。
 由于阿里云换了浏览器登录账号，需要使用手机号或者刷脸验证，这时候就要从旧的电脑导出cookie导入到新的电脑浏览器中
 
 使用火狐浏览器的cookie-editor在阿里云的登录页导出cookie，再在新电脑的浏览器中导入cookie。
-
-
 
 # 编程软件
 

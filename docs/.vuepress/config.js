@@ -49,7 +49,7 @@ export default defineUserConfig({
 	// 侧边栏
 	sidebar: [
 		{ text: '首页',link: '/README.md', },
-		{ text: 'ChatGPT',
+		{ text: '人工智能',
 			collapsible: true,
 				children: [
 					{ text: 'ChatGPT', link: '/chatgpt/',},
@@ -60,19 +60,26 @@ export default defineUserConfig({
 			collapsible: true,
 				children: [
 					{ text: '开源软件', link: '/kaiyuan/Open-Source-Software/',},
-					{ text: '开源2025',link: '/kaiyuan2025/',},
+					{ text: '开源',link: '/kaiyuan2/',},
+				],
+		},
+		{ text: 'NAS',
+			collapsible: true,
+				children: [
+					{ text: 'NAS', link: '/NAS/',},
+					{ text: 'NAS-飞牛',link: '/NAS-飞牛/',},
+					{ text: 'NAS-All-in-one',link: '/NAS-All-in-one/',},
 				],
 		},
 		{ text: '基础知识',link: '/linux-basis/', },
-		{ text: '互联网2025', link: '/internet2025/' },
-		{ text: 'NAS',link: '/NAS/', },
+		{ text: '白嫖', link: '/internet/' },		
 		{ text: 'Rocky-Linux',link: '/Rocky-Linux/', },
 		{ text: '网络安全',link: '/safe/', },
 		{ text: 'MySQL',link: '/mysql/', },
 		{ text: 'Nginx',link: '/nginx/', },
 		{ text: 'Shell',link: '/shell/', },
 		{ text: 'Ubuntu',link: '/Ubuntu/', },
-		{ text: '硬件',link: '/hardware/', },
+		{ text: 'NAS',link: '/hardware/', },
 		{ text: 'Git',link: '/git/', },
 		//隐藏左侧导航
 		/**
