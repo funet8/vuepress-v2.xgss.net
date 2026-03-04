@@ -10,6 +10,10 @@ git commit -m 'deploy.sh-vuepressV2脚本自动提交'
 git push -f git@github.com:funet8/vuepress-v2.xgss.net.git main
 
 
+
+# cd  docs
+# grep -R 'typora_images' ./*| grep -v '.vuepress/'
+
 # vuepress-V1使用的代码
 # 生成静态文件
 #yarn docs:build
