@@ -90,11 +90,34 @@ cd docs/.vuepress/dist
 
 
 
-## AI编程
+## AI
 
-[腾讯云CodeBuddy-CLI实战案例解析](https://mp.weixin.qq.com/s/gaUC_T-8bSNKu9neLsV0Bw)
+- [如何安装2026年最强个人助理ClawdBot、完整安装教程](https://mp.weixin.qq.com/s/2Y-lvQRMoBstXt9lvd-ucA)
+- [云服务器部署OpenClaw：轻量应用服务器+钉钉和QQ机器人](https://mp.weixin.qq.com/s/l686H1yk3isGLFuPgYFSag)
+- [宝塔面板一键部署OpenClaw，支持QQ、飞书机器人](https://mp.weixin.qq.com/s/OsO0mgWzRiKwXauthks3Ug)
+- [OpenRouter提供的DeepSeek-R1-70B的大模型免费用](https://mp.weixin.qq.com/s/bkwSo53CL4b2vBduJD2LQw)
+- [获取各大人工智能AI工具通过API和KEY调用的方法](https://mp.weixin.qq.com/s/AZmmAreVdj4OkCLb0qnDFQ)
+- 分割
+- 
+- [腾讯云CodeBuddy-CLI实战案例解析](https://mp.weixin.qq.com/s/gaUC_T-8bSNKu9neLsV0Bw)
+- [自己手撸一个AI智能体---跟创业大佬对话](https://mp.weixin.qq.com/s/TzspFuGyorXlaDQhtiZsqQ)
 
-[自己手撸一个AI智能体---跟创业大佬对话](https://mp.weixin.qq.com/s/TzspFuGyorXlaDQhtiZsqQ)
+
+
+
+
+
+
+
+
+
+
+## AI语音
+
+- [ChatTTS和Spark-TTS](https://mp.weixin.qq.com/s/L2L32m05IQT9ZkbMdON3kQ)
+- 
+
+
 
 
 
@@ -109,6 +132,8 @@ cd docs/.vuepress/dist
 - 获取免费的OpenAI的key： [https://github.com/chatanywhere/GPT_API_free](https://github.com/chatanywhere/GPT_API_free)，限制：有的模型每天只有5次，可以选择deepseek。
 - [有这好事？DeepSeek-R1-70B的大模型免费用](https://mp.weixin.qq.com/s/bkwSo53CL4b2vBduJD2LQw)，申请一个KEY，大模型名称“openai/gpt-oss-20b:free”或者其他，‘deepseek/deepseek-r1-distill-llama-70b:free’模型不能用了
 - [注册即送免费人工智能高额度key，GPT-5.2/Claude 全家桶一键解锁](https://mp.weixin.qq.com/s/rmF0qaCFt2OL97uzdAPogg)
+- [英伟达和GitHub的AI大模型API申请](https://mp.weixin.qq.com/s/9hPhf3HmcLk2JA0FvbhNPw)
+- [cerebras每天免费100万Token，这个羊毛不薅等于亏了一个亿](https://mp.weixin.qq.com/s/b6gHSdeqUZvVGT5ntSBKYQ)
 
 
 
@@ -116,6 +141,19 @@ cd docs/.vuepress/dist
 
 - [每年0.99刀，拿下你的第一个顶级域名，详细注册使用-注册xyz域名](https://mp.weixin.qq.com/s/7aa_2YGYSgZ2f2R7EQcyxw)
 - [教你免费申请一个永久域名！ClouDNS 平台保姆级教程](https://mp.weixin.qq.com/s/MZhglD1IF0qX9YOmeEEXjw)
+- [开发者福利：免费 .frii.site 子域名](https://mp.weixin.qq.com/s/12Af5dmuIzBui9OEhlQn5w)
+- 
+
+## 免费云服务器
+
+- [免费领取huggingface的2核16G云服务器，超简单教程](https://mp.weixin.qq.com/s/hLoS7w12dcI8NilrtwHLyg)
+- [Hugging Face免费服务器部署HertzBeat监控平台](https://mp.weixin.qq.com/s/IfjT7ASj5hOHSR_SPLO-jg)
+- [免费领一个AWS、华为云等的主机](https://mp.weixin.qq.com/s/WvK9QUyOyj0nf7JmRRkF6g)
+- [免费服务器，无广告免费主机，新手也能轻松上手-InfinityFree](https://mp.weixin.qq.com/s/-UEx4o8UoDzJwseNH1eJSg)
+- [永久免费的高配容器Clawcloud](https://mp.weixin.qq.com/s/RqpB_lqr_XVQJY4RXCQa9w)
+- [欧洲高性价比容器服务器VPS白嫖指南，零基础部署私有应用](https://mp.weixin.qq.com/s/UjSTQJwCIvcbMey5n9_3bg)
+- [快速实现25G永久存储！InfiniCloud网盘+Webdav搭建详解](https://mp.weixin.qq.com/s/-C9aKCn81O28x8so-G8vMg)
+- [Koofr免费10GB永久存储 + WebDAV部署](https://mp.weixin.qq.com/s/StUIMoj7Xj0dB5d2s6H9ZQ)
 
 
 
@@ -141,43 +179,66 @@ cd docs/.vuepress/dist
 往期回顾
 
 - [星哥带你玩飞牛NAS-1：安装飞牛NAS](https://mp.weixin.qq.com/s/QMaWJ8E9cd4-y5p02NWqzg)
+
 - [星哥带你玩飞牛NAS-2：飞牛配置RAID磁盘阵列](https://mp.weixin.qq.com/s/R6Qw9sO5sNlQ2CdwE4wUkg)
+
 - [星哥带你玩飞牛NAS-3：安装飞牛NAS后的很有必要的操作](https://mp.weixin.qq.com/s/Xc0Qci70aug6Hry7QCzXDg)
+
 - [星哥带你玩飞牛NAS-4：飞牛NAS安装istore旁路由，家庭网络升级的最佳实践](https://mp.weixin.qq.com/s/UL4StiG40OxwGQ5IQTlYYg)
+
 - [星哥带你玩飞牛NAS-5：飞牛NAS中的Docker功能介绍](https://mp.weixin.qq.com/s/Wqv3Iusu__Ugrb_LbLtfMQ)
+
 - [星哥带你玩飞牛NAS-6：抖音视频同步工具，视频下载自动下载保存](https://mp.weixin.qq.com/s/BeGhw0cF7R1goS_lUPBQZw)
+
 - [星哥带你玩飞牛NAS-7：手把手教你免费内网穿透-Cloudflare tunnel](https://mp.weixin.qq.com/s/gs9shAazBT1wOnwjQQYDwQ)
+
 - [星哥带你玩飞牛NAS-8：有了NAS你可以干什么？软件汇总篇](https://mp.weixin.qq.com/s/bID9-DyiThiwNUfeg_2PHw)
+
 - [星哥带你玩飞牛NAS-9：全能网盘搜索工具13种云盘一键搞定！](https://mp.weixin.qq.com/s/65knuIyDIasFoDPlyxi1XQ)
+
 - [星哥带你玩飞牛NAS-10：备份微信聊天记录、数据到你的NAS中!](https://mp.weixin.qq.com/s/N9uXSubuBMn5iyNdajdp2Q)
+
 - [星哥带你玩飞牛NAS-11：咪咕视频订阅部署全攻略](https://mp.weixin.qq.com/s/Z-zj2BC9X-77lD0nYJ1Y6w)
+
 - [星哥带你玩飞牛NAS-12：开源笔记-TriliumNext](https://mp.weixin.qq.com/s/eNu7ClfqsLtXoLfMpO4_qA)
+
 - [星哥带你玩飞牛NAS-13：自动追番、订阅下载 + 刮削，动漫党彻底解放双手！](https://mp.weixin.qq.com/s/bRGIteRluJvJlay_PTeKbA)
+
 - [星哥带你玩飞牛NAS-14：解锁公网自由！Lucky功能工具安装使用保姆级教程](https://mp.weixin.qq.com/s/3aA-JHpuod3lZaXuipSmHw)
+
 - [星哥带你玩飞牛NAS-15：飞牛NAS也能秒变私人流媒体-LibreTV真香实测！](https://mp.weixin.qq.com/s/eDmPeETZa3zZKkOTObiEnw)
-- 
+
+- [星哥带你玩飞牛NAS-16：飞牛云NAS换桌面，fndesk图标管理神器上线！](https://mp.weixin.qq.com/s/S5BjU9-gbv2VNXU7bTcsjw)
+
+- [星哥带你玩飞牛NAS-17：不再错过公众号更新，飞牛NAS搭建RSS](https://mp.weixin.qq.com/s/8vZA6mGuH93YDPQrtlaoBw)
+
+- [星哥带你玩飞牛NAS-19：飞牛NAS安装OpenList，挂载超50个网盘](https://mp.weixin.qq.com/s/pnugIGUp3rr6-eFrIZtcng)
+
+  
+
 - [把小米云笔记搬回家：飞牛NAS一键部署，小米云笔记自动同步到本地](https://mp.weixin.qq.com/s/fregXnukV89Amxg3QB1xTQ)
+
 - [群晖NAS配置之自有服务器frp实现内网穿透](https://mp.weixin.qq.com/s/4NwzAvh1F3eRWK0dwMwfpw)
+
 - [云服务器配置frp实现内网穿透](https://mp.weixin.qq.com/s/4NwzAvh1F3eRWK0dwMwfpw)
+
 - [飞牛NAS玩转Frpc并且配置，随时随地直连你的私有云](https://mp.weixin.qq.com/s/Cdf5m0DCU2TecS6rkM64Uw)
 
-## NAS硬件
+## NAS硬件-往期
 
 - [星哥带你玩飞牛NAS硬件 01：捡垃圾的最爱双盘，暴风二期矿渣为何成不老神话？](https://mp.weixin.qq.com/s/RbyfqsTa2Jf5MvG-PGxOaw)
 - [星哥带你玩飞牛NAS硬件02：某鱼6张左右就可拿下5盘位的飞牛圣体NAS-联想个人云存储X1](https://mp.weixin.qq.com/s/h1u1Ly6KPqPeAeIsp6Z6fQ)
 - [星哥带你玩飞牛NAS硬件03：五盘位+N5105+双网口的成品NAS值得入手吗-奥睿科HA500](https://mp.weixin.qq.com/s/-F7tNSqaSEgJIny_QDKDUg)
-- [惠普Z2G8工作站](https://mp.weixin.qq.com/s/0XbiYaMjBSN-z9-zBf9d0A)
-- [AMD天机算小主机](https://mp.weixin.qq.com/s/Wd6WHwWPlHH8d88I_EZHqw)
+- [垃圾佬的神机！惠普这款工作站支持11代I9处理器，内存最大支持128G，只看不买又省800！-惠普Z2G8工作站](https://mp.weixin.qq.com/s/0XbiYaMjBSN-z9-zBf9d0A)
+- [AMD天机算小主机-垃圾佬的最爱！这个小主机适合做NAS还是软路由？4个2.5G网口+四盘位](https://mp.weixin.qq.com/s/Wd6WHwWPlHH8d88I_EZHqw)
+- [谨科E522绝版NAS！N5105、4个2.5G网卡、2nvme、5个机械盘， 性价比太低？](https://mp.weixin.qq.com/s/u-Y67BeiYsNQ7RgoNvvxkw)
+- [熊猫B3工控板-150元打造低成本NAS小钢炮，捡一块3865U工控板](https://mp.weixin.qq.com/s/youvH4tiGUNTD5tPFzkyJA)
+- [4盘位、4K输出、J3455、遥控，NAS硬件入门性价比之王-威联通TS-453Bmini](https://mp.weixin.qq.com/s/fqVbU-V911vYmNihGV-yEw)
+- [240 元左右！五盘位 NAS主机，7 代U硬解4K稳如狗，拓展性碾压同价位](https://mp.weixin.qq.com/s/cDeifHz7U_y-Gw0hdxfY1g)
+- [300元就能买到的"小钢炮"？惠普7L四盘位小主机解析](https://mp.weixin.qq.com/s/kOqkdneNIW21xr5Hkpo-0A)
+- 
 
 
-
-## 云服务器
-
-[免费服务器，无广告免费主机，新手也能轻松上手-InfinityFree](https://mp.weixin.qq.com/s/-UEx4o8UoDzJwseNH1eJSg)
-
-[免费领取huggingface的2核16G云服务器，超简单教程](https://mp.weixin.qq.com/s/hLoS7w12dcI8NilrtwHLyg)
-
-[零成本上线！用 Hugging Face免费服务器+Docker 快速部署HertzBeat 监控平台](https://mp.weixin.qq.com/s/IfjT7ASj5hOHSR_SPLO-jg)
 
 
 

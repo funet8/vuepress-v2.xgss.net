@@ -22,6 +22,10 @@ zizifn 大佬的一个开源项目 edgetunnel ，使得我们可以免费的在 
 
 
 
+参考：https://blog.cmliussss.com/p/edt2/
+
+
+
 ## CloudFlare 部署免费节点
 
 ### 1.项目地址
@@ -29,6 +33,8 @@ zizifn 大佬的一个开源项目 edgetunnel ，使得我们可以免费的在 
 高级版的部署，其实和初级的部署，大同小异，道理是一样的，只是多了很多功能，比如自动生成 SUB CLASH，SURGE订阅地址、自动优选 IP 等。
 
 [CM](https://github.com/cmliu) 基于 [zizifn](https://github.com/zizifn/edgetunnel) 的项目进行了二次创作，GitHub 地址：[点击访问](https://github.com/cmliu/edgetunnel) （功能还是很多的）
+
+https://github.com/cmliu/edgetunnel
 
 核心代码：
 
