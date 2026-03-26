@@ -74,6 +74,8 @@ cd docs/.vuepress/dist
 
 # 文章链接（微信公众号）
 
+
+
 ## 宝塔相关
 
 [宝塔面板从零搭建个人博客新手也能轻松上手](https://mp.weixin.qq.com/s/DIgPUt4lN-XAQPqa3WkYIQ)
@@ -93,8 +95,6 @@ cd docs/.vuepress/dist
 ## AI
 
 - [如何安装2026年最强个人助理ClawdBot、完整安装教程](https://mp.weixin.qq.com/s/2Y-lvQRMoBstXt9lvd-ucA)
-- [云服务器部署OpenClaw：轻量应用服务器+钉钉和QQ机器人](https://mp.weixin.qq.com/s/l686H1yk3isGLFuPgYFSag)
-- [宝塔面板一键部署OpenClaw，支持QQ、飞书机器人](https://mp.weixin.qq.com/s/OsO0mgWzRiKwXauthks3Ug)
 - [OpenRouter提供的DeepSeek-R1-70B的大模型免费用](https://mp.weixin.qq.com/s/bkwSo53CL4b2vBduJD2LQw)
 - [获取各大人工智能AI工具通过API和KEY调用的方法](https://mp.weixin.qq.com/s/AZmmAreVdj4OkCLb0qnDFQ)
 - 分割
@@ -104,9 +104,15 @@ cd docs/.vuepress/dist
 
 
 
+## AI-OpenClaw
 
-
-
+- [开源OpenClaw用例-awesome-openclaw-usecases](https://mp.weixin.qq.com/s/iNiC_S1n8jCw5FvqdwBihA)
+- [云服务器部署OpenClaw：轻量应用服务器+钉钉和QQ机器人](https://mp.weixin.qq.com/s/l686H1yk3isGLFuPgYFSag)
+- [宝塔面板一键部署OpenClaw，支持QQ、飞书机器人](https://mp.weixin.qq.com/s/OsO0mgWzRiKwXauthks3Ug)
+- [Windows 11系统OpenClaw安装教程](https://mp.weixin.qq.com/s/P769NyUkrYD1XrVysgpypw)
+- [MacOS系统安装OpenClaw安装教程](https://mp.weixin.qq.com/s/wVMOcVhbwIMm-StYx5rE-Q)
+- [大龙虾OpenClaw的token不够吃了？用免费的 APIKey 续命](https://mp.weixin.qq.com/s/UxO057O7Y6HPz1JZY8GnFA)
+- 
 
 
 
@@ -115,7 +121,6 @@ cd docs/.vuepress/dist
 ## AI语音
 
 - [ChatTTS和Spark-TTS](https://mp.weixin.qq.com/s/L2L32m05IQT9ZkbMdON3kQ)
-- 
 
 
 
@@ -131,9 +136,10 @@ cd docs/.vuepress/dist
 
 - 获取免费的OpenAI的key： [https://github.com/chatanywhere/GPT_API_free](https://github.com/chatanywhere/GPT_API_free)，限制：有的模型每天只有5次，可以选择deepseek。
 - [有这好事？DeepSeek-R1-70B的大模型免费用](https://mp.weixin.qq.com/s/bkwSo53CL4b2vBduJD2LQw)，申请一个KEY，大模型名称“openai/gpt-oss-20b:free”或者其他，‘deepseek/deepseek-r1-distill-llama-70b:free’模型不能用了
-- [注册即送免费人工智能高额度key，GPT-5.2/Claude 全家桶一键解锁](https://mp.weixin.qq.com/s/rmF0qaCFt2OL97uzdAPogg)
+- [routerpark不能用了！注册即送免费人工智能高额度key，GPT-5.2/Claude 全家桶一键解锁](https://mp.weixin.qq.com/s/rmF0qaCFt2OL97uzdAPogg)
 - [英伟达和GitHub的AI大模型API申请](https://mp.weixin.qq.com/s/9hPhf3HmcLk2JA0FvbhNPw)
 - [cerebras每天免费100万Token，这个羊毛不薅等于亏了一个亿](https://mp.weixin.qq.com/s/b6gHSdeqUZvVGT5ntSBKYQ)
+- 
 
 
 
@@ -249,6 +255,22 @@ cd docs/.vuepress/dist
 [2025年11月18日-Cloudflare史诗级事故:一次配置失误，引爆全球宕机](https://mp.weixin.qq.com/s/Lyzh4yrcW5Gb0ZRCLFqHBA)
 
 [2025年12月4日-支付宝、淘宝、闲鱼又崩了](https://mp.weixin.qq.com/s/96dKzXXHt-EKvXGpAlO_Kw)
+
+
+
+## 系统
+
+- [在Windows系统中通过VMware安装苹果macOS15](https://mp.weixin.qq.com/s/b9C-Jkx7CYMUoW9ZosKC4w)
+
+
+
+
+
+## 结尾
+
+```
+写文不易，如果你都看到了这里，请点个赞和在看，分享给更多的朋友；也别忘了关注星哥玩云！这里有满满的干货分享，还有轻松有趣的技术交流～点个赞、分享给身边的小伙伴，一起成长，一起玩转技术世界吧！ 😊
+```
 
 
 
