@@ -42,18 +42,6 @@ https://cloud.tencent.com/developer/article/2554715
 
 
 
-## 查找关键字
-
-```
-H:/typora_images
-Administrator@chuanqu-star MINGW64 /g/vuepress-v2.xgss.net (main)
-
-
-grep -R 'typora_images' ./*| grep -v '.vuepress/'
-```
-
-
-
 ```
 # Role: 内容创作专家（技术类）
 
