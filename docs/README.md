@@ -56,22 +56,6 @@ cd docs/.vuepress/dist
 
 
 
-# 软件下载
-
-
-
-## 360系列
-
-[360安全卫士](http://urlqh.cn/mSFTo) | [360浏览器](http://urlqh.cn/mTLVf) | [360极速浏览器](http://urlqh.cn/n1mZf)
-
-## 2345系列
-
-[WPS](https://jifendownload.yl234.com/jifen_2345/wpssetup_k309707872_196875.exe) | [万能压缩](https://jifendownload.yl234.com/jifen_2345/haocompress_k309707872.exe) |[驱动大师](https://jifendownload.yl234.com/jifen_2345/drivermaster_k309707872_129143.exe) |[爱奇艺](https://jifendownload.yl234.com/jifen_2345/iqiyi_k309707872_177864.exe) | [看图王](https://jifendownload.yl234.com/jifen_2345/2345pic_k309707872.exe)
-
-## 其他软件
-
-[向日葵](https://sunlogin.oray.com/)
-
 # 文章链接（微信公众号）
 
 
@@ -94,27 +78,44 @@ cd docs/.vuepress/dist
 
 ## AI
 
-- [如何安装2026年最强个人助理ClawdBot、完整安装教程](https://mp.weixin.qq.com/s/2Y-lvQRMoBstXt9lvd-ucA)
-- [OpenRouter提供的DeepSeek-R1-70B的大模型免费用](https://mp.weixin.qq.com/s/bkwSo53CL4b2vBduJD2LQw)
 - [获取各大人工智能AI工具通过API和KEY调用的方法](https://mp.weixin.qq.com/s/AZmmAreVdj4OkCLb0qnDFQ)
 - 分割
 - 
 - [腾讯云CodeBuddy-CLI实战案例解析](https://mp.weixin.qq.com/s/gaUC_T-8bSNKu9neLsV0Bw)
 - [自己手撸一个AI智能体---跟创业大佬对话](https://mp.weixin.qq.com/s/TzspFuGyorXlaDQhtiZsqQ)
+- [开源狂揽16.5K+星！这个万能CLI神器，让命令行玩转 50+ 平台、桌面应用](https://mp.weixin.qq.com/s/-egObU303V1883kpJJN65A)
+- [MacOS上直接跑真实iPhone系统，这款开源神器颠覆iOS开发测试](https://mp.weixin.qq.com/s/kcLFuGiouWNwL0_Y_8rvEQ)
+- [我用Claude Code、花费100元Token词元开发一个三合一收款码网站](https://mp.weixin.qq.com/s/FRHEz8Ye5yPE5qcFblM5Xw)
+- [同事离职、偶像难触？手把手教你用这个开源神器训练一个'周杰伦'出来](https://mp.weixin.qq.com/s/rsLGg-qIjmQTW-ije7hC2g)
+- [手把手教你部署 Hermes Agent，打造懂你的 24h 私人 AI 助理](https://mp.weixin.qq.com/s/AAf-Ujj1QKxug1a_1Tlj6g)
+- 
+
+
+
+## AI-编程
+
+- [让AI替你干活！OpenAI Codex 实战指南](https://mp.weixin.qq.com/s/cGsbjwiKMbVhLzCZ8PzlDA)
+- [Claude Code + cc-switch，丝滑接入国产大模型](https://mp.weixin.qq.com/s/2jserMvTGND8eGCouiVuxA)
+- [安装阿里Qoder CLI，打造AI代码审查自动化工厂](https://mp.weixin.qq.com/s/UxEt4sdBR1Wy3q3tIpdveQ)
+- [OpenCode 打造自由可控的 AI 编程工作流](https://mp.weixin.qq.com/s/jGxlacr9_aBM2FNdEeif-A)
+- [别再盲目跟风！Qoder、Trae、CodeBuddy国产AI编程助手实测](https://mp.weixin.qq.com/s/GX7q6VLgwGacnQ7ALgEVrg)
+- [安装Claude Code和cc-switch](https://mp.weixin.qq.com/s/HXJKj699MdBvq45EXildOg)
+- [Claude Code + cc-switch，丝滑接入国产大模型](https://mp.weixin.qq.com/s/2jserMvTGND8eGCouiVuxA)
+- [开源rtk神器绝了！AI 编程Token成本直降 89%，Claude Code等开发者必装](https://mp.weixin.qq.com/s/so4WEZQ6wrxez6VLHJBhzw)
 
 
 
 ## AI-OpenClaw
 
+- [如何安装2026年最强个人助理ClawdBot、完整安装教程](https://mp.weixin.qq.com/s/2Y-lvQRMoBstXt9lvd-ucA)
 - [开源OpenClaw用例-awesome-openclaw-usecases](https://mp.weixin.qq.com/s/iNiC_S1n8jCw5FvqdwBihA)
 - [云服务器部署OpenClaw：轻量应用服务器+钉钉和QQ机器人](https://mp.weixin.qq.com/s/l686H1yk3isGLFuPgYFSag)
 - [宝塔面板一键部署OpenClaw，支持QQ、飞书机器人](https://mp.weixin.qq.com/s/OsO0mgWzRiKwXauthks3Ug)
 - [Windows 11系统OpenClaw安装教程](https://mp.weixin.qq.com/s/P769NyUkrYD1XrVysgpypw)
 - [MacOS系统安装OpenClaw安装教程](https://mp.weixin.qq.com/s/wVMOcVhbwIMm-StYx5rE-Q)
 - [大龙虾OpenClaw的token不够吃了？用免费的 APIKey 续命](https://mp.weixin.qq.com/s/UxO057O7Y6HPz1JZY8GnFA)
-- 
-
-
+- [开源项目OpenClaw免token](https://mp.weixin.qq.com/s/Az98C0GJ2yErm6pdO-0hhQ)
+- [OpenClaw 装 U 盘 + Cherry Studio 双教程！即插即用 + 一键部署](https://mp.weixin.qq.com/s/BCE5ZU7ECKurjKiUO3SCZw)
 
 
 
@@ -132,14 +133,17 @@ cd docs/.vuepress/dist
 
 
 
-## AI接口
+## AI-免费Token
 
-- 获取免费的OpenAI的key： [https://github.com/chatanywhere/GPT_API_free](https://github.com/chatanywhere/GPT_API_free)，限制：有的模型每天只有5次，可以选择deepseek。
-- [有这好事？DeepSeek-R1-70B的大模型免费用](https://mp.weixin.qq.com/s/bkwSo53CL4b2vBduJD2LQw)，申请一个KEY，大模型名称“openai/gpt-oss-20b:free”或者其他，‘deepseek/deepseek-r1-distill-llama-70b:free’模型不能用了
-- [routerpark不能用了！注册即送免费人工智能高额度key，GPT-5.2/Claude 全家桶一键解锁](https://mp.weixin.qq.com/s/rmF0qaCFt2OL97uzdAPogg)
+- 
+- [OpenRouter提供免费大模型](https://mp.weixin.qq.com/s/bkwSo53CL4b2vBduJD2LQw) ：申请一个KEY，大模型名称“openai/gpt-oss-20b:free”或者其他，‘deepseek/deepseek-r1-distill-llama-70b:free’模型不能用了
 - [英伟达和GitHub的AI大模型API申请](https://mp.weixin.qq.com/s/9hPhf3HmcLk2JA0FvbhNPw)
 - [cerebras每天免费100万Token，这个羊毛不薅等于亏了一个亿](https://mp.weixin.qq.com/s/b6gHSdeqUZvVGT5ntSBKYQ)
-- 
+- 获取免费的OpenAI的key： [https://github.com/chatanywhere/GPT_API_free](https://github.com/chatanywhere/GPT_API_free)，限制：有的模型每天只有5次，可以选择deepseek。
+- 以下违规了！
+- [routerpark不能用了！注册即送免费人工智能高额度key，GPT-5.2/Claude 全家桶一键解锁](https://mp.weixin.qq.com/s/rmF0qaCFt2OL97uzdAPogg)
+- [自建sub2api中转站](https://mp.weixin.qq.com/s/Q62FG4qYiGN3YSv3nO5N2A)
+- [注册就给免费Token！全网最良心的AI“白嫖”指南来了](https://mp.weixin.qq.com/s/eihnGCDmiaaD6k44M6KNOQ)
 
 
 
@@ -148,12 +152,14 @@ cd docs/.vuepress/dist
 - [每年0.99刀，拿下你的第一个顶级域名，详细注册使用-注册xyz域名](https://mp.weixin.qq.com/s/7aa_2YGYSgZ2f2R7EQcyxw)
 - [教你免费申请一个永久域名！ClouDNS 平台保姆级教程](https://mp.weixin.qq.com/s/MZhglD1IF0qX9YOmeEEXjw)
 - [开发者福利：免费 .frii.site 子域名](https://mp.weixin.qq.com/s/12Af5dmuIzBui9OEhlQn5w)
+- [免费域名+Cloudflare托管保姆级攻略](https://mp.weixin.qq.com/s/fpXi8tSiImw6O11TzMvVzQ)
 - 
 
 ## 免费云服务器
 
 - [免费领取huggingface的2核16G云服务器，超简单教程](https://mp.weixin.qq.com/s/hLoS7w12dcI8NilrtwHLyg)
 - [Hugging Face免费服务器部署HertzBeat监控平台](https://mp.weixin.qq.com/s/IfjT7ASj5hOHSR_SPLO-jg)
+- [Huggingface免费部署Uptime Kuma，自建专属监控系统](https://mp.weixin.qq.com/s/DwEBkcUiNwtJWgsONRst3A)
 - [免费领一个AWS、华为云等的主机](https://mp.weixin.qq.com/s/WvK9QUyOyj0nf7JmRRkF6g)
 - [免费服务器，无广告免费主机，新手也能轻松上手-InfinityFree](https://mp.weixin.qq.com/s/-UEx4o8UoDzJwseNH1eJSg)
 - [永久免费的高配容器Clawcloud](https://mp.weixin.qq.com/s/RqpB_lqr_XVQJY4RXCQa9w)
@@ -172,11 +178,41 @@ cd docs/.vuepress/dist
 
 ## 开源
 
-[国产开源文档神器：5 分钟搭建 AI 驱动 Wiki 系统，重新定义知识库管理](https://mp.weixin.qq.com/s/zMmeqXtF27sXm6Jmjirfqw)
+- [国产开源文档神器：5 分钟搭建 AI 驱动 Wiki 系统，重新定义知识库管理](https://mp.weixin.qq.com/s/zMmeqXtF27sXm6Jmjirfqw)
+- [高颜值多平台的第三方网易云音乐播放器-YesPlayMusic](https://mp.weixin.qq.com/s/GSsxyvJQsON1fy986WAA3w)
+- [搭建开源免费的全平台私有密码工具BitWarden](https://mp.weixin.qq.com/s/lvKNeueYPxm3ktbTpH42kg)
+- [ZeroTermux 一键把安卓手机变成 Linux](https://mp.weixin.qq.com/s/kAQ_z5y9JKuupFpPNBeNmw)
+- [把WordPress站变成AI智能知识库，WP2AI一键部署超简单！](https://mp.weixin.qq.com/s/ZdlZSB2vQVsS__tEBL1kvg)
+- [换设备不用重复登录？这个 Chrome 插件让 Cookie 同步超省心！](https://mp.weixin.qq.com/s/1RbhmuJj5UYqM15c4It8AA)
+- [自然语言指令控制 Android 和 iOS 设备](https://mp.weixin.qq.com/s/UpJ66otWnL3kiRFLGCrCtQ)
+- [这份开源资源库，覆盖小初高至大学教材](https://mp.weixin.qq.com/s/XW3gNbt6WOazOV3HwJx0HQ)
+- [告别买真机！用 Docker 一键拉起“云手机”，自动化测试真香](https://mp.weixin.qq.com/s/jKDcLHtbfpUga_7LD_KrJA)
+- [开源数据库备份-Databasus](https://mp.weixin.qq.com/s/phCCJEcmfSwZnWoEM79Bxg)
+- [开源邮件系统-BillionMail](https://mp.weixin.qq.com/s/Zg0ezTt7O-1DnX0oMWmiXg)
+- [手把手教你自建 Gotify 推送服务，消息直达 Android 手机](https://mp.weixin.qq.com/s/VO33lQ_QaWkmhso9oOS5VQ)
+- [闲置服务器别吃灰！手把手教你打造专属“云手机”](https://mp.weixin.qq.com/s/yboVISIf3aZPcvXcrMzTgQ)
 
-[高颜值多平台的第三方网易云音乐播放器-YesPlayMusic](https://mp.weixin.qq.com/s/GSsxyvJQsON1fy986WAA3w)
 
-[搭建开源免费的全平台私有密码工具BitWarden](https://mp.weixin.qq.com/s/lvKNeueYPxm3ktbTpH42kg)
+
+## 免费玩转Cloudflare
+
+- [免费玩转Cloudflare-01：搭建免费文生图工具！Cloudflare Workers 一键部署，4 款热门模型随便用](https://mp.weixin.qq.com/s/_a2f6M61QEedS1QaxYDsBg)
+
+- [免费玩转Cloudflare-02：Cloudflare 15年免费通配符SSL证书保姆级教程](https://mp.weixin.qq.com/s/7l7gWPbI_RZHVanS-kY7iw)
+
+- [免费玩转Cloudflare-03：Cloudflare零成本打造你的“无限邮箱”](https://mp.weixin.qq.com/s/pGuEFEjKGVX8wmCbkizHwQ)
+
+- [免费玩转Cloudflare-04：把Bitwarden部署到Cloudflare上，0成本自建个人密码库](https://mp.weixin.qq.com/s/FhpBFE4qyYk3Y4kAlV3kig)
+
+- [手把手教你免费内网穿透-Cloudflare tunnel](https://mp.weixin.qq.com/s/gs9shAazBT1wOnwjQQYDwQ)
+
+- [免费玩转Cloudflare-05：CF部署智能挪车码，扫码一键通知车主秒回](https://mp.weixin.qq.com/s/n_5vCeNHRJy8QVjQr1zIcQ)
+
+- [Cloudflare免费全家桶白嫖指南](https://mp.weixin.qq.com/s/AU07o7I05l_8YLpdjFSsSg)
+
+  
+
+
 
 
 
@@ -220,6 +256,30 @@ cd docs/.vuepress/dist
 
 - [星哥带你玩飞牛NAS-19：飞牛NAS安装OpenList，挂载超50个网盘](https://mp.weixin.qq.com/s/pnugIGUp3rr6-eFrIZtcng)
 
+- [星哥带你玩飞牛NAS-20：把B站收藏同步下载到NAS，打造家庭教育、娱乐分中心](https://mp.weixin.qq.com/s/MNxIsmsR1aI8jhYsSB-QGg)
+
+- [星哥带你玩飞牛NAS-21：私人游戏中心GameServerManager一键部署教程](https://mp.weixin.qq.com/s/V8_yaC_Ci2taGWf03zi5LA)
+
+- [星哥带你玩飞牛NAS-22：飞牛NAS官方的Openclaw的安装与使用](https://mp.weixin.qq.com/s/cTzl8RWOQg-gwdj79bLp_Q)
+
+- [星哥带你玩飞牛NAS-23：飞牛NAS第三方应用仓库，轻松一键获取海量应用和工具](https://mp.weixin.qq.com/s/9PO_BhW-WHvtKCnbBH5Pcg)
+
+- [星哥带你玩飞牛NAS-24：在飞牛NAS上部署AI一键生成证件照，隐私安全秒出片](https://mp.weixin.qq.com/s/m2aCYLTAJPvqzMOt1lDxbQ)
+
+- [星哥带你玩飞牛NAS-25：网页视频一键播、一键下，多设备通用超省心](https://mp.weixin.qq.com/s/RJ4FHo8QFXREwuMhwwEGsA)
+
+- [飞牛NAS中Docker安装群晖DSM！无需虚拟机，几步就能体验 Synology 系统](https://mp.weixin.qq.com/s/IHnZGMiYBzZ6Vv71Axffxw)
+
+- [星哥带你玩飞牛NAS-26：在飞牛NAS部署《魔兽》服，老玩家的终极浪漫](https://mp.weixin.qq.com/s/FRqdc1dAa_Nr1EMlAzJ8UA)
+
+- [星哥带你玩飞牛NAS-27：告别歌荒！NAS一键部署这款开源音乐神器，搜听下载全搞定](https://mp.weixin.qq.com/s/QMEqSipi3eE9XXfUpgm9kQ)
+
+- [星哥带你玩飞牛NAS-28：把夸克网盘装机进飞牛NAS，影视直接播，本地空间原地翻倍！](https://mp.weixin.qq.com/s/GX7q6VLgwGacnQ7ALgEVrg)
+
+- [星哥带你玩飞牛NAS-29：飞牛NAS部署DailyCheckIn：全网自动签到+打卡保姆级指南](https://mp.weixin.qq.com/s/JLkSsdu8iUi4ELQv1StOdg)
+
+- 
+
   
 
 - [把小米云笔记搬回家：飞牛NAS一键部署，小米云笔记自动同步到本地](https://mp.weixin.qq.com/s/fregXnukV89Amxg3QB1xTQ)
@@ -242,9 +302,21 @@ cd docs/.vuepress/dist
 - [4盘位、4K输出、J3455、遥控，NAS硬件入门性价比之王-威联通TS-453Bmini](https://mp.weixin.qq.com/s/fqVbU-V911vYmNihGV-yEw)
 - [240 元左右！五盘位 NAS主机，7 代U硬解4K稳如狗，拓展性碾压同价位](https://mp.weixin.qq.com/s/cDeifHz7U_y-Gw0hdxfY1g)
 - [300元就能买到的"小钢炮"？惠普7L四盘位小主机解析](https://mp.weixin.qq.com/s/kOqkdneNIW21xr5Hkpo-0A)
+- [3张以内捡漏戴尔小工作站，能上 E3、4K三显还能插独显，太香了](https://mp.weixin.qq.com/s/QGziEqrv-GO0pr_TRnvAEw)
+- [AOC爱攻27寸2K高刷屏，二手市场这波真的杀疯了！](https://mp.weixin.qq.com/s/YV-cqfLFl_V0XpNtj4N5Tw?token=1307491738&lang=zh_CN)
+- [iPad mini 2在2026年到底还能打吗？](https://mp.weixin.qq.com/s/hhdzOh-0j5M2kfyFkqLDug)
+- [某银行退役六口小主机仅99元，刷刷飞牛NAS真香！](https://mp.weixin.qq.com/s/FPJAea7tkHxMHkAXfSX_FA)
+- [10盘位NAS+ROG信仰，只要几百块？带你打造“精致穷”NAS终极方案](https://mp.weixin.qq.com/s/C85ZOmWjy7cKUMdw9Rtr9w)
+- [3张捡漏苹果级屏幕？这台谷歌笔记本，懂行的都在抢！](https://mp.weixin.qq.com/s/xJx-F0fFHbyj06bum9JJOA)
+- [110元买个带电池的Intel小主机？二手鱼里的“奇葩”到底能不能碰？-ZXK迷你主机](https://mp.weixin.qq.com/s/JM0Hl7pBBhrxwFDHdA69Gw)
+- [黄鱼捡漏！不到300元的惠普10代小主机，接口爆表还带金牌电源](https://mp.weixin.qq.com/s/ojH0f5L2d9bxIK4kEXQokg)
 - 
 
 
+
+
+
+[iPhone实现短信自动转发到微信，验证码、取件码再也不漏接](https://mp.weixin.qq.com/s/i4IAK7F3SQXh1g5zHqpbNA)
 
 
 
@@ -255,6 +327,12 @@ cd docs/.vuepress/dist
 [2025年11月18日-Cloudflare史诗级事故:一次配置失误，引爆全球宕机](https://mp.weixin.qq.com/s/Lyzh4yrcW5Gb0ZRCLFqHBA)
 
 [2025年12月4日-支付宝、淘宝、闲鱼又崩了](https://mp.weixin.qq.com/s/96dKzXXHt-EKvXGpAlO_Kw)
+
+## 云服务器
+
+- [仅需10元/年！纯小白也能轻松拥有的第一台云服务器](https://mp.weixin.qq.com/s/f27eMGamVuc5FYexUhCMKA)
+
+
 
 
 
