@@ -53,7 +53,7 @@ export default defineUserConfig({
 			collapsible: true,
 				children: [
 					{ text: 'ChatGPT', link: '/chatgpt/',},
-					{ text: 'ChatGPT2025',link: '/chatgpt2025/',},
+					{ text: 'ChatGPT2',link: '/chatgpt2/',},
 				],
 		},
 		{ text: '开源',
@@ -79,7 +79,7 @@ export default defineUserConfig({
 		{ text: 'Nginx',link: '/nginx/', },
 		{ text: 'Shell',link: '/shell/', },
 		{ text: 'Ubuntu',link: '/Ubuntu/', },
-		{ text: 'NAS',link: '/hardware/', },
+		{ text: 'NAS',link: '/NAS/', },
 		{ text: 'Git',link: '/git/', },
 		//隐藏左侧导航
 		/**

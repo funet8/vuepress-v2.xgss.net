@@ -88,7 +88,12 @@ cd docs/.vuepress/dist
 - [我用Claude Code、花费100元Token词元开发一个三合一收款码网站](https://mp.weixin.qq.com/s/FRHEz8Ye5yPE5qcFblM5Xw)
 - [同事离职、偶像难触？手把手教你用这个开源神器训练一个'周杰伦'出来](https://mp.weixin.qq.com/s/rsLGg-qIjmQTW-ije7hC2g)
 - [手把手教你部署 Hermes Agent，打造懂你的 24h 私人 AI 助理](https://mp.weixin.qq.com/s/AAf-Ujj1QKxug1a_1Tlj6g)
-- 
+- [官方Hermes桌面客户端，这款稳如老狗的开源桌面端，让 小白轻松安装AI Agent！](https://mp.weixin.qq.com/s/lGHodt3DsfTT-Q6M8L0PFg)
+- [这个开源神器，把全球大模型的价格和参数扒了个底朝天](https://mp.weixin.qq.com/s/O3F5cdlWZleer4hENVbp9Q)
+- [输入一个词，AI 自动生成精美科普动画！这款开源神器太香了！-雾象](https://mp.weixin.qq.com/s/QA7FpyQ1Wu6Fh6fE-l7ZBg)
+- [Superpowers-告别AI编程“开盲盒”！这款22万Star的神器，给AI装上了“工程纪律”](https://mp.weixin.qq.com/s/NS0-qmqc7YPMaYLygoVk0Q)
+- [这款AI生图浏览器插件提示词神器，让你的绘图效率直接翻倍！](https://mp.weixin.qq.com/s/RjIQC8Y3n83Mi3uyWtLffA)
+- [让AI来检查AI写的代码，阿里开源的这款 AI Code Review 神器](https://mp.weixin.qq.com/s/WxPKB4l5lWYLFZTgdYD1fw)
 
 
 
@@ -191,6 +196,13 @@ cd docs/.vuepress/dist
 - [开源邮件系统-BillionMail](https://mp.weixin.qq.com/s/Zg0ezTt7O-1DnX0oMWmiXg)
 - [手把手教你自建 Gotify 推送服务，消息直达 Android 手机](https://mp.weixin.qq.com/s/VO33lQ_QaWkmhso9oOS5VQ)
 - [闲置服务器别吃灰！手把手教你打造专属“云手机”](https://mp.weixin.qq.com/s/yboVISIf3aZPcvXcrMzTgQ)
+- [LinkAndroid-告别收费与广告！这款开源全能手机管理神器，相见恨晚！](https://mp.weixin.qq.com/s/T8ZirUyxtWgbFrABd--jcA)
+- [OctaFuse这个开源 AI 网关，帮我把所有模型套餐“一网打尽”！](https://mp.weixin.qq.com/s/REwWE75dW1sNbsbzEyrqOg)
+- [JoyAI-Echo-京东又放大招！开源长视频AI神器，彻底解决"角色变脸"难题！](https://mp.weixin.qq.com/s/YdyWVd2J8j1lzjHO4Kfl7Q)
+- [专为 AI Agent 而生！拒绝套壳 Chrome，这款纯血无头浏览器让自动化起飞](https://mp.weixin.qq.com/s/CQFSwGPQyFe20s6WO9N1sg)
+- [做小红书图文太头秃？这款开源 AI 神器，一句话帮你搞定！](https://mp.weixin.qq.com/s/HQsO6rBndmfoJ1Q_HUBkrA)
+- [智谱开源 AutoGLM，一句话让 AI 替你刷手机！](https://mp.weixin.qq.com/s/sdLU-sVOqSbr_mffNesnyA)
+- [大模型Token烧不起？GitHub霸榜的“马尾辫”，教AI学会“抠门”](https://mp.weixin.qq.com/s/1TTc8t2SUNSo12u4KN_GNA)
 
 
 
@@ -209,6 +221,14 @@ cd docs/.vuepress/dist
 - [免费玩转Cloudflare-05：CF部署智能挪车码，扫码一键通知车主秒回](https://mp.weixin.qq.com/s/n_5vCeNHRJy8QVjQr1zIcQ)
 
 - [Cloudflare免费全家桶白嫖指南](https://mp.weixin.qq.com/s/AU07o7I05l_8YLpdjFSsSg)
+
+- [免费玩转Cloudflare-06：这款零成本订阅管理神器，帮你盯紧每一笔自动扣费！](https://mp.weixin.qq.com/s/DO3ScFqyCusCqj_Fgsxl-w)
+
+- [免费玩转Cloudflare-07：实测Workers AI：模型真香！](https://mp.weixin.qq.com/s/uWOxzYKwUuHZIGQJnEJaFg)
+
+- [免费玩转Cloudflare-08：用Cloudflare搭建你的专属 EPG 节目单接口](https://mp.weixin.qq.com/s/PypFJ_pquUVjxFXMU-gAmw)
+
+- 
 
   
 
@@ -278,6 +298,14 @@ cd docs/.vuepress/dist
 
 - [星哥带你玩飞牛NAS-29：飞牛NAS部署DailyCheckIn：全网自动签到+打卡保姆级指南](https://mp.weixin.qq.com/s/JLkSsdu8iUi4ELQv1StOdg)
 
+- [星哥带你玩飞牛NAS-30：别再死记IP和端口了！飞牛NAS装上这个“神仙面板”](https://mp.weixin.qq.com/s/dA_-wz2MhbgTbe_x-mzxaA)
+
+- [星哥带你玩飞牛NAS-31：Docker一键部署OmniBox，打造你的终极家庭私人影院](https://mp.weixin.qq.com/s/iL6wr8rM8oYHVdsxdUXR0g)
+
+- [星哥带你玩飞牛NAS-32：用 nodecast-tv 打造专属网页IPTV私人影院，丝滑看全球直播](https://mp.weixin.qq.com/s/ln2ItZDGDAOTn5gHj5XI0A)
+
+- [星哥带你玩飞牛NAS-33：部署 easy-vdl，全网视频下载、订阅、AI 切片一锅端！](https://mp.weixin.qq.com/s/P9aqRrD6T5wBzXP-y6Nh4Q)
+
 - 
 
   
@@ -310,7 +338,9 @@ cd docs/.vuepress/dist
 - [3张捡漏苹果级屏幕？这台谷歌笔记本，懂行的都在抢！](https://mp.weixin.qq.com/s/xJx-F0fFHbyj06bum9JJOA)
 - [110元买个带电池的Intel小主机？二手鱼里的“奇葩”到底能不能碰？-ZXK迷你主机](https://mp.weixin.qq.com/s/JM0Hl7pBBhrxwFDHdA69Gw)
 - [黄鱼捡漏！不到300元的惠普10代小主机，接口爆表还带金牌电源](https://mp.weixin.qq.com/s/ojH0f5L2d9bxIK4kEXQokg)
-- 
+- [联想 ThinkCentre E75-预算不过200，这台支持4K硬解的三盘位小主机，闭眼入不踩坑！](https://mp.weixin.qq.com/s/nouGozzLDkerDozpsS2yhw)
+- [200多捡漏HP Z240工作站，NAS+Docker分离才是终极解法！](https://mp.weixin.qq.com/s/c5LCKpQLqtAv3AdkjUMESg)
+- [小黄鱼百元“魔改”矿渣主板！3865U+双内存，能搞NAS还能打游戏，这坑你敢踩吗？](https://mp.weixin.qq.com/s/mNSkY4XewZ2mjCZJ63wXyQ)
 
 
 
@@ -331,6 +361,7 @@ cd docs/.vuepress/dist
 ## 云服务器
 
 - [仅需10元/年！纯小白也能轻松拥有的第一台云服务器](https://mp.weixin.qq.com/s/f27eMGamVuc5FYexUhCMKA)
+- [10元年海外低价玩具云服务器部署OpenClaw AI Agent完整教程](https://mp.weixin.qq.com/s/GFh1hxN0eEsc4nI4oyU1NA)
 
 
 

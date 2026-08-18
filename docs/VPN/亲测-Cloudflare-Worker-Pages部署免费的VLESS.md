@@ -20,8 +20,6 @@ zizifn 大佬的一个开源项目 edgetunnel ，使得我们可以免费的在 
 2. 购买注册域名一个
 3. 托管域名到 Cloudflare（非必须）
 
-
-
 参考：https://blog.cmliussss.com/p/edt2/
 
 
